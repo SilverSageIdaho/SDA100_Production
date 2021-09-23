@@ -32,7 +32,6 @@ namespace SDA100
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnHome = new System.Windows.Forms.Button();
-            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.lblScanDefectCnt7 = new System.Windows.Forms.Label();
             this.lblScanDefectCnt6 = new System.Windows.Forms.Label();
             this.lblScanDefectCnt5 = new System.Windows.Forms.Label();
@@ -60,7 +59,16 @@ namespace SDA100
             this.disHis = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblCCScanProgress_50 = new System.Windows.Forms.Label();
+            this.lblCCScanProgress_100 = new System.Windows.Forms.Label();
+            this.lblCCScanProgress_0 = new System.Windows.Forms.Label();
+            this.lblCCScanProgress_Text = new System.Windows.Forms.Label();
+            this.lblCCScanID_Current = new System.Windows.Forms.Label();
+            this.lblCCScanID_Text = new System.Windows.Forms.Label();
+            this.lblCCUserID_Current = new System.Windows.Forms.Label();
+            this.lblCCUserID_Text = new System.Windows.Forms.Label();
             this.lblCCRecipeName_Current = new System.Windows.Forms.Label();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.lblCCEdgeReject_Current = new System.Windows.Forms.Label();
             this.lblCCWaferSize_Current = new System.Windows.Forms.Label();
             this.lblCCRecipeName_Text = new System.Windows.Forms.Label();
@@ -128,6 +136,10 @@ namespace SDA100
             this.eDisHis = new System.Windows.Forms.TextBox();
             this.eScanDataImage = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lbleCCScanID_Value = new System.Windows.Forms.Label();
+            this.lbleCCScanID_Text = new System.Windows.Forms.Label();
+            this.lbleCCUserID_Value = new System.Windows.Forms.Label();
+            this.lbleCCUserID_Text = new System.Windows.Forms.Label();
             this.lbleCCRecipeName_Value = new System.Windows.Forms.Label();
             this.lbleCCEdgeReject_Value = new System.Windows.Forms.Label();
             this.lbleCCWaferSize_Value = new System.Windows.Forms.Label();
@@ -209,16 +221,7 @@ namespace SDA100
             this.lblSSScanOfArea_Text = new System.Windows.Forms.Label();
             this.lblSSWaferSize_Text = new System.Windows.Forms.Label();
             this.lblTestScanSettings_Text = new System.Windows.Forms.Label();
-            this.lblCCUserID_Current = new System.Windows.Forms.Label();
-            this.lblCCUserID_Text = new System.Windows.Forms.Label();
-            this.lblCCScanID_Current = new System.Windows.Forms.Label();
-            this.lblCCScanID_Text = new System.Windows.Forms.Label();
-            this.lblCCScanProgress_0 = new System.Windows.Forms.Label();
-            this.lblCCScanProgress_Text = new System.Windows.Forms.Label();
-            this.lblCCScanProgress_100 = new System.Windows.Forms.Label();
-            this.lblCCScanProgress_50 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.lblSyS_LeftLimitY = new System.Windows.Forms.Label();
             this.lblSyS_AutoFocusValue = new System.Windows.Forms.Label();
@@ -258,14 +261,11 @@ namespace SDA100
             this.lblUCV_Title = new System.Windows.Forms.Label();
             this.btnUCV_XY_Init = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtZM_Set = new System.Windows.Forms.TextBox();
             this.btnZM_Up = new System.Windows.Forms.Button();
             this.btnZM_Down = new System.Windows.Forms.Button();
             this.lblZM_Title = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.txtXYM_MoveZ = new System.Windows.Forms.TextBox();
-            this.txtXYM_MoveY = new System.Windows.Forms.TextBox();
-            this.txtXYM_MoveX = new System.Windows.Forms.TextBox();
             this.txtXYM_Set = new System.Windows.Forms.TextBox();
             this.btnXYM_Front = new System.Windows.Forms.Button();
             this.btnXYM_Right = new System.Windows.Forms.Button();
@@ -274,16 +274,22 @@ namespace SDA100
             this.btnXYM_Left = new System.Windows.Forms.Button();
             this.btnXYM_Park = new System.Windows.Forms.Button();
             this.btnXYM_VacuumStatus = new System.Windows.Forms.Button();
-            this.btnXYM_MoveZ = new System.Windows.Forms.Button();
-            this.btnXYM_MoveY = new System.Windows.Forms.Button();
-            this.btnXYM_MoveX = new System.Windows.Forms.Button();
             this.btnXYM_DoorStatus = new System.Windows.Forms.Button();
             this.btnXYM_Home = new System.Windows.Forms.Button();
             this.lblXYM_Title = new System.Windows.Forms.Label();
-            this.lbleCCScanID_Value = new System.Windows.Forms.Label();
-            this.lbleCCScanID_Text = new System.Windows.Forms.Label();
-            this.lbleCCUserID_Value = new System.Windows.Forms.Label();
-            this.lbleCCUserID_Text = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.btnSendConsole = new System.Windows.Forms.Button();
+            this.btnClearConsole = new System.Windows.Forms.Button();
+            this.cbxConsoleCommands = new System.Windows.Forms.ComboBox();
+            this.txtConsoleOutput = new System.Windows.Forms.TextBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.lblXYZAbs_Title = new System.Windows.Forms.Label();
+            this.txtXYM_SetZ = new System.Windows.Forms.TextBox();
+            this.txtXYM_SetY = new System.Windows.Forms.TextBox();
+            this.txtXYM_SetX = new System.Windows.Forms.TextBox();
+            this.btnXYM_SetZ = new System.Windows.Forms.Button();
+            this.btnXYM_SetY = new System.Windows.Forms.Button();
+            this.btnXYM_SetX = new System.Windows.Forms.Button();
             this.tabMain.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -301,6 +307,8 @@ namespace SDA100
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabMain
@@ -372,14 +380,6 @@ namespace SDA100
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // progressBar
-            // 
-            this.progressBar.Location = new System.Drawing.Point(83, 266);
-            this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(295, 23);
-            this.progressBar.Step = 1;
-            this.progressBar.TabIndex = 107;
             // 
             // lblScanDefectCnt7
             // 
@@ -672,6 +672,86 @@ namespace SDA100
             this.groupBox3.TabIndex = 79;
             this.groupBox3.TabStop = false;
             // 
+            // lblCCScanProgress_50
+            // 
+            this.lblCCScanProgress_50.AutoSize = true;
+            this.lblCCScanProgress_50.Location = new System.Drawing.Point(217, 240);
+            this.lblCCScanProgress_50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCScanProgress_50.Name = "lblCCScanProgress_50";
+            this.lblCCScanProgress_50.Size = new System.Drawing.Size(27, 20);
+            this.lblCCScanProgress_50.TabIndex = 115;
+            this.lblCCScanProgress_50.Text = "50";
+            // 
+            // lblCCScanProgress_100
+            // 
+            this.lblCCScanProgress_100.AutoSize = true;
+            this.lblCCScanProgress_100.Location = new System.Drawing.Point(345, 241);
+            this.lblCCScanProgress_100.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCScanProgress_100.Name = "lblCCScanProgress_100";
+            this.lblCCScanProgress_100.Size = new System.Drawing.Size(36, 20);
+            this.lblCCScanProgress_100.TabIndex = 114;
+            this.lblCCScanProgress_100.Text = "100";
+            // 
+            // lblCCScanProgress_0
+            // 
+            this.lblCCScanProgress_0.AutoSize = true;
+            this.lblCCScanProgress_0.Location = new System.Drawing.Point(80, 242);
+            this.lblCCScanProgress_0.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCScanProgress_0.Name = "lblCCScanProgress_0";
+            this.lblCCScanProgress_0.Size = new System.Drawing.Size(18, 20);
+            this.lblCCScanProgress_0.TabIndex = 112;
+            this.lblCCScanProgress_0.Text = "0";
+            // 
+            // lblCCScanProgress_Text
+            // 
+            this.lblCCScanProgress_Text.Location = new System.Drawing.Point(0, 266);
+            this.lblCCScanProgress_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCScanProgress_Text.Name = "lblCCScanProgress_Text";
+            this.lblCCScanProgress_Text.Size = new System.Drawing.Size(78, 23);
+            this.lblCCScanProgress_Text.TabIndex = 113;
+            this.lblCCScanProgress_Text.Text = "%Scan:";
+            this.lblCCScanProgress_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblCCScanID_Current
+            // 
+            this.lblCCScanID_Current.AutoSize = true;
+            this.lblCCScanID_Current.Location = new System.Drawing.Point(164, 172);
+            this.lblCCScanID_Current.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCScanID_Current.Name = "lblCCScanID_Current";
+            this.lblCCScanID_Current.Size = new System.Drawing.Size(47, 20);
+            this.lblCCScanID_Current.TabIndex = 110;
+            this.lblCCScanID_Current.Text = "None";
+            // 
+            // lblCCScanID_Text
+            // 
+            this.lblCCScanID_Text.Location = new System.Drawing.Point(21, 172);
+            this.lblCCScanID_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCScanID_Text.Name = "lblCCScanID_Text";
+            this.lblCCScanID_Text.Size = new System.Drawing.Size(101, 19);
+            this.lblCCScanID_Text.TabIndex = 111;
+            this.lblCCScanID_Text.Text = "Scan ID:";
+            this.lblCCScanID_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblCCUserID_Current
+            // 
+            this.lblCCUserID_Current.AutoSize = true;
+            this.lblCCUserID_Current.Location = new System.Drawing.Point(164, 146);
+            this.lblCCUserID_Current.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCUserID_Current.Name = "lblCCUserID_Current";
+            this.lblCCUserID_Current.Size = new System.Drawing.Size(47, 20);
+            this.lblCCUserID_Current.TabIndex = 108;
+            this.lblCCUserID_Current.Text = "None";
+            // 
+            // lblCCUserID_Text
+            // 
+            this.lblCCUserID_Text.Location = new System.Drawing.Point(21, 146);
+            this.lblCCUserID_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCUserID_Text.Name = "lblCCUserID_Text";
+            this.lblCCUserID_Text.Size = new System.Drawing.Size(101, 19);
+            this.lblCCUserID_Text.TabIndex = 109;
+            this.lblCCUserID_Text.Text = "User ID:";
+            this.lblCCUserID_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // lblCCRecipeName_Current
             // 
             this.lblCCRecipeName_Current.AutoSize = true;
@@ -681,6 +761,14 @@ namespace SDA100
             this.lblCCRecipeName_Current.Size = new System.Drawing.Size(47, 20);
             this.lblCCRecipeName_Current.TabIndex = 2;
             this.lblCCRecipeName_Current.Text = "None";
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(83, 266);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(295, 23);
+            this.progressBar.Step = 1;
+            this.progressBar.TabIndex = 107;
             // 
             // lblCCEdgeReject_Current
             // 
@@ -1479,6 +1567,46 @@ namespace SDA100
             this.groupBox5.Size = new System.Drawing.Size(375, 197);
             this.groupBox5.TabIndex = 109;
             this.groupBox5.TabStop = false;
+            // 
+            // lbleCCScanID_Value
+            // 
+            this.lbleCCScanID_Value.AutoSize = true;
+            this.lbleCCScanID_Value.Location = new System.Drawing.Point(137, 143);
+            this.lbleCCScanID_Value.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleCCScanID_Value.Name = "lbleCCScanID_Value";
+            this.lbleCCScanID_Value.Size = new System.Drawing.Size(47, 20);
+            this.lbleCCScanID_Value.TabIndex = 114;
+            this.lbleCCScanID_Value.Text = "None";
+            // 
+            // lbleCCScanID_Text
+            // 
+            this.lbleCCScanID_Text.Location = new System.Drawing.Point(17, 143);
+            this.lbleCCScanID_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleCCScanID_Text.Name = "lbleCCScanID_Text";
+            this.lbleCCScanID_Text.Size = new System.Drawing.Size(101, 19);
+            this.lbleCCScanID_Text.TabIndex = 115;
+            this.lbleCCScanID_Text.Text = "Scan ID:";
+            this.lbleCCScanID_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lbleCCUserID_Value
+            // 
+            this.lbleCCUserID_Value.AutoSize = true;
+            this.lbleCCUserID_Value.Location = new System.Drawing.Point(137, 123);
+            this.lbleCCUserID_Value.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleCCUserID_Value.Name = "lbleCCUserID_Value";
+            this.lbleCCUserID_Value.Size = new System.Drawing.Size(47, 20);
+            this.lbleCCUserID_Value.TabIndex = 112;
+            this.lbleCCUserID_Value.Text = "None";
+            // 
+            // lbleCCUserID_Text
+            // 
+            this.lbleCCUserID_Text.Location = new System.Drawing.Point(17, 123);
+            this.lbleCCUserID_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleCCUserID_Text.Name = "lbleCCUserID_Text";
+            this.lbleCCUserID_Text.Size = new System.Drawing.Size(101, 19);
+            this.lbleCCUserID_Text.TabIndex = 113;
+            this.lbleCCUserID_Text.Text = "User ID:";
+            this.lbleCCUserID_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lbleCCRecipeName_Value
             // 
@@ -2427,88 +2555,9 @@ namespace SDA100
             this.lblTestScanSettings_Text.TabIndex = 0;
             this.lblTestScanSettings_Text.Text = "Scan Recipe Manager";
             // 
-            // lblCCUserID_Current
-            // 
-            this.lblCCUserID_Current.AutoSize = true;
-            this.lblCCUserID_Current.Location = new System.Drawing.Point(164, 146);
-            this.lblCCUserID_Current.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCCUserID_Current.Name = "lblCCUserID_Current";
-            this.lblCCUserID_Current.Size = new System.Drawing.Size(47, 20);
-            this.lblCCUserID_Current.TabIndex = 108;
-            this.lblCCUserID_Current.Text = "None";
-            // 
-            // lblCCUserID_Text
-            // 
-            this.lblCCUserID_Text.Location = new System.Drawing.Point(21, 146);
-            this.lblCCUserID_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCCUserID_Text.Name = "lblCCUserID_Text";
-            this.lblCCUserID_Text.Size = new System.Drawing.Size(101, 19);
-            this.lblCCUserID_Text.TabIndex = 109;
-            this.lblCCUserID_Text.Text = "User ID:";
-            this.lblCCUserID_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // lblCCScanID_Current
-            // 
-            this.lblCCScanID_Current.AutoSize = true;
-            this.lblCCScanID_Current.Location = new System.Drawing.Point(164, 172);
-            this.lblCCScanID_Current.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCCScanID_Current.Name = "lblCCScanID_Current";
-            this.lblCCScanID_Current.Size = new System.Drawing.Size(47, 20);
-            this.lblCCScanID_Current.TabIndex = 110;
-            this.lblCCScanID_Current.Text = "None";
-            // 
-            // lblCCScanID_Text
-            // 
-            this.lblCCScanID_Text.Location = new System.Drawing.Point(21, 172);
-            this.lblCCScanID_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCCScanID_Text.Name = "lblCCScanID_Text";
-            this.lblCCScanID_Text.Size = new System.Drawing.Size(101, 19);
-            this.lblCCScanID_Text.TabIndex = 111;
-            this.lblCCScanID_Text.Text = "Scan ID:";
-            this.lblCCScanID_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // lblCCScanProgress_0
-            // 
-            this.lblCCScanProgress_0.AutoSize = true;
-            this.lblCCScanProgress_0.Location = new System.Drawing.Point(80, 242);
-            this.lblCCScanProgress_0.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCCScanProgress_0.Name = "lblCCScanProgress_0";
-            this.lblCCScanProgress_0.Size = new System.Drawing.Size(18, 20);
-            this.lblCCScanProgress_0.TabIndex = 112;
-            this.lblCCScanProgress_0.Text = "0";
-            // 
-            // lblCCScanProgress_Text
-            // 
-            this.lblCCScanProgress_Text.Location = new System.Drawing.Point(0, 266);
-            this.lblCCScanProgress_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCCScanProgress_Text.Name = "lblCCScanProgress_Text";
-            this.lblCCScanProgress_Text.Size = new System.Drawing.Size(78, 23);
-            this.lblCCScanProgress_Text.TabIndex = 113;
-            this.lblCCScanProgress_Text.Text = "%Scan:";
-            this.lblCCScanProgress_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // lblCCScanProgress_100
-            // 
-            this.lblCCScanProgress_100.AutoSize = true;
-            this.lblCCScanProgress_100.Location = new System.Drawing.Point(345, 241);
-            this.lblCCScanProgress_100.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCCScanProgress_100.Name = "lblCCScanProgress_100";
-            this.lblCCScanProgress_100.Size = new System.Drawing.Size(36, 20);
-            this.lblCCScanProgress_100.TabIndex = 114;
-            this.lblCCScanProgress_100.Text = "100";
-            // 
-            // lblCCScanProgress_50
-            // 
-            this.lblCCScanProgress_50.AutoSize = true;
-            this.lblCCScanProgress_50.Location = new System.Drawing.Point(217, 240);
-            this.lblCCScanProgress_50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCCScanProgress_50.Name = "lblCCScanProgress_50";
-            this.lblCCScanProgress_50.Size = new System.Drawing.Size(27, 20);
-            this.lblCCScanProgress_50.TabIndex = 115;
-            this.lblCCScanProgress_50.Text = "50";
-            // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.groupBox11);
             this.tabPage4.Controls.Add(this.groupBox7);
             this.tabPage4.Controls.Add(this.groupBox8);
             this.tabPage4.Controls.Add(this.groupBox9);
@@ -2519,15 +2568,6 @@ namespace SDA100
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Maintenance";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(54, 4);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1211, 754);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Console";
-            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
@@ -2922,21 +2962,21 @@ namespace SDA100
             this.groupBox8.Controls.Add(this.btnUCV_XY_Center);
             this.groupBox8.Controls.Add(this.lblUCV_Title);
             this.groupBox8.Controls.Add(this.btnUCV_XY_Init);
-            this.groupBox8.Location = new System.Drawing.Point(297, 236);
+            this.groupBox8.Location = new System.Drawing.Point(311, 236);
             this.groupBox8.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox8.Size = new System.Drawing.Size(220, 214);
+            this.groupBox8.Size = new System.Drawing.Size(200, 322);
             this.groupBox8.TabIndex = 21;
             this.groupBox8.TabStop = false;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(47, 182);
+            this.button1.Location = new System.Drawing.Point(47, 221);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 26);
+            this.button1.Size = new System.Drawing.Size(113, 42);
             this.button1.TabIndex = 1;
             this.button1.Text = "Save Z as Park";
             this.button1.UseVisualStyleBackColor = true;
@@ -2944,10 +2984,10 @@ namespace SDA100
             // btnUCV_XY_Park
             // 
             this.btnUCV_XY_Park.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUCV_XY_Park.Location = new System.Drawing.Point(47, 136);
+            this.btnUCV_XY_Park.Location = new System.Drawing.Point(47, 159);
             this.btnUCV_XY_Park.Margin = new System.Windows.Forms.Padding(2);
             this.btnUCV_XY_Park.Name = "btnUCV_XY_Park";
-            this.btnUCV_XY_Park.Size = new System.Drawing.Size(113, 26);
+            this.btnUCV_XY_Park.Size = new System.Drawing.Size(113, 42);
             this.btnUCV_XY_Park.TabIndex = 1;
             this.btnUCV_XY_Park.Text = "Save XY as Park";
             this.btnUCV_XY_Park.UseVisualStyleBackColor = true;
@@ -2955,10 +2995,10 @@ namespace SDA100
             // btnUCV_XY_Center
             // 
             this.btnUCV_XY_Center.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUCV_XY_Center.Location = new System.Drawing.Point(47, 104);
+            this.btnUCV_XY_Center.Location = new System.Drawing.Point(47, 115);
             this.btnUCV_XY_Center.Margin = new System.Windows.Forms.Padding(2);
             this.btnUCV_XY_Center.Name = "btnUCV_XY_Center";
-            this.btnUCV_XY_Center.Size = new System.Drawing.Size(113, 26);
+            this.btnUCV_XY_Center.Size = new System.Drawing.Size(113, 42);
             this.btnUCV_XY_Center.TabIndex = 1;
             this.btnUCV_XY_Center.Text = "Save XY as Center";
             this.btnUCV_XY_Center.UseVisualStyleBackColor = true;
@@ -2966,11 +3006,11 @@ namespace SDA100
             // lblUCV_Title
             // 
             this.lblUCV_Title.AutoSize = true;
-            this.lblUCV_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUCV_Title.Location = new System.Drawing.Point(27, 13);
+            this.lblUCV_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUCV_Title.Location = new System.Drawing.Point(20, 13);
             this.lblUCV_Title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUCV_Title.Name = "lblUCV_Title";
-            this.lblUCV_Title.Size = new System.Drawing.Size(147, 50);
+            this.lblUCV_Title.Size = new System.Drawing.Size(176, 50);
             this.lblUCV_Title.TabIndex = 0;
             this.lblUCV_Title.Text = "Update Config. \r\nValues";
             this.lblUCV_Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2981,72 +3021,71 @@ namespace SDA100
             this.btnUCV_XY_Init.Location = new System.Drawing.Point(47, 71);
             this.btnUCV_XY_Init.Margin = new System.Windows.Forms.Padding(2);
             this.btnUCV_XY_Init.Name = "btnUCV_XY_Init";
-            this.btnUCV_XY_Init.Size = new System.Drawing.Size(113, 26);
+            this.btnUCV_XY_Init.Size = new System.Drawing.Size(113, 42);
             this.btnUCV_XY_Init.TabIndex = 1;
             this.btnUCV_XY_Init.Text = "Save XY as Init";
             this.btnUCV_XY_Init.UseVisualStyleBackColor = true;
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.textBox4);
+            this.groupBox9.Controls.Add(this.txtZM_Set);
             this.groupBox9.Controls.Add(this.btnZM_Up);
             this.groupBox9.Controls.Add(this.btnZM_Down);
             this.groupBox9.Controls.Add(this.lblZM_Title);
-            this.groupBox9.Location = new System.Drawing.Point(304, 8);
+            this.groupBox9.Location = new System.Drawing.Point(311, 8);
             this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox9.Size = new System.Drawing.Size(200, 169);
+            this.groupBox9.Size = new System.Drawing.Size(200, 214);
             this.groupBox9.TabIndex = 19;
             this.groupBox9.TabStop = false;
             // 
-            // textBox4
+            // txtZM_Set
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(80, 93);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(55, 22);
-            this.textBox4.TabIndex = 2;
+            this.txtZM_Set.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtZM_Set.Location = new System.Drawing.Point(62, 108);
+            this.txtZM_Set.Margin = new System.Windows.Forms.Padding(2);
+            this.txtZM_Set.Name = "txtZM_Set";
+            this.txtZM_Set.Size = new System.Drawing.Size(79, 22);
+            this.txtZM_Set.TabIndex = 2;
             // 
             // btnZM_Up
             // 
             this.btnZM_Up.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZM_Up.Location = new System.Drawing.Point(80, 58);
+            this.btnZM_Up.Location = new System.Drawing.Point(61, 59);
             this.btnZM_Up.Margin = new System.Windows.Forms.Padding(2);
             this.btnZM_Up.Name = "btnZM_Up";
-            this.btnZM_Up.Size = new System.Drawing.Size(53, 26);
+            this.btnZM_Up.Size = new System.Drawing.Size(80, 42);
             this.btnZM_Up.TabIndex = 1;
             this.btnZM_Up.Text = "Up";
             this.btnZM_Up.UseVisualStyleBackColor = true;
+            this.btnZM_Up.Click += new System.EventHandler(this.btnZM_Up_Click);
             // 
             // btnZM_Down
             // 
             this.btnZM_Down.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZM_Down.Location = new System.Drawing.Point(80, 123);
+            this.btnZM_Down.Location = new System.Drawing.Point(62, 135);
             this.btnZM_Down.Margin = new System.Windows.Forms.Padding(2);
             this.btnZM_Down.Name = "btnZM_Down";
-            this.btnZM_Down.Size = new System.Drawing.Size(53, 26);
+            this.btnZM_Down.Size = new System.Drawing.Size(80, 42);
             this.btnZM_Down.TabIndex = 1;
             this.btnZM_Down.Text = "Down";
             this.btnZM_Down.UseVisualStyleBackColor = true;
+            this.btnZM_Down.Click += new System.EventHandler(this.btnZM_Down_Click);
             // 
             // lblZM_Title
             // 
             this.lblZM_Title.AutoSize = true;
-            this.lblZM_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZM_Title.Location = new System.Drawing.Point(53, 12);
+            this.lblZM_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblZM_Title.Location = new System.Drawing.Point(44, 15);
             this.lblZM_Title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblZM_Title.Name = "lblZM_Title";
-            this.lblZM_Title.Size = new System.Drawing.Size(98, 25);
+            this.lblZM_Title.Size = new System.Drawing.Size(116, 25);
             this.lblZM_Title.TabIndex = 0;
             this.lblZM_Title.Text = "Z Motions";
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.txtXYM_MoveZ);
-            this.groupBox10.Controls.Add(this.txtXYM_MoveY);
-            this.groupBox10.Controls.Add(this.txtXYM_MoveX);
             this.groupBox10.Controls.Add(this.txtXYM_Set);
             this.groupBox10.Controls.Add(this.btnXYM_Front);
             this.groupBox10.Controls.Add(this.btnXYM_Right);
@@ -3055,9 +3094,6 @@ namespace SDA100
             this.groupBox10.Controls.Add(this.btnXYM_Left);
             this.groupBox10.Controls.Add(this.btnXYM_Park);
             this.groupBox10.Controls.Add(this.btnXYM_VacuumStatus);
-            this.groupBox10.Controls.Add(this.btnXYM_MoveZ);
-            this.groupBox10.Controls.Add(this.btnXYM_MoveY);
-            this.groupBox10.Controls.Add(this.btnXYM_MoveX);
             this.groupBox10.Controls.Add(this.btnXYM_DoorStatus);
             this.groupBox10.Controls.Add(this.btnXYM_Home);
             this.groupBox10.Controls.Add(this.lblXYM_Title);
@@ -3065,237 +3101,284 @@ namespace SDA100
             this.groupBox10.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox10.Size = new System.Drawing.Size(260, 468);
+            this.groupBox10.Size = new System.Drawing.Size(276, 318);
             this.groupBox10.TabIndex = 20;
             this.groupBox10.TabStop = false;
-            // 
-            // txtXYM_MoveZ
-            // 
-            this.txtXYM_MoveZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtXYM_MoveZ.Location = new System.Drawing.Point(100, 318);
-            this.txtXYM_MoveZ.Margin = new System.Windows.Forms.Padding(2);
-            this.txtXYM_MoveZ.Name = "txtXYM_MoveZ";
-            this.txtXYM_MoveZ.Size = new System.Drawing.Size(55, 22);
-            this.txtXYM_MoveZ.TabIndex = 2;
-            // 
-            // txtXYM_MoveY
-            // 
-            this.txtXYM_MoveY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtXYM_MoveY.Location = new System.Drawing.Point(100, 279);
-            this.txtXYM_MoveY.Margin = new System.Windows.Forms.Padding(2);
-            this.txtXYM_MoveY.Name = "txtXYM_MoveY";
-            this.txtXYM_MoveY.Size = new System.Drawing.Size(55, 22);
-            this.txtXYM_MoveY.TabIndex = 2;
-            // 
-            // txtXYM_MoveX
-            // 
-            this.txtXYM_MoveX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtXYM_MoveX.Location = new System.Drawing.Point(100, 240);
-            this.txtXYM_MoveX.Margin = new System.Windows.Forms.Padding(2);
-            this.txtXYM_MoveX.Name = "txtXYM_MoveX";
-            this.txtXYM_MoveX.Size = new System.Drawing.Size(55, 22);
-            this.txtXYM_MoveX.TabIndex = 2;
             // 
             // txtXYM_Set
             // 
             this.txtXYM_Set.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtXYM_Set.Location = new System.Drawing.Point(67, 86);
+            this.txtXYM_Set.Location = new System.Drawing.Point(104, 102);
             this.txtXYM_Set.Margin = new System.Windows.Forms.Padding(2);
             this.txtXYM_Set.Name = "txtXYM_Set";
-            this.txtXYM_Set.Size = new System.Drawing.Size(55, 22);
+            this.txtXYM_Set.Size = new System.Drawing.Size(68, 22);
             this.txtXYM_Set.TabIndex = 2;
             // 
             // btnXYM_Front
             // 
             this.btnXYM_Front.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_Front.Location = new System.Drawing.Point(67, 52);
+            this.btnXYM_Front.Location = new System.Drawing.Point(96, 47);
             this.btnXYM_Front.Margin = new System.Windows.Forms.Padding(2);
             this.btnXYM_Front.Name = "btnXYM_Front";
-            this.btnXYM_Front.Size = new System.Drawing.Size(53, 26);
+            this.btnXYM_Front.Size = new System.Drawing.Size(80, 42);
             this.btnXYM_Front.TabIndex = 1;
             this.btnXYM_Front.Text = "Front";
             this.btnXYM_Front.UseVisualStyleBackColor = true;
+            this.btnXYM_Front.Click += new System.EventHandler(this.btnXYM_Front_Click);
             // 
             // btnXYM_Right
             // 
             this.btnXYM_Right.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_Right.Location = new System.Drawing.Point(127, 84);
+            this.btnXYM_Right.Location = new System.Drawing.Point(176, 91);
             this.btnXYM_Right.Margin = new System.Windows.Forms.Padding(2);
             this.btnXYM_Right.Name = "btnXYM_Right";
-            this.btnXYM_Right.Size = new System.Drawing.Size(53, 26);
+            this.btnXYM_Right.Size = new System.Drawing.Size(80, 42);
             this.btnXYM_Right.TabIndex = 1;
             this.btnXYM_Right.Text = "Right";
             this.btnXYM_Right.UseVisualStyleBackColor = true;
+            this.btnXYM_Right.Click += new System.EventHandler(this.btnXYM_Right_Click);
             // 
             // btnXYM_Back
             // 
             this.btnXYM_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_Back.Location = new System.Drawing.Point(67, 117);
+            this.btnXYM_Back.Location = new System.Drawing.Point(96, 140);
             this.btnXYM_Back.Margin = new System.Windows.Forms.Padding(2);
             this.btnXYM_Back.Name = "btnXYM_Back";
-            this.btnXYM_Back.Size = new System.Drawing.Size(53, 26);
+            this.btnXYM_Back.Size = new System.Drawing.Size(80, 42);
             this.btnXYM_Back.TabIndex = 1;
             this.btnXYM_Back.Text = "Back";
             this.btnXYM_Back.UseVisualStyleBackColor = true;
+            this.btnXYM_Back.Click += new System.EventHandler(this.btnXYM_Back_Click);
             // 
             // btnXYM_Center
             // 
             this.btnXYM_Center.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnXYM_Center.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_Center.Location = new System.Drawing.Point(127, 156);
+            this.btnXYM_Center.Location = new System.Drawing.Point(182, 199);
             this.btnXYM_Center.Margin = new System.Windows.Forms.Padding(2);
             this.btnXYM_Center.Name = "btnXYM_Center";
-            this.btnXYM_Center.Size = new System.Drawing.Size(53, 26);
+            this.btnXYM_Center.Size = new System.Drawing.Size(80, 42);
             this.btnXYM_Center.TabIndex = 1;
             this.btnXYM_Center.Text = "Center";
             this.btnXYM_Center.UseVisualStyleBackColor = true;
+            this.btnXYM_Center.Click += new System.EventHandler(this.btnXYM_Center_Click);
             // 
             // btnXYM_Left
             // 
             this.btnXYM_Left.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnXYM_Left.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_Left.Location = new System.Drawing.Point(7, 84);
+            this.btnXYM_Left.Location = new System.Drawing.Point(16, 92);
             this.btnXYM_Left.Margin = new System.Windows.Forms.Padding(2);
             this.btnXYM_Left.Name = "btnXYM_Left";
-            this.btnXYM_Left.Size = new System.Drawing.Size(53, 26);
+            this.btnXYM_Left.Size = new System.Drawing.Size(80, 42);
             this.btnXYM_Left.TabIndex = 1;
             this.btnXYM_Left.Text = "Left";
             this.btnXYM_Left.UseVisualStyleBackColor = true;
+            this.btnXYM_Left.Click += new System.EventHandler(this.btnXYM_Left_Click);
             // 
             // btnXYM_Park
             // 
             this.btnXYM_Park.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnXYM_Park.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_Park.Location = new System.Drawing.Point(67, 156);
+            this.btnXYM_Park.Location = new System.Drawing.Point(95, 198);
             this.btnXYM_Park.Margin = new System.Windows.Forms.Padding(2);
             this.btnXYM_Park.Name = "btnXYM_Park";
-            this.btnXYM_Park.Size = new System.Drawing.Size(53, 26);
+            this.btnXYM_Park.Size = new System.Drawing.Size(80, 42);
             this.btnXYM_Park.TabIndex = 1;
             this.btnXYM_Park.Text = "Park";
             this.btnXYM_Park.UseVisualStyleBackColor = true;
+            this.btnXYM_Park.Click += new System.EventHandler(this.btnXYM_Park_Click);
             // 
             // btnXYM_VacuumStatus
             // 
             this.btnXYM_VacuumStatus.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnXYM_VacuumStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_VacuumStatus.Location = new System.Drawing.Point(100, 195);
+            this.btnXYM_VacuumStatus.Location = new System.Drawing.Point(139, 259);
             this.btnXYM_VacuumStatus.Margin = new System.Windows.Forms.Padding(2);
             this.btnXYM_VacuumStatus.Name = "btnXYM_VacuumStatus";
-            this.btnXYM_VacuumStatus.Size = new System.Drawing.Size(60, 32);
+            this.btnXYM_VacuumStatus.Size = new System.Drawing.Size(80, 42);
             this.btnXYM_VacuumStatus.TabIndex = 1;
             this.btnXYM_VacuumStatus.Text = "Vacuum On";
             this.btnXYM_VacuumStatus.UseVisualStyleBackColor = true;
-            // 
-            // btnXYM_MoveZ
-            // 
-            this.btnXYM_MoveZ.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnXYM_MoveZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_MoveZ.Location = new System.Drawing.Point(27, 318);
-            this.btnXYM_MoveZ.Margin = new System.Windows.Forms.Padding(2);
-            this.btnXYM_MoveZ.Name = "btnXYM_MoveZ";
-            this.btnXYM_MoveZ.Size = new System.Drawing.Size(60, 33);
-            this.btnXYM_MoveZ.TabIndex = 1;
-            this.btnXYM_MoveZ.Text = "Move Z:";
-            this.btnXYM_MoveZ.UseVisualStyleBackColor = true;
-            // 
-            // btnXYM_MoveY
-            // 
-            this.btnXYM_MoveY.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnXYM_MoveY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_MoveY.Location = new System.Drawing.Point(27, 279);
-            this.btnXYM_MoveY.Margin = new System.Windows.Forms.Padding(2);
-            this.btnXYM_MoveY.Name = "btnXYM_MoveY";
-            this.btnXYM_MoveY.Size = new System.Drawing.Size(60, 27);
-            this.btnXYM_MoveY.TabIndex = 1;
-            this.btnXYM_MoveY.Text = "Move Y:";
-            this.btnXYM_MoveY.UseVisualStyleBackColor = true;
-            // 
-            // btnXYM_MoveX
-            // 
-            this.btnXYM_MoveX.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnXYM_MoveX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_MoveX.Location = new System.Drawing.Point(27, 240);
-            this.btnXYM_MoveX.Margin = new System.Windows.Forms.Padding(2);
-            this.btnXYM_MoveX.Name = "btnXYM_MoveX";
-            this.btnXYM_MoveX.Size = new System.Drawing.Size(60, 27);
-            this.btnXYM_MoveX.TabIndex = 1;
-            this.btnXYM_MoveX.Text = "Move X:";
-            this.btnXYM_MoveX.UseVisualStyleBackColor = true;
+            this.btnXYM_VacuumStatus.Click += new System.EventHandler(this.btnXYM_VacuumStatus_Click);
             // 
             // btnXYM_DoorStatus
             // 
             this.btnXYM_DoorStatus.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnXYM_DoorStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_DoorStatus.Location = new System.Drawing.Point(27, 195);
+            this.btnXYM_DoorStatus.Location = new System.Drawing.Point(48, 259);
             this.btnXYM_DoorStatus.Margin = new System.Windows.Forms.Padding(2);
             this.btnXYM_DoorStatus.Name = "btnXYM_DoorStatus";
-            this.btnXYM_DoorStatus.Size = new System.Drawing.Size(60, 32);
+            this.btnXYM_DoorStatus.Size = new System.Drawing.Size(80, 42);
             this.btnXYM_DoorStatus.TabIndex = 1;
             this.btnXYM_DoorStatus.Text = "Open Door";
             this.btnXYM_DoorStatus.UseVisualStyleBackColor = true;
+            this.btnXYM_DoorStatus.Click += new System.EventHandler(this.btnXYM_DoorStatus_Click);
             // 
             // btnXYM_Home
             // 
             this.btnXYM_Home.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnXYM_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_Home.Location = new System.Drawing.Point(7, 156);
+            this.btnXYM_Home.Location = new System.Drawing.Point(8, 198);
             this.btnXYM_Home.Margin = new System.Windows.Forms.Padding(2);
             this.btnXYM_Home.Name = "btnXYM_Home";
-            this.btnXYM_Home.Size = new System.Drawing.Size(53, 26);
+            this.btnXYM_Home.Size = new System.Drawing.Size(80, 42);
             this.btnXYM_Home.TabIndex = 1;
             this.btnXYM_Home.Text = "Home";
             this.btnXYM_Home.UseVisualStyleBackColor = true;
+            this.btnXYM_Home.Click += new System.EventHandler(this.btnXYM_Home_Click);
             // 
             // lblXYM_Title
             // 
             this.lblXYM_Title.AutoSize = true;
-            this.lblXYM_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblXYM_Title.Location = new System.Drawing.Point(40, 6);
+            this.lblXYM_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblXYM_Title.Location = new System.Drawing.Point(68, 15);
             this.lblXYM_Title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblXYM_Title.Name = "lblXYM_Title";
-            this.lblXYM_Title.Size = new System.Drawing.Size(113, 25);
+            this.lblXYM_Title.Size = new System.Drawing.Size(133, 25);
             this.lblXYM_Title.TabIndex = 0;
             this.lblXYM_Title.Text = "XY Motions";
             // 
-            // lbleCCScanID_Value
+            // tabPage5
             // 
-            this.lbleCCScanID_Value.AutoSize = true;
-            this.lbleCCScanID_Value.Location = new System.Drawing.Point(137, 143);
-            this.lbleCCScanID_Value.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbleCCScanID_Value.Name = "lbleCCScanID_Value";
-            this.lbleCCScanID_Value.Size = new System.Drawing.Size(47, 20);
-            this.lbleCCScanID_Value.TabIndex = 114;
-            this.lbleCCScanID_Value.Text = "None";
+            this.tabPage5.Controls.Add(this.btnSendConsole);
+            this.tabPage5.Controls.Add(this.btnClearConsole);
+            this.tabPage5.Controls.Add(this.cbxConsoleCommands);
+            this.tabPage5.Controls.Add(this.txtConsoleOutput);
+            this.tabPage5.Location = new System.Drawing.Point(54, 4);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1211, 754);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Console";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // lbleCCScanID_Text
+            // btnSendConsole
             // 
-            this.lbleCCScanID_Text.Location = new System.Drawing.Point(17, 143);
-            this.lbleCCScanID_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbleCCScanID_Text.Name = "lbleCCScanID_Text";
-            this.lbleCCScanID_Text.Size = new System.Drawing.Size(101, 19);
-            this.lbleCCScanID_Text.TabIndex = 115;
-            this.lbleCCScanID_Text.Text = "Scan ID:";
-            this.lbleCCScanID_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnSendConsole.Location = new System.Drawing.Point(287, 21);
+            this.btnSendConsole.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSendConsole.Name = "btnSendConsole";
+            this.btnSendConsole.Size = new System.Drawing.Size(60, 24);
+            this.btnSendConsole.TabIndex = 5;
+            this.btnSendConsole.Text = "Send";
+            this.btnSendConsole.UseVisualStyleBackColor = true;
             // 
-            // lbleCCUserID_Value
+            // btnClearConsole
             // 
-            this.lbleCCUserID_Value.AutoSize = true;
-            this.lbleCCUserID_Value.Location = new System.Drawing.Point(137, 123);
-            this.lbleCCUserID_Value.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbleCCUserID_Value.Name = "lbleCCUserID_Value";
-            this.lbleCCUserID_Value.Size = new System.Drawing.Size(47, 20);
-            this.lbleCCUserID_Value.TabIndex = 112;
-            this.lbleCCUserID_Value.Text = "None";
+            this.btnClearConsole.Location = new System.Drawing.Point(367, 21);
+            this.btnClearConsole.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClearConsole.Name = "btnClearConsole";
+            this.btnClearConsole.Size = new System.Drawing.Size(60, 24);
+            this.btnClearConsole.TabIndex = 6;
+            this.btnClearConsole.Text = "Clear";
+            this.btnClearConsole.UseVisualStyleBackColor = true;
             // 
-            // lbleCCUserID_Text
+            // cbxConsoleCommands
             // 
-            this.lbleCCUserID_Text.Location = new System.Drawing.Point(17, 123);
-            this.lbleCCUserID_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbleCCUserID_Text.Name = "lbleCCUserID_Text";
-            this.lbleCCUserID_Text.Size = new System.Drawing.Size(101, 19);
-            this.lbleCCUserID_Text.TabIndex = 113;
-            this.lbleCCUserID_Text.Text = "User ID:";
-            this.lbleCCUserID_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.cbxConsoleCommands.FormattingEnabled = true;
+            this.cbxConsoleCommands.Location = new System.Drawing.Point(27, 21);
+            this.cbxConsoleCommands.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxConsoleCommands.Name = "cbxConsoleCommands";
+            this.cbxConsoleCommands.Size = new System.Drawing.Size(241, 24);
+            this.cbxConsoleCommands.TabIndex = 4;
+            // 
+            // txtConsoleOutput
+            // 
+            this.txtConsoleOutput.Location = new System.Drawing.Point(27, 72);
+            this.txtConsoleOutput.Margin = new System.Windows.Forms.Padding(2);
+            this.txtConsoleOutput.Multiline = true;
+            this.txtConsoleOutput.Name = "txtConsoleOutput";
+            this.txtConsoleOutput.Size = new System.Drawing.Size(401, 274);
+            this.txtConsoleOutput.TabIndex = 3;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.txtXYM_SetZ);
+            this.groupBox11.Controls.Add(this.txtXYM_SetY);
+            this.groupBox11.Controls.Add(this.txtXYM_SetX);
+            this.groupBox11.Controls.Add(this.btnXYM_SetZ);
+            this.groupBox11.Controls.Add(this.btnXYM_SetY);
+            this.groupBox11.Controls.Add(this.btnXYM_SetX);
+            this.groupBox11.Controls.Add(this.lblXYZAbs_Title);
+            this.groupBox11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.groupBox11.Location = new System.Drawing.Point(17, 340);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(275, 218);
+            this.groupBox11.TabIndex = 22;
+            this.groupBox11.TabStop = false;
+            // 
+            // lblXYZAbs_Title
+            // 
+            this.lblXYZAbs_Title.AutoSize = true;
+            this.lblXYZAbs_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblXYZAbs_Title.Location = new System.Drawing.Point(16, 17);
+            this.lblXYZAbs_Title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblXYZAbs_Title.Name = "lblXYZAbs_Title";
+            this.lblXYZAbs_Title.Size = new System.Drawing.Size(228, 25);
+            this.lblXYZAbs_Title.TabIndex = 1;
+            this.lblXYZAbs_Title.Text = "XYZ Abs Positioning";
+            // 
+            // txtXYM_SetZ
+            // 
+            this.txtXYM_SetZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtXYM_SetZ.Location = new System.Drawing.Point(139, 167);
+            this.txtXYM_SetZ.Margin = new System.Windows.Forms.Padding(2);
+            this.txtXYM_SetZ.Name = "txtXYM_SetZ";
+            this.txtXYM_SetZ.Size = new System.Drawing.Size(77, 22);
+            this.txtXYM_SetZ.TabIndex = 6;
+            // 
+            // txtXYM_SetY
+            // 
+            this.txtXYM_SetY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtXYM_SetY.Location = new System.Drawing.Point(142, 114);
+            this.txtXYM_SetY.Margin = new System.Windows.Forms.Padding(2);
+            this.txtXYM_SetY.Name = "txtXYM_SetY";
+            this.txtXYM_SetY.Size = new System.Drawing.Size(77, 22);
+            this.txtXYM_SetY.TabIndex = 7;
+            // 
+            // txtXYM_SetX
+            // 
+            this.txtXYM_SetX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtXYM_SetX.Location = new System.Drawing.Point(142, 62);
+            this.txtXYM_SetX.Margin = new System.Windows.Forms.Padding(2);
+            this.txtXYM_SetX.Name = "txtXYM_SetX";
+            this.txtXYM_SetX.Size = new System.Drawing.Size(77, 22);
+            this.txtXYM_SetX.TabIndex = 8;
+            // 
+            // btnXYM_SetZ
+            // 
+            this.btnXYM_SetZ.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnXYM_SetZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXYM_SetZ.Location = new System.Drawing.Point(49, 157);
+            this.btnXYM_SetZ.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXYM_SetZ.Name = "btnXYM_SetZ";
+            this.btnXYM_SetZ.Size = new System.Drawing.Size(80, 42);
+            this.btnXYM_SetZ.TabIndex = 3;
+            this.btnXYM_SetZ.Text = "Set Z:";
+            this.btnXYM_SetZ.UseVisualStyleBackColor = true;
+            // 
+            // btnXYM_SetY
+            // 
+            this.btnXYM_SetY.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnXYM_SetY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXYM_SetY.Location = new System.Drawing.Point(49, 104);
+            this.btnXYM_SetY.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXYM_SetY.Name = "btnXYM_SetY";
+            this.btnXYM_SetY.Size = new System.Drawing.Size(80, 42);
+            this.btnXYM_SetY.TabIndex = 4;
+            this.btnXYM_SetY.Text = "Set Y:";
+            this.btnXYM_SetY.UseVisualStyleBackColor = true;
+            // 
+            // btnXYM_SetX
+            // 
+            this.btnXYM_SetX.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnXYM_SetX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXYM_SetX.Location = new System.Drawing.Point(49, 52);
+            this.btnXYM_SetX.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXYM_SetX.Name = "btnXYM_SetX";
+            this.btnXYM_SetX.Size = new System.Drawing.Size(80, 42);
+            this.btnXYM_SetX.TabIndex = 5;
+            this.btnXYM_SetX.Text = "Set X:";
+            this.btnXYM_SetX.UseVisualStyleBackColor = true;
             // 
             // mainForm
             // 
@@ -3335,6 +3418,10 @@ namespace SDA100
             this.groupBox9.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3569,14 +3656,11 @@ namespace SDA100
         private System.Windows.Forms.Label lblUCV_Title;
         private System.Windows.Forms.Button btnUCV_XY_Init;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtZM_Set;
         private System.Windows.Forms.Button btnZM_Up;
         private System.Windows.Forms.Button btnZM_Down;
         private System.Windows.Forms.Label lblZM_Title;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.TextBox txtXYM_MoveZ;
-        private System.Windows.Forms.TextBox txtXYM_MoveY;
-        private System.Windows.Forms.TextBox txtXYM_MoveX;
         private System.Windows.Forms.TextBox txtXYM_Set;
         private System.Windows.Forms.Button btnXYM_Front;
         private System.Windows.Forms.Button btnXYM_Right;
@@ -3585,9 +3669,6 @@ namespace SDA100
         private System.Windows.Forms.Button btnXYM_Left;
         private System.Windows.Forms.Button btnXYM_Park;
         private System.Windows.Forms.Button btnXYM_VacuumStatus;
-        private System.Windows.Forms.Button btnXYM_MoveZ;
-        private System.Windows.Forms.Button btnXYM_MoveY;
-        private System.Windows.Forms.Button btnXYM_MoveX;
         private System.Windows.Forms.Button btnXYM_DoorStatus;
         private System.Windows.Forms.Button btnXYM_Home;
         private System.Windows.Forms.Label lblXYM_Title;
@@ -3596,6 +3677,18 @@ namespace SDA100
         private System.Windows.Forms.Label lbleCCScanID_Text;
         private System.Windows.Forms.Label lbleCCUserID_Value;
         private System.Windows.Forms.Label lbleCCUserID_Text;
+        private System.Windows.Forms.Button btnSendConsole;
+        private System.Windows.Forms.Button btnClearConsole;
+        private System.Windows.Forms.ComboBox cbxConsoleCommands;
+        private System.Windows.Forms.TextBox txtConsoleOutput;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.TextBox txtXYM_SetZ;
+        private System.Windows.Forms.TextBox txtXYM_SetY;
+        private System.Windows.Forms.TextBox txtXYM_SetX;
+        private System.Windows.Forms.Button btnXYM_SetZ;
+        private System.Windows.Forms.Button btnXYM_SetY;
+        private System.Windows.Forms.Button btnXYM_SetX;
+        private System.Windows.Forms.Label lblXYZAbs_Title;
     }
 }
 

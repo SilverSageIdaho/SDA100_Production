@@ -35,7 +35,7 @@ namespace SDA100
         public static string scanStatus;
         public static string scanReply;
         public static string scanUnknownMessage;
-        public static string inData;
+        //public static string inData;
 
         double prctComplete;
 
@@ -54,7 +54,7 @@ namespace SDA100
         {
             // *** Find the Scanner Com Port by testing for "?" => "!" ****
             ScanPort.ScanComPorts();
-
+            
             serialPort1 = new SerialPort();
 
             if (!Globals.teensyComPortOK)
@@ -130,16 +130,16 @@ namespace SDA100
         }
         private void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
         {
-            inData = serialPort1.ReadLine();
+            Globals.inData = serialPort1.ReadLine();
 
-            if (inData.Contains("<"))
+            if (Globals.inData.Contains("<"))
             {
                 OpenFile();
             }
 
-            else if (inData.Contains("$"))
+            else if (Globals.inData.Contains("$"))
             {
-                scanTrack = inData;
+                scanTrack = Globals.inData;
 
                 using (System.IO.StreamWriter sw = System.IO.File.AppendText(filePath))
                 {
@@ -148,24 +148,24 @@ namespace SDA100
 
                 BeginInvoke(new EventHandler(MapDefectData));
             }
-            else if (inData.Contains("!"))
+            else if (Globals.inData.Contains("!"))
             {
-                scanReply = inData;
+                scanReply = Globals.inData;
                 BeginInvoke(new EventHandler(ResponseData));
             }
-            else if (inData.Contains("*"))
+            else if (Globals.inData.Contains("*"))
             {
-                scanStatus = inData;
+                scanStatus = Globals.inData;
                 BeginInvoke(new EventHandler(MachineStatus));
             }
-            else if (inData.Contains(">"))
+            else if (Globals.inData.Contains(">"))
             {
                 Console.WriteLine("Saw the >!");
                 serialPort1.Write("P");
                 serialPort1.Write("o");
                 serialPort1.Write("N");
             }
-            else if (inData.Contains("%"))
+            else if (Globals.inData.Contains("%"))
             {
                 BeginInvoke(new EventHandler(ProgressBarStatus));
             }
@@ -177,9 +177,9 @@ namespace SDA100
 
         private void ProgressBarStatus(object sender, EventArgs e)
         {
-            inData = inData.Remove(inData.Length - 2, 2);
-            Console.WriteLine(inData);
-            prctComplete = (Convert.ToDouble(inData)) * 100;
+            Globals.inData = Globals.inData.Remove(Globals.inData.Length - 2, 2);
+            Console.WriteLine(Globals.inData);
+            prctComplete = (Convert.ToDouble(Globals.inData)) * 100;
             Console.WriteLine(prctComplete);
             progressBar.Value = Convert.ToInt32(prctComplete);
         }
@@ -190,6 +190,7 @@ namespace SDA100
 
         private void MachineStatus(object sender, EventArgs e)
         {
+            ScanPort.UpdateStatus();
             Console.WriteLine("Machine Status: " + scanStatus);
         }
 
@@ -1110,6 +1111,105 @@ namespace SDA100
                 }
             }
             ebmp = (Bitmap)eScanDataImage.Image;
+        }
+
+        public void btnXYM_Front_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("." + txtXYM_Set.Text + "F");
+        }
+
+        private void btnXYM_Left_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("." + txtXYM_Set.Text + "L");
+        }
+
+        private void btnXYM_Right_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("." + txtXYM_Set.Text + "R");
+        }
+
+        private void btnXYM_Back_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("." + txtXYM_Set.Text + "B");
+        }
+
+        private void btnXYM_Home_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("H");
+        }
+
+        private void btnXYM_Park_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("P");
+        }
+
+        private void btnXYM_Center_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("i");
+            serialPort1.Write("I");
+        }
+
+        private void btnXYM_DoorStatus_Click(object sender, EventArgs e)
+        {
+            if (Globals.DoorOpenFlag == 1)
+            {
+                serialPort1.Write("o");
+                btnXYM_DoorStatus.Text = "Close Door";
+                Globals.DoorOpenFlag = 0;
+                Globals.DoorCloseFlag = 1;
+                //UpdateSystemStatusLabels();
+            }
+            else
+            {
+                serialPort1.Write("n");
+                btnXYM_DoorStatus.Text = "Open Door";
+                Globals.DoorOpenFlag = 1;
+                Globals.DoorCloseFlag = 0;
+                //UpdateSystemStatusLabels();
+            }
+        }
+
+        private void btnXYM_VacuumStatus_Click(object sender, EventArgs e)
+        {
+            if (Globals.VacChuckFlag == 0)
+            {
+                serialPort1.Write("O");
+                btnXYM_VacuumStatus.Text = "Chuck Vac Off";
+                Globals.VacChuckFlag = 1;
+                //UpdateSystemStatusLabels();
+            }
+            else
+            {
+                serialPort1.Write("N");
+                btnXYM_VacuumStatus.Text = "Chuck Vac On";
+                Globals.VacChuckFlag = 0;
+                //UpdateSystemStatusLabels();
+            }
+        }
+
+        private void btnXYM_SetX_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("." + txtXYM_SetX.Text + "X");
+        }
+
+        private void btnXYM_SetY_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("." + txtXYM_SetY.Text + "Y");
+        }
+
+        private void btnXYM_SetZ_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("." + txtXYM_SetZ.Text + "Z");
+        }
+
+        private void btnZM_Up_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("." + txtZM_Set.Text + "U");
+        }
+
+        private void btnZM_Down_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("." + txtZM_Set.Text + "D");
         }
     }
 }

@@ -8,6 +8,7 @@ namespace SDA100
 {
     class Globals
     {
+        public static string inData;
         public static string teensyComPort;
         public static bool teensyComPortOK = true;
 
@@ -54,5 +55,37 @@ namespace SDA100
         public static string rejectLimitS7;
         public static string rejectLimitTotal;
         public static string recipeComments;
+
+        public static int MxFrontLimitFlag;
+        public static int MxBackLimitFlag;
+        public static int MyLeftLimitFlag;
+        public static int MyRightLimitFlag;
+        public static int MzTopLimitFlag;
+        public static int MzBottomLimitFlag;
+        public static int DoorOpenFlag;
+        public static int DoorCloseFlag;
+        public static int DoorOKFlag;
+        public static int VacMainFlag;
+        public static int VacChuckFlag;
+        public static int NoMIPFlag;
+        public static int ChuckValveFlag;
+        public static int ScanStopFlag;
+        public static int MxPosAbsVal;
+        public static int MyPosAbsVal;
+        public static int MzPosAbsVal;
+        public static int MxScanTrackWidthVal;
+        public static int MyScanSectorWidthVal;
+        public static int PercentScanVal;
+        public static int HomeNotOK;
+        public static int zHomeNotOK;
+        public static int DoorValveFlag;
+        public static int PHA_SizeNum;
+        public static int AutoFocusOK;
+        public static int AutoFocusVal;
+        public static int SpeedVal;
+        public static int MaxSpeed;
+        public static int WaferRadius;
+        public static int WaferEdgeReject;
+        public static int CountAbort;
     }
 }
