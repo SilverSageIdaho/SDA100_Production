@@ -31,10 +31,10 @@ namespace SDA100
 
         //public int x;
 
-        public static string scanTrack;
-        public static string scanStatus;
-        public static string scanReply;
-        public static string scanUnknownMessage;
+        //public static string scanTrack;
+        //public static string scanStatus;
+        //public static string scanReply;
+        //public static string scanUnknownMessage;
         //public static string inData;
 
         double prctComplete;
@@ -120,7 +120,8 @@ namespace SDA100
 
                 serialPort1.Write("." + Globals.centerX + "v");
 
-                //need to add the autofocus time out here when the comand is available
+                serialPort1.Write("m");
+                //need to add the autofocus time out here when the command is available
 
                 string recString = System.IO.File.ReadAllText(@"C:\ScanBeta\SDA100rec.txt");
                 //string[] recData = iniString.Split(',');
@@ -139,23 +140,23 @@ namespace SDA100
 
             else if (Globals.inData.Contains("$"))
             {
-                scanTrack = Globals.inData;
+                Globals.scanTrack = Globals.inData;
 
                 using (System.IO.StreamWriter sw = System.IO.File.AppendText(filePath))
                 {
-                    sw.WriteLine(scanTrack);                
+                    sw.WriteLine(Globals.scanTrack);                
                 }
 
                 BeginInvoke(new EventHandler(MapDefectData));
             }
             else if (Globals.inData.Contains("!"))
             {
-                scanReply = Globals.inData;
+                Globals.scanReply = Globals.inData;
                 BeginInvoke(new EventHandler(ResponseData));
             }
             else if (Globals.inData.Contains("*"))
             {
-                scanStatus = Globals.inData;
+                Globals.statusMessage = Globals.inData;
                 BeginInvoke(new EventHandler(MachineStatus));
             }
             else if (Globals.inData.Contains(">"))
@@ -185,18 +186,23 @@ namespace SDA100
         }
         private void DisplayErrorMessage(object sender, EventArgs e)
         {
-            Console.WriteLine("Unknown Response: " + scanUnknownMessage);
+            Console.WriteLine("Unknown Response: " + Globals.scanUnknownMessage);
         }
 
         private void MachineStatus(object sender, EventArgs e)
         {
             ScanPort.UpdateStatus();
-            Console.WriteLine("Machine Status: " + scanStatus);
+            UpdateSystemStatusLabels();
+            Console.WriteLine("Machine Status: " + Globals.statusMessage);
         }
 
         private void ResponseData(object sender, EventArgs e)
         {
-            Console.WriteLine("Response Data: " + scanReply);
+            if (Globals.scanReply != "!m\r")
+            {
+                serialPort1.Write("m");
+            }
+            Console.WriteLine("Response Data: " + Globals.scanReply);
         }
 
         private void OpenFile()
@@ -214,7 +220,7 @@ namespace SDA100
         private void MapDefectData(object sender, EventArgs e)
         {
             const char DELIM = ';';
-            string[] sectors = scanTrack.Split(DELIM);
+            string[] sectors = Globals.scanTrack.Split(DELIM);
             for (int y = 0; y < (sectors.Length - 1); y++)
             {
                 string[] DefectVal = sectors[y].Split(',');
@@ -278,7 +284,7 @@ namespace SDA100
             trackDefectCnt6 = 0;
             trackDefectCnt7 = 0;
 
-            postHistData();
+            PostHistData();
         }
         public int GetMax(int val1, int val2)
         {
@@ -288,7 +294,7 @@ namespace SDA100
             }
             return val2;
         }
-        public void postHistData()
+        public void PostHistData()
         {
             const int maxTextHeight = 100;
             int maxHeight = 0;
@@ -571,7 +577,7 @@ namespace SDA100
             scanDefectCnt6 = 0;
             scanDefectCnt7 = 0;
 
-            postHistData();
+            PostHistData();
             serialPort1.Write("O"); //Turn chuck vac on
             serialPort1.Write("n"); //Close door
             serialPort1.Write("G"); //Start scan
@@ -1140,7 +1146,7 @@ namespace SDA100
 
         private void btnXYM_Park_Click(object sender, EventArgs e)
         {
-            serialPort1.Write("P");
+            serialPort1.Write("P");            
         }
 
         private void btnXYM_Center_Click(object sender, EventArgs e)
@@ -1151,39 +1157,37 @@ namespace SDA100
 
         private void btnXYM_DoorStatus_Click(object sender, EventArgs e)
         {
-            if (Globals.DoorOpenFlag == 1)
+            if (Globals.doorOpenFlag == 1)
             {
                 serialPort1.Write("o");
-                btnXYM_DoorStatus.Text = "Close Door";
-                Globals.DoorOpenFlag = 0;
-                Globals.DoorCloseFlag = 1;
-                //UpdateSystemStatusLabels();
+                //btnXYM_DoorStatus.Text = "Close Door";
+                //Globals.doorOpenFlag = 0;
+                //Globals.doorCloseFlag = 1;                
             }
             else
             {
                 serialPort1.Write("n");
-                btnXYM_DoorStatus.Text = "Open Door";
-                Globals.DoorOpenFlag = 1;
-                Globals.DoorCloseFlag = 0;
-                //UpdateSystemStatusLabels();
+                //btnXYM_DoorStatus.Text = "Open Door";
+                //Globals.doorOpenFlag = 1;
+                //Globals.doorCloseFlag = 0;                
             }
         }
 
         private void btnXYM_VacuumStatus_Click(object sender, EventArgs e)
         {
-            if (Globals.VacChuckFlag == 0)
+            if (Globals.vacChuckFlag == 0)
             {
                 serialPort1.Write("O");
                 btnXYM_VacuumStatus.Text = "Chuck Vac Off";
-                Globals.VacChuckFlag = 1;
-                //UpdateSystemStatusLabels();
+                //Globals.vacChuckFlag = 1;
+                
             }
             else
             {
                 serialPort1.Write("N");
                 btnXYM_VacuumStatus.Text = "Chuck Vac On";
-                Globals.VacChuckFlag = 0;
-                //UpdateSystemStatusLabels();
+                //Globals.vacChuckFlag = 0;
+                
             }
         }
 
@@ -1210,6 +1214,107 @@ namespace SDA100
         private void btnZM_Down_Click(object sender, EventArgs e)
         {
             serialPort1.Write("." + txtZM_Set.Text + "D");
+        }
+
+        public void UpdateSystemStatusLabels()
+        {
+            if (Globals.mxFrontLimitFlag == 0)
+            {
+                lblSyS_FrontLimitX_Display.BackColor = Color.Red;
+            }
+            else
+            {
+                lblSyS_FrontLimitX_Display.BackColor = Color.LawnGreen;
+            }
+
+            if (Globals.mxBackLimitFlag == 0)
+            {
+                lblSyS_BackLimitX_Display.BackColor = Color.Red;
+            }
+            else
+            {
+                lblSyS_BackLimitX_Display.BackColor = Color.LawnGreen;
+            }
+            if (Globals.myLeftLimitFlag == 0)
+            {
+                lblSyS_LeftLimitY_Display.BackColor = Color.Red;
+            }
+            else
+            {                
+                lblSyS_LeftLimitY_Display.BackColor = Color.LawnGreen;
+            }
+
+            if (Globals.myRightLimitFlag == 0)
+            {                
+                lblSyS_RightLimitY_Display.BackColor = Color.Red;
+            }
+            else
+            {                
+                lblSyS_RightLimitY_Display.BackColor = Color.LawnGreen;
+            }
+
+            if (Globals.mzTopLimitFlag == 0)
+            {                
+                lblSyS_TopLimitZ_Display.BackColor = Color.Red;
+            }
+            else
+            {                
+                lblSyS_TopLimitZ_Display.BackColor = Color.LawnGreen;
+            }
+
+            if (Globals.mzBottomLimitFlag == 0)
+            {                
+                lblSyS_BottomLimitZ_Display.BackColor = Color.Red;
+            }
+            else
+            {                
+                lblSyS_BottomLimitZ_Display.BackColor = Color.LawnGreen;
+            }
+
+            if (Globals.vacMainFlag == 0)
+            {
+                lblSyS_MainVacuum_Display.Text = "Off";
+                lblSyS_MainVacuum_Display.BackColor = Color.Red;
+            }
+            else
+            {
+                lblSyS_MainVacuum_Display.Text = "On";
+                lblSyS_MainVacuum_Display.BackColor = Color.LawnGreen;
+            }
+
+            if (Globals.vacChuckFlag == 0)
+            {
+                lblSyS_ChuckVacuum_Display.Text = "Off";
+                lblSyS_ChuckVacuum_Display.BackColor = Color.Red;
+            }
+            else
+            {
+                lblSyS_ChuckVacuum_Display.Text = "On";
+                lblSyS_ChuckVacuum_Display.BackColor = Color.LawnGreen;
+                
+            }
+
+            if (Globals.doorOpenFlag == 0)
+            {
+                lblSys_DoorStatus_Display.Text = "Open";
+                lblSys_DoorStatus_Display.BackColor = Color.Red;
+                btnXYM_DoorStatus.Text = "Close Door";
+            }
+            else
+            {
+                lblSys_DoorStatus_Display.Text = "Closed";
+                lblSys_DoorStatus_Display.BackColor = Color.LawnGreen;
+                btnXYM_DoorStatus.Text = "Open Door";
+            }
+
+            txtSyS_XStagePosition.Text = Convert.ToString(Globals.mxPosAbsVal);
+            txtSyS_YStagePosition.Text = Convert.ToString(Globals.myPosAbsVal);
+            txtSyS_ZStagePosition.Text = Convert.ToString(Globals.mzPosAbsVal);
+        }
+
+        private void btnSyS_RefreshStatus_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("m");
         }
     }
 }

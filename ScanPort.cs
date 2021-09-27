@@ -48,7 +48,6 @@ namespace SDA100
                     Console.WriteLine("Found the ! Flag on ComPort: " + ports[x].ToString());
                     Globals.teensyComPort = Convert.ToString(ports[x]);
                     x = portFoundCount;
-                    //_serialPort.Write("m");
                     _serialPort.Close();
                 }
                 else
@@ -72,46 +71,40 @@ namespace SDA100
 
             const char DELIM = ',';
 
-            Globals.inData = Globals.inData.Remove(0, 1);
-            Globals.inData = Globals.inData.Remove(Globals.inData.Length - 3, 3);
-            string[] fields = Globals.inData.Split(DELIM);
-            int dataINLength = Globals.inData.Length;
-
-            Globals.MxFrontLimitFlag = Convert.ToInt32(fields[0]);
-            Globals.MxBackLimitFlag = Convert.ToInt32(fields[1]);
-            Globals.MyLeftLimitFlag = Convert.ToInt32(fields[2]);
-            Globals.MyRightLimitFlag = Convert.ToInt32(fields[3]);
-            Globals.MzTopLimitFlag = Convert.ToInt32(fields[4]);
-            Globals.MzBottomLimitFlag = Convert.ToInt32(fields[5]);
-            Globals.DoorOpenFlag = Convert.ToInt32(fields[6]);
-            Globals.DoorCloseFlag = Convert.ToInt32(fields[7]);
-            Globals.DoorOKFlag = Convert.ToInt32(fields[8]);
-            Globals.VacMainFlag = Convert.ToInt32(fields[9]);
-            Globals.VacChuckFlag = Convert.ToInt32(fields[10]);
-            Globals.NoMIPFlag = Convert.ToInt32(fields[11]);
-            Globals.ChuckValveFlag = Convert.ToInt32(fields[12]);
-            Globals.ScanStopFlag = Convert.ToInt32(fields[13]);
-            Globals.MxPosAbsVal = Convert.ToInt32(fields[14]);
-            Globals.MyPosAbsVal = Convert.ToInt32(fields[15]);
-            Globals.MzPosAbsVal = Convert.ToInt32(fields[16]);
-            Globals.MxScanTrackWidthVal = Convert.ToInt32(fields[17]);
-            Globals.MyScanSectorWidthVal = Convert.ToInt32(fields[18]);
-            Globals.PercentScanVal = Convert.ToInt32(fields[19]);
-            Globals.HomeNotOK = Convert.ToInt32(fields[20]);
-            Globals.zHomeNotOK = Convert.ToInt32(fields[21]);
-            Globals.DoorValveFlag = Convert.ToInt32(fields[22]);
-            Globals.PHA_SizeNum = Convert.ToInt32(fields[23]);
-            Globals.AutoFocusOK = Convert.ToInt32(fields[24]);
-            Globals.AutoFocusVal = Convert.ToInt32(fields[25]);
-            Globals.SpeedVal = Convert.ToInt32(fields[26]);
-            Globals.MaxSpeed = Convert.ToInt32(fields[27]);
-            Globals.WaferRadius = Convert.ToInt32(fields[28]);
-            Globals.WaferEdgeReject = Convert.ToInt32(fields[29]);
-            Globals.CountAbort = Convert.ToInt32(fields[30]);
-
-            
-
-            
+            //Globals.inData = Globals.inData.Remove(0, 1);
+            //Globals.inData = Globals.inData.Remove(Globals.inData.Length - 3, 3);
+            string[] fields = Globals.statusMessage.Split(DELIM);
+            int dataINLength = Globals.statusMessage.Length;
+           
+            Globals.mxFrontLimitFlag = Convert.ToInt32(fields[0]);
+            Globals.mxBackLimitFlag = Convert.ToInt32(fields[1]);
+            Globals.myLeftLimitFlag = Convert.ToInt32(fields[2]);
+            Globals.myRightLimitFlag = Convert.ToInt32(fields[3]);
+            Globals.mzTopLimitFlag = Convert.ToInt32(fields[4]);
+            Globals.mzBottomLimitFlag = Convert.ToInt32(fields[5]);
+            Globals.doorOpenFlag = Convert.ToInt32(fields[6]);
+            Globals.doorCloseFlag = Convert.ToInt32(fields[7]);
+            Globals.doorOKFlag = Convert.ToInt32(fields[8]);
+            Globals.vacMainFlag = Convert.ToInt32(fields[9]);
+            Globals.vacChuckFlag = Convert.ToInt32(fields[10]);
+            Globals.chuckValveFlag = Convert.ToInt32(fields[11]);
+            Globals.scanStopFlag = Convert.ToInt32(fields[12]);
+            Globals.mxPosAbsVal = Convert.ToInt32(fields[13]);
+            Globals.myPosAbsVal = Convert.ToInt32(fields[14]);
+            Globals.mzPosAbsVal = Convert.ToInt32(fields[15]);
+            Globals.mxScanTrackWidthVal = Convert.ToInt32(fields[16]);
+            Globals.myScanSectorWidthVal = Convert.ToInt32(fields[17]);
+            Globals.percentScanVal = Convert.ToDouble(fields[18]);
+            Globals.homeNotOK = Convert.ToInt32(fields[19]);
+            Globals.zHomeNotOK = Convert.ToInt32(fields[20]);
+            Globals.autoFocusOK = Convert.ToInt32(fields[21]);
+            Globals.autoFocusVal = Convert.ToInt32(fields[22]);
+            Globals.speedVal = Convert.ToInt32(fields[23]);
+            Globals.maxSpeed = Convert.ToInt32(fields[24]);
+            Globals.waferRadius = Convert.ToInt32(fields[25]);
+            Globals.waferEdgeReject = Convert.ToInt32(fields[26]);
+            Globals.countAbort = Convert.ToInt32(fields[27]);
+            Globals.sysError = Convert.ToInt32(fields[28]);
         }
     }
 }

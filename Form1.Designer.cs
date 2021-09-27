@@ -222,6 +222,14 @@ namespace SDA100
             this.lblSSWaferSize_Text = new System.Windows.Forms.Label();
             this.lblTestScanSettings_Text = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.txtXYM_SetZ = new System.Windows.Forms.TextBox();
+            this.txtXYM_SetY = new System.Windows.Forms.TextBox();
+            this.txtXYM_SetX = new System.Windows.Forms.TextBox();
+            this.btnXYM_SetZ = new System.Windows.Forms.Button();
+            this.btnXYM_SetY = new System.Windows.Forms.Button();
+            this.btnXYM_SetX = new System.Windows.Forms.Button();
+            this.lblXYZAbs_Title = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.lblSyS_LeftLimitY = new System.Windows.Forms.Label();
             this.lblSyS_AutoFocusValue = new System.Windows.Forms.Label();
@@ -237,13 +245,13 @@ namespace SDA100
             this.lblSyS_BackLimitX = new System.Windows.Forms.Label();
             this.lblSys_DoorStatus_Display = new System.Windows.Forms.Label();
             this.lblSyS_ChuckVacuum_Display = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.lblSyS_MainVacuum_Display = new System.Windows.Forms.Label();
+            this.lblSyS_BottomLimitZ_Display = new System.Windows.Forms.Label();
+            this.lblSyS_TopLimitZ_Display = new System.Windows.Forms.Label();
+            this.lblSyS_RightLimitY_Display = new System.Windows.Forms.Label();
+            this.lblSyS_LeftLimitY_Display = new System.Windows.Forms.Label();
+            this.lblSyS_BackLimitX_Display = new System.Windows.Forms.Label();
+            this.lblSyS_FrontLimitX_Display = new System.Windows.Forms.Label();
             this.lblSyS_RefreshStatus = new System.Windows.Forms.Label();
             this.lblSyS_FrontLimitX = new System.Windows.Forms.Label();
             this.txtSyS_AutoFocusValue = new System.Windows.Forms.TextBox();
@@ -282,14 +290,6 @@ namespace SDA100
             this.btnClearConsole = new System.Windows.Forms.Button();
             this.cbxConsoleCommands = new System.Windows.Forms.ComboBox();
             this.txtConsoleOutput = new System.Windows.Forms.TextBox();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.lblXYZAbs_Title = new System.Windows.Forms.Label();
-            this.txtXYM_SetZ = new System.Windows.Forms.TextBox();
-            this.txtXYM_SetY = new System.Windows.Forms.TextBox();
-            this.txtXYM_SetX = new System.Windows.Forms.TextBox();
-            this.btnXYM_SetZ = new System.Windows.Forms.Button();
-            this.btnXYM_SetY = new System.Windows.Forms.Button();
-            this.btnXYM_SetX = new System.Windows.Forms.Button();
             this.tabMain.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -303,12 +303,12 @@ namespace SDA100
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            this.groupBox11.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabMain
@@ -2569,6 +2569,96 @@ namespace SDA100
             this.tabPage4.Text = "Maintenance";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.txtXYM_SetZ);
+            this.groupBox11.Controls.Add(this.txtXYM_SetY);
+            this.groupBox11.Controls.Add(this.txtXYM_SetX);
+            this.groupBox11.Controls.Add(this.btnXYM_SetZ);
+            this.groupBox11.Controls.Add(this.btnXYM_SetY);
+            this.groupBox11.Controls.Add(this.btnXYM_SetX);
+            this.groupBox11.Controls.Add(this.lblXYZAbs_Title);
+            this.groupBox11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.groupBox11.Location = new System.Drawing.Point(17, 340);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(275, 218);
+            this.groupBox11.TabIndex = 22;
+            this.groupBox11.TabStop = false;
+            // 
+            // txtXYM_SetZ
+            // 
+            this.txtXYM_SetZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtXYM_SetZ.Location = new System.Drawing.Point(139, 167);
+            this.txtXYM_SetZ.Margin = new System.Windows.Forms.Padding(2);
+            this.txtXYM_SetZ.Name = "txtXYM_SetZ";
+            this.txtXYM_SetZ.Size = new System.Drawing.Size(77, 22);
+            this.txtXYM_SetZ.TabIndex = 6;
+            // 
+            // txtXYM_SetY
+            // 
+            this.txtXYM_SetY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtXYM_SetY.Location = new System.Drawing.Point(142, 114);
+            this.txtXYM_SetY.Margin = new System.Windows.Forms.Padding(2);
+            this.txtXYM_SetY.Name = "txtXYM_SetY";
+            this.txtXYM_SetY.Size = new System.Drawing.Size(77, 22);
+            this.txtXYM_SetY.TabIndex = 7;
+            // 
+            // txtXYM_SetX
+            // 
+            this.txtXYM_SetX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtXYM_SetX.Location = new System.Drawing.Point(142, 62);
+            this.txtXYM_SetX.Margin = new System.Windows.Forms.Padding(2);
+            this.txtXYM_SetX.Name = "txtXYM_SetX";
+            this.txtXYM_SetX.Size = new System.Drawing.Size(77, 22);
+            this.txtXYM_SetX.TabIndex = 8;
+            // 
+            // btnXYM_SetZ
+            // 
+            this.btnXYM_SetZ.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnXYM_SetZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXYM_SetZ.Location = new System.Drawing.Point(49, 157);
+            this.btnXYM_SetZ.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXYM_SetZ.Name = "btnXYM_SetZ";
+            this.btnXYM_SetZ.Size = new System.Drawing.Size(80, 42);
+            this.btnXYM_SetZ.TabIndex = 3;
+            this.btnXYM_SetZ.Text = "Set Z:";
+            this.btnXYM_SetZ.UseVisualStyleBackColor = true;
+            // 
+            // btnXYM_SetY
+            // 
+            this.btnXYM_SetY.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnXYM_SetY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXYM_SetY.Location = new System.Drawing.Point(49, 104);
+            this.btnXYM_SetY.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXYM_SetY.Name = "btnXYM_SetY";
+            this.btnXYM_SetY.Size = new System.Drawing.Size(80, 42);
+            this.btnXYM_SetY.TabIndex = 4;
+            this.btnXYM_SetY.Text = "Set Y:";
+            this.btnXYM_SetY.UseVisualStyleBackColor = true;
+            // 
+            // btnXYM_SetX
+            // 
+            this.btnXYM_SetX.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnXYM_SetX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXYM_SetX.Location = new System.Drawing.Point(49, 52);
+            this.btnXYM_SetX.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXYM_SetX.Name = "btnXYM_SetX";
+            this.btnXYM_SetX.Size = new System.Drawing.Size(80, 42);
+            this.btnXYM_SetX.TabIndex = 5;
+            this.btnXYM_SetX.Text = "Set X:";
+            this.btnXYM_SetX.UseVisualStyleBackColor = true;
+            // 
+            // lblXYZAbs_Title
+            // 
+            this.lblXYZAbs_Title.AutoSize = true;
+            this.lblXYZAbs_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblXYZAbs_Title.Location = new System.Drawing.Point(16, 17);
+            this.lblXYZAbs_Title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblXYZAbs_Title.Name = "lblXYZAbs_Title";
+            this.lblXYZAbs_Title.Size = new System.Drawing.Size(228, 25);
+            this.lblXYZAbs_Title.TabIndex = 1;
+            this.lblXYZAbs_Title.Text = "XYZ Abs Positioning";
+            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.lblSyS_LeftLimitY);
@@ -2585,13 +2675,13 @@ namespace SDA100
             this.groupBox7.Controls.Add(this.lblSyS_BackLimitX);
             this.groupBox7.Controls.Add(this.lblSys_DoorStatus_Display);
             this.groupBox7.Controls.Add(this.lblSyS_ChuckVacuum_Display);
-            this.groupBox7.Controls.Add(this.label13);
-            this.groupBox7.Controls.Add(this.label14);
-            this.groupBox7.Controls.Add(this.label15);
-            this.groupBox7.Controls.Add(this.label16);
-            this.groupBox7.Controls.Add(this.label17);
-            this.groupBox7.Controls.Add(this.label18);
-            this.groupBox7.Controls.Add(this.label19);
+            this.groupBox7.Controls.Add(this.lblSyS_MainVacuum_Display);
+            this.groupBox7.Controls.Add(this.lblSyS_BottomLimitZ_Display);
+            this.groupBox7.Controls.Add(this.lblSyS_TopLimitZ_Display);
+            this.groupBox7.Controls.Add(this.lblSyS_RightLimitY_Display);
+            this.groupBox7.Controls.Add(this.lblSyS_LeftLimitY_Display);
+            this.groupBox7.Controls.Add(this.lblSyS_BackLimitX_Display);
+            this.groupBox7.Controls.Add(this.lblSyS_FrontLimitX_Display);
             this.groupBox7.Controls.Add(this.lblSyS_RefreshStatus);
             this.groupBox7.Controls.Add(this.lblSyS_FrontLimitX);
             this.groupBox7.Controls.Add(this.txtSyS_AutoFocusValue);
@@ -2768,90 +2858,90 @@ namespace SDA100
             this.lblSyS_ChuckVacuum_Display.Text = "On";
             this.lblSyS_ChuckVacuum_Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label13
+            // lblSyS_MainVacuum_Display
             // 
-            this.label13.BackColor = System.Drawing.Color.LawnGreen;
-            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(153, 273);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(67, 20);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "On";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSyS_MainVacuum_Display.BackColor = System.Drawing.Color.LawnGreen;
+            this.lblSyS_MainVacuum_Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblSyS_MainVacuum_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSyS_MainVacuum_Display.Location = new System.Drawing.Point(153, 273);
+            this.lblSyS_MainVacuum_Display.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_MainVacuum_Display.Name = "lblSyS_MainVacuum_Display";
+            this.lblSyS_MainVacuum_Display.Size = new System.Drawing.Size(67, 20);
+            this.lblSyS_MainVacuum_Display.TabIndex = 3;
+            this.lblSyS_MainVacuum_Display.Text = "On";
+            this.lblSyS_MainVacuum_Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label14
+            // lblSyS_BottomLimitZ_Display
             // 
-            this.label14.BackColor = System.Drawing.Color.LawnGreen;
-            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(153, 246);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(67, 21);
-            this.label14.TabIndex = 3;
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSyS_BottomLimitZ_Display.BackColor = System.Drawing.Color.LawnGreen;
+            this.lblSyS_BottomLimitZ_Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblSyS_BottomLimitZ_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSyS_BottomLimitZ_Display.Location = new System.Drawing.Point(153, 246);
+            this.lblSyS_BottomLimitZ_Display.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_BottomLimitZ_Display.Name = "lblSyS_BottomLimitZ_Display";
+            this.lblSyS_BottomLimitZ_Display.Size = new System.Drawing.Size(67, 21);
+            this.lblSyS_BottomLimitZ_Display.TabIndex = 3;
+            this.lblSyS_BottomLimitZ_Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label15
+            // lblSyS_TopLimitZ_Display
             // 
-            this.label15.BackColor = System.Drawing.Color.LawnGreen;
-            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(153, 221);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(67, 20);
-            this.label15.TabIndex = 3;
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSyS_TopLimitZ_Display.BackColor = System.Drawing.Color.LawnGreen;
+            this.lblSyS_TopLimitZ_Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblSyS_TopLimitZ_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSyS_TopLimitZ_Display.Location = new System.Drawing.Point(153, 221);
+            this.lblSyS_TopLimitZ_Display.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_TopLimitZ_Display.Name = "lblSyS_TopLimitZ_Display";
+            this.lblSyS_TopLimitZ_Display.Size = new System.Drawing.Size(67, 20);
+            this.lblSyS_TopLimitZ_Display.TabIndex = 3;
+            this.lblSyS_TopLimitZ_Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label16
+            // lblSyS_RightLimitY_Display
             // 
-            this.label16.BackColor = System.Drawing.Color.LawnGreen;
-            this.label16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(153, 194);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(67, 21);
-            this.label16.TabIndex = 3;
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSyS_RightLimitY_Display.BackColor = System.Drawing.Color.LawnGreen;
+            this.lblSyS_RightLimitY_Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblSyS_RightLimitY_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSyS_RightLimitY_Display.Location = new System.Drawing.Point(153, 194);
+            this.lblSyS_RightLimitY_Display.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_RightLimitY_Display.Name = "lblSyS_RightLimitY_Display";
+            this.lblSyS_RightLimitY_Display.Size = new System.Drawing.Size(67, 21);
+            this.lblSyS_RightLimitY_Display.TabIndex = 3;
+            this.lblSyS_RightLimitY_Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label17
+            // lblSyS_LeftLimitY_Display
             // 
-            this.label17.BackColor = System.Drawing.Color.LawnGreen;
-            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(153, 169);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(67, 20);
-            this.label17.TabIndex = 3;
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSyS_LeftLimitY_Display.BackColor = System.Drawing.Color.LawnGreen;
+            this.lblSyS_LeftLimitY_Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblSyS_LeftLimitY_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSyS_LeftLimitY_Display.Location = new System.Drawing.Point(153, 169);
+            this.lblSyS_LeftLimitY_Display.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_LeftLimitY_Display.Name = "lblSyS_LeftLimitY_Display";
+            this.lblSyS_LeftLimitY_Display.Size = new System.Drawing.Size(67, 20);
+            this.lblSyS_LeftLimitY_Display.TabIndex = 3;
+            this.lblSyS_LeftLimitY_Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label18
+            // lblSyS_BackLimitX_Display
             // 
-            this.label18.BackColor = System.Drawing.Color.LawnGreen;
-            this.label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(153, 142);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(67, 21);
-            this.label18.TabIndex = 3;
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSyS_BackLimitX_Display.BackColor = System.Drawing.Color.LawnGreen;
+            this.lblSyS_BackLimitX_Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblSyS_BackLimitX_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSyS_BackLimitX_Display.Location = new System.Drawing.Point(153, 142);
+            this.lblSyS_BackLimitX_Display.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_BackLimitX_Display.Name = "lblSyS_BackLimitX_Display";
+            this.lblSyS_BackLimitX_Display.Size = new System.Drawing.Size(67, 21);
+            this.lblSyS_BackLimitX_Display.TabIndex = 3;
+            this.lblSyS_BackLimitX_Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label19
+            // lblSyS_FrontLimitX_Display
             // 
-            this.label19.BackColor = System.Drawing.Color.LawnGreen;
-            this.label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(153, 117);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(67, 20);
-            this.label19.TabIndex = 3;
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSyS_FrontLimitX_Display.BackColor = System.Drawing.Color.LawnGreen;
+            this.lblSyS_FrontLimitX_Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblSyS_FrontLimitX_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSyS_FrontLimitX_Display.Location = new System.Drawing.Point(153, 117);
+            this.lblSyS_FrontLimitX_Display.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_FrontLimitX_Display.Name = "lblSyS_FrontLimitX_Display";
+            this.lblSyS_FrontLimitX_Display.Size = new System.Drawing.Size(67, 20);
+            this.lblSyS_FrontLimitX_Display.TabIndex = 3;
+            this.lblSyS_FrontLimitX_Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblSyS_RefreshStatus
             // 
@@ -2943,6 +3033,7 @@ namespace SDA100
             this.btnSyS_RefreshStatus.TabIndex = 1;
             this.btnSyS_RefreshStatus.Text = "Refresh";
             this.btnSyS_RefreshStatus.UseVisualStyleBackColor = true;
+            this.btnSyS_RefreshStatus.Click += new System.EventHandler(this.btnSyS_RefreshStatus_Click);
             // 
             // lblSyS_Title
             // 
@@ -3290,96 +3381,6 @@ namespace SDA100
             this.txtConsoleOutput.Size = new System.Drawing.Size(401, 274);
             this.txtConsoleOutput.TabIndex = 3;
             // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.txtXYM_SetZ);
-            this.groupBox11.Controls.Add(this.txtXYM_SetY);
-            this.groupBox11.Controls.Add(this.txtXYM_SetX);
-            this.groupBox11.Controls.Add(this.btnXYM_SetZ);
-            this.groupBox11.Controls.Add(this.btnXYM_SetY);
-            this.groupBox11.Controls.Add(this.btnXYM_SetX);
-            this.groupBox11.Controls.Add(this.lblXYZAbs_Title);
-            this.groupBox11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox11.Location = new System.Drawing.Point(17, 340);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(275, 218);
-            this.groupBox11.TabIndex = 22;
-            this.groupBox11.TabStop = false;
-            // 
-            // lblXYZAbs_Title
-            // 
-            this.lblXYZAbs_Title.AutoSize = true;
-            this.lblXYZAbs_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblXYZAbs_Title.Location = new System.Drawing.Point(16, 17);
-            this.lblXYZAbs_Title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblXYZAbs_Title.Name = "lblXYZAbs_Title";
-            this.lblXYZAbs_Title.Size = new System.Drawing.Size(228, 25);
-            this.lblXYZAbs_Title.TabIndex = 1;
-            this.lblXYZAbs_Title.Text = "XYZ Abs Positioning";
-            // 
-            // txtXYM_SetZ
-            // 
-            this.txtXYM_SetZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtXYM_SetZ.Location = new System.Drawing.Point(139, 167);
-            this.txtXYM_SetZ.Margin = new System.Windows.Forms.Padding(2);
-            this.txtXYM_SetZ.Name = "txtXYM_SetZ";
-            this.txtXYM_SetZ.Size = new System.Drawing.Size(77, 22);
-            this.txtXYM_SetZ.TabIndex = 6;
-            // 
-            // txtXYM_SetY
-            // 
-            this.txtXYM_SetY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtXYM_SetY.Location = new System.Drawing.Point(142, 114);
-            this.txtXYM_SetY.Margin = new System.Windows.Forms.Padding(2);
-            this.txtXYM_SetY.Name = "txtXYM_SetY";
-            this.txtXYM_SetY.Size = new System.Drawing.Size(77, 22);
-            this.txtXYM_SetY.TabIndex = 7;
-            // 
-            // txtXYM_SetX
-            // 
-            this.txtXYM_SetX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtXYM_SetX.Location = new System.Drawing.Point(142, 62);
-            this.txtXYM_SetX.Margin = new System.Windows.Forms.Padding(2);
-            this.txtXYM_SetX.Name = "txtXYM_SetX";
-            this.txtXYM_SetX.Size = new System.Drawing.Size(77, 22);
-            this.txtXYM_SetX.TabIndex = 8;
-            // 
-            // btnXYM_SetZ
-            // 
-            this.btnXYM_SetZ.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnXYM_SetZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_SetZ.Location = new System.Drawing.Point(49, 157);
-            this.btnXYM_SetZ.Margin = new System.Windows.Forms.Padding(2);
-            this.btnXYM_SetZ.Name = "btnXYM_SetZ";
-            this.btnXYM_SetZ.Size = new System.Drawing.Size(80, 42);
-            this.btnXYM_SetZ.TabIndex = 3;
-            this.btnXYM_SetZ.Text = "Set Z:";
-            this.btnXYM_SetZ.UseVisualStyleBackColor = true;
-            // 
-            // btnXYM_SetY
-            // 
-            this.btnXYM_SetY.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnXYM_SetY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_SetY.Location = new System.Drawing.Point(49, 104);
-            this.btnXYM_SetY.Margin = new System.Windows.Forms.Padding(2);
-            this.btnXYM_SetY.Name = "btnXYM_SetY";
-            this.btnXYM_SetY.Size = new System.Drawing.Size(80, 42);
-            this.btnXYM_SetY.TabIndex = 4;
-            this.btnXYM_SetY.Text = "Set Y:";
-            this.btnXYM_SetY.UseVisualStyleBackColor = true;
-            // 
-            // btnXYM_SetX
-            // 
-            this.btnXYM_SetX.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnXYM_SetX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_SetX.Location = new System.Drawing.Point(49, 52);
-            this.btnXYM_SetX.Margin = new System.Windows.Forms.Padding(2);
-            this.btnXYM_SetX.Name = "btnXYM_SetX";
-            this.btnXYM_SetX.Size = new System.Drawing.Size(80, 42);
-            this.btnXYM_SetX.TabIndex = 5;
-            this.btnXYM_SetX.Text = "Set X:";
-            this.btnXYM_SetX.UseVisualStyleBackColor = true;
-            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3410,6 +3411,8 @@ namespace SDA100
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.tabPage4.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox8.ResumeLayout(false);
@@ -3420,8 +3423,6 @@ namespace SDA100
             this.groupBox10.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3632,13 +3633,13 @@ namespace SDA100
         private System.Windows.Forms.Label lblSyS_BackLimitX;
         private System.Windows.Forms.Label lblSys_DoorStatus_Display;
         internal System.Windows.Forms.Label lblSyS_ChuckVacuum_Display;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lblSyS_MainVacuum_Display;
+        private System.Windows.Forms.Label lblSyS_BottomLimitZ_Display;
+        private System.Windows.Forms.Label lblSyS_TopLimitZ_Display;
+        private System.Windows.Forms.Label lblSyS_RightLimitY_Display;
+        private System.Windows.Forms.Label lblSyS_LeftLimitY_Display;
+        private System.Windows.Forms.Label lblSyS_BackLimitX_Display;
+        private System.Windows.Forms.Label lblSyS_FrontLimitX_Display;
         private System.Windows.Forms.Label lblSyS_RefreshStatus;
         private System.Windows.Forms.Label lblSyS_FrontLimitX;
         private System.Windows.Forms.TextBox txtSyS_AutoFocusValue;

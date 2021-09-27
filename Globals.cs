@@ -9,6 +9,11 @@ namespace SDA100
     class Globals
     {
         public static string inData;
+        public static string scanTrack;
+        public static string statusMessage;
+        public static string scanReply;
+        public static string scanUnknownMessage;
+
         public static string teensyComPort;
         public static bool teensyComPortOK = true;
 
@@ -56,36 +61,34 @@ namespace SDA100
         public static string rejectLimitTotal;
         public static string recipeComments;
 
-        public static int MxFrontLimitFlag;
-        public static int MxBackLimitFlag;
-        public static int MyLeftLimitFlag;
-        public static int MyRightLimitFlag;
-        public static int MzTopLimitFlag;
-        public static int MzBottomLimitFlag;
-        public static int DoorOpenFlag;
-        public static int DoorCloseFlag;
-        public static int DoorOKFlag;
-        public static int VacMainFlag;
-        public static int VacChuckFlag;
-        public static int NoMIPFlag;
-        public static int ChuckValveFlag;
-        public static int ScanStopFlag;
-        public static int MxPosAbsVal;
-        public static int MyPosAbsVal;
-        public static int MzPosAbsVal;
-        public static int MxScanTrackWidthVal;
-        public static int MyScanSectorWidthVal;
-        public static int PercentScanVal;
-        public static int HomeNotOK;
+        public static int mxFrontLimitFlag;
+        public static int mxBackLimitFlag;
+        public static int myLeftLimitFlag;
+        public static int myRightLimitFlag;
+        public static int mzTopLimitFlag;
+        public static int mzBottomLimitFlag;
+        public static int doorOpenFlag;
+        public static int doorCloseFlag;
+        public static int doorOKFlag;
+        public static int vacMainFlag;
+        public static int vacChuckFlag;
+        public static int chuckValveFlag;
+        public static int scanStopFlag;
+        public static int mxPosAbsVal;
+        public static int myPosAbsVal;
+        public static int mzPosAbsVal;
+        public static int mxScanTrackWidthVal;
+        public static int myScanSectorWidthVal;
+        public static double percentScanVal;
+        public static int homeNotOK;
         public static int zHomeNotOK;
-        public static int DoorValveFlag;
-        public static int PHA_SizeNum;
-        public static int AutoFocusOK;
-        public static int AutoFocusVal;
-        public static int SpeedVal;
-        public static int MaxSpeed;
-        public static int WaferRadius;
-        public static int WaferEdgeReject;
-        public static int CountAbort;
+        public static int autoFocusOK;
+        public static int autoFocusVal;
+        public static int speedVal;
+        public static int maxSpeed;
+        public static int waferRadius;
+        public static int waferEdgeReject;
+        public static int countAbort;
+        public static int sysError;
     }
 }
