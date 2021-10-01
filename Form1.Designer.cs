@@ -31,7 +31,6 @@ namespace SDA100
         {
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnHome = new System.Windows.Forms.Button();
             this.lblScanDefectCnt7 = new System.Windows.Forms.Label();
             this.lblScanDefectCnt6 = new System.Windows.Forms.Label();
             this.lblScanDefectCnt5 = new System.Windows.Forms.Label();
@@ -331,7 +330,6 @@ namespace SDA100
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.btnHome);
             this.tabPage1.Controls.Add(this.lblScanDefectCnt7);
             this.tabPage1.Controls.Add(this.lblScanDefectCnt6);
             this.tabPage1.Controls.Add(this.lblScanDefectCnt5);
@@ -370,16 +368,6 @@ namespace SDA100
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Main";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // btnHome
-            // 
-            this.btnHome.Location = new System.Drawing.Point(479, 118);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(43, 39);
-            this.btnHome.TabIndex = 108;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // lblScanDefectCnt7
             // 
@@ -3607,7 +3595,6 @@ namespace SDA100
         private System.Windows.Forms.Label lblSSScanOfArea_Text;
         private System.Windows.Forms.Label lblSSWaferSize_Text;
         private System.Windows.Forms.Label lblTestScanSettings_Text;
-        private System.Windows.Forms.Button btnHome;
         public System.Windows.Forms.ListBox lbxScanDataFiles;
         private System.Windows.Forms.Label lblCCScanProgress_0;
         private System.Windows.Forms.Label lblCCScanProgress_Text;

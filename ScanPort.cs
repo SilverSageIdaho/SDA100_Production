@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO.Ports;
 
+
 namespace SDA100
 {
     class ScanPort
