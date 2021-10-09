@@ -90,5 +90,7 @@ namespace SDA100
         public static int waferEdgeReject;
         public static int countAbort;
         public static int sysError;
+
+        public static string[] recLines;
     }
 }

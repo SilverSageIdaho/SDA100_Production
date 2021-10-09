@@ -177,7 +177,7 @@ namespace SDA100
             this.label68 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.lbxLoadBox = new System.Windows.Forms.ListBox();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.btnRecipeLoad = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -2009,7 +2009,7 @@ namespace SDA100
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.lbxLoadBox);
-            this.tabPage3.Controls.Add(this.btnClose);
+            this.tabPage3.Controls.Add(this.btnEdit);
             this.tabPage3.Controls.Add(this.btnRecipeLoad);
             this.tabPage3.Controls.Add(this.btnSave);
             this.tabPage3.Controls.Add(this.groupBox2);
@@ -2031,20 +2031,21 @@ namespace SDA100
             this.lbxLoadBox.TabIndex = 29;
             this.lbxLoadBox.SelectedIndexChanged += new System.EventHandler(this.lbxLoadBox_SelectedIndexChanged);
             // 
-            // btnClose
+            // btnEdit
             // 
-            this.btnClose.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnClose.Location = new System.Drawing.Point(839, 664);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 30);
-            this.btnClose.TabIndex = 28;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnEdit.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEdit.Location = new System.Drawing.Point(725, 664);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 30);
+            this.btnEdit.TabIndex = 28;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnRecipeLoad
             // 
             this.btnRecipeLoad.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnRecipeLoad.Location = new System.Drawing.Point(569, 664);
+            this.btnRecipeLoad.Location = new System.Drawing.Point(636, 664);
             this.btnRecipeLoad.Name = "btnRecipeLoad";
             this.btnRecipeLoad.Size = new System.Drawing.Size(75, 30);
             this.btnRecipeLoad.TabIndex = 27;
@@ -2055,7 +2056,7 @@ namespace SDA100
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnSave.Location = new System.Drawing.Point(367, 664);
+            this.btnSave.Location = new System.Drawing.Point(550, 664);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 30);
             this.btnSave.TabIndex = 26;
@@ -3552,7 +3553,7 @@ namespace SDA100
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.ListBox lbxLoadBox;
-        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnRecipeLoad;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.GroupBox groupBox2;

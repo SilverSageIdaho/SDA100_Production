@@ -115,8 +115,11 @@ namespace SDA100
                 serialPort1.Write("m");
                 //need to add the autofocus time out here when the command is available
 
-                string recString = System.IO.File.ReadAllText(@"C:\ScanBeta\SDA100rec.txt");
+                //string recString = System.IO.File.ReadAllText(@"C:\ScanBeta\SDA100rec.txt");
                 //string[] recData = iniString.Split(',');
+                Globals.recLines = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
+
+                //lbxLoadBox.Text = "New Recipe";
                 lbxLoadBox.DataSource = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
                 lbxScanDataFiles.DataSource = System.IO.Directory.GetFiles(@"C:\ScanBeta\", "*.dat");
             }
@@ -248,12 +251,6 @@ namespace SDA100
             serialPort1.Write("o");     // Open door
             serialPort1.Write("N");     //Turn chuck vac off
         }
-
-        
-        
-        
-
-        
 
         
     }

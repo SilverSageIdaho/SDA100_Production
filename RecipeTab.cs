@@ -21,9 +21,13 @@ namespace SDA100
             cbxSSEdgeReject_Set.Text = recData[7];
             cbxSSScanOfArea_Set.Text = recData[8];
             //cbxSSZoneScanType_Set.Text = recDate[9]; //add later...currently disabled
-            if (recData[10] == "1")
+            if (recData[10] == "TRUE")
             {
                 chboxAutoSave.Checked = true;
+            }
+            else
+            {
+                chboxAutoSave.Checked = false;
             }
             //recipeNameDefault = recData[11]; will go here
             txtSizeClass_Size1_Limit.Text = recData[12];
@@ -62,17 +66,18 @@ namespace SDA100
             recSaveData += cbxSSWaferSize_Set.Text + ",";
             recSaveData += cbxSSEdgeReject_Set.Text + ",";
             recSaveData += cbxSSScanOfArea_Set.Text + ",";
-            //recSaveData += cbxSSZoneScanType_Set.Text + ","; //add later...currently disabled
+            recSaveData += "5" + ","; //static value since the text box is currently disabled
             if (chboxAutoSave.Checked == true)
             {
-                recSaveData += "1" + ",";
+                recSaveData += "TRUE" + ",";
                 Globals.autoSave = "1";
             }
             else
             {
-                recSaveData += "0" + ",";
+                recSaveData += "FALSE" + ",";
                 Globals.autoSave = "0";
             }
+            recSaveData += "text" + ","; //static value since we are deciding on if this is useful or not
             recSaveData += txtSizeClass_Size1_Limit.Text + ",";
             recSaveData += txtSizeClass_Size2_Limit.Text + ",";
             recSaveData += txtSizeClass_Size3_Limit.Text + ",";
@@ -83,10 +88,14 @@ namespace SDA100
             recSaveData += txtSizeClass_Total_Limit.Text + ",";
             recSaveData += txtRecipeComments.Text + ";";
 
-            using (System.IO.StreamWriter sw = System.IO.File.AppendText(@"C:\ScanBeta\SDA100rec.txt"))
-            {
-                sw.WriteLine(recSaveData);
-            }
+            System.IO.File.AppendAllText(@"C:\ScanBeta\SDA100rec.txt", recSaveData + Environment.NewLine);
+            
+            //using (System.IO.StreamWriter sw = System.IO.File.AppendText(@"C:\ScanBeta\SDA100rec.txt"))
+            //{
+            //    sw.WriteLine(recSaveData);
+            //}
+            //lbxLoadBox.DataSource = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
+            
             lbxLoadBox.DataSource = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
         }
 
@@ -134,6 +143,50 @@ namespace SDA100
             lblSizeClass_PSize7_Limit.Text = Globals.rejectLimitS7;
             lblSizeClass_PSizeTotal_Limit.Text = Globals.rejectLimitTotal;
 
+        }
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            string recEditData;
+            recEditData = DateTime.Now.ToString("yyyyMMddHHmmss") + ",";
+            recEditData += DateTime.Now.ToString("yyyyMMddHHmmss") + ",";
+            recEditData += "Active" + ",";
+            recEditData += txtSSRecipeName_Set.Text + ",";
+            recEditData += txtSSUserID_Set.Text + ",";
+            recEditData += txtSSScanID_Set.Text + ",";
+            recEditData += cbxSSWaferSize_Set.Text + ",";
+            recEditData += cbxSSEdgeReject_Set.Text + ",";
+            recEditData += cbxSSScanOfArea_Set.Text + ",";
+            recEditData += "5" + ","; //static value since the text box is currently disabled
+            if (chboxAutoSave.Checked == true)
+            {
+                recEditData += "TRUE" + ",";
+                Globals.autoSave = "1";
+            }
+            else
+            {
+                recEditData += "FALSE" + ",";
+                Globals.autoSave = "0";
+            }
+            recEditData += "text" + ","; //static value since we are deciding on if this is useful or not
+            recEditData += txtSizeClass_Size1_Limit.Text + ",";
+            recEditData += txtSizeClass_Size2_Limit.Text + ",";
+            recEditData += txtSizeClass_Size3_Limit.Text + ",";
+            recEditData += txtSizeClass_Size4_Limit.Text + ",";
+            recEditData += txtSizeClass_Size5_Limit.Text + ",";
+            recEditData += txtSizeClass_Size6_Limit.Text + ",";
+            recEditData += txtSizeClass_Size7_Limit.Text + ",";
+            recEditData += txtSizeClass_Total_Limit.Text + ",";
+            recEditData += txtRecipeComments.Text + ";";
+
+            //System.IO.File.AppendAllText(@"C:\ScanBeta\SDA100rec.txt", recEditData + Environment.NewLine);
+            Globals.recLines[lbxLoadBox.SelectedIndex] = recEditData;
+            System.IO.File.Delete(@"C:\ScanBeta\SDA100rec.txt");
+            System.Threading.Thread.Sleep(1000);
+            for (int x = 0; x < lbxLoadBox.Items.Count; x++)
+            {
+                System.IO.File.AppendAllText(@"C:\ScanBeta\SDA100rec.txt", Globals.recLines[x] + Environment.NewLine);
+            }
+            lbxLoadBox.DataSource = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
         }
     }
 }
