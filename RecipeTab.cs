@@ -9,6 +9,7 @@ namespace SDA100
 {
     public partial class mainForm : Form
     {
+        string recSaveData;
         private void lbxLoadBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedRecipe = lbxLoadBox.SelectedItem.ToString();
@@ -56,37 +57,8 @@ namespace SDA100
 
         public void btnSave_Click(object sender, EventArgs e)
         {
-            string recSaveData;
-            recSaveData = DateTime.Now.ToString("yyyyMMddHHmmss") + ",";
-            recSaveData += DateTime.Now.ToString("yyyyMMddHHmmss") + ",";
-            recSaveData += "Active" + ",";
-            recSaveData += txtSSRecipeName_Set.Text + ",";
-            recSaveData += txtSSUserID_Set.Text + ",";
-            recSaveData += txtSSScanID_Set.Text + ",";
-            recSaveData += cbxSSWaferSize_Set.Text + ",";
-            recSaveData += cbxSSEdgeReject_Set.Text + ",";
-            recSaveData += cbxSSScanOfArea_Set.Text + ",";
-            recSaveData += "5" + ","; //static value since the text box is currently disabled
-            if (chboxAutoSave.Checked == true)
-            {
-                recSaveData += "TRUE" + ",";
-                Globals.autoSave = "1";
-            }
-            else
-            {
-                recSaveData += "FALSE" + ",";
-                Globals.autoSave = "0";
-            }
-            recSaveData += "text" + ","; //static value since we are deciding on if this is useful or not
-            recSaveData += txtSizeClass_Size1_Limit.Text + ",";
-            recSaveData += txtSizeClass_Size2_Limit.Text + ",";
-            recSaveData += txtSizeClass_Size3_Limit.Text + ",";
-            recSaveData += txtSizeClass_Size4_Limit.Text + ",";
-            recSaveData += txtSizeClass_Size5_Limit.Text + ",";
-            recSaveData += txtSizeClass_Size6_Limit.Text + ",";
-            recSaveData += txtSizeClass_Size7_Limit.Text + ",";
-            recSaveData += txtSizeClass_Total_Limit.Text + ",";
-            recSaveData += txtRecipeComments.Text + ";";
+
+            CreateRecipeString();
 
             System.IO.File.AppendAllText(@"C:\ScanBeta\SDA100rec.txt", recSaveData + Environment.NewLine);
             
@@ -142,7 +114,7 @@ namespace SDA100
             lblSizeClass_PSize6_Limit.Text = Globals.rejectLimitS6;
             lblSizeClass_PSize7_Limit.Text = Globals.rejectLimitS7;
             lblSizeClass_PSizeTotal_Limit.Text = Globals.rejectLimitTotal;
-
+            CreateRecipeString();
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -187,6 +159,39 @@ namespace SDA100
                 System.IO.File.AppendAllText(@"C:\ScanBeta\SDA100rec.txt", Globals.recLines[x] + Environment.NewLine);
             }
             lbxLoadBox.DataSource = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
+        }
+        public void CreateRecipeString()
+        {
+            recSaveData = DateTime.Now.ToString("yyyyMMddHHmmss") + ",";
+            recSaveData += DateTime.Now.ToString("yyyyMMddHHmmss") + ",";
+            recSaveData += "Active" + ",";
+            recSaveData += txtSSRecipeName_Set.Text + ",";
+            recSaveData += txtSSUserID_Set.Text + ",";
+            recSaveData += txtSSScanID_Set.Text + ",";
+            recSaveData += cbxSSWaferSize_Set.Text + ",";
+            recSaveData += cbxSSEdgeReject_Set.Text + ",";
+            recSaveData += cbxSSScanOfArea_Set.Text + ",";
+            recSaveData += "5" + ","; //static value since the text box is currently disabled
+            if (chboxAutoSave.Checked == true)
+            {
+                recSaveData += "TRUE" + ",";
+                Globals.autoSave = "1";
+            }
+            else
+            {
+                recSaveData += "FALSE" + ",";
+                Globals.autoSave = "0";
+            }
+            recSaveData += "text" + ","; //static value since we are deciding on if this is useful or not
+            recSaveData += txtSizeClass_Size1_Limit.Text + ",";
+            recSaveData += txtSizeClass_Size2_Limit.Text + ",";
+            recSaveData += txtSizeClass_Size3_Limit.Text + ",";
+            recSaveData += txtSizeClass_Size4_Limit.Text + ",";
+            recSaveData += txtSizeClass_Size5_Limit.Text + ",";
+            recSaveData += txtSizeClass_Size6_Limit.Text + ",";
+            recSaveData += txtSizeClass_Size7_Limit.Text + ",";
+            recSaveData += txtSizeClass_Total_Limit.Text + ",";
+            recSaveData += txtRecipeComments.Text + ";";
         }
     }
 }

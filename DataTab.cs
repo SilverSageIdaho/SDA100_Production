@@ -12,29 +12,29 @@ namespace SDA100
         public void lbxScanDataFiles_SelectedIndexChanged(object sender, EventArgs e)
         {
             string[] eScanData = System.IO.File.ReadAllLines(lbxScanDataFiles.SelectedItem.ToString());
-            string[] erecData = eScanData[1].Split(',');
+            string[] erecData = eScanData[0].Split(',');
 
             Emulator.erecipeOID = erecData[0];
             Emulator.eeditDateTime = erecData[1];
-            //Emulator.erecipeStatus = erecData[2];
-            Emulator.erecipeName = erecData[2];
-            Emulator.euserName = erecData[3];
-            Emulator.escanID = erecData[4];
-            Emulator.ewaferDiam = int.Parse(erecData[5]);
-            Emulator.eedgeRej = int.Parse(erecData[6]);
-            Emulator.escanArea = erecData[7];
-            Emulator.ezoneType = erecData[8];
-            Emulator.eautoSave = erecData[9];
-            Emulator.erecipeNameDefault = erecData[10]; //is this still necessary?
-            Emulator.erejectLimitS1 = erecData[11];
-            Emulator.erejectLimitS2 = erecData[12];
-            Emulator.erejectLimitS3 = erecData[13];
-            Emulator.erejectLimitS4 = erecData[14];
-            Emulator.erejectLimitS5 = erecData[15];
-            Emulator.erejectLimitS6 = erecData[16];
-            Emulator.erejectLimitS7 = erecData[17];
-            Emulator.erejectLimitTotal = erecData[18];
-            Emulator.erecipeComments = erecData[19];
+            Emulator.erecipeStatus = erecData[2];
+            Emulator.erecipeName = erecData[3];
+            Emulator.euserName = erecData[4];
+            Emulator.escanID = erecData[5];
+            Emulator.ewaferDiam = int.Parse(erecData[6]);
+            Emulator.eedgeRej = int.Parse(erecData[7]);
+            Emulator.escanArea = erecData[8];
+            Emulator.ezoneType = erecData[9];
+            Emulator.eautoSave = erecData[10];
+            Emulator.erecipeNameDefault = erecData[11]; //is this still necessary?
+            Emulator.erejectLimitS1 = erecData[12];
+            Emulator.erejectLimitS2 = erecData[13];
+            Emulator.erejectLimitS3 = erecData[14];
+            Emulator.erejectLimitS4 = erecData[15];
+            Emulator.erejectLimitS5 = erecData[16];
+            Emulator.erejectLimitS6 = erecData[17];
+            Emulator.erejectLimitS7 = erecData[18];
+            Emulator.erejectLimitTotal = erecData[19];
+            Emulator.erecipeComments = erecData[20];
 
             lbleSizeClass_PSize1_Limit.Text = Emulator.erejectLimitS1;
             lbleSizeClass_PSize2_Limit.Text = Emulator.erejectLimitS2;
@@ -52,7 +52,7 @@ namespace SDA100
             lbleCCUserID_Value.Text = Emulator.euserName;
             lbleCCScanID_Value.Text = Emulator.escanID;
 
-            string[] einiData = eScanData[2].Split(',');
+            string[] einiData = eScanData[1].Split(',');
 
             Emulator.einiOID = einiData[0];
             Emulator.emapRes = int.Parse(einiData[1]);
@@ -79,23 +79,6 @@ namespace SDA100
             Emulator.edirErrorLog = einiData[22];
             EEdgeReject();
             EMapDefectData(eScanData);
-            //trackDefectCnt1 = 0;
-            //trackDefectCnt2 = 0;
-            //trackDefectCnt3 = 0;
-            //trackDefectCnt4 = 0;
-            //trackDefectCnt5 = 0;
-            //trackDefectCnt6 = 0;
-            //trackDefectCnt7 = 0;
-
-            //scanDefectCnt1 = 0;
-            //scanDefectCnt2 = 0;
-            //scanDefectCnt3 = 0;
-            //scanDefectCnt4 = 0;
-            //scanDefectCnt5 = 0;
-            //scanDefectCnt6 = 0;
-            //scanDefectCnt7 = 0;
-
-            //EPostHistData();
         }
     }
 }

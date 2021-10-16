@@ -121,7 +121,7 @@ namespace SDA100
 
                 //lbxLoadBox.Text = "New Recipe";
                 lbxLoadBox.DataSource = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
-                lbxScanDataFiles.DataSource = System.IO.Directory.GetFiles(@"C:\ScanBeta\", "*.dat");
+                lbxScanDataFiles.DataSource = System.IO.Directory.GetFiles(@"C:\ScanBeta\", "Scan*.txt");
             }
         }
         private void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
@@ -160,6 +160,7 @@ namespace SDA100
                 serialPort1.Write("P");
                 serialPort1.Write("o");
                 serialPort1.Write("N");
+                lbxScanDataFiles.DataSource = System.IO.Directory.GetFiles(@"C:\ScanBeta\", "Scan*.txt");
             }
             else if (Globals.inData.Contains("%"))
             {
@@ -173,11 +174,11 @@ namespace SDA100
 
         private void ProgressBarStatus(object sender, EventArgs e)
         {
-            Globals.inData = Globals.inData.Remove(Globals.inData.Length - 2, 2);
-            Console.WriteLine(Globals.inData);
-            prctComplete = (Convert.ToDouble(Globals.inData)) * 100;
-            Console.WriteLine(prctComplete);
-            progressBar.Value = Convert.ToInt32(prctComplete);
+            //Globals.inData = Globals.inData.Remove(Globals.inData.Length - 2, 2);
+            //Console.WriteLine(Globals.inData);
+            //prctComplete = (Convert.ToDouble(Globals.inData)) * 100;
+            //Console.WriteLine(prctComplete);
+            //progressBar.Value = Convert.ToInt32(prctComplete);
         }
         private void DisplayErrorMessage(object sender, EventArgs e)
         {
@@ -208,7 +209,8 @@ namespace SDA100
             filePath = System.IO.Path.Combine(folderName, fileName);
             using (System.IO.StreamWriter sw = System.IO.File.CreateText(filePath))
             {
-                sw.Write("INI Info: ");
+                sw.WriteLine(recSaveData);
+                //sw.Write("INI Info: ");
                 sw.WriteLine(System.IO.File.ReadAllText(@"C:\ScanBeta\SDA100ini.txt"));
             }
         }
@@ -216,28 +218,37 @@ namespace SDA100
 
         private void btnRun_Click(object sender, EventArgs e)
         {
-            EdgeReject();
+            if (lblCCRecipeName_Current.Text == "None")
+            {
+                string message = "Clint! Until I'm smarter...you gotta select a recipe first!";
+                string title = "Dustin Says";
+                MessageBox.Show(message, title);
+            }
+            else
+            {
+                EdgeReject();
 
-            trackDefectCnt1 = 0;
-            trackDefectCnt2 = 0;
-            trackDefectCnt3 = 0;
-            trackDefectCnt4 = 0;
-            trackDefectCnt5 = 0;
-            trackDefectCnt6 = 0;
-            trackDefectCnt7 = 0;
+                trackDefectCnt1 = 0;
+                trackDefectCnt2 = 0;
+                trackDefectCnt3 = 0;
+                trackDefectCnt4 = 0;
+                trackDefectCnt5 = 0;
+                trackDefectCnt6 = 0;
+                trackDefectCnt7 = 0;
 
-            scanDefectCnt1 = 0;
-            scanDefectCnt2 = 0;
-            scanDefectCnt3 = 0;
-            scanDefectCnt4 = 0;
-            scanDefectCnt5 = 0;
-            scanDefectCnt6 = 0;
-            scanDefectCnt7 = 0;
+                scanDefectCnt1 = 0;
+                scanDefectCnt2 = 0;
+                scanDefectCnt3 = 0;
+                scanDefectCnt4 = 0;
+                scanDefectCnt5 = 0;
+                scanDefectCnt6 = 0;
+                scanDefectCnt7 = 0;
 
-            PostHistData();
-            serialPort1.Write("O"); //Turn chuck vac on
-            serialPort1.Write("n"); //Close door
-            serialPort1.Write("G"); //Start scan
+                PostHistData();
+                serialPort1.Write("O"); //Turn chuck vac on
+                serialPort1.Write("n"); //Close door
+                serialPort1.Write("G"); //Start scan
+            }
         }
 
         private void btnStop_Click(object sender, EventArgs e)
