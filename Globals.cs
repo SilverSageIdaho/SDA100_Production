@@ -26,8 +26,9 @@ namespace SDA100
         public static string parkY;
         public static string parkX;
         public static string parkZ;
-        public static string centerY;
-        public static string centerX;
+        public static string preFocusX;
+        public static string preFocusY;
+        public static string preFocusZ;
         public static string pSize1Label;
         public static string pSize2Label;
         public static string pSize3Label;

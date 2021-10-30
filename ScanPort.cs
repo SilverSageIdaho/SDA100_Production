@@ -55,7 +55,7 @@ namespace SDA100
                 {
                     _serialPort.Close();
                 }
-                if ((x == portFoundCount - 1))
+                if (x == portFoundCount - 1)
                 {
                     Globals.teensyComPortOK = false;
                 }
@@ -69,7 +69,6 @@ namespace SDA100
         }
         public static void UpdateStatus()
         {
-
             const char DELIM = ',';
 
             //Globals.inData = Globals.inData.Remove(0, 1);

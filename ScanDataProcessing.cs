@@ -58,7 +58,7 @@ namespace SDA100
 
             }
             // total track counts into the wafer scan counts after
-            // each track is processes. Then clear track counts
+            // each track is processed. Then clear track counts
             // and update Histogram bars.
             // scanDefectCnt passes values to the MaxHeight calculator 
             scanDefectCnt1 += trackDefectCnt1;

@@ -75,20 +75,21 @@ namespace SDA100
                 Globals.parkY = iniData[6];
                 Globals.parkX = iniData[7];
                 Globals.parkZ = iniData[8];
-                Globals.centerY = iniData[9];
-                Globals.centerX = iniData[10];
-                Globals.pSize1Label = iniData[11];
-                Globals.pSize2Label = iniData[12];
-                Globals.pSize3Label = iniData[13];
-                Globals.pSize4Label = iniData[14];
-                Globals.pSize5Label = iniData[15];
-                Globals.pSize6Label = iniData[16];
-                Globals.pSize7Label = iniData[17];
-                Globals.afTimeOut = iniData[18];
-                Globals.dirData = iniData[19];
-                Globals.dirRecipe = iniData[20];
-                Globals.dirINI = iniData[21];
-                Globals.dirErrorLog = iniData[22];
+                Globals.preFocusX = iniData[9];
+                Globals.preFocusY = iniData[10];
+                Globals.preFocusZ = iniData[11];
+                Globals.pSize1Label = iniData[12];
+                Globals.pSize2Label = iniData[13];
+                Globals.pSize3Label = iniData[14];
+                Globals.pSize4Label = iniData[15];
+                Globals.pSize5Label = iniData[16];
+                Globals.pSize6Label = iniData[17];
+                Globals.pSize7Label = iniData[18];
+                Globals.afTimeOut = iniData[19];
+                Globals.dirData = iniData[20];
+                Globals.dirRecipe = iniData[21];
+                Globals.dirINI = iniData[22];
+                Globals.dirErrorLog = iniData[23];
 
                 serialPort1.Write("." + Globals.mapRes + "r");
                 
@@ -108,11 +109,15 @@ namespace SDA100
 
                 serialPort1.Write("." + Globals.parkZ + "z");
 
-                serialPort1.Write("." + Globals.centerY + "w");
+                serialPort1.Write("." + Globals.preFocusZ + "u");
 
-                serialPort1.Write("." + Globals.centerX + "v");
+                serialPort1.Write("." + Globals.preFocusX + "v"); 
+                
+                serialPort1.Write("." + Globals.preFocusY + "w");
 
                 serialPort1.Write("m");
+
+                btnRun.Enabled = false;
                 //need to add the autofocus time out here when the command is available
 
                 //string recString = System.IO.File.ReadAllText(@"C:\ScanBeta\SDA100rec.txt");
@@ -160,7 +165,7 @@ namespace SDA100
                 serialPort1.Write("P");
                 serialPort1.Write("o");
                 serialPort1.Write("N");
-                lbxScanDataFiles.DataSource = System.IO.Directory.GetFiles(@"C:\ScanBeta\", "Scan*.txt");
+                
             }
             else if (Globals.inData.Contains("%"))
             {
@@ -194,11 +199,15 @@ namespace SDA100
 
         private void ResponseData(object sender, EventArgs e)
         {
-            if (Globals.scanReply != "!m\r")
+            if (Globals.scanReply == "!m\r")
             {
-                serialPort1.Write("m");
+                Console.WriteLine("Response Data: " + Globals.scanReply);                                
             }
-            Console.WriteLine("Response Data: " + Globals.scanReply);
+            else
+            {
+                Console.WriteLine("Response Data: " + Globals.scanReply);
+                //serialPort1.Write("m");
+            }
         }
 
         private void OpenFile()
@@ -213,8 +222,7 @@ namespace SDA100
                 //sw.Write("INI Info: ");
                 sw.WriteLine(System.IO.File.ReadAllText(@"C:\ScanBeta\SDA100ini.txt"));
             }
-        }
-        
+        }        
 
         private void btnRun_Click(object sender, EventArgs e)
         {
@@ -246,8 +254,16 @@ namespace SDA100
 
                 PostHistData();
                 serialPort1.Write("O"); //Turn chuck vac on
+                CheckForComResponse("O");
                 serialPort1.Write("n"); //Close door
-                serialPort1.Write("G"); //Start scan
+                CheckForComResponse("n");
+                serialPort1.Write("i"); //copy ini(uvw) to XYZ
+                CheckForComResponse("i");
+                serialPort1.Write("I"); //moves XY stage to chuck center and Z to prefocus
+                CheckForComResponse("I");
+                serialPort1.Write("f"); //focus Z
+                CheckForComResponse("f");
+                serialPort1.Write("G"); //Start scan                 
             }
         }
 
@@ -258,11 +274,46 @@ namespace SDA100
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            serialPort1.Write("P Z");   // Park Stage at preScan position
-            serialPort1.Write("o");     // Open door
-            serialPort1.Write("N");     //Turn chuck vac off
+           
+
+            if (btnLoad.Text == "LOAD")
+            {            
+                serialPort1.Write("P");   // Park Stage at preScan position
+                CheckForComResponse("P");
+                serialPort1.Write("o");     // Open door
+                CheckForComResponse("o");
+                serialPort1.Write("N");     //Turn chuck vac off
+                CheckForComResponse("N");
+                btnLoad.Text = "READY";
+                btnRun.Enabled = true;
+            }
+            
         }
 
-        
+        private void CheckForComResponse(string command)
+        {
+            bool gotResponse = false;
+            int errorCounter = 1000000;
+            do
+            {
+                if (Globals.scanReply.Contains(command))
+                {
+                    Console.WriteLine(Globals.scanReply);
+                    gotResponse = true;
+                }
+                errorCounter--;
+                if (errorCounter == 0)
+                {
+                    Console.WriteLine($"The {command} command didn't return a confirmation.");
+                    break;
+                }
+            } while (!gotResponse);
+
+        }
+
+        private void dataTab_Clicked(object sender, TabControlEventArgs e)
+        {
+            lbxScanDataFiles.DataSource = System.IO.Directory.GetFiles(@"C:\ScanBeta\", "Scan*.txt");
+        }
     }
 }

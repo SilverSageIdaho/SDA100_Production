@@ -327,6 +327,7 @@ namespace SDA100
             this.tabMain.Size = new System.Drawing.Size(1269, 762);
             this.tabMain.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabMain.TabIndex = 75;
+            this.tabMain.Selected += new System.Windows.Forms.TabControlEventHandler(this.dataTab_Clicked);
             // 
             // tabPage1
             // 
