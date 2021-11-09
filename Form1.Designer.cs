@@ -289,6 +289,8 @@ namespace SDA100
             this.btnClearConsole = new System.Windows.Forms.Button();
             this.cbxConsoleCommands = new System.Windows.Forms.ComboBox();
             this.txtConsoleOutput = new System.Windows.Forms.TextBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabMain.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -318,13 +320,16 @@ namespace SDA100
             this.tabMain.Controls.Add(this.tabPage3);
             this.tabMain.Controls.Add(this.tabPage4);
             this.tabMain.Controls.Add(this.tabPage5);
+            this.tabMain.Controls.Add(this.tabPage6);
+            this.tabMain.Controls.Add(this.tabPage7);
             this.tabMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabMain.ItemSize = new System.Drawing.Size(100, 50);
-            this.tabMain.Location = new System.Drawing.Point(-1, -1);
+            this.tabMain.Location = new System.Drawing.Point(-2, -2);
+            this.tabMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabMain.Multiline = true;
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedIndex = 0;
-            this.tabMain.Size = new System.Drawing.Size(1269, 762);
+            this.tabMain.Size = new System.Drawing.Size(1904, 1172);
             this.tabMain.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabMain.TabIndex = 75;
             this.tabMain.Selected += new System.Windows.Forms.TabControlEventHandler(this.dataTab_Clicked);
@@ -363,9 +368,10 @@ namespace SDA100
             this.tabPage1.Controls.Add(this.btnStop);
             this.tabPage1.Controls.Add(this.btnRun);
             this.tabPage1.Location = new System.Drawing.Point(54, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1211, 754);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage1.Size = new System.Drawing.Size(1846, 1164);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Main";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -375,9 +381,10 @@ namespace SDA100
             this.lblScanDefectCnt7.AutoSize = true;
             this.lblScanDefectCnt7.BackColor = System.Drawing.SystemColors.Control;
             this.lblScanDefectCnt7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScanDefectCnt7.Location = new System.Drawing.Point(982, 557);
+            this.lblScanDefectCnt7.Location = new System.Drawing.Point(1473, 857);
+            this.lblScanDefectCnt7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScanDefectCnt7.Name = "lblScanDefectCnt7";
-            this.lblScanDefectCnt7.Size = new System.Drawing.Size(15, 16);
+            this.lblScanDefectCnt7.Size = new System.Drawing.Size(23, 25);
             this.lblScanDefectCnt7.TabIndex = 105;
             this.lblScanDefectCnt7.Text = "0";
             // 
@@ -386,9 +393,10 @@ namespace SDA100
             this.lblScanDefectCnt6.AutoSize = true;
             this.lblScanDefectCnt6.BackColor = System.Drawing.SystemColors.Control;
             this.lblScanDefectCnt6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScanDefectCnt6.Location = new System.Drawing.Point(912, 557);
+            this.lblScanDefectCnt6.Location = new System.Drawing.Point(1368, 857);
+            this.lblScanDefectCnt6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScanDefectCnt6.Name = "lblScanDefectCnt6";
-            this.lblScanDefectCnt6.Size = new System.Drawing.Size(15, 16);
+            this.lblScanDefectCnt6.Size = new System.Drawing.Size(23, 25);
             this.lblScanDefectCnt6.TabIndex = 104;
             this.lblScanDefectCnt6.Text = "0";
             // 
@@ -397,9 +405,10 @@ namespace SDA100
             this.lblScanDefectCnt5.AutoSize = true;
             this.lblScanDefectCnt5.BackColor = System.Drawing.SystemColors.Control;
             this.lblScanDefectCnt5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScanDefectCnt5.Location = new System.Drawing.Point(841, 557);
+            this.lblScanDefectCnt5.Location = new System.Drawing.Point(1262, 857);
+            this.lblScanDefectCnt5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScanDefectCnt5.Name = "lblScanDefectCnt5";
-            this.lblScanDefectCnt5.Size = new System.Drawing.Size(15, 16);
+            this.lblScanDefectCnt5.Size = new System.Drawing.Size(23, 25);
             this.lblScanDefectCnt5.TabIndex = 103;
             this.lblScanDefectCnt5.Text = "0";
             // 
@@ -408,9 +417,10 @@ namespace SDA100
             this.lblScanDefectCnt4.AutoSize = true;
             this.lblScanDefectCnt4.BackColor = System.Drawing.SystemColors.Control;
             this.lblScanDefectCnt4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScanDefectCnt4.Location = new System.Drawing.Point(771, 557);
+            this.lblScanDefectCnt4.Location = new System.Drawing.Point(1156, 857);
+            this.lblScanDefectCnt4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScanDefectCnt4.Name = "lblScanDefectCnt4";
-            this.lblScanDefectCnt4.Size = new System.Drawing.Size(15, 16);
+            this.lblScanDefectCnt4.Size = new System.Drawing.Size(23, 25);
             this.lblScanDefectCnt4.TabIndex = 102;
             this.lblScanDefectCnt4.Text = "0";
             // 
@@ -419,9 +429,10 @@ namespace SDA100
             this.lblScanDefectCnt3.AutoSize = true;
             this.lblScanDefectCnt3.BackColor = System.Drawing.SystemColors.Control;
             this.lblScanDefectCnt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScanDefectCnt3.Location = new System.Drawing.Point(701, 557);
+            this.lblScanDefectCnt3.Location = new System.Drawing.Point(1052, 857);
+            this.lblScanDefectCnt3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScanDefectCnt3.Name = "lblScanDefectCnt3";
-            this.lblScanDefectCnt3.Size = new System.Drawing.Size(15, 16);
+            this.lblScanDefectCnt3.Size = new System.Drawing.Size(23, 25);
             this.lblScanDefectCnt3.TabIndex = 101;
             this.lblScanDefectCnt3.Text = "0";
             // 
@@ -430,9 +441,10 @@ namespace SDA100
             this.lblScanDefectCnt2.AutoSize = true;
             this.lblScanDefectCnt2.BackColor = System.Drawing.SystemColors.Control;
             this.lblScanDefectCnt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScanDefectCnt2.Location = new System.Drawing.Point(631, 557);
+            this.lblScanDefectCnt2.Location = new System.Drawing.Point(946, 857);
+            this.lblScanDefectCnt2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScanDefectCnt2.Name = "lblScanDefectCnt2";
-            this.lblScanDefectCnt2.Size = new System.Drawing.Size(15, 16);
+            this.lblScanDefectCnt2.Size = new System.Drawing.Size(23, 25);
             this.lblScanDefectCnt2.TabIndex = 100;
             this.lblScanDefectCnt2.Text = "0";
             // 
@@ -441,9 +453,10 @@ namespace SDA100
             this.lblScanDefectCnt1.AutoSize = true;
             this.lblScanDefectCnt1.BackColor = System.Drawing.SystemColors.Control;
             this.lblScanDefectCnt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScanDefectCnt1.Location = new System.Drawing.Point(561, 556);
+            this.lblScanDefectCnt1.Location = new System.Drawing.Point(842, 855);
+            this.lblScanDefectCnt1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScanDefectCnt1.Name = "lblScanDefectCnt1";
-            this.lblScanDefectCnt1.Size = new System.Drawing.Size(15, 16);
+            this.lblScanDefectCnt1.Size = new System.Drawing.Size(23, 25);
             this.lblScanDefectCnt1.TabIndex = 99;
             this.lblScanDefectCnt1.Text = "0";
             // 
@@ -451,9 +464,10 @@ namespace SDA100
             // 
             this.lblMinHeightBar.AutoSize = true;
             this.lblMinHeightBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMinHeightBar.Location = new System.Drawing.Point(460, 660);
+            this.lblMinHeightBar.Location = new System.Drawing.Point(690, 1015);
+            this.lblMinHeightBar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMinHeightBar.Name = "lblMinHeightBar";
-            this.lblMinHeightBar.Size = new System.Drawing.Size(68, 16);
+            this.lblMinHeightBar.Size = new System.Drawing.Size(100, 25);
             this.lblMinHeightBar.TabIndex = 98;
             this.lblMinHeightBar.Text = "MinHeight";
             // 
@@ -461,9 +475,10 @@ namespace SDA100
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(967, 675);
+            this.label9.Location = new System.Drawing.Point(1450, 1038);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 16);
+            this.label9.Size = new System.Drawing.Size(88, 25);
             this.label9.TabIndex = 97;
             this.label9.Text = "5.0 um +";
             // 
@@ -471,9 +486,10 @@ namespace SDA100
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(898, 675);
+            this.label8.Location = new System.Drawing.Point(1347, 1038);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 16);
+            this.label8.Size = new System.Drawing.Size(71, 25);
             this.label8.TabIndex = 96;
             this.label8.Text = "3.0 um";
             // 
@@ -481,9 +497,10 @@ namespace SDA100
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(830, 675);
+            this.label7.Location = new System.Drawing.Point(1245, 1038);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 16);
+            this.label7.Size = new System.Drawing.Size(71, 25);
             this.label7.TabIndex = 95;
             this.label7.Text = "1.0 um";
             // 
@@ -491,9 +508,10 @@ namespace SDA100
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(759, 675);
+            this.label6.Location = new System.Drawing.Point(1138, 1038);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 16);
+            this.label6.Size = new System.Drawing.Size(60, 25);
             this.label6.TabIndex = 94;
             this.label6.Text = ".7 um";
             // 
@@ -501,9 +519,10 @@ namespace SDA100
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(689, 676);
+            this.label5.Location = new System.Drawing.Point(1034, 1040);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 16);
+            this.label5.Size = new System.Drawing.Size(60, 25);
             this.label5.TabIndex = 93;
             this.label5.Text = ".5 um";
             // 
@@ -511,9 +530,10 @@ namespace SDA100
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(617, 676);
+            this.label4.Location = new System.Drawing.Point(926, 1040);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 16);
+            this.label4.Size = new System.Drawing.Size(60, 25);
             this.label4.TabIndex = 92;
             this.label4.Text = ".3 um";
             // 
@@ -521,9 +541,10 @@ namespace SDA100
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(547, 675);
+            this.label3.Location = new System.Drawing.Point(820, 1038);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 16);
+            this.label3.Size = new System.Drawing.Size(66, 25);
             this.label3.TabIndex = 91;
             this.label3.Text = ".25um";
             // 
@@ -531,9 +552,10 @@ namespace SDA100
             // 
             this.lblMidHeightBar.AutoSize = true;
             this.lblMidHeightBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMidHeightBar.Location = new System.Drawing.Point(460, 608);
+            this.lblMidHeightBar.Location = new System.Drawing.Point(690, 935);
+            this.lblMidHeightBar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMidHeightBar.Name = "lblMidHeightBar";
-            this.lblMidHeightBar.Size = new System.Drawing.Size(69, 16);
+            this.lblMidHeightBar.Size = new System.Drawing.Size(100, 25);
             this.lblMidHeightBar.TabIndex = 90;
             this.lblMidHeightBar.Text = "MidHeight";
             // 
@@ -541,96 +563,106 @@ namespace SDA100
             // 
             this.lblMaxHeightBar.AutoSize = true;
             this.lblMaxHeightBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaxHeightBar.Location = new System.Drawing.Point(457, 558);
+            this.lblMaxHeightBar.Location = new System.Drawing.Point(686, 858);
+            this.lblMaxHeightBar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMaxHeightBar.Name = "lblMaxHeightBar";
-            this.lblMaxHeightBar.Size = new System.Drawing.Size(72, 16);
+            this.lblMaxHeightBar.Size = new System.Drawing.Size(106, 25);
             this.lblMaxHeightBar.TabIndex = 89;
             this.lblMaxHeightBar.Text = "MaxHeight";
             // 
             // def7
             // 
             this.def7.BackColor = System.Drawing.Color.LightGreen;
-            this.def7.Location = new System.Drawing.Point(964, 573);
+            this.def7.Location = new System.Drawing.Point(1446, 882);
+            this.def7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.def7.Multiline = true;
             this.def7.Name = "def7";
-            this.def7.Size = new System.Drawing.Size(50, 100);
+            this.def7.Size = new System.Drawing.Size(73, 152);
             this.def7.TabIndex = 88;
             // 
             // def6
             // 
             this.def6.BackColor = System.Drawing.Color.Yellow;
-            this.def6.Location = new System.Drawing.Point(894, 573);
+            this.def6.Location = new System.Drawing.Point(1341, 882);
+            this.def6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.def6.Multiline = true;
             this.def6.Name = "def6";
             this.def6.ReadOnly = true;
-            this.def6.Size = new System.Drawing.Size(50, 100);
+            this.def6.Size = new System.Drawing.Size(73, 152);
             this.def6.TabIndex = 87;
             // 
             // def5
             // 
             this.def5.BackColor = System.Drawing.Color.Orange;
-            this.def5.Location = new System.Drawing.Point(824, 573);
+            this.def5.Location = new System.Drawing.Point(1236, 882);
+            this.def5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.def5.Multiline = true;
             this.def5.Name = "def5";
             this.def5.ReadOnly = true;
-            this.def5.Size = new System.Drawing.Size(50, 100);
+            this.def5.Size = new System.Drawing.Size(73, 152);
             this.def5.TabIndex = 86;
             // 
             // def4
             // 
             this.def4.BackColor = System.Drawing.Color.Red;
-            this.def4.Location = new System.Drawing.Point(754, 573);
+            this.def4.Location = new System.Drawing.Point(1131, 882);
+            this.def4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.def4.Multiline = true;
             this.def4.Name = "def4";
             this.def4.ReadOnly = true;
-            this.def4.Size = new System.Drawing.Size(50, 100);
+            this.def4.Size = new System.Drawing.Size(73, 152);
             this.def4.TabIndex = 85;
             // 
             // def3
             // 
             this.def3.BackColor = System.Drawing.Color.Fuchsia;
-            this.def3.Location = new System.Drawing.Point(684, 573);
+            this.def3.Location = new System.Drawing.Point(1026, 882);
+            this.def3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.def3.Multiline = true;
             this.def3.Name = "def3";
             this.def3.ReadOnly = true;
-            this.def3.Size = new System.Drawing.Size(50, 100);
+            this.def3.Size = new System.Drawing.Size(73, 152);
             this.def3.TabIndex = 84;
             // 
             // def2
             // 
             this.def2.BackColor = System.Drawing.Color.BlueViolet;
-            this.def2.Location = new System.Drawing.Point(614, 573);
+            this.def2.Location = new System.Drawing.Point(921, 882);
+            this.def2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.def2.Multiline = true;
             this.def2.Name = "def2";
             this.def2.ReadOnly = true;
-            this.def2.Size = new System.Drawing.Size(50, 100);
+            this.def2.Size = new System.Drawing.Size(73, 152);
             this.def2.TabIndex = 83;
             // 
             // def1
             // 
             this.def1.BackColor = System.Drawing.Color.Blue;
-            this.def1.Location = new System.Drawing.Point(544, 573);
+            this.def1.Location = new System.Drawing.Point(816, 882);
+            this.def1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.def1.Multiline = true;
             this.def1.Name = "def1";
             this.def1.ReadOnly = true;
-            this.def1.Size = new System.Drawing.Size(50, 100);
+            this.def1.Size = new System.Drawing.Size(73, 152);
             this.def1.TabIndex = 82;
             // 
             // disHis
             // 
-            this.disHis.Location = new System.Drawing.Point(529, 553);
+            this.disHis.Location = new System.Drawing.Point(794, 851);
+            this.disHis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.disHis.Multiline = true;
             this.disHis.Name = "disHis";
             this.disHis.ReadOnly = true;
-            this.disHis.Size = new System.Drawing.Size(500, 120);
+            this.disHis.Size = new System.Drawing.Size(748, 182);
             this.disHis.TabIndex = 81;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(528, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(792, 28);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(501, 501);
+            this.pictureBox1.Size = new System.Drawing.Size(750, 770);
             this.pictureBox1.TabIndex = 80;
             this.pictureBox1.TabStop = false;
             // 
@@ -653,50 +685,44 @@ namespace SDA100
             this.groupBox3.Controls.Add(this.lblCCWaferSize_Text);
             this.groupBox3.Controls.Add(this.label29);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(48, 365);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Location = new System.Drawing.Point(72, 562);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(400, 308);
+            this.groupBox3.Size = new System.Drawing.Size(600, 474);
             this.groupBox3.TabIndex = 79;
             this.groupBox3.TabStop = false;
             // 
             // lblCCScanProgress_50
             // 
             this.lblCCScanProgress_50.AutoSize = true;
-            this.lblCCScanProgress_50.Location = new System.Drawing.Point(217, 240);
-            this.lblCCScanProgress_50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCScanProgress_50.Location = new System.Drawing.Point(326, 369);
             this.lblCCScanProgress_50.Name = "lblCCScanProgress_50";
-            this.lblCCScanProgress_50.Size = new System.Drawing.Size(27, 20);
+            this.lblCCScanProgress_50.Size = new System.Drawing.Size(39, 29);
             this.lblCCScanProgress_50.TabIndex = 115;
             this.lblCCScanProgress_50.Text = "50";
             // 
             // lblCCScanProgress_100
             // 
             this.lblCCScanProgress_100.AutoSize = true;
-            this.lblCCScanProgress_100.Location = new System.Drawing.Point(345, 241);
-            this.lblCCScanProgress_100.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCScanProgress_100.Location = new System.Drawing.Point(518, 371);
             this.lblCCScanProgress_100.Name = "lblCCScanProgress_100";
-            this.lblCCScanProgress_100.Size = new System.Drawing.Size(36, 20);
+            this.lblCCScanProgress_100.Size = new System.Drawing.Size(52, 29);
             this.lblCCScanProgress_100.TabIndex = 114;
             this.lblCCScanProgress_100.Text = "100";
             // 
             // lblCCScanProgress_0
             // 
             this.lblCCScanProgress_0.AutoSize = true;
-            this.lblCCScanProgress_0.Location = new System.Drawing.Point(80, 242);
-            this.lblCCScanProgress_0.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCScanProgress_0.Location = new System.Drawing.Point(120, 372);
             this.lblCCScanProgress_0.Name = "lblCCScanProgress_0";
-            this.lblCCScanProgress_0.Size = new System.Drawing.Size(18, 20);
+            this.lblCCScanProgress_0.Size = new System.Drawing.Size(26, 29);
             this.lblCCScanProgress_0.TabIndex = 112;
             this.lblCCScanProgress_0.Text = "0";
             // 
             // lblCCScanProgress_Text
             // 
-            this.lblCCScanProgress_Text.Location = new System.Drawing.Point(0, 266);
-            this.lblCCScanProgress_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCScanProgress_Text.Location = new System.Drawing.Point(0, 409);
             this.lblCCScanProgress_Text.Name = "lblCCScanProgress_Text";
-            this.lblCCScanProgress_Text.Size = new System.Drawing.Size(78, 23);
+            this.lblCCScanProgress_Text.Size = new System.Drawing.Size(117, 35);
             this.lblCCScanProgress_Text.TabIndex = 113;
             this.lblCCScanProgress_Text.Text = "%Scan:";
             this.lblCCScanProgress_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -704,19 +730,17 @@ namespace SDA100
             // lblCCScanID_Current
             // 
             this.lblCCScanID_Current.AutoSize = true;
-            this.lblCCScanID_Current.Location = new System.Drawing.Point(164, 172);
-            this.lblCCScanID_Current.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCScanID_Current.Location = new System.Drawing.Point(246, 265);
             this.lblCCScanID_Current.Name = "lblCCScanID_Current";
-            this.lblCCScanID_Current.Size = new System.Drawing.Size(47, 20);
+            this.lblCCScanID_Current.Size = new System.Drawing.Size(72, 29);
             this.lblCCScanID_Current.TabIndex = 110;
             this.lblCCScanID_Current.Text = "None";
             // 
             // lblCCScanID_Text
             // 
-            this.lblCCScanID_Text.Location = new System.Drawing.Point(21, 172);
-            this.lblCCScanID_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCScanID_Text.Location = new System.Drawing.Point(32, 265);
             this.lblCCScanID_Text.Name = "lblCCScanID_Text";
-            this.lblCCScanID_Text.Size = new System.Drawing.Size(101, 19);
+            this.lblCCScanID_Text.Size = new System.Drawing.Size(152, 29);
             this.lblCCScanID_Text.TabIndex = 111;
             this.lblCCScanID_Text.Text = "Scan ID:";
             this.lblCCScanID_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -724,19 +748,17 @@ namespace SDA100
             // lblCCUserID_Current
             // 
             this.lblCCUserID_Current.AutoSize = true;
-            this.lblCCUserID_Current.Location = new System.Drawing.Point(164, 146);
-            this.lblCCUserID_Current.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCUserID_Current.Location = new System.Drawing.Point(246, 225);
             this.lblCCUserID_Current.Name = "lblCCUserID_Current";
-            this.lblCCUserID_Current.Size = new System.Drawing.Size(47, 20);
+            this.lblCCUserID_Current.Size = new System.Drawing.Size(72, 29);
             this.lblCCUserID_Current.TabIndex = 108;
             this.lblCCUserID_Current.Text = "None";
             // 
             // lblCCUserID_Text
             // 
-            this.lblCCUserID_Text.Location = new System.Drawing.Point(21, 146);
-            this.lblCCUserID_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCUserID_Text.Location = new System.Drawing.Point(32, 225);
             this.lblCCUserID_Text.Name = "lblCCUserID_Text";
-            this.lblCCUserID_Text.Size = new System.Drawing.Size(101, 19);
+            this.lblCCUserID_Text.Size = new System.Drawing.Size(152, 29);
             this.lblCCUserID_Text.TabIndex = 109;
             this.lblCCUserID_Text.Text = "User ID:";
             this.lblCCUserID_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -744,28 +766,27 @@ namespace SDA100
             // lblCCRecipeName_Current
             // 
             this.lblCCRecipeName_Current.AutoSize = true;
-            this.lblCCRecipeName_Current.Location = new System.Drawing.Point(164, 120);
-            this.lblCCRecipeName_Current.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCRecipeName_Current.Location = new System.Drawing.Point(246, 185);
             this.lblCCRecipeName_Current.Name = "lblCCRecipeName_Current";
-            this.lblCCRecipeName_Current.Size = new System.Drawing.Size(47, 20);
+            this.lblCCRecipeName_Current.Size = new System.Drawing.Size(72, 29);
             this.lblCCRecipeName_Current.TabIndex = 2;
             this.lblCCRecipeName_Current.Text = "None";
             // 
             // progressBar
             // 
-            this.progressBar.Location = new System.Drawing.Point(83, 266);
+            this.progressBar.Location = new System.Drawing.Point(124, 409);
+            this.progressBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(295, 23);
+            this.progressBar.Size = new System.Drawing.Size(442, 35);
             this.progressBar.Step = 1;
             this.progressBar.TabIndex = 107;
             // 
             // lblCCEdgeReject_Current
             // 
             this.lblCCEdgeReject_Current.AutoSize = true;
-            this.lblCCEdgeReject_Current.Location = new System.Drawing.Point(175, 80);
-            this.lblCCEdgeReject_Current.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCEdgeReject_Current.Location = new System.Drawing.Point(262, 123);
             this.lblCCEdgeReject_Current.Name = "lblCCEdgeReject_Current";
-            this.lblCCEdgeReject_Current.Size = new System.Drawing.Size(18, 20);
+            this.lblCCEdgeReject_Current.Size = new System.Drawing.Size(26, 29);
             this.lblCCEdgeReject_Current.TabIndex = 2;
             this.lblCCEdgeReject_Current.Text = "0";
             this.lblCCEdgeReject_Current.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -773,40 +794,36 @@ namespace SDA100
             // lblCCWaferSize_Current
             // 
             this.lblCCWaferSize_Current.AutoSize = true;
-            this.lblCCWaferSize_Current.Location = new System.Drawing.Point(175, 58);
-            this.lblCCWaferSize_Current.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCWaferSize_Current.Location = new System.Drawing.Point(262, 89);
             this.lblCCWaferSize_Current.Name = "lblCCWaferSize_Current";
-            this.lblCCWaferSize_Current.Size = new System.Drawing.Size(18, 20);
+            this.lblCCWaferSize_Current.Size = new System.Drawing.Size(26, 29);
             this.lblCCWaferSize_Current.TabIndex = 2;
             this.lblCCWaferSize_Current.Text = "0";
             this.lblCCWaferSize_Current.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblCCRecipeName_Text
             // 
-            this.lblCCRecipeName_Text.Location = new System.Drawing.Point(21, 121);
-            this.lblCCRecipeName_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCRecipeName_Text.Location = new System.Drawing.Point(32, 186);
             this.lblCCRecipeName_Text.Name = "lblCCRecipeName_Text";
-            this.lblCCRecipeName_Text.Size = new System.Drawing.Size(101, 19);
+            this.lblCCRecipeName_Text.Size = new System.Drawing.Size(152, 29);
             this.lblCCRecipeName_Text.TabIndex = 2;
             this.lblCCRecipeName_Text.Text = "Recipe:";
             this.lblCCRecipeName_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblCCEdgeReject_Text
             // 
-            this.lblCCEdgeReject_Text.Location = new System.Drawing.Point(19, 80);
-            this.lblCCEdgeReject_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCEdgeReject_Text.Location = new System.Drawing.Point(28, 123);
             this.lblCCEdgeReject_Text.Name = "lblCCEdgeReject_Text";
-            this.lblCCEdgeReject_Text.Size = new System.Drawing.Size(105, 20);
+            this.lblCCEdgeReject_Text.Size = new System.Drawing.Size(158, 31);
             this.lblCCEdgeReject_Text.TabIndex = 2;
             this.lblCCEdgeReject_Text.Text = "Edge Reject:";
             this.lblCCEdgeReject_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblCCWaferSize_Text
             // 
-            this.lblCCWaferSize_Text.Location = new System.Drawing.Point(25, 58);
-            this.lblCCWaferSize_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCCWaferSize_Text.Location = new System.Drawing.Point(38, 89);
             this.lblCCWaferSize_Text.Name = "lblCCWaferSize_Text";
-            this.lblCCWaferSize_Text.Size = new System.Drawing.Size(97, 20);
+            this.lblCCWaferSize_Text.Size = new System.Drawing.Size(146, 31);
             this.lblCCWaferSize_Text.TabIndex = 2;
             this.lblCCWaferSize_Text.Text = "Wafer Size:";
             this.lblCCWaferSize_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -815,10 +832,9 @@ namespace SDA100
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(110, 25);
-            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label29.Location = new System.Drawing.Point(165, 38);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(140, 25);
+            this.label29.Size = new System.Drawing.Size(203, 37);
             this.label29.TabIndex = 0;
             this.label29.Text = "Scan Config";
             // 
@@ -853,11 +869,9 @@ namespace SDA100
             this.groupBox1.Controls.Add(this.lblSizeClassTitle);
             this.groupBox1.Controls.Add(this.lblTestInfoTitle);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(48, 118);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(72, 182);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(400, 237);
+            this.groupBox1.Size = new System.Drawing.Size(600, 365);
             this.groupBox1.TabIndex = 78;
             this.groupBox1.TabStop = false;
             // 
@@ -865,10 +879,9 @@ namespace SDA100
             // 
             this.lblSizeClass_PSizeTotal_Limit.AutoSize = true;
             this.lblSizeClass_PSizeTotal_Limit.ForeColor = System.Drawing.Color.Green;
-            this.lblSizeClass_PSizeTotal_Limit.Location = new System.Drawing.Point(268, 208);
-            this.lblSizeClass_PSizeTotal_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSizeTotal_Limit.Location = new System.Drawing.Point(402, 320);
             this.lblSizeClass_PSizeTotal_Limit.Name = "lblSizeClass_PSizeTotal_Limit";
-            this.lblSizeClass_PSizeTotal_Limit.Size = new System.Drawing.Size(18, 20);
+            this.lblSizeClass_PSizeTotal_Limit.Size = new System.Drawing.Size(26, 29);
             this.lblSizeClass_PSizeTotal_Limit.TabIndex = 2;
             this.lblSizeClass_PSizeTotal_Limit.Text = "0";
             this.lblSizeClass_PSizeTotal_Limit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -877,10 +890,9 @@ namespace SDA100
             // 
             this.lblSizeClass_PSize7_Limit.AutoSize = true;
             this.lblSizeClass_PSize7_Limit.ForeColor = System.Drawing.Color.Green;
-            this.lblSizeClass_PSize7_Limit.Location = new System.Drawing.Point(268, 188);
-            this.lblSizeClass_PSize7_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize7_Limit.Location = new System.Drawing.Point(402, 289);
             this.lblSizeClass_PSize7_Limit.Name = "lblSizeClass_PSize7_Limit";
-            this.lblSizeClass_PSize7_Limit.Size = new System.Drawing.Size(18, 20);
+            this.lblSizeClass_PSize7_Limit.Size = new System.Drawing.Size(26, 29);
             this.lblSizeClass_PSize7_Limit.TabIndex = 2;
             this.lblSizeClass_PSize7_Limit.Text = "0";
             this.lblSizeClass_PSize7_Limit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -889,10 +901,9 @@ namespace SDA100
             // 
             this.lblSizeClass_PSize6_Limit.AutoSize = true;
             this.lblSizeClass_PSize6_Limit.ForeColor = System.Drawing.Color.Green;
-            this.lblSizeClass_PSize6_Limit.Location = new System.Drawing.Point(268, 169);
-            this.lblSizeClass_PSize6_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize6_Limit.Location = new System.Drawing.Point(402, 260);
             this.lblSizeClass_PSize6_Limit.Name = "lblSizeClass_PSize6_Limit";
-            this.lblSizeClass_PSize6_Limit.Size = new System.Drawing.Size(18, 20);
+            this.lblSizeClass_PSize6_Limit.Size = new System.Drawing.Size(26, 29);
             this.lblSizeClass_PSize6_Limit.TabIndex = 2;
             this.lblSizeClass_PSize6_Limit.Text = "0";
             this.lblSizeClass_PSize6_Limit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -901,10 +912,9 @@ namespace SDA100
             // 
             this.lblSizeClass_PSize5_Limit.AutoSize = true;
             this.lblSizeClass_PSize5_Limit.ForeColor = System.Drawing.Color.Green;
-            this.lblSizeClass_PSize5_Limit.Location = new System.Drawing.Point(268, 149);
-            this.lblSizeClass_PSize5_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize5_Limit.Location = new System.Drawing.Point(402, 229);
             this.lblSizeClass_PSize5_Limit.Name = "lblSizeClass_PSize5_Limit";
-            this.lblSizeClass_PSize5_Limit.Size = new System.Drawing.Size(18, 20);
+            this.lblSizeClass_PSize5_Limit.Size = new System.Drawing.Size(26, 29);
             this.lblSizeClass_PSize5_Limit.TabIndex = 2;
             this.lblSizeClass_PSize5_Limit.Text = "0";
             this.lblSizeClass_PSize5_Limit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -913,10 +923,9 @@ namespace SDA100
             // 
             this.lblSizeClass_PSize4_Limit.AutoSize = true;
             this.lblSizeClass_PSize4_Limit.ForeColor = System.Drawing.Color.Green;
-            this.lblSizeClass_PSize4_Limit.Location = new System.Drawing.Point(268, 130);
-            this.lblSizeClass_PSize4_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize4_Limit.Location = new System.Drawing.Point(402, 200);
             this.lblSizeClass_PSize4_Limit.Name = "lblSizeClass_PSize4_Limit";
-            this.lblSizeClass_PSize4_Limit.Size = new System.Drawing.Size(18, 20);
+            this.lblSizeClass_PSize4_Limit.Size = new System.Drawing.Size(26, 29);
             this.lblSizeClass_PSize4_Limit.TabIndex = 2;
             this.lblSizeClass_PSize4_Limit.Text = "0";
             this.lblSizeClass_PSize4_Limit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -925,10 +934,9 @@ namespace SDA100
             // 
             this.lblSizeClass_PSize3_Limit.AutoSize = true;
             this.lblSizeClass_PSize3_Limit.ForeColor = System.Drawing.Color.Green;
-            this.lblSizeClass_PSize3_Limit.Location = new System.Drawing.Point(268, 110);
-            this.lblSizeClass_PSize3_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize3_Limit.Location = new System.Drawing.Point(402, 169);
             this.lblSizeClass_PSize3_Limit.Name = "lblSizeClass_PSize3_Limit";
-            this.lblSizeClass_PSize3_Limit.Size = new System.Drawing.Size(18, 20);
+            this.lblSizeClass_PSize3_Limit.Size = new System.Drawing.Size(26, 29);
             this.lblSizeClass_PSize3_Limit.TabIndex = 2;
             this.lblSizeClass_PSize3_Limit.Text = "0";
             this.lblSizeClass_PSize3_Limit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -937,10 +945,9 @@ namespace SDA100
             // 
             this.lblSizeClass_PSize2_Limit.AutoSize = true;
             this.lblSizeClass_PSize2_Limit.ForeColor = System.Drawing.Color.Green;
-            this.lblSizeClass_PSize2_Limit.Location = new System.Drawing.Point(268, 91);
-            this.lblSizeClass_PSize2_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize2_Limit.Location = new System.Drawing.Point(402, 140);
             this.lblSizeClass_PSize2_Limit.Name = "lblSizeClass_PSize2_Limit";
-            this.lblSizeClass_PSize2_Limit.Size = new System.Drawing.Size(18, 20);
+            this.lblSizeClass_PSize2_Limit.Size = new System.Drawing.Size(26, 29);
             this.lblSizeClass_PSize2_Limit.TabIndex = 2;
             this.lblSizeClass_PSize2_Limit.Text = "0";
             this.lblSizeClass_PSize2_Limit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -949,10 +956,9 @@ namespace SDA100
             // 
             this.lblSizeClass_PSize1_Limit.AutoSize = true;
             this.lblSizeClass_PSize1_Limit.ForeColor = System.Drawing.Color.Green;
-            this.lblSizeClass_PSize1_Limit.Location = new System.Drawing.Point(268, 71);
-            this.lblSizeClass_PSize1_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize1_Limit.Location = new System.Drawing.Point(402, 109);
             this.lblSizeClass_PSize1_Limit.Name = "lblSizeClass_PSize1_Limit";
-            this.lblSizeClass_PSize1_Limit.Size = new System.Drawing.Size(18, 20);
+            this.lblSizeClass_PSize1_Limit.Size = new System.Drawing.Size(26, 29);
             this.lblSizeClass_PSize1_Limit.TabIndex = 2;
             this.lblSizeClass_PSize1_Limit.Text = "0";
             this.lblSizeClass_PSize1_Limit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -960,10 +966,9 @@ namespace SDA100
             // lblSizeClass_Total_Count
             // 
             this.lblSizeClass_Total_Count.AutoSize = true;
-            this.lblSizeClass_Total_Count.Location = new System.Drawing.Point(154, 208);
-            this.lblSizeClass_Total_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_Total_Count.Location = new System.Drawing.Point(231, 320);
             this.lblSizeClass_Total_Count.Name = "lblSizeClass_Total_Count";
-            this.lblSizeClass_Total_Count.Size = new System.Drawing.Size(18, 20);
+            this.lblSizeClass_Total_Count.Size = new System.Drawing.Size(26, 29);
             this.lblSizeClass_Total_Count.TabIndex = 2;
             this.lblSizeClass_Total_Count.Text = "0";
             this.lblSizeClass_Total_Count.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -971,10 +976,9 @@ namespace SDA100
             // lblSizeClass_PSize7_Count
             // 
             this.lblSizeClass_PSize7_Count.AutoSize = true;
-            this.lblSizeClass_PSize7_Count.Location = new System.Drawing.Point(154, 188);
-            this.lblSizeClass_PSize7_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize7_Count.Location = new System.Drawing.Point(231, 289);
             this.lblSizeClass_PSize7_Count.Name = "lblSizeClass_PSize7_Count";
-            this.lblSizeClass_PSize7_Count.Size = new System.Drawing.Size(18, 20);
+            this.lblSizeClass_PSize7_Count.Size = new System.Drawing.Size(26, 29);
             this.lblSizeClass_PSize7_Count.TabIndex = 2;
             this.lblSizeClass_PSize7_Count.Text = "0";
             this.lblSizeClass_PSize7_Count.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -982,10 +986,9 @@ namespace SDA100
             // lblSizeClass_PSize6_Count
             // 
             this.lblSizeClass_PSize6_Count.AutoSize = true;
-            this.lblSizeClass_PSize6_Count.Location = new System.Drawing.Point(154, 169);
-            this.lblSizeClass_PSize6_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize6_Count.Location = new System.Drawing.Point(231, 260);
             this.lblSizeClass_PSize6_Count.Name = "lblSizeClass_PSize6_Count";
-            this.lblSizeClass_PSize6_Count.Size = new System.Drawing.Size(18, 20);
+            this.lblSizeClass_PSize6_Count.Size = new System.Drawing.Size(26, 29);
             this.lblSizeClass_PSize6_Count.TabIndex = 2;
             this.lblSizeClass_PSize6_Count.Text = "0";
             this.lblSizeClass_PSize6_Count.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -993,10 +996,9 @@ namespace SDA100
             // lblSizeClass_PSize5_Count
             // 
             this.lblSizeClass_PSize5_Count.AutoSize = true;
-            this.lblSizeClass_PSize5_Count.Location = new System.Drawing.Point(154, 149);
-            this.lblSizeClass_PSize5_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize5_Count.Location = new System.Drawing.Point(231, 229);
             this.lblSizeClass_PSize5_Count.Name = "lblSizeClass_PSize5_Count";
-            this.lblSizeClass_PSize5_Count.Size = new System.Drawing.Size(18, 20);
+            this.lblSizeClass_PSize5_Count.Size = new System.Drawing.Size(26, 29);
             this.lblSizeClass_PSize5_Count.TabIndex = 2;
             this.lblSizeClass_PSize5_Count.Text = "0";
             this.lblSizeClass_PSize5_Count.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1004,10 +1006,9 @@ namespace SDA100
             // lblSizeClass_PSize4_Count
             // 
             this.lblSizeClass_PSize4_Count.AutoSize = true;
-            this.lblSizeClass_PSize4_Count.Location = new System.Drawing.Point(154, 130);
-            this.lblSizeClass_PSize4_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize4_Count.Location = new System.Drawing.Point(231, 200);
             this.lblSizeClass_PSize4_Count.Name = "lblSizeClass_PSize4_Count";
-            this.lblSizeClass_PSize4_Count.Size = new System.Drawing.Size(18, 20);
+            this.lblSizeClass_PSize4_Count.Size = new System.Drawing.Size(26, 29);
             this.lblSizeClass_PSize4_Count.TabIndex = 2;
             this.lblSizeClass_PSize4_Count.Text = "0";
             this.lblSizeClass_PSize4_Count.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1015,10 +1016,9 @@ namespace SDA100
             // lblSizeClass_PSize3_Count
             // 
             this.lblSizeClass_PSize3_Count.AutoSize = true;
-            this.lblSizeClass_PSize3_Count.Location = new System.Drawing.Point(154, 110);
-            this.lblSizeClass_PSize3_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize3_Count.Location = new System.Drawing.Point(231, 169);
             this.lblSizeClass_PSize3_Count.Name = "lblSizeClass_PSize3_Count";
-            this.lblSizeClass_PSize3_Count.Size = new System.Drawing.Size(18, 20);
+            this.lblSizeClass_PSize3_Count.Size = new System.Drawing.Size(26, 29);
             this.lblSizeClass_PSize3_Count.TabIndex = 2;
             this.lblSizeClass_PSize3_Count.Text = "0";
             this.lblSizeClass_PSize3_Count.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1026,10 +1026,9 @@ namespace SDA100
             // lblSizeClass_PSize2_Count
             // 
             this.lblSizeClass_PSize2_Count.AutoSize = true;
-            this.lblSizeClass_PSize2_Count.Location = new System.Drawing.Point(154, 91);
-            this.lblSizeClass_PSize2_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize2_Count.Location = new System.Drawing.Point(231, 140);
             this.lblSizeClass_PSize2_Count.Name = "lblSizeClass_PSize2_Count";
-            this.lblSizeClass_PSize2_Count.Size = new System.Drawing.Size(18, 20);
+            this.lblSizeClass_PSize2_Count.Size = new System.Drawing.Size(26, 29);
             this.lblSizeClass_PSize2_Count.TabIndex = 2;
             this.lblSizeClass_PSize2_Count.Text = "0";
             this.lblSizeClass_PSize2_Count.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1037,10 +1036,9 @@ namespace SDA100
             // lblSizeClass_PSize1_Count
             // 
             this.lblSizeClass_PSize1_Count.AutoSize = true;
-            this.lblSizeClass_PSize1_Count.Location = new System.Drawing.Point(154, 71);
-            this.lblSizeClass_PSize1_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize1_Count.Location = new System.Drawing.Point(231, 109);
             this.lblSizeClass_PSize1_Count.Name = "lblSizeClass_PSize1_Count";
-            this.lblSizeClass_PSize1_Count.Size = new System.Drawing.Size(18, 20);
+            this.lblSizeClass_PSize1_Count.Size = new System.Drawing.Size(26, 29);
             this.lblSizeClass_PSize1_Count.TabIndex = 2;
             this.lblSizeClass_PSize1_Count.Text = "0";
             this.lblSizeClass_PSize1_Count.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1048,80 +1046,72 @@ namespace SDA100
             // lblSizeClass_Total_Text
             // 
             this.lblSizeClass_Total_Text.AutoSize = true;
-            this.lblSizeClass_Total_Text.Location = new System.Drawing.Point(43, 208);
-            this.lblSizeClass_Total_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_Total_Text.Location = new System.Drawing.Point(64, 320);
             this.lblSizeClass_Total_Text.Name = "lblSizeClass_Total_Text";
-            this.lblSizeClass_Total_Text.Size = new System.Drawing.Size(48, 20);
+            this.lblSizeClass_Total_Text.Size = new System.Drawing.Size(74, 29);
             this.lblSizeClass_Total_Text.TabIndex = 2;
             this.lblSizeClass_Total_Text.Text = "Total:";
             // 
             // lblSizeClass_PSize7_Text
             // 
             this.lblSizeClass_PSize7_Text.AutoSize = true;
-            this.lblSizeClass_PSize7_Text.Location = new System.Drawing.Point(25, 188);
-            this.lblSizeClass_PSize7_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize7_Text.Location = new System.Drawing.Point(38, 289);
             this.lblSizeClass_PSize7_Text.Name = "lblSizeClass_PSize7_Text";
-            this.lblSizeClass_PSize7_Text.Size = new System.Drawing.Size(66, 20);
+            this.lblSizeClass_PSize7_Text.Size = new System.Drawing.Size(98, 29);
             this.lblSizeClass_PSize7_Text.TabIndex = 2;
             this.lblSizeClass_PSize7_Text.Text = "+5.0 um";
             // 
             // lblSizeClass_PSize6_Text
             // 
             this.lblSizeClass_PSize6_Text.AutoSize = true;
-            this.lblSizeClass_PSize6_Text.Location = new System.Drawing.Point(34, 169);
-            this.lblSizeClass_PSize6_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize6_Text.Location = new System.Drawing.Point(51, 260);
             this.lblSizeClass_PSize6_Text.Name = "lblSizeClass_PSize6_Text";
-            this.lblSizeClass_PSize6_Text.Size = new System.Drawing.Size(57, 20);
+            this.lblSizeClass_PSize6_Text.Size = new System.Drawing.Size(84, 29);
             this.lblSizeClass_PSize6_Text.TabIndex = 2;
             this.lblSizeClass_PSize6_Text.Text = "3.0 um";
             // 
             // lblSizeClass_PSize5_Text
             // 
             this.lblSizeClass_PSize5_Text.AutoSize = true;
-            this.lblSizeClass_PSize5_Text.Location = new System.Drawing.Point(34, 149);
-            this.lblSizeClass_PSize5_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize5_Text.Location = new System.Drawing.Point(51, 229);
             this.lblSizeClass_PSize5_Text.Name = "lblSizeClass_PSize5_Text";
-            this.lblSizeClass_PSize5_Text.Size = new System.Drawing.Size(57, 20);
+            this.lblSizeClass_PSize5_Text.Size = new System.Drawing.Size(84, 29);
             this.lblSizeClass_PSize5_Text.TabIndex = 2;
             this.lblSizeClass_PSize5_Text.Text = "1.0 um";
             // 
             // lblSizeClass_PSize4_Text
             // 
             this.lblSizeClass_PSize4_Text.AutoSize = true;
-            this.lblSizeClass_PSize4_Text.Location = new System.Drawing.Point(34, 130);
-            this.lblSizeClass_PSize4_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize4_Text.Location = new System.Drawing.Point(51, 200);
             this.lblSizeClass_PSize4_Text.Name = "lblSizeClass_PSize4_Text";
-            this.lblSizeClass_PSize4_Text.Size = new System.Drawing.Size(57, 20);
+            this.lblSizeClass_PSize4_Text.Size = new System.Drawing.Size(84, 29);
             this.lblSizeClass_PSize4_Text.TabIndex = 2;
             this.lblSizeClass_PSize4_Text.Text = "0.7 um";
             // 
             // lblSizeClass_PSize3_Text
             // 
             this.lblSizeClass_PSize3_Text.AutoSize = true;
-            this.lblSizeClass_PSize3_Text.Location = new System.Drawing.Point(34, 110);
-            this.lblSizeClass_PSize3_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize3_Text.Location = new System.Drawing.Point(51, 169);
             this.lblSizeClass_PSize3_Text.Name = "lblSizeClass_PSize3_Text";
-            this.lblSizeClass_PSize3_Text.Size = new System.Drawing.Size(57, 20);
+            this.lblSizeClass_PSize3_Text.Size = new System.Drawing.Size(84, 29);
             this.lblSizeClass_PSize3_Text.TabIndex = 2;
             this.lblSizeClass_PSize3_Text.Text = "0.5 um";
             // 
             // lblSizeClass_PSize2_Text
             // 
             this.lblSizeClass_PSize2_Text.AutoSize = true;
-            this.lblSizeClass_PSize2_Text.Location = new System.Drawing.Point(34, 91);
-            this.lblSizeClass_PSize2_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize2_Text.Location = new System.Drawing.Point(51, 140);
             this.lblSizeClass_PSize2_Text.Name = "lblSizeClass_PSize2_Text";
-            this.lblSizeClass_PSize2_Text.Size = new System.Drawing.Size(57, 20);
+            this.lblSizeClass_PSize2_Text.Size = new System.Drawing.Size(84, 29);
             this.lblSizeClass_PSize2_Text.TabIndex = 2;
             this.lblSizeClass_PSize2_Text.Text = "0.3 um";
             // 
             // lblSizeClass_PSize1_Text
             // 
             this.lblSizeClass_PSize1_Text.AutoSize = true;
-            this.lblSizeClass_PSize1_Text.Location = new System.Drawing.Point(25, 72);
-            this.lblSizeClass_PSize1_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_PSize1_Text.Location = new System.Drawing.Point(38, 111);
             this.lblSizeClass_PSize1_Text.Name = "lblSizeClass_PSize1_Text";
-            this.lblSizeClass_PSize1_Text.Size = new System.Drawing.Size(66, 20);
+            this.lblSizeClass_PSize1_Text.Size = new System.Drawing.Size(97, 29);
             this.lblSizeClass_PSize1_Text.TabIndex = 2;
             this.lblSizeClass_PSize1_Text.Text = "0.25 um";
             // 
@@ -1129,10 +1119,9 @@ namespace SDA100
             // 
             this.lblRejectLimitTitle.AutoSize = true;
             this.lblRejectLimitTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRejectLimitTitle.Location = new System.Drawing.Point(228, 52);
-            this.lblRejectLimitTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRejectLimitTitle.Location = new System.Drawing.Point(342, 80);
             this.lblRejectLimitTitle.Name = "lblRejectLimitTitle";
-            this.lblRejectLimitTitle.Size = new System.Drawing.Size(92, 20);
+            this.lblRejectLimitTitle.Size = new System.Drawing.Size(139, 29);
             this.lblRejectLimitTitle.TabIndex = 1;
             this.lblRejectLimitTitle.Text = "Reject Limit";
             // 
@@ -1140,10 +1129,9 @@ namespace SDA100
             // 
             this.lblDefectCountTitle.AutoSize = true;
             this.lblDefectCountTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDefectCountTitle.Location = new System.Drawing.Point(114, 52);
-            this.lblDefectCountTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDefectCountTitle.Location = new System.Drawing.Point(171, 80);
             this.lblDefectCountTitle.Name = "lblDefectCountTitle";
-            this.lblDefectCountTitle.Size = new System.Drawing.Size(104, 20);
+            this.lblDefectCountTitle.Size = new System.Drawing.Size(151, 29);
             this.lblDefectCountTitle.TabIndex = 1;
             this.lblDefectCountTitle.Text = "Defect Count";
             // 
@@ -1151,10 +1139,9 @@ namespace SDA100
             // 
             this.lblSizeClassTitle.AutoSize = true;
             this.lblSizeClassTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSizeClassTitle.Location = new System.Drawing.Point(21, 52);
-            this.lblSizeClassTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClassTitle.Location = new System.Drawing.Point(32, 80);
             this.lblSizeClassTitle.Name = "lblSizeClassTitle";
-            this.lblSizeClassTitle.Size = new System.Drawing.Size(83, 20);
+            this.lblSizeClassTitle.Size = new System.Drawing.Size(126, 29);
             this.lblSizeClassTitle.TabIndex = 1;
             this.lblSizeClassTitle.Text = "Size Class";
             // 
@@ -1162,10 +1149,9 @@ namespace SDA100
             // 
             this.lblTestInfoTitle.AutoSize = true;
             this.lblTestInfoTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTestInfoTitle.Location = new System.Drawing.Point(94, 22);
-            this.lblTestInfoTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTestInfoTitle.Location = new System.Drawing.Point(141, 34);
             this.lblTestInfoTitle.Name = "lblTestInfoTitle";
-            this.lblTestInfoTitle.Size = new System.Drawing.Size(182, 25);
+            this.lblTestInfoTitle.Size = new System.Drawing.Size(265, 37);
             this.lblTestInfoTitle.TabIndex = 0;
             this.lblTestInfoTitle.Text = "Test Information";
             // 
@@ -1175,10 +1161,9 @@ namespace SDA100
             this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoad.ForeColor = System.Drawing.Color.White;
-            this.btnLoad.Location = new System.Drawing.Point(326, 18);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLoad.Location = new System.Drawing.Point(489, 28);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(147, 85);
+            this.btnLoad.Size = new System.Drawing.Size(220, 131);
             this.btnLoad.TabIndex = 77;
             this.btnLoad.Text = "LOAD";
             this.btnLoad.UseVisualStyleBackColor = false;
@@ -1190,10 +1175,9 @@ namespace SDA100
             this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStop.ForeColor = System.Drawing.Color.White;
-            this.btnStop.Location = new System.Drawing.Point(172, 18);
-            this.btnStop.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStop.Location = new System.Drawing.Point(258, 28);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(143, 85);
+            this.btnStop.Size = new System.Drawing.Size(214, 131);
             this.btnStop.TabIndex = 76;
             this.btnStop.Text = "STOP";
             this.btnStop.UseVisualStyleBackColor = false;
@@ -1205,10 +1189,9 @@ namespace SDA100
             this.btnRun.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRun.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRun.ForeColor = System.Drawing.Color.White;
-            this.btnRun.Location = new System.Drawing.Point(26, 18);
-            this.btnRun.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRun.Location = new System.Drawing.Point(39, 28);
             this.btnRun.Name = "btnRun";
-            this.btnRun.Size = new System.Drawing.Size(140, 85);
+            this.btnRun.Size = new System.Drawing.Size(210, 131);
             this.btnRun.TabIndex = 75;
             this.btnRun.Text = "RUN";
             this.btnRun.UseVisualStyleBackColor = false;
@@ -1247,9 +1230,10 @@ namespace SDA100
             this.tabPage2.Controls.Add(this.groupBox6);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(54, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1211, 754);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage2.Size = new System.Drawing.Size(1846, 1164);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Data";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1257,10 +1241,11 @@ namespace SDA100
             // lbxScanDataFiles
             // 
             this.lbxScanDataFiles.FormattingEnabled = true;
-            this.lbxScanDataFiles.ItemHeight = 16;
-            this.lbxScanDataFiles.Location = new System.Drawing.Point(70, 23);
+            this.lbxScanDataFiles.ItemHeight = 25;
+            this.lbxScanDataFiles.Location = new System.Drawing.Point(105, 35);
+            this.lbxScanDataFiles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lbxScanDataFiles.Name = "lbxScanDataFiles";
-            this.lbxScanDataFiles.Size = new System.Drawing.Size(375, 276);
+            this.lbxScanDataFiles.Size = new System.Drawing.Size(560, 404);
             this.lbxScanDataFiles.TabIndex = 136;
             this.lbxScanDataFiles.SelectedIndexChanged += new System.EventHandler(this.lbxScanDataFiles_SelectedIndexChanged);
             // 
@@ -1269,9 +1254,10 @@ namespace SDA100
             this.lbleScanDefectCnt7.AutoSize = true;
             this.lbleScanDefectCnt7.BackColor = System.Drawing.SystemColors.Control;
             this.lbleScanDefectCnt7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleScanDefectCnt7.Location = new System.Drawing.Point(1016, 599);
+            this.lbleScanDefectCnt7.Location = new System.Drawing.Point(1524, 922);
+            this.lbleScanDefectCnt7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbleScanDefectCnt7.Name = "lbleScanDefectCnt7";
-            this.lbleScanDefectCnt7.Size = new System.Drawing.Size(15, 16);
+            this.lbleScanDefectCnt7.Size = new System.Drawing.Size(23, 25);
             this.lbleScanDefectCnt7.TabIndex = 135;
             this.lbleScanDefectCnt7.Text = "0";
             this.lbleScanDefectCnt7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1281,9 +1267,10 @@ namespace SDA100
             this.lbleScanDefectCnt6.AutoSize = true;
             this.lbleScanDefectCnt6.BackColor = System.Drawing.SystemColors.Control;
             this.lbleScanDefectCnt6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleScanDefectCnt6.Location = new System.Drawing.Point(946, 599);
+            this.lbleScanDefectCnt6.Location = new System.Drawing.Point(1419, 922);
+            this.lbleScanDefectCnt6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbleScanDefectCnt6.Name = "lbleScanDefectCnt6";
-            this.lbleScanDefectCnt6.Size = new System.Drawing.Size(15, 16);
+            this.lbleScanDefectCnt6.Size = new System.Drawing.Size(23, 25);
             this.lbleScanDefectCnt6.TabIndex = 134;
             this.lbleScanDefectCnt6.Text = "0";
             this.lbleScanDefectCnt6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1293,9 +1280,10 @@ namespace SDA100
             this.lbleScanDefectCnt5.AutoSize = true;
             this.lbleScanDefectCnt5.BackColor = System.Drawing.SystemColors.Control;
             this.lbleScanDefectCnt5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleScanDefectCnt5.Location = new System.Drawing.Point(876, 599);
+            this.lbleScanDefectCnt5.Location = new System.Drawing.Point(1314, 922);
+            this.lbleScanDefectCnt5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbleScanDefectCnt5.Name = "lbleScanDefectCnt5";
-            this.lbleScanDefectCnt5.Size = new System.Drawing.Size(15, 16);
+            this.lbleScanDefectCnt5.Size = new System.Drawing.Size(23, 25);
             this.lbleScanDefectCnt5.TabIndex = 133;
             this.lbleScanDefectCnt5.Text = "0";
             this.lbleScanDefectCnt5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1305,9 +1293,10 @@ namespace SDA100
             this.lbleScanDefectCnt4.AutoSize = true;
             this.lbleScanDefectCnt4.BackColor = System.Drawing.SystemColors.Control;
             this.lbleScanDefectCnt4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleScanDefectCnt4.Location = new System.Drawing.Point(806, 599);
+            this.lbleScanDefectCnt4.Location = new System.Drawing.Point(1209, 922);
+            this.lbleScanDefectCnt4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbleScanDefectCnt4.Name = "lbleScanDefectCnt4";
-            this.lbleScanDefectCnt4.Size = new System.Drawing.Size(15, 16);
+            this.lbleScanDefectCnt4.Size = new System.Drawing.Size(23, 25);
             this.lbleScanDefectCnt4.TabIndex = 132;
             this.lbleScanDefectCnt4.Text = "0";
             this.lbleScanDefectCnt4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1317,9 +1306,10 @@ namespace SDA100
             this.lbleScanDefectCnt3.AutoSize = true;
             this.lbleScanDefectCnt3.BackColor = System.Drawing.SystemColors.Control;
             this.lbleScanDefectCnt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleScanDefectCnt3.Location = new System.Drawing.Point(737, 599);
+            this.lbleScanDefectCnt3.Location = new System.Drawing.Point(1106, 922);
+            this.lbleScanDefectCnt3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbleScanDefectCnt3.Name = "lbleScanDefectCnt3";
-            this.lbleScanDefectCnt3.Size = new System.Drawing.Size(15, 16);
+            this.lbleScanDefectCnt3.Size = new System.Drawing.Size(23, 25);
             this.lbleScanDefectCnt3.TabIndex = 131;
             this.lbleScanDefectCnt3.Text = "0";
             this.lbleScanDefectCnt3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1329,9 +1319,10 @@ namespace SDA100
             this.lbleScanDefectCnt2.AutoSize = true;
             this.lbleScanDefectCnt2.BackColor = System.Drawing.SystemColors.Control;
             this.lbleScanDefectCnt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleScanDefectCnt2.Location = new System.Drawing.Point(666, 599);
+            this.lbleScanDefectCnt2.Location = new System.Drawing.Point(999, 922);
+            this.lbleScanDefectCnt2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbleScanDefectCnt2.Name = "lbleScanDefectCnt2";
-            this.lbleScanDefectCnt2.Size = new System.Drawing.Size(15, 16);
+            this.lbleScanDefectCnt2.Size = new System.Drawing.Size(23, 25);
             this.lbleScanDefectCnt2.TabIndex = 130;
             this.lbleScanDefectCnt2.Text = "0";
             this.lbleScanDefectCnt2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1341,9 +1332,10 @@ namespace SDA100
             this.lbleScanDefectCnt1.AutoSize = true;
             this.lbleScanDefectCnt1.BackColor = System.Drawing.SystemColors.Control;
             this.lbleScanDefectCnt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleScanDefectCnt1.Location = new System.Drawing.Point(596, 599);
+            this.lbleScanDefectCnt1.Location = new System.Drawing.Point(894, 922);
+            this.lbleScanDefectCnt1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbleScanDefectCnt1.Name = "lbleScanDefectCnt1";
-            this.lbleScanDefectCnt1.Size = new System.Drawing.Size(15, 16);
+            this.lbleScanDefectCnt1.Size = new System.Drawing.Size(23, 25);
             this.lbleScanDefectCnt1.TabIndex = 129;
             this.lbleScanDefectCnt1.Text = "0";
             this.lbleScanDefectCnt1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1352,9 +1344,10 @@ namespace SDA100
             // 
             this.lbleMinHeightBar.AutoSize = true;
             this.lbleMinHeightBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleMinHeightBar.Location = new System.Drawing.Point(494, 702);
+            this.lbleMinHeightBar.Location = new System.Drawing.Point(741, 1080);
+            this.lbleMinHeightBar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbleMinHeightBar.Name = "lbleMinHeightBar";
-            this.lbleMinHeightBar.Size = new System.Drawing.Size(68, 16);
+            this.lbleMinHeightBar.Size = new System.Drawing.Size(100, 25);
             this.lbleMinHeightBar.TabIndex = 128;
             this.lbleMinHeightBar.Text = "MinHeight";
             // 
@@ -1362,9 +1355,10 @@ namespace SDA100
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(1001, 717);
+            this.label22.Location = new System.Drawing.Point(1502, 1103);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(56, 16);
+            this.label22.Size = new System.Drawing.Size(88, 25);
             this.label22.TabIndex = 127;
             this.label22.Text = "5.0 um +";
             // 
@@ -1372,9 +1366,10 @@ namespace SDA100
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(932, 717);
+            this.label23.Location = new System.Drawing.Point(1398, 1103);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(46, 16);
+            this.label23.Size = new System.Drawing.Size(71, 25);
             this.label23.TabIndex = 126;
             this.label23.Text = "3.0 um";
             // 
@@ -1382,9 +1377,10 @@ namespace SDA100
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(864, 717);
+            this.label24.Location = new System.Drawing.Point(1296, 1103);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(46, 16);
+            this.label24.Size = new System.Drawing.Size(71, 25);
             this.label24.TabIndex = 125;
             this.label24.Text = "1.0 um";
             // 
@@ -1392,9 +1388,10 @@ namespace SDA100
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(793, 717);
+            this.label25.Location = new System.Drawing.Point(1190, 1103);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(39, 16);
+            this.label25.Size = new System.Drawing.Size(60, 25);
             this.label25.TabIndex = 124;
             this.label25.Text = ".7 um";
             // 
@@ -1402,9 +1399,10 @@ namespace SDA100
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(723, 718);
+            this.label26.Location = new System.Drawing.Point(1084, 1105);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(39, 16);
+            this.label26.Size = new System.Drawing.Size(60, 25);
             this.label26.TabIndex = 123;
             this.label26.Text = ".5 um";
             // 
@@ -1412,9 +1410,10 @@ namespace SDA100
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(651, 718);
+            this.label27.Location = new System.Drawing.Point(976, 1105);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(39, 16);
+            this.label27.Size = new System.Drawing.Size(60, 25);
             this.label27.TabIndex = 122;
             this.label27.Text = ".3 um";
             // 
@@ -1422,9 +1421,10 @@ namespace SDA100
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(581, 717);
+            this.label28.Location = new System.Drawing.Point(872, 1103);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(43, 16);
+            this.label28.Size = new System.Drawing.Size(66, 25);
             this.label28.TabIndex = 121;
             this.label28.Text = ".25um";
             // 
@@ -1432,9 +1432,10 @@ namespace SDA100
             // 
             this.lbleMidHeightBar.AutoSize = true;
             this.lbleMidHeightBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleMidHeightBar.Location = new System.Drawing.Point(494, 650);
+            this.lbleMidHeightBar.Location = new System.Drawing.Point(741, 1000);
+            this.lbleMidHeightBar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbleMidHeightBar.Name = "lbleMidHeightBar";
-            this.lbleMidHeightBar.Size = new System.Drawing.Size(69, 16);
+            this.lbleMidHeightBar.Size = new System.Drawing.Size(100, 25);
             this.lbleMidHeightBar.TabIndex = 120;
             this.lbleMidHeightBar.Text = "MidHeight";
             // 
@@ -1442,96 +1443,106 @@ namespace SDA100
             // 
             this.lbleMaxHeightBar.AutoSize = true;
             this.lbleMaxHeightBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleMaxHeightBar.Location = new System.Drawing.Point(491, 600);
+            this.lbleMaxHeightBar.Location = new System.Drawing.Point(736, 923);
+            this.lbleMaxHeightBar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbleMaxHeightBar.Name = "lbleMaxHeightBar";
-            this.lbleMaxHeightBar.Size = new System.Drawing.Size(72, 16);
+            this.lbleMaxHeightBar.Size = new System.Drawing.Size(106, 25);
             this.lbleMaxHeightBar.TabIndex = 119;
             this.lbleMaxHeightBar.Text = "MaxHeight";
             // 
             // edef7
             // 
             this.edef7.BackColor = System.Drawing.Color.LightGreen;
-            this.edef7.Location = new System.Drawing.Point(998, 615);
+            this.edef7.Location = new System.Drawing.Point(1497, 946);
+            this.edef7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.edef7.Multiline = true;
             this.edef7.Name = "edef7";
-            this.edef7.Size = new System.Drawing.Size(50, 100);
+            this.edef7.Size = new System.Drawing.Size(73, 152);
             this.edef7.TabIndex = 118;
             // 
             // edef6
             // 
             this.edef6.BackColor = System.Drawing.Color.Yellow;
-            this.edef6.Location = new System.Drawing.Point(928, 615);
+            this.edef6.Location = new System.Drawing.Point(1392, 946);
+            this.edef6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.edef6.Multiline = true;
             this.edef6.Name = "edef6";
             this.edef6.ReadOnly = true;
-            this.edef6.Size = new System.Drawing.Size(50, 100);
+            this.edef6.Size = new System.Drawing.Size(73, 152);
             this.edef6.TabIndex = 117;
             // 
             // edef5
             // 
             this.edef5.BackColor = System.Drawing.Color.Orange;
-            this.edef5.Location = new System.Drawing.Point(858, 615);
+            this.edef5.Location = new System.Drawing.Point(1287, 946);
+            this.edef5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.edef5.Multiline = true;
             this.edef5.Name = "edef5";
             this.edef5.ReadOnly = true;
-            this.edef5.Size = new System.Drawing.Size(50, 100);
+            this.edef5.Size = new System.Drawing.Size(73, 152);
             this.edef5.TabIndex = 116;
             // 
             // edef4
             // 
             this.edef4.BackColor = System.Drawing.Color.Red;
-            this.edef4.Location = new System.Drawing.Point(788, 615);
+            this.edef4.Location = new System.Drawing.Point(1182, 946);
+            this.edef4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.edef4.Multiline = true;
             this.edef4.Name = "edef4";
             this.edef4.ReadOnly = true;
-            this.edef4.Size = new System.Drawing.Size(50, 100);
+            this.edef4.Size = new System.Drawing.Size(73, 152);
             this.edef4.TabIndex = 115;
             // 
             // edef3
             // 
             this.edef3.BackColor = System.Drawing.Color.Fuchsia;
-            this.edef3.Location = new System.Drawing.Point(718, 615);
+            this.edef3.Location = new System.Drawing.Point(1077, 946);
+            this.edef3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.edef3.Multiline = true;
             this.edef3.Name = "edef3";
             this.edef3.ReadOnly = true;
-            this.edef3.Size = new System.Drawing.Size(50, 100);
+            this.edef3.Size = new System.Drawing.Size(73, 152);
             this.edef3.TabIndex = 114;
             // 
             // edef2
             // 
             this.edef2.BackColor = System.Drawing.Color.BlueViolet;
-            this.edef2.Location = new System.Drawing.Point(648, 615);
+            this.edef2.Location = new System.Drawing.Point(972, 946);
+            this.edef2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.edef2.Multiline = true;
             this.edef2.Name = "edef2";
             this.edef2.ReadOnly = true;
-            this.edef2.Size = new System.Drawing.Size(50, 100);
+            this.edef2.Size = new System.Drawing.Size(73, 152);
             this.edef2.TabIndex = 113;
             // 
             // edef1
             // 
             this.edef1.BackColor = System.Drawing.Color.Blue;
-            this.edef1.Location = new System.Drawing.Point(578, 615);
+            this.edef1.Location = new System.Drawing.Point(867, 946);
+            this.edef1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.edef1.Multiline = true;
             this.edef1.Name = "edef1";
             this.edef1.ReadOnly = true;
-            this.edef1.Size = new System.Drawing.Size(50, 100);
+            this.edef1.Size = new System.Drawing.Size(73, 152);
             this.edef1.TabIndex = 112;
             // 
             // eDisHis
             // 
-            this.eDisHis.Location = new System.Drawing.Point(563, 595);
+            this.eDisHis.Location = new System.Drawing.Point(844, 915);
+            this.eDisHis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.eDisHis.Multiline = true;
             this.eDisHis.Name = "eDisHis";
             this.eDisHis.ReadOnly = true;
-            this.eDisHis.Size = new System.Drawing.Size(500, 120);
+            this.eDisHis.Size = new System.Drawing.Size(748, 182);
             this.eDisHis.TabIndex = 111;
             // 
             // eScanDataImage
             // 
             this.eScanDataImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.eScanDataImage.Location = new System.Drawing.Point(565, 60);
+            this.eScanDataImage.Location = new System.Drawing.Point(848, 92);
+            this.eScanDataImage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.eScanDataImage.Name = "eScanDataImage";
-            this.eScanDataImage.Size = new System.Drawing.Size(501, 501);
+            this.eScanDataImage.Size = new System.Drawing.Size(750, 770);
             this.eScanDataImage.TabIndex = 110;
             this.eScanDataImage.TabStop = false;
             // 
@@ -1549,30 +1560,26 @@ namespace SDA100
             this.groupBox5.Controls.Add(this.lbleCCWaferSize_Text);
             this.groupBox5.Controls.Add(this.label40);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(70, 536);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox5.Location = new System.Drawing.Point(105, 825);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox5.Size = new System.Drawing.Size(375, 197);
+            this.groupBox5.Size = new System.Drawing.Size(562, 303);
             this.groupBox5.TabIndex = 109;
             this.groupBox5.TabStop = false;
             // 
             // lbleCCScanID_Value
             // 
             this.lbleCCScanID_Value.AutoSize = true;
-            this.lbleCCScanID_Value.Location = new System.Drawing.Point(137, 143);
-            this.lbleCCScanID_Value.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleCCScanID_Value.Location = new System.Drawing.Point(206, 220);
             this.lbleCCScanID_Value.Name = "lbleCCScanID_Value";
-            this.lbleCCScanID_Value.Size = new System.Drawing.Size(47, 20);
+            this.lbleCCScanID_Value.Size = new System.Drawing.Size(72, 29);
             this.lbleCCScanID_Value.TabIndex = 114;
             this.lbleCCScanID_Value.Text = "None";
             // 
             // lbleCCScanID_Text
             // 
-            this.lbleCCScanID_Text.Location = new System.Drawing.Point(17, 143);
-            this.lbleCCScanID_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleCCScanID_Text.Location = new System.Drawing.Point(26, 220);
             this.lbleCCScanID_Text.Name = "lbleCCScanID_Text";
-            this.lbleCCScanID_Text.Size = new System.Drawing.Size(101, 19);
+            this.lbleCCScanID_Text.Size = new System.Drawing.Size(152, 29);
             this.lbleCCScanID_Text.TabIndex = 115;
             this.lbleCCScanID_Text.Text = "Scan ID:";
             this.lbleCCScanID_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -1580,19 +1587,17 @@ namespace SDA100
             // lbleCCUserID_Value
             // 
             this.lbleCCUserID_Value.AutoSize = true;
-            this.lbleCCUserID_Value.Location = new System.Drawing.Point(137, 123);
-            this.lbleCCUserID_Value.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleCCUserID_Value.Location = new System.Drawing.Point(206, 189);
             this.lbleCCUserID_Value.Name = "lbleCCUserID_Value";
-            this.lbleCCUserID_Value.Size = new System.Drawing.Size(47, 20);
+            this.lbleCCUserID_Value.Size = new System.Drawing.Size(72, 29);
             this.lbleCCUserID_Value.TabIndex = 112;
             this.lbleCCUserID_Value.Text = "None";
             // 
             // lbleCCUserID_Text
             // 
-            this.lbleCCUserID_Text.Location = new System.Drawing.Point(17, 123);
-            this.lbleCCUserID_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleCCUserID_Text.Location = new System.Drawing.Point(26, 189);
             this.lbleCCUserID_Text.Name = "lbleCCUserID_Text";
-            this.lbleCCUserID_Text.Size = new System.Drawing.Size(101, 19);
+            this.lbleCCUserID_Text.Size = new System.Drawing.Size(152, 29);
             this.lbleCCUserID_Text.TabIndex = 113;
             this.lbleCCUserID_Text.Text = "User ID:";
             this.lbleCCUserID_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -1600,59 +1605,53 @@ namespace SDA100
             // lbleCCRecipeName_Value
             // 
             this.lbleCCRecipeName_Value.AutoSize = true;
-            this.lbleCCRecipeName_Value.Location = new System.Drawing.Point(137, 103);
-            this.lbleCCRecipeName_Value.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleCCRecipeName_Value.Location = new System.Drawing.Point(206, 158);
             this.lbleCCRecipeName_Value.Name = "lbleCCRecipeName_Value";
-            this.lbleCCRecipeName_Value.Size = new System.Drawing.Size(47, 20);
+            this.lbleCCRecipeName_Value.Size = new System.Drawing.Size(72, 29);
             this.lbleCCRecipeName_Value.TabIndex = 2;
             this.lbleCCRecipeName_Value.Text = "None";
             // 
             // lbleCCEdgeReject_Value
             // 
             this.lbleCCEdgeReject_Value.AutoSize = true;
-            this.lbleCCEdgeReject_Value.Location = new System.Drawing.Point(152, 65);
-            this.lbleCCEdgeReject_Value.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleCCEdgeReject_Value.Location = new System.Drawing.Point(228, 100);
             this.lbleCCEdgeReject_Value.Name = "lbleCCEdgeReject_Value";
-            this.lbleCCEdgeReject_Value.Size = new System.Drawing.Size(18, 20);
+            this.lbleCCEdgeReject_Value.Size = new System.Drawing.Size(26, 29);
             this.lbleCCEdgeReject_Value.TabIndex = 2;
             this.lbleCCEdgeReject_Value.Text = "0";
             // 
             // lbleCCWaferSize_Value
             // 
             this.lbleCCWaferSize_Value.AutoSize = true;
-            this.lbleCCWaferSize_Value.Location = new System.Drawing.Point(152, 45);
-            this.lbleCCWaferSize_Value.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleCCWaferSize_Value.Location = new System.Drawing.Point(228, 69);
             this.lbleCCWaferSize_Value.Name = "lbleCCWaferSize_Value";
-            this.lbleCCWaferSize_Value.Size = new System.Drawing.Size(18, 20);
+            this.lbleCCWaferSize_Value.Size = new System.Drawing.Size(26, 29);
             this.lbleCCWaferSize_Value.TabIndex = 2;
             this.lbleCCWaferSize_Value.Text = "0";
             // 
             // lbleCCRecipeName_Text
             // 
-            this.lbleCCRecipeName_Text.Location = new System.Drawing.Point(15, 103);
-            this.lbleCCRecipeName_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleCCRecipeName_Text.Location = new System.Drawing.Point(22, 158);
             this.lbleCCRecipeName_Text.Name = "lbleCCRecipeName_Text";
-            this.lbleCCRecipeName_Text.Size = new System.Drawing.Size(101, 19);
+            this.lbleCCRecipeName_Text.Size = new System.Drawing.Size(152, 29);
             this.lbleCCRecipeName_Text.TabIndex = 2;
             this.lbleCCRecipeName_Text.Text = "Recipe:";
             this.lbleCCRecipeName_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lbleCCEdgeReject_Text
             // 
-            this.lbleCCEdgeReject_Text.Location = new System.Drawing.Point(11, 65);
-            this.lbleCCEdgeReject_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleCCEdgeReject_Text.Location = new System.Drawing.Point(16, 100);
             this.lbleCCEdgeReject_Text.Name = "lbleCCEdgeReject_Text";
-            this.lbleCCEdgeReject_Text.Size = new System.Drawing.Size(105, 20);
+            this.lbleCCEdgeReject_Text.Size = new System.Drawing.Size(158, 31);
             this.lbleCCEdgeReject_Text.TabIndex = 2;
             this.lbleCCEdgeReject_Text.Text = "Edge Reject:";
             this.lbleCCEdgeReject_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lbleCCWaferSize_Text
             // 
-            this.lbleCCWaferSize_Text.Location = new System.Drawing.Point(17, 45);
-            this.lbleCCWaferSize_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleCCWaferSize_Text.Location = new System.Drawing.Point(26, 69);
             this.lbleCCWaferSize_Text.Name = "lbleCCWaferSize_Text";
-            this.lbleCCWaferSize_Text.Size = new System.Drawing.Size(97, 20);
+            this.lbleCCWaferSize_Text.Size = new System.Drawing.Size(146, 31);
             this.lbleCCWaferSize_Text.TabIndex = 2;
             this.lbleCCWaferSize_Text.Text = "Wafer Size:";
             this.lbleCCWaferSize_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -1661,10 +1660,9 @@ namespace SDA100
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(112, 13);
-            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label40.Location = new System.Drawing.Point(168, 20);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(140, 25);
+            this.label40.Size = new System.Drawing.Size(203, 37);
             this.label40.TabIndex = 0;
             this.label40.Text = "Scan Config";
             // 
@@ -1699,21 +1697,18 @@ namespace SDA100
             this.groupBox6.Controls.Add(this.label67);
             this.groupBox6.Controls.Add(this.label68);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(70, 305);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox6.Location = new System.Drawing.Point(105, 469);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox6.Size = new System.Drawing.Size(375, 227);
+            this.groupBox6.Size = new System.Drawing.Size(562, 349);
             this.groupBox6.TabIndex = 108;
             this.groupBox6.TabStop = false;
             // 
             // lbleSizeClass_PSizeTotal_Limit
             // 
             this.lbleSizeClass_PSizeTotal_Limit.AutoSize = true;
-            this.lbleSizeClass_PSizeTotal_Limit.Location = new System.Drawing.Point(285, 195);
-            this.lbleSizeClass_PSizeTotal_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleSizeClass_PSizeTotal_Limit.Location = new System.Drawing.Point(428, 300);
             this.lbleSizeClass_PSizeTotal_Limit.Name = "lbleSizeClass_PSizeTotal_Limit";
-            this.lbleSizeClass_PSizeTotal_Limit.Size = new System.Drawing.Size(18, 20);
+            this.lbleSizeClass_PSizeTotal_Limit.Size = new System.Drawing.Size(26, 29);
             this.lbleSizeClass_PSizeTotal_Limit.TabIndex = 2;
             this.lbleSizeClass_PSizeTotal_Limit.Text = "0";
             this.lbleSizeClass_PSizeTotal_Limit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1721,10 +1716,9 @@ namespace SDA100
             // lbleSizeClass_PSize7_Limit
             // 
             this.lbleSizeClass_PSize7_Limit.AutoSize = true;
-            this.lbleSizeClass_PSize7_Limit.Location = new System.Drawing.Point(285, 175);
-            this.lbleSizeClass_PSize7_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleSizeClass_PSize7_Limit.Location = new System.Drawing.Point(428, 269);
             this.lbleSizeClass_PSize7_Limit.Name = "lbleSizeClass_PSize7_Limit";
-            this.lbleSizeClass_PSize7_Limit.Size = new System.Drawing.Size(18, 20);
+            this.lbleSizeClass_PSize7_Limit.Size = new System.Drawing.Size(26, 29);
             this.lbleSizeClass_PSize7_Limit.TabIndex = 2;
             this.lbleSizeClass_PSize7_Limit.Text = "0";
             this.lbleSizeClass_PSize7_Limit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1732,10 +1726,9 @@ namespace SDA100
             // lbleSizeClass_PSize6_Limit
             // 
             this.lbleSizeClass_PSize6_Limit.AutoSize = true;
-            this.lbleSizeClass_PSize6_Limit.Location = new System.Drawing.Point(285, 156);
-            this.lbleSizeClass_PSize6_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleSizeClass_PSize6_Limit.Location = new System.Drawing.Point(428, 240);
             this.lbleSizeClass_PSize6_Limit.Name = "lbleSizeClass_PSize6_Limit";
-            this.lbleSizeClass_PSize6_Limit.Size = new System.Drawing.Size(18, 20);
+            this.lbleSizeClass_PSize6_Limit.Size = new System.Drawing.Size(26, 29);
             this.lbleSizeClass_PSize6_Limit.TabIndex = 2;
             this.lbleSizeClass_PSize6_Limit.Text = "0";
             this.lbleSizeClass_PSize6_Limit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1743,10 +1736,9 @@ namespace SDA100
             // lbleSizeClass_PSize5_Limit
             // 
             this.lbleSizeClass_PSize5_Limit.AutoSize = true;
-            this.lbleSizeClass_PSize5_Limit.Location = new System.Drawing.Point(285, 136);
-            this.lbleSizeClass_PSize5_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleSizeClass_PSize5_Limit.Location = new System.Drawing.Point(428, 209);
             this.lbleSizeClass_PSize5_Limit.Name = "lbleSizeClass_PSize5_Limit";
-            this.lbleSizeClass_PSize5_Limit.Size = new System.Drawing.Size(18, 20);
+            this.lbleSizeClass_PSize5_Limit.Size = new System.Drawing.Size(26, 29);
             this.lbleSizeClass_PSize5_Limit.TabIndex = 2;
             this.lbleSizeClass_PSize5_Limit.Text = "0";
             this.lbleSizeClass_PSize5_Limit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1754,10 +1746,9 @@ namespace SDA100
             // lbleSizeClass_PSize4_Limit
             // 
             this.lbleSizeClass_PSize4_Limit.AutoSize = true;
-            this.lbleSizeClass_PSize4_Limit.Location = new System.Drawing.Point(285, 117);
-            this.lbleSizeClass_PSize4_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleSizeClass_PSize4_Limit.Location = new System.Drawing.Point(428, 180);
             this.lbleSizeClass_PSize4_Limit.Name = "lbleSizeClass_PSize4_Limit";
-            this.lbleSizeClass_PSize4_Limit.Size = new System.Drawing.Size(18, 20);
+            this.lbleSizeClass_PSize4_Limit.Size = new System.Drawing.Size(26, 29);
             this.lbleSizeClass_PSize4_Limit.TabIndex = 2;
             this.lbleSizeClass_PSize4_Limit.Text = "0";
             this.lbleSizeClass_PSize4_Limit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1765,10 +1756,9 @@ namespace SDA100
             // lbleSizeClass_PSize3_Limit
             // 
             this.lbleSizeClass_PSize3_Limit.AutoSize = true;
-            this.lbleSizeClass_PSize3_Limit.Location = new System.Drawing.Point(285, 97);
-            this.lbleSizeClass_PSize3_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleSizeClass_PSize3_Limit.Location = new System.Drawing.Point(428, 149);
             this.lbleSizeClass_PSize3_Limit.Name = "lbleSizeClass_PSize3_Limit";
-            this.lbleSizeClass_PSize3_Limit.Size = new System.Drawing.Size(18, 20);
+            this.lbleSizeClass_PSize3_Limit.Size = new System.Drawing.Size(26, 29);
             this.lbleSizeClass_PSize3_Limit.TabIndex = 2;
             this.lbleSizeClass_PSize3_Limit.Text = "0";
             this.lbleSizeClass_PSize3_Limit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1776,10 +1766,9 @@ namespace SDA100
             // lbleSizeClass_PSize2_Limit
             // 
             this.lbleSizeClass_PSize2_Limit.AutoSize = true;
-            this.lbleSizeClass_PSize2_Limit.Location = new System.Drawing.Point(285, 78);
-            this.lbleSizeClass_PSize2_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleSizeClass_PSize2_Limit.Location = new System.Drawing.Point(428, 120);
             this.lbleSizeClass_PSize2_Limit.Name = "lbleSizeClass_PSize2_Limit";
-            this.lbleSizeClass_PSize2_Limit.Size = new System.Drawing.Size(18, 20);
+            this.lbleSizeClass_PSize2_Limit.Size = new System.Drawing.Size(26, 29);
             this.lbleSizeClass_PSize2_Limit.TabIndex = 2;
             this.lbleSizeClass_PSize2_Limit.Text = "0";
             this.lbleSizeClass_PSize2_Limit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1787,10 +1776,9 @@ namespace SDA100
             // lbleSizeClass_PSize1_Limit
             // 
             this.lbleSizeClass_PSize1_Limit.AutoSize = true;
-            this.lbleSizeClass_PSize1_Limit.Location = new System.Drawing.Point(285, 58);
-            this.lbleSizeClass_PSize1_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleSizeClass_PSize1_Limit.Location = new System.Drawing.Point(428, 89);
             this.lbleSizeClass_PSize1_Limit.Name = "lbleSizeClass_PSize1_Limit";
-            this.lbleSizeClass_PSize1_Limit.Size = new System.Drawing.Size(18, 20);
+            this.lbleSizeClass_PSize1_Limit.Size = new System.Drawing.Size(26, 29);
             this.lbleSizeClass_PSize1_Limit.TabIndex = 2;
             this.lbleSizeClass_PSize1_Limit.Text = "0";
             this.lbleSizeClass_PSize1_Limit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1798,10 +1786,9 @@ namespace SDA100
             // lbleSizeClass_PSizeTotal_Count
             // 
             this.lbleSizeClass_PSizeTotal_Count.AutoSize = true;
-            this.lbleSizeClass_PSizeTotal_Count.Location = new System.Drawing.Point(171, 195);
-            this.lbleSizeClass_PSizeTotal_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleSizeClass_PSizeTotal_Count.Location = new System.Drawing.Point(256, 300);
             this.lbleSizeClass_PSizeTotal_Count.Name = "lbleSizeClass_PSizeTotal_Count";
-            this.lbleSizeClass_PSizeTotal_Count.Size = new System.Drawing.Size(18, 20);
+            this.lbleSizeClass_PSizeTotal_Count.Size = new System.Drawing.Size(26, 29);
             this.lbleSizeClass_PSizeTotal_Count.TabIndex = 2;
             this.lbleSizeClass_PSizeTotal_Count.Text = "0";
             this.lbleSizeClass_PSizeTotal_Count.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1809,10 +1796,9 @@ namespace SDA100
             // lbleSizeClass_PSize7_Count
             // 
             this.lbleSizeClass_PSize7_Count.AutoSize = true;
-            this.lbleSizeClass_PSize7_Count.Location = new System.Drawing.Point(171, 175);
-            this.lbleSizeClass_PSize7_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleSizeClass_PSize7_Count.Location = new System.Drawing.Point(256, 269);
             this.lbleSizeClass_PSize7_Count.Name = "lbleSizeClass_PSize7_Count";
-            this.lbleSizeClass_PSize7_Count.Size = new System.Drawing.Size(18, 20);
+            this.lbleSizeClass_PSize7_Count.Size = new System.Drawing.Size(26, 29);
             this.lbleSizeClass_PSize7_Count.TabIndex = 2;
             this.lbleSizeClass_PSize7_Count.Text = "0";
             this.lbleSizeClass_PSize7_Count.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1820,10 +1806,9 @@ namespace SDA100
             // lbleSizeClass_PSize6_Count
             // 
             this.lbleSizeClass_PSize6_Count.AutoSize = true;
-            this.lbleSizeClass_PSize6_Count.Location = new System.Drawing.Point(171, 156);
-            this.lbleSizeClass_PSize6_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleSizeClass_PSize6_Count.Location = new System.Drawing.Point(256, 240);
             this.lbleSizeClass_PSize6_Count.Name = "lbleSizeClass_PSize6_Count";
-            this.lbleSizeClass_PSize6_Count.Size = new System.Drawing.Size(18, 20);
+            this.lbleSizeClass_PSize6_Count.Size = new System.Drawing.Size(26, 29);
             this.lbleSizeClass_PSize6_Count.TabIndex = 2;
             this.lbleSizeClass_PSize6_Count.Text = "0";
             this.lbleSizeClass_PSize6_Count.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1831,10 +1816,9 @@ namespace SDA100
             // lbleSizeClass_PSize5_Count
             // 
             this.lbleSizeClass_PSize5_Count.AutoSize = true;
-            this.lbleSizeClass_PSize5_Count.Location = new System.Drawing.Point(171, 136);
-            this.lbleSizeClass_PSize5_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleSizeClass_PSize5_Count.Location = new System.Drawing.Point(256, 209);
             this.lbleSizeClass_PSize5_Count.Name = "lbleSizeClass_PSize5_Count";
-            this.lbleSizeClass_PSize5_Count.Size = new System.Drawing.Size(18, 20);
+            this.lbleSizeClass_PSize5_Count.Size = new System.Drawing.Size(26, 29);
             this.lbleSizeClass_PSize5_Count.TabIndex = 2;
             this.lbleSizeClass_PSize5_Count.Text = "0";
             this.lbleSizeClass_PSize5_Count.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1842,10 +1826,9 @@ namespace SDA100
             // lbleSizeClass_PSize4_Count
             // 
             this.lbleSizeClass_PSize4_Count.AutoSize = true;
-            this.lbleSizeClass_PSize4_Count.Location = new System.Drawing.Point(171, 117);
-            this.lbleSizeClass_PSize4_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleSizeClass_PSize4_Count.Location = new System.Drawing.Point(256, 180);
             this.lbleSizeClass_PSize4_Count.Name = "lbleSizeClass_PSize4_Count";
-            this.lbleSizeClass_PSize4_Count.Size = new System.Drawing.Size(18, 20);
+            this.lbleSizeClass_PSize4_Count.Size = new System.Drawing.Size(26, 29);
             this.lbleSizeClass_PSize4_Count.TabIndex = 2;
             this.lbleSizeClass_PSize4_Count.Text = "0";
             this.lbleSizeClass_PSize4_Count.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1853,10 +1836,9 @@ namespace SDA100
             // lbleSizeClass_PSize3_Count
             // 
             this.lbleSizeClass_PSize3_Count.AutoSize = true;
-            this.lbleSizeClass_PSize3_Count.Location = new System.Drawing.Point(171, 97);
-            this.lbleSizeClass_PSize3_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleSizeClass_PSize3_Count.Location = new System.Drawing.Point(256, 149);
             this.lbleSizeClass_PSize3_Count.Name = "lbleSizeClass_PSize3_Count";
-            this.lbleSizeClass_PSize3_Count.Size = new System.Drawing.Size(18, 20);
+            this.lbleSizeClass_PSize3_Count.Size = new System.Drawing.Size(26, 29);
             this.lbleSizeClass_PSize3_Count.TabIndex = 2;
             this.lbleSizeClass_PSize3_Count.Text = "0";
             this.lbleSizeClass_PSize3_Count.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1864,10 +1846,9 @@ namespace SDA100
             // lbleSizeClass_PSize2_Count
             // 
             this.lbleSizeClass_PSize2_Count.AutoSize = true;
-            this.lbleSizeClass_PSize2_Count.Location = new System.Drawing.Point(171, 78);
-            this.lbleSizeClass_PSize2_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleSizeClass_PSize2_Count.Location = new System.Drawing.Point(256, 120);
             this.lbleSizeClass_PSize2_Count.Name = "lbleSizeClass_PSize2_Count";
-            this.lbleSizeClass_PSize2_Count.Size = new System.Drawing.Size(18, 20);
+            this.lbleSizeClass_PSize2_Count.Size = new System.Drawing.Size(26, 29);
             this.lbleSizeClass_PSize2_Count.TabIndex = 2;
             this.lbleSizeClass_PSize2_Count.Text = "0";
             this.lbleSizeClass_PSize2_Count.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1875,10 +1856,9 @@ namespace SDA100
             // lbleSizeClass_PSize1_Count
             // 
             this.lbleSizeClass_PSize1_Count.AutoSize = true;
-            this.lbleSizeClass_PSize1_Count.Location = new System.Drawing.Point(171, 58);
-            this.lbleSizeClass_PSize1_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbleSizeClass_PSize1_Count.Location = new System.Drawing.Point(256, 89);
             this.lbleSizeClass_PSize1_Count.Name = "lbleSizeClass_PSize1_Count";
-            this.lbleSizeClass_PSize1_Count.Size = new System.Drawing.Size(18, 20);
+            this.lbleSizeClass_PSize1_Count.Size = new System.Drawing.Size(26, 29);
             this.lbleSizeClass_PSize1_Count.TabIndex = 2;
             this.lbleSizeClass_PSize1_Count.Text = "0";
             this.lbleSizeClass_PSize1_Count.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1886,80 +1866,72 @@ namespace SDA100
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(56, 195);
-            this.label57.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label57.Location = new System.Drawing.Point(84, 300);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(48, 20);
+            this.label57.Size = new System.Drawing.Size(74, 29);
             this.label57.TabIndex = 2;
             this.label57.Text = "Total:";
             // 
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(38, 175);
-            this.label58.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label58.Location = new System.Drawing.Point(57, 269);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(66, 20);
+            this.label58.Size = new System.Drawing.Size(98, 29);
             this.label58.TabIndex = 2;
             this.label58.Text = "+5.0 um";
             // 
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(51, 156);
-            this.label59.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label59.Location = new System.Drawing.Point(76, 240);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(57, 20);
+            this.label59.Size = new System.Drawing.Size(84, 29);
             this.label59.TabIndex = 2;
             this.label59.Text = "3.0 um";
             // 
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(51, 136);
-            this.label60.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label60.Location = new System.Drawing.Point(76, 209);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(57, 20);
+            this.label60.Size = new System.Drawing.Size(84, 29);
             this.label60.TabIndex = 2;
             this.label60.Text = "1.0 um";
             // 
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(51, 117);
-            this.label61.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label61.Location = new System.Drawing.Point(76, 180);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(57, 20);
+            this.label61.Size = new System.Drawing.Size(84, 29);
             this.label61.TabIndex = 2;
             this.label61.Text = "0.7 um";
             // 
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(51, 97);
-            this.label62.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label62.Location = new System.Drawing.Point(76, 149);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(57, 20);
+            this.label62.Size = new System.Drawing.Size(84, 29);
             this.label62.TabIndex = 2;
             this.label62.Text = "0.5 um";
             // 
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(51, 78);
-            this.label63.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label63.Location = new System.Drawing.Point(76, 120);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(57, 20);
+            this.label63.Size = new System.Drawing.Size(84, 29);
             this.label63.TabIndex = 2;
             this.label63.Text = "0.3 um";
             // 
             // label64
             // 
             this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(42, 58);
-            this.label64.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label64.Location = new System.Drawing.Point(63, 89);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(66, 20);
+            this.label64.Size = new System.Drawing.Size(97, 29);
             this.label64.TabIndex = 2;
             this.label64.Text = "0.25 um";
             // 
@@ -1967,10 +1939,9 @@ namespace SDA100
             // 
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(245, 39);
-            this.label65.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label65.Location = new System.Drawing.Point(368, 60);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(92, 20);
+            this.label65.Size = new System.Drawing.Size(139, 29);
             this.label65.TabIndex = 1;
             this.label65.Text = "Reject Limit";
             // 
@@ -1978,10 +1949,9 @@ namespace SDA100
             // 
             this.label66.AutoSize = true;
             this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.Location = new System.Drawing.Point(131, 39);
-            this.label66.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label66.Location = new System.Drawing.Point(196, 60);
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(104, 20);
+            this.label66.Size = new System.Drawing.Size(151, 29);
             this.label66.TabIndex = 1;
             this.label66.Text = "Defect Count";
             // 
@@ -1989,10 +1959,9 @@ namespace SDA100
             // 
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.Location = new System.Drawing.Point(38, 39);
-            this.label67.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label67.Location = new System.Drawing.Point(57, 60);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(83, 20);
+            this.label67.Size = new System.Drawing.Size(126, 29);
             this.label67.TabIndex = 1;
             this.label67.Text = "Size Class";
             // 
@@ -2000,10 +1969,9 @@ namespace SDA100
             // 
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.Location = new System.Drawing.Point(98, 13);
-            this.label68.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label68.Location = new System.Drawing.Point(147, 20);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(182, 25);
+            this.label68.Size = new System.Drawing.Size(265, 37);
             this.label68.TabIndex = 0;
             this.label68.Text = "Test Information";
             // 
@@ -2016,8 +1984,9 @@ namespace SDA100
             this.tabPage3.Controls.Add(this.groupBox2);
             this.tabPage3.Controls.Add(this.groupBox4);
             this.tabPage3.Location = new System.Drawing.Point(54, 4);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1211, 754);
+            this.tabPage3.Size = new System.Drawing.Size(1846, 1164);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Recipe";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -2025,19 +1994,21 @@ namespace SDA100
             // lbxLoadBox
             // 
             this.lbxLoadBox.FormattingEnabled = true;
-            this.lbxLoadBox.ItemHeight = 16;
-            this.lbxLoadBox.Location = new System.Drawing.Point(550, 379);
+            this.lbxLoadBox.ItemHeight = 25;
+            this.lbxLoadBox.Location = new System.Drawing.Point(825, 583);
+            this.lbxLoadBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lbxLoadBox.Name = "lbxLoadBox";
-            this.lbxLoadBox.Size = new System.Drawing.Size(375, 276);
+            this.lbxLoadBox.Size = new System.Drawing.Size(560, 404);
             this.lbxLoadBox.TabIndex = 29;
             this.lbxLoadBox.SelectedIndexChanged += new System.EventHandler(this.lbxLoadBox_SelectedIndexChanged);
             // 
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEdit.Location = new System.Drawing.Point(725, 664);
+            this.btnEdit.Location = new System.Drawing.Point(1088, 1022);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 30);
+            this.btnEdit.Size = new System.Drawing.Size(112, 46);
             this.btnEdit.TabIndex = 28;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -2046,9 +2017,10 @@ namespace SDA100
             // btnRecipeLoad
             // 
             this.btnRecipeLoad.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnRecipeLoad.Location = new System.Drawing.Point(636, 664);
+            this.btnRecipeLoad.Location = new System.Drawing.Point(954, 1022);
+            this.btnRecipeLoad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRecipeLoad.Name = "btnRecipeLoad";
-            this.btnRecipeLoad.Size = new System.Drawing.Size(75, 30);
+            this.btnRecipeLoad.Size = new System.Drawing.Size(112, 46);
             this.btnRecipeLoad.TabIndex = 27;
             this.btnRecipeLoad.Text = "Load";
             this.btnRecipeLoad.UseVisualStyleBackColor = false;
@@ -2057,9 +2029,10 @@ namespace SDA100
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnSave.Location = new System.Drawing.Point(550, 664);
+            this.btnSave.Location = new System.Drawing.Point(825, 1022);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 30);
+            this.btnSave.Size = new System.Drawing.Size(112, 46);
             this.btnSave.TabIndex = 26;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -2086,93 +2059,82 @@ namespace SDA100
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Location = new System.Drawing.Point(285, 373);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(428, 574);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(260, 283);
+            this.groupBox2.Size = new System.Drawing.Size(390, 435);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             // 
             // txtSizeClass_Total_Limit
             // 
             this.txtSizeClass_Total_Limit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSizeClass_Total_Limit.Location = new System.Drawing.Point(134, 209);
-            this.txtSizeClass_Total_Limit.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSizeClass_Total_Limit.Location = new System.Drawing.Point(201, 322);
             this.txtSizeClass_Total_Limit.Name = "txtSizeClass_Total_Limit";
-            this.txtSizeClass_Total_Limit.Size = new System.Drawing.Size(64, 26);
+            this.txtSizeClass_Total_Limit.Size = new System.Drawing.Size(94, 35);
             this.txtSizeClass_Total_Limit.TabIndex = 3;
             // 
             // txtSizeClass_Size7_Limit
             // 
             this.txtSizeClass_Size7_Limit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSizeClass_Size7_Limit.Location = new System.Drawing.Point(134, 189);
-            this.txtSizeClass_Size7_Limit.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSizeClass_Size7_Limit.Location = new System.Drawing.Point(201, 291);
             this.txtSizeClass_Size7_Limit.Name = "txtSizeClass_Size7_Limit";
-            this.txtSizeClass_Size7_Limit.Size = new System.Drawing.Size(64, 26);
+            this.txtSizeClass_Size7_Limit.Size = new System.Drawing.Size(94, 35);
             this.txtSizeClass_Size7_Limit.TabIndex = 3;
             // 
             // txtSizeClass_Size6_Limit
             // 
             this.txtSizeClass_Size6_Limit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSizeClass_Size6_Limit.Location = new System.Drawing.Point(134, 170);
-            this.txtSizeClass_Size6_Limit.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSizeClass_Size6_Limit.Location = new System.Drawing.Point(201, 262);
             this.txtSizeClass_Size6_Limit.Name = "txtSizeClass_Size6_Limit";
-            this.txtSizeClass_Size6_Limit.Size = new System.Drawing.Size(64, 26);
+            this.txtSizeClass_Size6_Limit.Size = new System.Drawing.Size(94, 35);
             this.txtSizeClass_Size6_Limit.TabIndex = 3;
             // 
             // txtSizeClass_Size5_Limit
             // 
             this.txtSizeClass_Size5_Limit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSizeClass_Size5_Limit.Location = new System.Drawing.Point(134, 150);
-            this.txtSizeClass_Size5_Limit.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSizeClass_Size5_Limit.Location = new System.Drawing.Point(201, 231);
             this.txtSizeClass_Size5_Limit.Name = "txtSizeClass_Size5_Limit";
-            this.txtSizeClass_Size5_Limit.Size = new System.Drawing.Size(64, 26);
+            this.txtSizeClass_Size5_Limit.Size = new System.Drawing.Size(94, 35);
             this.txtSizeClass_Size5_Limit.TabIndex = 3;
             // 
             // txtSizeClass_Size4_Limit
             // 
             this.txtSizeClass_Size4_Limit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSizeClass_Size4_Limit.Location = new System.Drawing.Point(134, 131);
-            this.txtSizeClass_Size4_Limit.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSizeClass_Size4_Limit.Location = new System.Drawing.Point(201, 202);
             this.txtSizeClass_Size4_Limit.Name = "txtSizeClass_Size4_Limit";
-            this.txtSizeClass_Size4_Limit.Size = new System.Drawing.Size(64, 26);
+            this.txtSizeClass_Size4_Limit.Size = new System.Drawing.Size(94, 35);
             this.txtSizeClass_Size4_Limit.TabIndex = 3;
             // 
             // txtSizeClass_Size3_Limit
             // 
             this.txtSizeClass_Size3_Limit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSizeClass_Size3_Limit.Location = new System.Drawing.Point(134, 111);
-            this.txtSizeClass_Size3_Limit.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSizeClass_Size3_Limit.Location = new System.Drawing.Point(201, 171);
             this.txtSizeClass_Size3_Limit.Name = "txtSizeClass_Size3_Limit";
-            this.txtSizeClass_Size3_Limit.Size = new System.Drawing.Size(64, 26);
+            this.txtSizeClass_Size3_Limit.Size = new System.Drawing.Size(94, 35);
             this.txtSizeClass_Size3_Limit.TabIndex = 3;
             // 
             // txtSizeClass_Size2_Limit
             // 
             this.txtSizeClass_Size2_Limit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSizeClass_Size2_Limit.Location = new System.Drawing.Point(134, 92);
-            this.txtSizeClass_Size2_Limit.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSizeClass_Size2_Limit.Location = new System.Drawing.Point(201, 142);
             this.txtSizeClass_Size2_Limit.Name = "txtSizeClass_Size2_Limit";
-            this.txtSizeClass_Size2_Limit.Size = new System.Drawing.Size(64, 26);
+            this.txtSizeClass_Size2_Limit.Size = new System.Drawing.Size(94, 35);
             this.txtSizeClass_Size2_Limit.TabIndex = 3;
             // 
             // txtSizeClass_Size1_Limit
             // 
             this.txtSizeClass_Size1_Limit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSizeClass_Size1_Limit.Location = new System.Drawing.Point(134, 72);
-            this.txtSizeClass_Size1_Limit.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSizeClass_Size1_Limit.Location = new System.Drawing.Point(201, 111);
             this.txtSizeClass_Size1_Limit.Name = "txtSizeClass_Size1_Limit";
-            this.txtSizeClass_Size1_Limit.Size = new System.Drawing.Size(64, 26);
+            this.txtSizeClass_Size1_Limit.Size = new System.Drawing.Size(94, 35);
             this.txtSizeClass_Size1_Limit.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 209);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(6, 322);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 26);
+            this.label1.Size = new System.Drawing.Size(141, 40);
             this.label1.TabIndex = 2;
             this.label1.Text = "Count Limit:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2180,10 +2142,9 @@ namespace SDA100
             // lblSizeClass_50um_Text
             // 
             this.lblSizeClass_50um_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSizeClass_50um_Text.Location = new System.Drawing.Point(8, 189);
-            this.lblSizeClass_50um_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_50um_Text.Location = new System.Drawing.Point(12, 291);
             this.lblSizeClass_50um_Text.Name = "lblSizeClass_50um_Text";
-            this.lblSizeClass_50um_Text.Size = new System.Drawing.Size(90, 20);
+            this.lblSizeClass_50um_Text.Size = new System.Drawing.Size(135, 31);
             this.lblSizeClass_50um_Text.TabIndex = 2;
             this.lblSizeClass_50um_Text.Text = "+5.0 um";
             this.lblSizeClass_50um_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2191,10 +2152,9 @@ namespace SDA100
             // lblSizeClass_30um_Text
             // 
             this.lblSizeClass_30um_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSizeClass_30um_Text.Location = new System.Drawing.Point(8, 170);
-            this.lblSizeClass_30um_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_30um_Text.Location = new System.Drawing.Point(12, 262);
             this.lblSizeClass_30um_Text.Name = "lblSizeClass_30um_Text";
-            this.lblSizeClass_30um_Text.Size = new System.Drawing.Size(90, 19);
+            this.lblSizeClass_30um_Text.Size = new System.Drawing.Size(135, 29);
             this.lblSizeClass_30um_Text.TabIndex = 2;
             this.lblSizeClass_30um_Text.Text = "3.0 um";
             this.lblSizeClass_30um_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2202,10 +2162,9 @@ namespace SDA100
             // lblSizeClass_10um_Text
             // 
             this.lblSizeClass_10um_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSizeClass_10um_Text.Location = new System.Drawing.Point(8, 150);
-            this.lblSizeClass_10um_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_10um_Text.Location = new System.Drawing.Point(12, 231);
             this.lblSizeClass_10um_Text.Name = "lblSizeClass_10um_Text";
-            this.lblSizeClass_10um_Text.Size = new System.Drawing.Size(90, 20);
+            this.lblSizeClass_10um_Text.Size = new System.Drawing.Size(135, 31);
             this.lblSizeClass_10um_Text.TabIndex = 2;
             this.lblSizeClass_10um_Text.Text = "1.0 um";
             this.lblSizeClass_10um_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2213,10 +2172,9 @@ namespace SDA100
             // lblSizeClass_07um_Text
             // 
             this.lblSizeClass_07um_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSizeClass_07um_Text.Location = new System.Drawing.Point(4, 131);
-            this.lblSizeClass_07um_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_07um_Text.Location = new System.Drawing.Point(6, 202);
             this.lblSizeClass_07um_Text.Name = "lblSizeClass_07um_Text";
-            this.lblSizeClass_07um_Text.Size = new System.Drawing.Size(94, 19);
+            this.lblSizeClass_07um_Text.Size = new System.Drawing.Size(141, 29);
             this.lblSizeClass_07um_Text.TabIndex = 2;
             this.lblSizeClass_07um_Text.Text = "0.7 um";
             this.lblSizeClass_07um_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2224,10 +2182,9 @@ namespace SDA100
             // lblSizeClass_05um_Text
             // 
             this.lblSizeClass_05um_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSizeClass_05um_Text.Location = new System.Drawing.Point(12, 111);
-            this.lblSizeClass_05um_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_05um_Text.Location = new System.Drawing.Point(18, 171);
             this.lblSizeClass_05um_Text.Name = "lblSizeClass_05um_Text";
-            this.lblSizeClass_05um_Text.Size = new System.Drawing.Size(86, 20);
+            this.lblSizeClass_05um_Text.Size = new System.Drawing.Size(129, 31);
             this.lblSizeClass_05um_Text.TabIndex = 2;
             this.lblSizeClass_05um_Text.Text = "0.5 um";
             this.lblSizeClass_05um_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2235,10 +2192,9 @@ namespace SDA100
             // lblSizeClass_03um_Text
             // 
             this.lblSizeClass_03um_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSizeClass_03um_Text.Location = new System.Drawing.Point(16, 92);
-            this.lblSizeClass_03um_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_03um_Text.Location = new System.Drawing.Point(24, 142);
             this.lblSizeClass_03um_Text.Name = "lblSizeClass_03um_Text";
-            this.lblSizeClass_03um_Text.Size = new System.Drawing.Size(82, 19);
+            this.lblSizeClass_03um_Text.Size = new System.Drawing.Size(123, 29);
             this.lblSizeClass_03um_Text.TabIndex = 2;
             this.lblSizeClass_03um_Text.Text = "0.3 um";
             this.lblSizeClass_03um_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2246,10 +2202,9 @@ namespace SDA100
             // lblSizeClass_025um_Text
             // 
             this.lblSizeClass_025um_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSizeClass_025um_Text.Location = new System.Drawing.Point(12, 72);
-            this.lblSizeClass_025um_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSizeClass_025um_Text.Location = new System.Drawing.Point(18, 111);
             this.lblSizeClass_025um_Text.Name = "lblSizeClass_025um_Text";
-            this.lblSizeClass_025um_Text.Size = new System.Drawing.Size(86, 20);
+            this.lblSizeClass_025um_Text.Size = new System.Drawing.Size(129, 31);
             this.lblSizeClass_025um_Text.TabIndex = 2;
             this.lblSizeClass_025um_Text.Text = "0.25 um";
             this.lblSizeClass_025um_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2258,10 +2213,9 @@ namespace SDA100
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(120, 45);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(180, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 20);
+            this.label2.Size = new System.Drawing.Size(139, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Reject Limit";
             // 
@@ -2269,10 +2223,9 @@ namespace SDA100
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(36, 45);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(54, 69);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(83, 20);
+            this.label10.Size = new System.Drawing.Size(126, 29);
             this.label10.TabIndex = 1;
             this.label10.Text = "Size Class";
             // 
@@ -2280,10 +2233,9 @@ namespace SDA100
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(53, 13);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(80, 20);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(148, 25);
+            this.label11.Size = new System.Drawing.Size(211, 37);
             this.label11.TabIndex = 0;
             this.label11.Text = "Reject Limits";
             // 
@@ -2308,30 +2260,26 @@ namespace SDA100
             this.groupBox4.Controls.Add(this.lblSSScanOfArea_Text);
             this.groupBox4.Controls.Add(this.lblSSWaferSize_Text);
             this.groupBox4.Controls.Add(this.lblTestScanSettings_Text);
-            this.groupBox4.Location = new System.Drawing.Point(285, 61);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Location = new System.Drawing.Point(428, 94);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(640, 308);
+            this.groupBox4.Size = new System.Drawing.Size(960, 474);
             this.groupBox4.TabIndex = 24;
             this.groupBox4.TabStop = false;
             // 
             // txtSSScanID_Set
             // 
             this.txtSSScanID_Set.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSSScanID_Set.Location = new System.Drawing.Point(173, 184);
-            this.txtSSScanID_Set.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSSScanID_Set.Location = new System.Drawing.Point(260, 283);
             this.txtSSScanID_Set.Name = "txtSSScanID_Set";
-            this.txtSSScanID_Set.Size = new System.Drawing.Size(305, 26);
+            this.txtSSScanID_Set.Size = new System.Drawing.Size(456, 35);
             this.txtSSScanID_Set.TabIndex = 9;
             // 
             // lblSSScanID_Text
             // 
             this.lblSSScanID_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSSScanID_Text.Location = new System.Drawing.Point(33, 184);
-            this.lblSSScanID_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSSScanID_Text.Location = new System.Drawing.Point(50, 283);
             this.lblSSScanID_Text.Name = "lblSSScanID_Text";
-            this.lblSSScanID_Text.Size = new System.Drawing.Size(113, 26);
+            this.lblSSScanID_Text.Size = new System.Drawing.Size(170, 40);
             this.lblSSScanID_Text.TabIndex = 8;
             this.lblSSScanID_Text.Text = "Scan ID:";
             this.lblSSScanID_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2339,19 +2287,17 @@ namespace SDA100
             // txtSSUserID_Set
             // 
             this.txtSSUserID_Set.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSSUserID_Set.Location = new System.Drawing.Point(173, 154);
-            this.txtSSUserID_Set.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSSUserID_Set.Location = new System.Drawing.Point(260, 237);
             this.txtSSUserID_Set.Name = "txtSSUserID_Set";
-            this.txtSSUserID_Set.Size = new System.Drawing.Size(305, 26);
+            this.txtSSUserID_Set.Size = new System.Drawing.Size(456, 35);
             this.txtSSUserID_Set.TabIndex = 7;
             // 
             // lblSSUserID_Text
             // 
             this.lblSSUserID_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSSUserID_Text.Location = new System.Drawing.Point(33, 154);
-            this.lblSSUserID_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSSUserID_Text.Location = new System.Drawing.Point(50, 237);
             this.lblSSUserID_Text.Name = "lblSSUserID_Text";
-            this.lblSSUserID_Text.Size = new System.Drawing.Size(113, 26);
+            this.lblSSUserID_Text.Size = new System.Drawing.Size(170, 40);
             this.lblSSUserID_Text.TabIndex = 6;
             this.lblSSUserID_Text.Text = "User ID:";
             this.lblSSUserID_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2360,9 +2306,10 @@ namespace SDA100
             // 
             this.chboxAutoSave.AutoSize = true;
             this.chboxAutoSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chboxAutoSave.Location = new System.Drawing.Point(484, 228);
+            this.chboxAutoSave.Location = new System.Drawing.Point(726, 351);
+            this.chboxAutoSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chboxAutoSave.Name = "chboxAutoSave";
-            this.chboxAutoSave.Size = new System.Drawing.Size(141, 24);
+            this.chboxAutoSave.Size = new System.Drawing.Size(202, 33);
             this.chboxAutoSave.TabIndex = 5;
             this.chboxAutoSave.Text = "Auto Save Data";
             this.chboxAutoSave.UseVisualStyleBackColor = true;
@@ -2372,30 +2319,27 @@ namespace SDA100
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(228, 97);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(342, 149);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(35, 20);
+            this.label12.Size = new System.Drawing.Size(53, 29);
             this.label12.TabIndex = 4;
             this.label12.Text = "mm";
             // 
             // txtRecipeComments
             // 
             this.txtRecipeComments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRecipeComments.Location = new System.Drawing.Point(173, 216);
-            this.txtRecipeComments.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRecipeComments.Location = new System.Drawing.Point(260, 332);
             this.txtRecipeComments.Multiline = true;
             this.txtRecipeComments.Name = "txtRecipeComments";
-            this.txtRecipeComments.Size = new System.Drawing.Size(305, 73);
+            this.txtRecipeComments.Size = new System.Drawing.Size(456, 110);
             this.txtRecipeComments.TabIndex = 3;
             // 
             // txtSSRecipeName_Set
             // 
             this.txtSSRecipeName_Set.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSSRecipeName_Set.Location = new System.Drawing.Point(173, 124);
-            this.txtSSRecipeName_Set.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSSRecipeName_Set.Location = new System.Drawing.Point(260, 191);
             this.txtSSRecipeName_Set.Name = "txtSSRecipeName_Set";
-            this.txtSSRecipeName_Set.Size = new System.Drawing.Size(389, 26);
+            this.txtSSRecipeName_Set.Size = new System.Drawing.Size(582, 35);
             this.txtSSRecipeName_Set.TabIndex = 3;
             // 
             // cbxSSZoneScanType_Set
@@ -2408,10 +2352,9 @@ namespace SDA100
             "Full",
             "Half",
             "Quarter"});
-            this.cbxSSZoneScanType_Set.Location = new System.Drawing.Point(480, 86);
-            this.cbxSSZoneScanType_Set.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxSSZoneScanType_Set.Location = new System.Drawing.Point(720, 132);
             this.cbxSSZoneScanType_Set.Name = "cbxSSZoneScanType_Set";
-            this.cbxSSZoneScanType_Set.Size = new System.Drawing.Size(82, 28);
+            this.cbxSSZoneScanType_Set.Size = new System.Drawing.Size(121, 37);
             this.cbxSSZoneScanType_Set.TabIndex = 2;
             // 
             // cbxSSEdgeReject_Set
@@ -2426,10 +2369,9 @@ namespace SDA100
             "3",
             "4",
             "5"});
-            this.cbxSSEdgeReject_Set.Location = new System.Drawing.Point(173, 89);
-            this.cbxSSEdgeReject_Set.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxSSEdgeReject_Set.Location = new System.Drawing.Point(260, 137);
             this.cbxSSEdgeReject_Set.Name = "cbxSSEdgeReject_Set";
-            this.cbxSSEdgeReject_Set.Size = new System.Drawing.Size(54, 28);
+            this.cbxSSEdgeReject_Set.Size = new System.Drawing.Size(79, 37);
             this.cbxSSEdgeReject_Set.TabIndex = 2;
             // 
             // cbxSSScanOfArea_Set
@@ -2442,10 +2384,9 @@ namespace SDA100
             "50",
             "75",
             "100"});
-            this.cbxSSScanOfArea_Set.Location = new System.Drawing.Point(480, 53);
-            this.cbxSSScanOfArea_Set.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxSSScanOfArea_Set.Location = new System.Drawing.Point(720, 82);
             this.cbxSSScanOfArea_Set.Name = "cbxSSScanOfArea_Set";
-            this.cbxSSScanOfArea_Set.Size = new System.Drawing.Size(82, 28);
+            this.cbxSSScanOfArea_Set.Size = new System.Drawing.Size(121, 37);
             this.cbxSSScanOfArea_Set.TabIndex = 2;
             // 
             // cbxSSWaferSize_Set
@@ -2461,19 +2402,17 @@ namespace SDA100
             "125",
             "150",
             "200"});
-            this.cbxSSWaferSize_Set.Location = new System.Drawing.Point(173, 53);
-            this.cbxSSWaferSize_Set.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxSSWaferSize_Set.Location = new System.Drawing.Point(260, 82);
             this.cbxSSWaferSize_Set.Name = "cbxSSWaferSize_Set";
-            this.cbxSSWaferSize_Set.Size = new System.Drawing.Size(82, 28);
+            this.cbxSSWaferSize_Set.Size = new System.Drawing.Size(121, 37);
             this.cbxSSWaferSize_Set.TabIndex = 2;
             // 
             // lblSSTestComments_Text
             // 
             this.lblSSTestComments_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSSTestComments_Text.Location = new System.Drawing.Point(33, 213);
-            this.lblSSTestComments_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSSTestComments_Text.Location = new System.Drawing.Point(50, 328);
             this.lblSSTestComments_Text.Name = "lblSSTestComments_Text";
-            this.lblSSTestComments_Text.Size = new System.Drawing.Size(113, 21);
+            this.lblSSTestComments_Text.Size = new System.Drawing.Size(170, 32);
             this.lblSSTestComments_Text.TabIndex = 1;
             this.lblSSTestComments_Text.Text = "Description:";
             this.lblSSTestComments_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2481,10 +2420,9 @@ namespace SDA100
             // lblSSRecipeName_Text
             // 
             this.lblSSRecipeName_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSSRecipeName_Text.Location = new System.Drawing.Point(33, 124);
-            this.lblSSRecipeName_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSSRecipeName_Text.Location = new System.Drawing.Point(50, 191);
             this.lblSSRecipeName_Text.Name = "lblSSRecipeName_Text";
-            this.lblSSRecipeName_Text.Size = new System.Drawing.Size(113, 26);
+            this.lblSSRecipeName_Text.Size = new System.Drawing.Size(170, 40);
             this.lblSSRecipeName_Text.TabIndex = 1;
             this.lblSSRecipeName_Text.Text = "Recipe Name:";
             this.lblSSRecipeName_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2493,10 +2431,9 @@ namespace SDA100
             // 
             this.lblSSZoneScanType_Text.Enabled = false;
             this.lblSSZoneScanType_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSSZoneScanType_Text.Location = new System.Drawing.Point(311, 86);
-            this.lblSSZoneScanType_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSSZoneScanType_Text.Location = new System.Drawing.Point(466, 132);
             this.lblSSZoneScanType_Text.Name = "lblSSZoneScanType_Text";
-            this.lblSSZoneScanType_Text.Size = new System.Drawing.Size(150, 24);
+            this.lblSSZoneScanType_Text.Size = new System.Drawing.Size(225, 37);
             this.lblSSZoneScanType_Text.TabIndex = 1;
             this.lblSSZoneScanType_Text.Text = "Zone Scan Type:";
             this.lblSSZoneScanType_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2504,10 +2441,9 @@ namespace SDA100
             // lblSSEdgeReject_Text
             // 
             this.lblSSEdgeReject_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSSEdgeReject_Text.Location = new System.Drawing.Point(20, 89);
-            this.lblSSEdgeReject_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSSEdgeReject_Text.Location = new System.Drawing.Point(30, 137);
             this.lblSSEdgeReject_Text.Name = "lblSSEdgeReject_Text";
-            this.lblSSEdgeReject_Text.Size = new System.Drawing.Size(126, 26);
+            this.lblSSEdgeReject_Text.Size = new System.Drawing.Size(189, 40);
             this.lblSSEdgeReject_Text.TabIndex = 1;
             this.lblSSEdgeReject_Text.Text = "Edge Reject:";
             this.lblSSEdgeReject_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2515,10 +2451,9 @@ namespace SDA100
             // lblSSScanOfArea_Text
             // 
             this.lblSSScanOfArea_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSSScanOfArea_Text.Location = new System.Drawing.Point(333, 53);
-            this.lblSSScanOfArea_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSSScanOfArea_Text.Location = new System.Drawing.Point(500, 82);
             this.lblSSScanOfArea_Text.Name = "lblSSScanOfArea_Text";
-            this.lblSSScanOfArea_Text.Size = new System.Drawing.Size(127, 26);
+            this.lblSSScanOfArea_Text.Size = new System.Drawing.Size(190, 40);
             this.lblSSScanOfArea_Text.TabIndex = 1;
             this.lblSSScanOfArea_Text.Text = "Scan Area (%):";
             this.lblSSScanOfArea_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2526,10 +2461,9 @@ namespace SDA100
             // lblSSWaferSize_Text
             // 
             this.lblSSWaferSize_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSSWaferSize_Text.Location = new System.Drawing.Point(33, 53);
-            this.lblSSWaferSize_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSSWaferSize_Text.Location = new System.Drawing.Point(50, 82);
             this.lblSSWaferSize_Text.Name = "lblSSWaferSize_Text";
-            this.lblSSWaferSize_Text.Size = new System.Drawing.Size(113, 26);
+            this.lblSSWaferSize_Text.Size = new System.Drawing.Size(170, 40);
             this.lblSSWaferSize_Text.TabIndex = 1;
             this.lblSSWaferSize_Text.Text = "Wafer Size:";
             this.lblSSWaferSize_Text.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2538,10 +2472,9 @@ namespace SDA100
             // 
             this.lblTestScanSettings_Text.AutoSize = true;
             this.lblTestScanSettings_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTestScanSettings_Text.Location = new System.Drawing.Point(210, 14);
-            this.lblTestScanSettings_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTestScanSettings_Text.Location = new System.Drawing.Point(315, 22);
             this.lblTestScanSettings_Text.Name = "lblTestScanSettings_Text";
-            this.lblTestScanSettings_Text.Size = new System.Drawing.Size(244, 25);
+            this.lblTestScanSettings_Text.Size = new System.Drawing.Size(350, 37);
             this.lblTestScanSettings_Text.TabIndex = 0;
             this.lblTestScanSettings_Text.Text = "Scan Recipe Manager";
             // 
@@ -2553,8 +2486,9 @@ namespace SDA100
             this.tabPage4.Controls.Add(this.groupBox9);
             this.tabPage4.Controls.Add(this.groupBox10);
             this.tabPage4.Location = new System.Drawing.Point(54, 4);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1211, 754);
+            this.tabPage4.Size = new System.Drawing.Size(1846, 1164);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Maintenance";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -2569,47 +2503,45 @@ namespace SDA100
             this.groupBox11.Controls.Add(this.btnXYM_SetX);
             this.groupBox11.Controls.Add(this.lblXYZAbs_Title);
             this.groupBox11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox11.Location = new System.Drawing.Point(17, 340);
+            this.groupBox11.Location = new System.Drawing.Point(26, 523);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(275, 218);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox11.Size = new System.Drawing.Size(412, 335);
             this.groupBox11.TabIndex = 22;
             this.groupBox11.TabStop = false;
             // 
             // txtXYM_SetZ
             // 
             this.txtXYM_SetZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtXYM_SetZ.Location = new System.Drawing.Point(139, 167);
-            this.txtXYM_SetZ.Margin = new System.Windows.Forms.Padding(2);
+            this.txtXYM_SetZ.Location = new System.Drawing.Point(208, 257);
             this.txtXYM_SetZ.Name = "txtXYM_SetZ";
-            this.txtXYM_SetZ.Size = new System.Drawing.Size(77, 22);
+            this.txtXYM_SetZ.Size = new System.Drawing.Size(114, 30);
             this.txtXYM_SetZ.TabIndex = 6;
             // 
             // txtXYM_SetY
             // 
             this.txtXYM_SetY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtXYM_SetY.Location = new System.Drawing.Point(142, 114);
-            this.txtXYM_SetY.Margin = new System.Windows.Forms.Padding(2);
+            this.txtXYM_SetY.Location = new System.Drawing.Point(213, 175);
             this.txtXYM_SetY.Name = "txtXYM_SetY";
-            this.txtXYM_SetY.Size = new System.Drawing.Size(77, 22);
+            this.txtXYM_SetY.Size = new System.Drawing.Size(114, 30);
             this.txtXYM_SetY.TabIndex = 7;
             // 
             // txtXYM_SetX
             // 
             this.txtXYM_SetX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtXYM_SetX.Location = new System.Drawing.Point(142, 62);
-            this.txtXYM_SetX.Margin = new System.Windows.Forms.Padding(2);
+            this.txtXYM_SetX.Location = new System.Drawing.Point(213, 95);
             this.txtXYM_SetX.Name = "txtXYM_SetX";
-            this.txtXYM_SetX.Size = new System.Drawing.Size(77, 22);
+            this.txtXYM_SetX.Size = new System.Drawing.Size(114, 30);
             this.txtXYM_SetX.TabIndex = 8;
             // 
             // btnXYM_SetZ
             // 
             this.btnXYM_SetZ.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnXYM_SetZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_SetZ.Location = new System.Drawing.Point(49, 157);
-            this.btnXYM_SetZ.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXYM_SetZ.Location = new System.Drawing.Point(74, 242);
             this.btnXYM_SetZ.Name = "btnXYM_SetZ";
-            this.btnXYM_SetZ.Size = new System.Drawing.Size(80, 42);
+            this.btnXYM_SetZ.Size = new System.Drawing.Size(120, 65);
             this.btnXYM_SetZ.TabIndex = 3;
             this.btnXYM_SetZ.Text = "Set Z:";
             this.btnXYM_SetZ.UseVisualStyleBackColor = true;
@@ -2618,10 +2550,9 @@ namespace SDA100
             // 
             this.btnXYM_SetY.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnXYM_SetY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_SetY.Location = new System.Drawing.Point(49, 104);
-            this.btnXYM_SetY.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXYM_SetY.Location = new System.Drawing.Point(74, 160);
             this.btnXYM_SetY.Name = "btnXYM_SetY";
-            this.btnXYM_SetY.Size = new System.Drawing.Size(80, 42);
+            this.btnXYM_SetY.Size = new System.Drawing.Size(120, 65);
             this.btnXYM_SetY.TabIndex = 4;
             this.btnXYM_SetY.Text = "Set Y:";
             this.btnXYM_SetY.UseVisualStyleBackColor = true;
@@ -2630,10 +2561,9 @@ namespace SDA100
             // 
             this.btnXYM_SetX.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnXYM_SetX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_SetX.Location = new System.Drawing.Point(49, 52);
-            this.btnXYM_SetX.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXYM_SetX.Location = new System.Drawing.Point(74, 80);
             this.btnXYM_SetX.Name = "btnXYM_SetX";
-            this.btnXYM_SetX.Size = new System.Drawing.Size(80, 42);
+            this.btnXYM_SetX.Size = new System.Drawing.Size(120, 65);
             this.btnXYM_SetX.TabIndex = 5;
             this.btnXYM_SetX.Text = "Set X:";
             this.btnXYM_SetX.UseVisualStyleBackColor = true;
@@ -2642,10 +2572,9 @@ namespace SDA100
             // 
             this.lblXYZAbs_Title.AutoSize = true;
             this.lblXYZAbs_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblXYZAbs_Title.Location = new System.Drawing.Point(16, 17);
-            this.lblXYZAbs_Title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblXYZAbs_Title.Location = new System.Drawing.Point(24, 26);
             this.lblXYZAbs_Title.Name = "lblXYZAbs_Title";
-            this.lblXYZAbs_Title.Size = new System.Drawing.Size(228, 25);
+            this.lblXYZAbs_Title.Size = new System.Drawing.Size(330, 37);
             this.lblXYZAbs_Title.TabIndex = 1;
             this.lblXYZAbs_Title.Text = "XYZ Abs Positioning";
             // 
@@ -2682,21 +2611,18 @@ namespace SDA100
             this.groupBox7.Controls.Add(this.btnSyS_ReadPHA);
             this.groupBox7.Controls.Add(this.btnSyS_RefreshStatus);
             this.groupBox7.Controls.Add(this.lblSyS_Title);
-            this.groupBox7.Location = new System.Drawing.Point(530, 8);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox7.Location = new System.Drawing.Point(795, 12);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox7.Size = new System.Drawing.Size(267, 468);
+            this.groupBox7.Size = new System.Drawing.Size(400, 720);
             this.groupBox7.TabIndex = 18;
             this.groupBox7.TabStop = false;
             // 
             // lblSyS_LeftLimitY
             // 
             this.lblSyS_LeftLimitY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_LeftLimitY.Location = new System.Drawing.Point(60, 169);
-            this.lblSyS_LeftLimitY.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_LeftLimitY.Location = new System.Drawing.Point(90, 260);
             this.lblSyS_LeftLimitY.Name = "lblSyS_LeftLimitY";
-            this.lblSyS_LeftLimitY.Size = new System.Drawing.Size(93, 19);
+            this.lblSyS_LeftLimitY.Size = new System.Drawing.Size(140, 29);
             this.lblSyS_LeftLimitY.TabIndex = 3;
             this.lblSyS_LeftLimitY.Text = "Left Limit Y:";
             this.lblSyS_LeftLimitY.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2704,10 +2630,9 @@ namespace SDA100
             // lblSyS_AutoFocusValue
             // 
             this.lblSyS_AutoFocusValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_AutoFocusValue.Location = new System.Drawing.Point(33, 435);
-            this.lblSyS_AutoFocusValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_AutoFocusValue.Location = new System.Drawing.Point(50, 669);
             this.lblSyS_AutoFocusValue.Name = "lblSyS_AutoFocusValue";
-            this.lblSyS_AutoFocusValue.Size = new System.Drawing.Size(127, 19);
+            this.lblSyS_AutoFocusValue.Size = new System.Drawing.Size(190, 29);
             this.lblSyS_AutoFocusValue.TabIndex = 3;
             this.lblSyS_AutoFocusValue.Text = "Auto Focus Value:";
             this.lblSyS_AutoFocusValue.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2715,10 +2640,9 @@ namespace SDA100
             // lblSyS_ZStagePosition
             // 
             this.lblSyS_ZStagePosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_ZStagePosition.Location = new System.Drawing.Point(33, 403);
-            this.lblSyS_ZStagePosition.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_ZStagePosition.Location = new System.Drawing.Point(50, 620);
             this.lblSyS_ZStagePosition.Name = "lblSyS_ZStagePosition";
-            this.lblSyS_ZStagePosition.Size = new System.Drawing.Size(120, 19);
+            this.lblSyS_ZStagePosition.Size = new System.Drawing.Size(180, 29);
             this.lblSyS_ZStagePosition.TabIndex = 3;
             this.lblSyS_ZStagePosition.Text = "Z Stage Position:";
             this.lblSyS_ZStagePosition.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2726,10 +2650,9 @@ namespace SDA100
             // lblSyS_YStagePosition
             // 
             this.lblSyS_YStagePosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_YStagePosition.Location = new System.Drawing.Point(33, 377);
-            this.lblSyS_YStagePosition.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_YStagePosition.Location = new System.Drawing.Point(50, 580);
             this.lblSyS_YStagePosition.Name = "lblSyS_YStagePosition";
-            this.lblSyS_YStagePosition.Size = new System.Drawing.Size(120, 19);
+            this.lblSyS_YStagePosition.Size = new System.Drawing.Size(180, 29);
             this.lblSyS_YStagePosition.TabIndex = 3;
             this.lblSyS_YStagePosition.Text = "Y Stage Position:";
             this.lblSyS_YStagePosition.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2737,10 +2660,9 @@ namespace SDA100
             // lblSyS_XStagePosition
             // 
             this.lblSyS_XStagePosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_XStagePosition.Location = new System.Drawing.Point(27, 351);
-            this.lblSyS_XStagePosition.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_XStagePosition.Location = new System.Drawing.Point(40, 540);
             this.lblSyS_XStagePosition.Name = "lblSyS_XStagePosition";
-            this.lblSyS_XStagePosition.Size = new System.Drawing.Size(127, 19);
+            this.lblSyS_XStagePosition.Size = new System.Drawing.Size(190, 29);
             this.lblSyS_XStagePosition.TabIndex = 3;
             this.lblSyS_XStagePosition.Text = "X Stage Position:";
             this.lblSyS_XStagePosition.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2748,10 +2670,9 @@ namespace SDA100
             // lblSys_DoorStatus
             // 
             this.lblSys_DoorStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSys_DoorStatus.Location = new System.Drawing.Point(60, 325);
-            this.lblSys_DoorStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSys_DoorStatus.Location = new System.Drawing.Point(90, 500);
             this.lblSys_DoorStatus.Name = "lblSys_DoorStatus";
-            this.lblSys_DoorStatus.Size = new System.Drawing.Size(93, 19);
+            this.lblSys_DoorStatus.Size = new System.Drawing.Size(140, 29);
             this.lblSys_DoorStatus.TabIndex = 3;
             this.lblSys_DoorStatus.Text = "Door Status:";
             this.lblSys_DoorStatus.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2759,10 +2680,9 @@ namespace SDA100
             // lblSyS_ChuckVacuum
             // 
             this.lblSyS_ChuckVacuum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_ChuckVacuum.Location = new System.Drawing.Point(60, 298);
-            this.lblSyS_ChuckVacuum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_ChuckVacuum.Location = new System.Drawing.Point(90, 458);
             this.lblSyS_ChuckVacuum.Name = "lblSyS_ChuckVacuum";
-            this.lblSyS_ChuckVacuum.Size = new System.Drawing.Size(93, 20);
+            this.lblSyS_ChuckVacuum.Size = new System.Drawing.Size(140, 31);
             this.lblSyS_ChuckVacuum.TabIndex = 3;
             this.lblSyS_ChuckVacuum.Text = "Chuck Vacuum:";
             this.lblSyS_ChuckVacuum.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2770,10 +2690,9 @@ namespace SDA100
             // lblSyS_MainVacuum
             // 
             this.lblSyS_MainVacuum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_MainVacuum.Location = new System.Drawing.Point(60, 273);
-            this.lblSyS_MainVacuum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_MainVacuum.Location = new System.Drawing.Point(90, 420);
             this.lblSyS_MainVacuum.Name = "lblSyS_MainVacuum";
-            this.lblSyS_MainVacuum.Size = new System.Drawing.Size(93, 19);
+            this.lblSyS_MainVacuum.Size = new System.Drawing.Size(140, 29);
             this.lblSyS_MainVacuum.TabIndex = 3;
             this.lblSyS_MainVacuum.Text = "Main Vacuum:";
             this.lblSyS_MainVacuum.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2781,10 +2700,9 @@ namespace SDA100
             // lblSyS_BottomLimitZ
             // 
             this.lblSyS_BottomLimitZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_BottomLimitZ.Location = new System.Drawing.Point(53, 246);
-            this.lblSyS_BottomLimitZ.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_BottomLimitZ.Location = new System.Drawing.Point(80, 378);
             this.lblSyS_BottomLimitZ.Name = "lblSyS_BottomLimitZ";
-            this.lblSyS_BottomLimitZ.Size = new System.Drawing.Size(100, 20);
+            this.lblSyS_BottomLimitZ.Size = new System.Drawing.Size(150, 31);
             this.lblSyS_BottomLimitZ.TabIndex = 3;
             this.lblSyS_BottomLimitZ.Text = "Bottom Limit Z:";
             this.lblSyS_BottomLimitZ.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2792,10 +2710,9 @@ namespace SDA100
             // lblSyS_TopLimitZ
             // 
             this.lblSyS_TopLimitZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_TopLimitZ.Location = new System.Drawing.Point(60, 221);
-            this.lblSyS_TopLimitZ.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_TopLimitZ.Location = new System.Drawing.Point(90, 340);
             this.lblSyS_TopLimitZ.Name = "lblSyS_TopLimitZ";
-            this.lblSyS_TopLimitZ.Size = new System.Drawing.Size(93, 19);
+            this.lblSyS_TopLimitZ.Size = new System.Drawing.Size(140, 29);
             this.lblSyS_TopLimitZ.TabIndex = 3;
             this.lblSyS_TopLimitZ.Text = "Top Limit Z:";
             this.lblSyS_TopLimitZ.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2803,10 +2720,9 @@ namespace SDA100
             // lblSyS_RightLimitY
             // 
             this.lblSyS_RightLimitY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_RightLimitY.Location = new System.Drawing.Point(60, 194);
-            this.lblSyS_RightLimitY.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_RightLimitY.Location = new System.Drawing.Point(90, 298);
             this.lblSyS_RightLimitY.Name = "lblSyS_RightLimitY";
-            this.lblSyS_RightLimitY.Size = new System.Drawing.Size(93, 20);
+            this.lblSyS_RightLimitY.Size = new System.Drawing.Size(140, 31);
             this.lblSyS_RightLimitY.TabIndex = 3;
             this.lblSyS_RightLimitY.Text = "Right Limit Y:";
             this.lblSyS_RightLimitY.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2814,10 +2730,9 @@ namespace SDA100
             // lblSyS_BackLimitX
             // 
             this.lblSyS_BackLimitX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_BackLimitX.Location = new System.Drawing.Point(60, 142);
-            this.lblSyS_BackLimitX.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_BackLimitX.Location = new System.Drawing.Point(90, 218);
             this.lblSyS_BackLimitX.Name = "lblSyS_BackLimitX";
-            this.lblSyS_BackLimitX.Size = new System.Drawing.Size(93, 20);
+            this.lblSyS_BackLimitX.Size = new System.Drawing.Size(140, 31);
             this.lblSyS_BackLimitX.TabIndex = 3;
             this.lblSyS_BackLimitX.Text = "Back Limit X:";
             this.lblSyS_BackLimitX.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2827,10 +2742,9 @@ namespace SDA100
             this.lblSys_DoorStatus_Display.BackColor = System.Drawing.Color.LawnGreen;
             this.lblSys_DoorStatus_Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSys_DoorStatus_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSys_DoorStatus_Display.Location = new System.Drawing.Point(153, 325);
-            this.lblSys_DoorStatus_Display.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSys_DoorStatus_Display.Location = new System.Drawing.Point(230, 500);
             this.lblSys_DoorStatus_Display.Name = "lblSys_DoorStatus_Display";
-            this.lblSys_DoorStatus_Display.Size = new System.Drawing.Size(67, 20);
+            this.lblSys_DoorStatus_Display.Size = new System.Drawing.Size(100, 30);
             this.lblSys_DoorStatus_Display.TabIndex = 3;
             this.lblSys_DoorStatus_Display.Text = "Closed";
             this.lblSys_DoorStatus_Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2840,10 +2754,9 @@ namespace SDA100
             this.lblSyS_ChuckVacuum_Display.BackColor = System.Drawing.Color.LawnGreen;
             this.lblSyS_ChuckVacuum_Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSyS_ChuckVacuum_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_ChuckVacuum_Display.Location = new System.Drawing.Point(153, 298);
-            this.lblSyS_ChuckVacuum_Display.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_ChuckVacuum_Display.Location = new System.Drawing.Point(230, 458);
             this.lblSyS_ChuckVacuum_Display.Name = "lblSyS_ChuckVacuum_Display";
-            this.lblSyS_ChuckVacuum_Display.Size = new System.Drawing.Size(67, 21);
+            this.lblSyS_ChuckVacuum_Display.Size = new System.Drawing.Size(100, 31);
             this.lblSyS_ChuckVacuum_Display.TabIndex = 3;
             this.lblSyS_ChuckVacuum_Display.Text = "On";
             this.lblSyS_ChuckVacuum_Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2853,10 +2766,9 @@ namespace SDA100
             this.lblSyS_MainVacuum_Display.BackColor = System.Drawing.Color.LawnGreen;
             this.lblSyS_MainVacuum_Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSyS_MainVacuum_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_MainVacuum_Display.Location = new System.Drawing.Point(153, 273);
-            this.lblSyS_MainVacuum_Display.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_MainVacuum_Display.Location = new System.Drawing.Point(230, 420);
             this.lblSyS_MainVacuum_Display.Name = "lblSyS_MainVacuum_Display";
-            this.lblSyS_MainVacuum_Display.Size = new System.Drawing.Size(67, 20);
+            this.lblSyS_MainVacuum_Display.Size = new System.Drawing.Size(100, 30);
             this.lblSyS_MainVacuum_Display.TabIndex = 3;
             this.lblSyS_MainVacuum_Display.Text = "On";
             this.lblSyS_MainVacuum_Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2866,10 +2778,9 @@ namespace SDA100
             this.lblSyS_BottomLimitZ_Display.BackColor = System.Drawing.Color.LawnGreen;
             this.lblSyS_BottomLimitZ_Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSyS_BottomLimitZ_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_BottomLimitZ_Display.Location = new System.Drawing.Point(153, 246);
-            this.lblSyS_BottomLimitZ_Display.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_BottomLimitZ_Display.Location = new System.Drawing.Point(230, 378);
             this.lblSyS_BottomLimitZ_Display.Name = "lblSyS_BottomLimitZ_Display";
-            this.lblSyS_BottomLimitZ_Display.Size = new System.Drawing.Size(67, 21);
+            this.lblSyS_BottomLimitZ_Display.Size = new System.Drawing.Size(100, 31);
             this.lblSyS_BottomLimitZ_Display.TabIndex = 3;
             this.lblSyS_BottomLimitZ_Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2878,10 +2789,9 @@ namespace SDA100
             this.lblSyS_TopLimitZ_Display.BackColor = System.Drawing.Color.LawnGreen;
             this.lblSyS_TopLimitZ_Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSyS_TopLimitZ_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_TopLimitZ_Display.Location = new System.Drawing.Point(153, 221);
-            this.lblSyS_TopLimitZ_Display.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_TopLimitZ_Display.Location = new System.Drawing.Point(230, 340);
             this.lblSyS_TopLimitZ_Display.Name = "lblSyS_TopLimitZ_Display";
-            this.lblSyS_TopLimitZ_Display.Size = new System.Drawing.Size(67, 20);
+            this.lblSyS_TopLimitZ_Display.Size = new System.Drawing.Size(100, 30);
             this.lblSyS_TopLimitZ_Display.TabIndex = 3;
             this.lblSyS_TopLimitZ_Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2890,10 +2800,9 @@ namespace SDA100
             this.lblSyS_RightLimitY_Display.BackColor = System.Drawing.Color.LawnGreen;
             this.lblSyS_RightLimitY_Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSyS_RightLimitY_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_RightLimitY_Display.Location = new System.Drawing.Point(153, 194);
-            this.lblSyS_RightLimitY_Display.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_RightLimitY_Display.Location = new System.Drawing.Point(230, 298);
             this.lblSyS_RightLimitY_Display.Name = "lblSyS_RightLimitY_Display";
-            this.lblSyS_RightLimitY_Display.Size = new System.Drawing.Size(67, 21);
+            this.lblSyS_RightLimitY_Display.Size = new System.Drawing.Size(100, 31);
             this.lblSyS_RightLimitY_Display.TabIndex = 3;
             this.lblSyS_RightLimitY_Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2902,10 +2811,9 @@ namespace SDA100
             this.lblSyS_LeftLimitY_Display.BackColor = System.Drawing.Color.LawnGreen;
             this.lblSyS_LeftLimitY_Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSyS_LeftLimitY_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_LeftLimitY_Display.Location = new System.Drawing.Point(153, 169);
-            this.lblSyS_LeftLimitY_Display.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_LeftLimitY_Display.Location = new System.Drawing.Point(230, 260);
             this.lblSyS_LeftLimitY_Display.Name = "lblSyS_LeftLimitY_Display";
-            this.lblSyS_LeftLimitY_Display.Size = new System.Drawing.Size(67, 20);
+            this.lblSyS_LeftLimitY_Display.Size = new System.Drawing.Size(100, 30);
             this.lblSyS_LeftLimitY_Display.TabIndex = 3;
             this.lblSyS_LeftLimitY_Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2914,10 +2822,9 @@ namespace SDA100
             this.lblSyS_BackLimitX_Display.BackColor = System.Drawing.Color.LawnGreen;
             this.lblSyS_BackLimitX_Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSyS_BackLimitX_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_BackLimitX_Display.Location = new System.Drawing.Point(153, 142);
-            this.lblSyS_BackLimitX_Display.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_BackLimitX_Display.Location = new System.Drawing.Point(230, 218);
             this.lblSyS_BackLimitX_Display.Name = "lblSyS_BackLimitX_Display";
-            this.lblSyS_BackLimitX_Display.Size = new System.Drawing.Size(67, 21);
+            this.lblSyS_BackLimitX_Display.Size = new System.Drawing.Size(100, 31);
             this.lblSyS_BackLimitX_Display.TabIndex = 3;
             this.lblSyS_BackLimitX_Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2926,20 +2833,18 @@ namespace SDA100
             this.lblSyS_FrontLimitX_Display.BackColor = System.Drawing.Color.LawnGreen;
             this.lblSyS_FrontLimitX_Display.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSyS_FrontLimitX_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_FrontLimitX_Display.Location = new System.Drawing.Point(153, 117);
-            this.lblSyS_FrontLimitX_Display.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_FrontLimitX_Display.Location = new System.Drawing.Point(230, 180);
             this.lblSyS_FrontLimitX_Display.Name = "lblSyS_FrontLimitX_Display";
-            this.lblSyS_FrontLimitX_Display.Size = new System.Drawing.Size(67, 20);
+            this.lblSyS_FrontLimitX_Display.Size = new System.Drawing.Size(100, 30);
             this.lblSyS_FrontLimitX_Display.TabIndex = 3;
             this.lblSyS_FrontLimitX_Display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblSyS_RefreshStatus
             // 
             this.lblSyS_RefreshStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_RefreshStatus.Location = new System.Drawing.Point(27, 84);
-            this.lblSyS_RefreshStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_RefreshStatus.Location = new System.Drawing.Point(40, 129);
             this.lblSyS_RefreshStatus.Name = "lblSyS_RefreshStatus";
-            this.lblSyS_RefreshStatus.Size = new System.Drawing.Size(127, 19);
+            this.lblSyS_RefreshStatus.Size = new System.Drawing.Size(190, 29);
             this.lblSyS_RefreshStatus.TabIndex = 3;
             this.lblSyS_RefreshStatus.Text = "Current Flag Status:";
             this.lblSyS_RefreshStatus.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2947,10 +2852,9 @@ namespace SDA100
             // lblSyS_FrontLimitX
             // 
             this.lblSyS_FrontLimitX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_FrontLimitX.Location = new System.Drawing.Point(60, 117);
-            this.lblSyS_FrontLimitX.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_FrontLimitX.Location = new System.Drawing.Point(90, 180);
             this.lblSyS_FrontLimitX.Name = "lblSyS_FrontLimitX";
-            this.lblSyS_FrontLimitX.Size = new System.Drawing.Size(93, 19);
+            this.lblSyS_FrontLimitX.Size = new System.Drawing.Size(140, 29);
             this.lblSyS_FrontLimitX.TabIndex = 3;
             this.lblSyS_FrontLimitX.Text = "Front Limit X:";
             this.lblSyS_FrontLimitX.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2958,56 +2862,50 @@ namespace SDA100
             // txtSyS_AutoFocusValue
             // 
             this.txtSyS_AutoFocusValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSyS_AutoFocusValue.Location = new System.Drawing.Point(160, 435);
-            this.txtSyS_AutoFocusValue.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSyS_AutoFocusValue.Location = new System.Drawing.Point(240, 669);
             this.txtSyS_AutoFocusValue.Name = "txtSyS_AutoFocusValue";
-            this.txtSyS_AutoFocusValue.Size = new System.Drawing.Size(55, 22);
+            this.txtSyS_AutoFocusValue.Size = new System.Drawing.Size(80, 30);
             this.txtSyS_AutoFocusValue.TabIndex = 2;
             // 
             // txtSyS_ZStagePosition
             // 
             this.txtSyS_ZStagePosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSyS_ZStagePosition.Location = new System.Drawing.Point(160, 403);
-            this.txtSyS_ZStagePosition.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSyS_ZStagePosition.Location = new System.Drawing.Point(240, 620);
             this.txtSyS_ZStagePosition.Name = "txtSyS_ZStagePosition";
-            this.txtSyS_ZStagePosition.Size = new System.Drawing.Size(55, 22);
+            this.txtSyS_ZStagePosition.Size = new System.Drawing.Size(80, 30);
             this.txtSyS_ZStagePosition.TabIndex = 2;
             // 
             // txtSyS_YStagePosition
             // 
             this.txtSyS_YStagePosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSyS_YStagePosition.Location = new System.Drawing.Point(160, 377);
-            this.txtSyS_YStagePosition.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSyS_YStagePosition.Location = new System.Drawing.Point(240, 580);
             this.txtSyS_YStagePosition.Name = "txtSyS_YStagePosition";
-            this.txtSyS_YStagePosition.Size = new System.Drawing.Size(55, 22);
+            this.txtSyS_YStagePosition.Size = new System.Drawing.Size(80, 30);
             this.txtSyS_YStagePosition.TabIndex = 2;
             // 
             // txtSyS_XStagePosition
             // 
             this.txtSyS_XStagePosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSyS_XStagePosition.Location = new System.Drawing.Point(160, 351);
-            this.txtSyS_XStagePosition.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSyS_XStagePosition.Location = new System.Drawing.Point(240, 540);
             this.txtSyS_XStagePosition.Name = "txtSyS_XStagePosition";
-            this.txtSyS_XStagePosition.Size = new System.Drawing.Size(55, 22);
+            this.txtSyS_XStagePosition.Size = new System.Drawing.Size(80, 30);
             this.txtSyS_XStagePosition.TabIndex = 2;
             // 
             // txtSyS_ReadPHA
             // 
             this.txtSyS_ReadPHA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSyS_ReadPHA.Location = new System.Drawing.Point(153, 45);
-            this.txtSyS_ReadPHA.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSyS_ReadPHA.Location = new System.Drawing.Point(230, 69);
             this.txtSyS_ReadPHA.Name = "txtSyS_ReadPHA";
-            this.txtSyS_ReadPHA.Size = new System.Drawing.Size(55, 22);
+            this.txtSyS_ReadPHA.Size = new System.Drawing.Size(80, 30);
             this.txtSyS_ReadPHA.TabIndex = 2;
             // 
             // btnSyS_ReadPHA
             // 
             this.btnSyS_ReadPHA.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnSyS_ReadPHA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSyS_ReadPHA.Location = new System.Drawing.Point(53, 39);
-            this.btnSyS_ReadPHA.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSyS_ReadPHA.Location = new System.Drawing.Point(80, 60);
             this.btnSyS_ReadPHA.Name = "btnSyS_ReadPHA";
-            this.btnSyS_ReadPHA.Size = new System.Drawing.Size(87, 26);
+            this.btnSyS_ReadPHA.Size = new System.Drawing.Size(130, 40);
             this.btnSyS_ReadPHA.TabIndex = 1;
             this.btnSyS_ReadPHA.Text = "Read PHA";
             this.btnSyS_ReadPHA.UseVisualStyleBackColor = true;
@@ -3016,10 +2914,9 @@ namespace SDA100
             // 
             this.btnSyS_RefreshStatus.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnSyS_RefreshStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSyS_RefreshStatus.Location = new System.Drawing.Point(153, 78);
-            this.btnSyS_RefreshStatus.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSyS_RefreshStatus.Location = new System.Drawing.Point(230, 120);
             this.btnSyS_RefreshStatus.Name = "btnSyS_RefreshStatus";
-            this.btnSyS_RefreshStatus.Size = new System.Drawing.Size(67, 26);
+            this.btnSyS_RefreshStatus.Size = new System.Drawing.Size(100, 40);
             this.btnSyS_RefreshStatus.TabIndex = 1;
             this.btnSyS_RefreshStatus.Text = "Refresh";
             this.btnSyS_RefreshStatus.UseVisualStyleBackColor = true;
@@ -3029,10 +2926,9 @@ namespace SDA100
             // 
             this.lblSyS_Title.AutoSize = true;
             this.lblSyS_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSyS_Title.Location = new System.Drawing.Point(73, 6);
-            this.lblSyS_Title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSyS_Title.Location = new System.Drawing.Point(110, 9);
             this.lblSyS_Title.Name = "lblSyS_Title";
-            this.lblSyS_Title.Size = new System.Drawing.Size(139, 25);
+            this.lblSyS_Title.Size = new System.Drawing.Size(204, 36);
             this.lblSyS_Title.TabIndex = 0;
             this.lblSyS_Title.Text = "System Status";
             // 
@@ -3043,21 +2939,18 @@ namespace SDA100
             this.groupBox8.Controls.Add(this.btnUCV_XY_Center);
             this.groupBox8.Controls.Add(this.lblUCV_Title);
             this.groupBox8.Controls.Add(this.btnUCV_XY_Init);
-            this.groupBox8.Location = new System.Drawing.Point(311, 236);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox8.Location = new System.Drawing.Point(466, 363);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox8.Size = new System.Drawing.Size(200, 322);
+            this.groupBox8.Size = new System.Drawing.Size(300, 495);
             this.groupBox8.TabIndex = 21;
             this.groupBox8.TabStop = false;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(47, 221);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(70, 340);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 42);
+            this.button1.Size = new System.Drawing.Size(170, 65);
             this.button1.TabIndex = 1;
             this.button1.Text = "Save Z as Park";
             this.button1.UseVisualStyleBackColor = true;
@@ -3065,10 +2958,9 @@ namespace SDA100
             // btnUCV_XY_Park
             // 
             this.btnUCV_XY_Park.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUCV_XY_Park.Location = new System.Drawing.Point(47, 159);
-            this.btnUCV_XY_Park.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUCV_XY_Park.Location = new System.Drawing.Point(70, 245);
             this.btnUCV_XY_Park.Name = "btnUCV_XY_Park";
-            this.btnUCV_XY_Park.Size = new System.Drawing.Size(113, 42);
+            this.btnUCV_XY_Park.Size = new System.Drawing.Size(170, 65);
             this.btnUCV_XY_Park.TabIndex = 1;
             this.btnUCV_XY_Park.Text = "Save XY as Park";
             this.btnUCV_XY_Park.UseVisualStyleBackColor = true;
@@ -3076,10 +2968,9 @@ namespace SDA100
             // btnUCV_XY_Center
             // 
             this.btnUCV_XY_Center.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUCV_XY_Center.Location = new System.Drawing.Point(47, 115);
-            this.btnUCV_XY_Center.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUCV_XY_Center.Location = new System.Drawing.Point(70, 177);
             this.btnUCV_XY_Center.Name = "btnUCV_XY_Center";
-            this.btnUCV_XY_Center.Size = new System.Drawing.Size(113, 42);
+            this.btnUCV_XY_Center.Size = new System.Drawing.Size(170, 65);
             this.btnUCV_XY_Center.TabIndex = 1;
             this.btnUCV_XY_Center.Text = "Save XY as Center";
             this.btnUCV_XY_Center.UseVisualStyleBackColor = true;
@@ -3088,10 +2979,9 @@ namespace SDA100
             // 
             this.lblUCV_Title.AutoSize = true;
             this.lblUCV_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUCV_Title.Location = new System.Drawing.Point(20, 13);
-            this.lblUCV_Title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUCV_Title.Location = new System.Drawing.Point(30, 20);
             this.lblUCV_Title.Name = "lblUCV_Title";
-            this.lblUCV_Title.Size = new System.Drawing.Size(176, 50);
+            this.lblUCV_Title.Size = new System.Drawing.Size(255, 74);
             this.lblUCV_Title.TabIndex = 0;
             this.lblUCV_Title.Text = "Update Config. \r\nValues";
             this.lblUCV_Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3099,10 +2989,9 @@ namespace SDA100
             // btnUCV_XY_Init
             // 
             this.btnUCV_XY_Init.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUCV_XY_Init.Location = new System.Drawing.Point(47, 71);
-            this.btnUCV_XY_Init.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUCV_XY_Init.Location = new System.Drawing.Point(70, 109);
             this.btnUCV_XY_Init.Name = "btnUCV_XY_Init";
-            this.btnUCV_XY_Init.Size = new System.Drawing.Size(113, 42);
+            this.btnUCV_XY_Init.Size = new System.Drawing.Size(170, 65);
             this.btnUCV_XY_Init.TabIndex = 1;
             this.btnUCV_XY_Init.Text = "Save XY as Init";
             this.btnUCV_XY_Init.UseVisualStyleBackColor = true;
@@ -3113,30 +3002,26 @@ namespace SDA100
             this.groupBox9.Controls.Add(this.btnZM_Up);
             this.groupBox9.Controls.Add(this.btnZM_Down);
             this.groupBox9.Controls.Add(this.lblZM_Title);
-            this.groupBox9.Location = new System.Drawing.Point(311, 8);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox9.Location = new System.Drawing.Point(466, 12);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox9.Size = new System.Drawing.Size(200, 214);
+            this.groupBox9.Size = new System.Drawing.Size(300, 329);
             this.groupBox9.TabIndex = 19;
             this.groupBox9.TabStop = false;
             // 
             // txtZM_Set
             // 
             this.txtZM_Set.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtZM_Set.Location = new System.Drawing.Point(62, 108);
-            this.txtZM_Set.Margin = new System.Windows.Forms.Padding(2);
+            this.txtZM_Set.Location = new System.Drawing.Point(93, 166);
             this.txtZM_Set.Name = "txtZM_Set";
-            this.txtZM_Set.Size = new System.Drawing.Size(79, 22);
+            this.txtZM_Set.Size = new System.Drawing.Size(116, 30);
             this.txtZM_Set.TabIndex = 2;
             // 
             // btnZM_Up
             // 
             this.btnZM_Up.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZM_Up.Location = new System.Drawing.Point(61, 59);
-            this.btnZM_Up.Margin = new System.Windows.Forms.Padding(2);
+            this.btnZM_Up.Location = new System.Drawing.Point(92, 91);
             this.btnZM_Up.Name = "btnZM_Up";
-            this.btnZM_Up.Size = new System.Drawing.Size(80, 42);
+            this.btnZM_Up.Size = new System.Drawing.Size(120, 65);
             this.btnZM_Up.TabIndex = 1;
             this.btnZM_Up.Text = "Up";
             this.btnZM_Up.UseVisualStyleBackColor = true;
@@ -3145,10 +3030,9 @@ namespace SDA100
             // btnZM_Down
             // 
             this.btnZM_Down.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZM_Down.Location = new System.Drawing.Point(62, 135);
-            this.btnZM_Down.Margin = new System.Windows.Forms.Padding(2);
+            this.btnZM_Down.Location = new System.Drawing.Point(93, 208);
             this.btnZM_Down.Name = "btnZM_Down";
-            this.btnZM_Down.Size = new System.Drawing.Size(80, 42);
+            this.btnZM_Down.Size = new System.Drawing.Size(120, 65);
             this.btnZM_Down.TabIndex = 1;
             this.btnZM_Down.Text = "Down";
             this.btnZM_Down.UseVisualStyleBackColor = true;
@@ -3158,10 +3042,9 @@ namespace SDA100
             // 
             this.lblZM_Title.AutoSize = true;
             this.lblZM_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZM_Title.Location = new System.Drawing.Point(44, 15);
-            this.lblZM_Title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblZM_Title.Location = new System.Drawing.Point(66, 23);
             this.lblZM_Title.Name = "lblZM_Title";
-            this.lblZM_Title.Size = new System.Drawing.Size(116, 25);
+            this.lblZM_Title.Size = new System.Drawing.Size(167, 37);
             this.lblZM_Title.TabIndex = 0;
             this.lblZM_Title.Text = "Z Motions";
             // 
@@ -3178,30 +3061,26 @@ namespace SDA100
             this.groupBox10.Controls.Add(this.btnXYM_DoorStatus);
             this.groupBox10.Controls.Add(this.btnXYM_Home);
             this.groupBox10.Controls.Add(this.lblXYM_Title);
-            this.groupBox10.Location = new System.Drawing.Point(17, 8);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox10.Location = new System.Drawing.Point(26, 12);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox10.Size = new System.Drawing.Size(276, 318);
+            this.groupBox10.Size = new System.Drawing.Size(414, 489);
             this.groupBox10.TabIndex = 20;
             this.groupBox10.TabStop = false;
             // 
             // txtXYM_Set
             // 
             this.txtXYM_Set.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtXYM_Set.Location = new System.Drawing.Point(104, 102);
-            this.txtXYM_Set.Margin = new System.Windows.Forms.Padding(2);
+            this.txtXYM_Set.Location = new System.Drawing.Point(156, 157);
             this.txtXYM_Set.Name = "txtXYM_Set";
-            this.txtXYM_Set.Size = new System.Drawing.Size(68, 22);
+            this.txtXYM_Set.Size = new System.Drawing.Size(100, 30);
             this.txtXYM_Set.TabIndex = 2;
             // 
             // btnXYM_Front
             // 
             this.btnXYM_Front.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_Front.Location = new System.Drawing.Point(96, 47);
-            this.btnXYM_Front.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXYM_Front.Location = new System.Drawing.Point(144, 72);
             this.btnXYM_Front.Name = "btnXYM_Front";
-            this.btnXYM_Front.Size = new System.Drawing.Size(80, 42);
+            this.btnXYM_Front.Size = new System.Drawing.Size(120, 65);
             this.btnXYM_Front.TabIndex = 1;
             this.btnXYM_Front.Text = "Front";
             this.btnXYM_Front.UseVisualStyleBackColor = true;
@@ -3210,10 +3089,9 @@ namespace SDA100
             // btnXYM_Right
             // 
             this.btnXYM_Right.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_Right.Location = new System.Drawing.Point(176, 91);
-            this.btnXYM_Right.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXYM_Right.Location = new System.Drawing.Point(264, 140);
             this.btnXYM_Right.Name = "btnXYM_Right";
-            this.btnXYM_Right.Size = new System.Drawing.Size(80, 42);
+            this.btnXYM_Right.Size = new System.Drawing.Size(120, 65);
             this.btnXYM_Right.TabIndex = 1;
             this.btnXYM_Right.Text = "Right";
             this.btnXYM_Right.UseVisualStyleBackColor = true;
@@ -3222,10 +3100,9 @@ namespace SDA100
             // btnXYM_Back
             // 
             this.btnXYM_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_Back.Location = new System.Drawing.Point(96, 140);
-            this.btnXYM_Back.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXYM_Back.Location = new System.Drawing.Point(144, 215);
             this.btnXYM_Back.Name = "btnXYM_Back";
-            this.btnXYM_Back.Size = new System.Drawing.Size(80, 42);
+            this.btnXYM_Back.Size = new System.Drawing.Size(120, 65);
             this.btnXYM_Back.TabIndex = 1;
             this.btnXYM_Back.Text = "Back";
             this.btnXYM_Back.UseVisualStyleBackColor = true;
@@ -3235,10 +3112,9 @@ namespace SDA100
             // 
             this.btnXYM_Center.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnXYM_Center.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_Center.Location = new System.Drawing.Point(182, 199);
-            this.btnXYM_Center.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXYM_Center.Location = new System.Drawing.Point(273, 306);
             this.btnXYM_Center.Name = "btnXYM_Center";
-            this.btnXYM_Center.Size = new System.Drawing.Size(80, 42);
+            this.btnXYM_Center.Size = new System.Drawing.Size(120, 65);
             this.btnXYM_Center.TabIndex = 1;
             this.btnXYM_Center.Text = "Center";
             this.btnXYM_Center.UseVisualStyleBackColor = true;
@@ -3248,10 +3124,9 @@ namespace SDA100
             // 
             this.btnXYM_Left.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnXYM_Left.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_Left.Location = new System.Drawing.Point(16, 92);
-            this.btnXYM_Left.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXYM_Left.Location = new System.Drawing.Point(24, 142);
             this.btnXYM_Left.Name = "btnXYM_Left";
-            this.btnXYM_Left.Size = new System.Drawing.Size(80, 42);
+            this.btnXYM_Left.Size = new System.Drawing.Size(120, 65);
             this.btnXYM_Left.TabIndex = 1;
             this.btnXYM_Left.Text = "Left";
             this.btnXYM_Left.UseVisualStyleBackColor = true;
@@ -3261,10 +3136,9 @@ namespace SDA100
             // 
             this.btnXYM_Park.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnXYM_Park.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_Park.Location = new System.Drawing.Point(95, 198);
-            this.btnXYM_Park.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXYM_Park.Location = new System.Drawing.Point(142, 305);
             this.btnXYM_Park.Name = "btnXYM_Park";
-            this.btnXYM_Park.Size = new System.Drawing.Size(80, 42);
+            this.btnXYM_Park.Size = new System.Drawing.Size(120, 65);
             this.btnXYM_Park.TabIndex = 1;
             this.btnXYM_Park.Text = "Park";
             this.btnXYM_Park.UseVisualStyleBackColor = true;
@@ -3274,10 +3148,9 @@ namespace SDA100
             // 
             this.btnXYM_VacuumStatus.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnXYM_VacuumStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_VacuumStatus.Location = new System.Drawing.Point(139, 259);
-            this.btnXYM_VacuumStatus.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXYM_VacuumStatus.Location = new System.Drawing.Point(208, 398);
             this.btnXYM_VacuumStatus.Name = "btnXYM_VacuumStatus";
-            this.btnXYM_VacuumStatus.Size = new System.Drawing.Size(80, 42);
+            this.btnXYM_VacuumStatus.Size = new System.Drawing.Size(120, 65);
             this.btnXYM_VacuumStatus.TabIndex = 1;
             this.btnXYM_VacuumStatus.Text = "Vacuum On";
             this.btnXYM_VacuumStatus.UseVisualStyleBackColor = true;
@@ -3287,10 +3160,9 @@ namespace SDA100
             // 
             this.btnXYM_DoorStatus.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnXYM_DoorStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_DoorStatus.Location = new System.Drawing.Point(48, 259);
-            this.btnXYM_DoorStatus.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXYM_DoorStatus.Location = new System.Drawing.Point(72, 398);
             this.btnXYM_DoorStatus.Name = "btnXYM_DoorStatus";
-            this.btnXYM_DoorStatus.Size = new System.Drawing.Size(80, 42);
+            this.btnXYM_DoorStatus.Size = new System.Drawing.Size(120, 65);
             this.btnXYM_DoorStatus.TabIndex = 1;
             this.btnXYM_DoorStatus.Text = "Open Door";
             this.btnXYM_DoorStatus.UseVisualStyleBackColor = true;
@@ -3300,10 +3172,9 @@ namespace SDA100
             // 
             this.btnXYM_Home.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnXYM_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXYM_Home.Location = new System.Drawing.Point(8, 198);
-            this.btnXYM_Home.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXYM_Home.Location = new System.Drawing.Point(12, 305);
             this.btnXYM_Home.Name = "btnXYM_Home";
-            this.btnXYM_Home.Size = new System.Drawing.Size(80, 42);
+            this.btnXYM_Home.Size = new System.Drawing.Size(120, 65);
             this.btnXYM_Home.TabIndex = 1;
             this.btnXYM_Home.Text = "Home";
             this.btnXYM_Home.UseVisualStyleBackColor = true;
@@ -3313,10 +3184,9 @@ namespace SDA100
             // 
             this.lblXYM_Title.AutoSize = true;
             this.lblXYM_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblXYM_Title.Location = new System.Drawing.Point(68, 15);
-            this.lblXYM_Title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblXYM_Title.Location = new System.Drawing.Point(102, 23);
             this.lblXYM_Title.Name = "lblXYM_Title";
-            this.lblXYM_Title.Size = new System.Drawing.Size(133, 25);
+            this.lblXYM_Title.Size = new System.Drawing.Size(191, 37);
             this.lblXYM_Title.TabIndex = 0;
             this.lblXYM_Title.Text = "XY Motions";
             // 
@@ -3327,28 +3197,27 @@ namespace SDA100
             this.tabPage5.Controls.Add(this.cbxConsoleCommands);
             this.tabPage5.Controls.Add(this.txtConsoleOutput);
             this.tabPage5.Location = new System.Drawing.Point(54, 4);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1211, 754);
+            this.tabPage5.Size = new System.Drawing.Size(1846, 1164);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Console";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // btnSendConsole
             // 
-            this.btnSendConsole.Location = new System.Drawing.Point(287, 21);
-            this.btnSendConsole.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSendConsole.Location = new System.Drawing.Point(430, 32);
             this.btnSendConsole.Name = "btnSendConsole";
-            this.btnSendConsole.Size = new System.Drawing.Size(60, 24);
+            this.btnSendConsole.Size = new System.Drawing.Size(90, 37);
             this.btnSendConsole.TabIndex = 5;
             this.btnSendConsole.Text = "Send";
             this.btnSendConsole.UseVisualStyleBackColor = true;
             // 
             // btnClearConsole
             // 
-            this.btnClearConsole.Location = new System.Drawing.Point(367, 21);
-            this.btnClearConsole.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClearConsole.Location = new System.Drawing.Point(550, 32);
             this.btnClearConsole.Name = "btnClearConsole";
-            this.btnClearConsole.Size = new System.Drawing.Size(60, 24);
+            this.btnClearConsole.Size = new System.Drawing.Size(90, 37);
             this.btnClearConsole.TabIndex = 6;
             this.btnClearConsole.Text = "Clear";
             this.btnClearConsole.UseVisualStyleBackColor = true;
@@ -3356,27 +3225,44 @@ namespace SDA100
             // cbxConsoleCommands
             // 
             this.cbxConsoleCommands.FormattingEnabled = true;
-            this.cbxConsoleCommands.Location = new System.Drawing.Point(27, 21);
-            this.cbxConsoleCommands.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxConsoleCommands.Location = new System.Drawing.Point(40, 32);
             this.cbxConsoleCommands.Name = "cbxConsoleCommands";
-            this.cbxConsoleCommands.Size = new System.Drawing.Size(241, 24);
+            this.cbxConsoleCommands.Size = new System.Drawing.Size(360, 33);
             this.cbxConsoleCommands.TabIndex = 4;
             // 
             // txtConsoleOutput
             // 
-            this.txtConsoleOutput.Location = new System.Drawing.Point(27, 72);
-            this.txtConsoleOutput.Margin = new System.Windows.Forms.Padding(2);
+            this.txtConsoleOutput.Location = new System.Drawing.Point(40, 111);
             this.txtConsoleOutput.Multiline = true;
             this.txtConsoleOutput.Name = "txtConsoleOutput";
-            this.txtConsoleOutput.Size = new System.Drawing.Size(401, 274);
+            this.txtConsoleOutput.Size = new System.Drawing.Size(600, 419);
             this.txtConsoleOutput.TabIndex = 3;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(54, 4);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1846, 1164);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "INI";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Location = new System.Drawing.Point(54, 4);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(1846, 1164);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Startup";
+            this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // mainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 761);
+            this.ClientSize = new System.Drawing.Size(1896, 1171);
             this.Controls.Add(this.tabMain);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "mainForm";
             this.Text = "SDA-100 Main Operations";
             this.Load += new System.EventHandler(this.mainForm_Load);
@@ -3679,6 +3565,8 @@ namespace SDA100
         private System.Windows.Forms.Button btnXYM_SetY;
         private System.Windows.Forms.Button btnXYM_SetX;
         private System.Windows.Forms.Label lblXYZAbs_Title;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPage7;
     }
 }
 
