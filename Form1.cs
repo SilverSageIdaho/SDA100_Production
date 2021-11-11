@@ -151,8 +151,25 @@ namespace SDA100
             }
             else if (Globals.inData.Contains("!"))
             {
-                Globals.scanReply = Globals.inData;
-                BeginInvoke(new EventHandler(ResponseData));
+                //*************************************
+                //ERROR HANDLING Globals.inData[2] == '0' 
+                // Globals.inData.IndexOf('0') == 2
+                //*************************************
+                if (Globals.inData.Contains("0") && Globals.inData.Length == 4)
+                {
+                    Console.WriteLine("ERRRR inData contains Data: {0} 0 Length: {1}", Globals.inData, Globals.inData.Length);
+                    string message = "Something failed!";
+                    string title = "ERROR";
+                    MessageBox.Show(message, title);
+                } else
+                {
+                    Globals.scanReply = Globals.inData;
+                    BeginInvoke(new EventHandler(ResponseData));
+                }
+                //*************************************
+                //ERROR HANDLING
+                //*************************************
+
             }
             else if (Globals.inData.Contains("*"))
             {
@@ -274,7 +291,6 @@ namespace SDA100
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-           
 
             if (btnLoad.Text == "LOAD")
             {            
@@ -319,6 +335,20 @@ namespace SDA100
         private void tabPage4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (Globals.doorCloseFlag == 0)
+            {
+                serialPort1.Write("n");
+                Globals.doorCloseFlag = 1;
+            }
+            else
+            {
+                serialPort1.Write("o");
+                Globals.doorCloseFlag = 0;
+            }
         }
     }
 }

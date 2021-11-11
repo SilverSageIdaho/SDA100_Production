@@ -51,16 +51,16 @@ namespace SDA100
             if (Globals.doorOpenFlag == 1)
             {
                 serialPort1.Write("o");
-                //btnXYM_DoorStatus.Text = "Close Door";
-                //Globals.doorOpenFlag = 0;
-                //Globals.doorCloseFlag = 1;                
+                btnXYM_DoorStatus.Text = "Close Door";
+                Globals.doorOpenFlag = 0;
+                Globals.doorCloseFlag = 1;
             }
             else
             {
                 serialPort1.Write("n");
-                //btnXYM_DoorStatus.Text = "Open Door";
-                //Globals.doorOpenFlag = 1;
-                //Globals.doorCloseFlag = 0;                
+                btnXYM_DoorStatus.Text = "Open Door";
+                Globals.doorOpenFlag = 1;
+                Globals.doorCloseFlag = 0;
             }
         }
 

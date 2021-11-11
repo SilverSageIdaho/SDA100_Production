@@ -8,6 +8,7 @@ namespace SDA100
 {
     class Globals
     {
+
         public static string inData;
         public static string scanTrack;
         public static string statusMessage;
