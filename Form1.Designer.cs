@@ -2558,6 +2558,7 @@ namespace SDA100
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Maintenance";
             this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
             // groupBox11
             // 

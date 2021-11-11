@@ -284,7 +284,7 @@ namespace SDA100
                 CheckForComResponse("o");
                 serialPort1.Write("N");     //Turn chuck vac off
                 CheckForComResponse("N");
-                btnLoad.Text = "READY";
+                btnLoad.Text = "Rdy";
                 btnRun.Enabled = true;
             }
             
@@ -314,6 +314,11 @@ namespace SDA100
         private void dataTab_Clicked(object sender, TabControlEventArgs e)
         {
             lbxScanDataFiles.DataSource = System.IO.Directory.GetFiles(@"C:\ScanBeta\", "Scan*.txt");
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
