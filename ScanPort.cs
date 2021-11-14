@@ -74,7 +74,7 @@ namespace SDA100
             //Globals.inData = Globals.inData.Remove(0, 1);
             //Globals.inData = Globals.inData.Remove(Globals.inData.Length - 3, 3);
             string[] fields = Globals.statusMessage.Split(DELIM);
-            int dataINLength = Globals.statusMessage.Length;
+            //int dataINLength = Globals.statusMessage.Length;
            
             Globals.mxFrontLimitFlag = Convert.ToInt32(fields[0]);
             Globals.mxBackLimitFlag = Convert.ToInt32(fields[1]);

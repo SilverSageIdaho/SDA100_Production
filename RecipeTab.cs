@@ -115,6 +115,7 @@ namespace SDA100
             lblSizeClass_PSize7_Limit.Text = Globals.rejectLimitS7;
             lblSizeClass_PSizeTotal_Limit.Text = Globals.rejectLimitTotal;
             CreateRecipeString();
+            tabMain.SelectedTab = tabPage1;
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {

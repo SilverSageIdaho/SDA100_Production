@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
+using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace SDA100
 {
@@ -34,7 +36,13 @@ namespace SDA100
         Bitmap bmp = new Bitmap(500, 500);
         Bitmap ebmp = new Bitmap(500, 500);
 
-        SerialPort serialPort1;
+        public SerialPort serialPort1;
+        private ErrorHandler errorHandler = new ErrorHandler();
+
+        //static AutoResetEvent autoReset = new AutoResetEvent(false);
+        //static ManualResetEvent manReset = new ManualResetEvent(false);
+
+        
 
         public string filePath;
         public mainForm()
@@ -44,6 +52,7 @@ namespace SDA100
 
         private void mainForm_Load(object sender, EventArgs e)
         {
+            //Thread.CurrentThread.Name = "Form Load";
             // *** Find the Scanner Com Port by testing for "?" => "!" ****
             ScanPort.ScanComPorts();
             
@@ -92,28 +101,42 @@ namespace SDA100
                 Globals.dirErrorLog = iniData[23];
 
                 serialPort1.Write("." + Globals.mapRes + "r");
+                Console.WriteLine("." + Globals.mapRes + "r");
+                //autoReset.WaitOne(); //Crap Dustin is messing with
                 
                 serialPort1.Write("." + Globals.waferDiam + "d");
+                Console.WriteLine("." + Globals.waferDiam + "d");
                 lblCCWaferSize_Current.Text = "." + Globals.waferDiam + "d";
 
                 serialPort1.Write("." + Globals.edgeRej + "e");
+                Console.WriteLine("." + Globals.edgeRej + "e");
                 lblCCEdgeReject_Current.Text = "." + Globals.edgeRej + "e";
 
                 serialPort1.Write("." + Globals.sectorSteps + "S");
-                
+                Console.WriteLine("." + Globals.sectorSteps + "S");
+
                 serialPort1.Write("." + Globals.trackSteps + "T");
-                
+                Console.WriteLine("." + Globals.trackSteps + "T");
+
                 serialPort1.Write("." + Globals.parkY + "y");
-                
+                Console.WriteLine("." + Globals.parkY + "y");
+
                 serialPort1.Write("." + Globals.parkX + "x");
+                Console.WriteLine("." + Globals.parkX + "x");
 
                 serialPort1.Write("." + Globals.parkZ + "z");
+                Console.WriteLine("." + Globals.parkZ + "z");
 
                 serialPort1.Write("." + Globals.preFocusZ + "u");
-
-                serialPort1.Write("." + Globals.preFocusX + "v"); 
+                Console.WriteLine("." + Globals.preFocusZ + "u");
                 
+                serialPort1.Write("." + Globals.preFocusX + "v");
+                Console.WriteLine("." + Globals.preFocusX + "v");
+
                 serialPort1.Write("." + Globals.preFocusY + "w");
+                Console.WriteLine("." + Globals.preFocusY + "w");
+
+                serialPort1.Write("H");
 
                 serialPort1.Write("m");
 
@@ -127,12 +150,13 @@ namespace SDA100
                 //lbxLoadBox.Text = "New Recipe";
                 lbxLoadBox.DataSource = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
                 lbxScanDataFiles.DataSource = System.IO.Directory.GetFiles(@"C:\ScanBeta\", "Scan*.txt");
+                
+
             }
         }
-        private void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
+        public void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
         {
             Globals.inData = serialPort1.ReadLine();
-
             if (Globals.inData.Contains("<"))
             {
                 OpenFile();
@@ -151,25 +175,61 @@ namespace SDA100
             }
             else if (Globals.inData.Contains("!"))
             {
-                //*************************************
-                //ERROR HANDLING Globals.inData[2] == '0' 
-                // Globals.inData.IndexOf('0') == 2
-                //*************************************
-                if (Globals.inData.Contains("0") && Globals.inData.Length == 4)
+                if(Globals.inData.Substring(0, 2) == "!f")
                 {
-                    Console.WriteLine("ERRRR inData contains Data: {0} 0 Length: {1}", Globals.inData, Globals.inData.Length);
-                    string message = "Something failed!";
-                    string title = "ERROR";
-                    MessageBox.Show(message, title);
-                } else
-                {
-                    Globals.scanReply = Globals.inData;
-                    BeginInvoke(new EventHandler(ResponseData));
+                    Console.WriteLine("inData FOCUS: {0}", Globals.inData);
+                    Globals.z_focus = Globals.inData.Substring(2, Globals.inData.Length - 2);
                 }
+                else if(Globals.inData.Contains("!H"))
+                {
+                    serialPort1.Write("m");
+                }
+                //*************************************
+                //ERROR HANDLING 
+                //*************************************
+
+                //Errors will match this regular expression
+                //Regex regex = new Regex("^![A-Za-z]{1}0{1}\r{1}$");
+
+                //if(regex.IsMatch(Globals.inData))
+                //{
+                //    Console.WriteLine("Indata error: {0}", Globals.inData);
+                //    char letter = Globals.inData[1];
+                //    //int maxFailedAttempts = 3;
+                //    switch (letter)
+                //    {
+                //        case 'O': serialPort1.Write("N");
+                //                  //Globals.vacChuckFlag = 0;
+                //                  Globals.errorMessage = "No wafer detected";
+                //            break;
+                //        case 'o': Globals.errorMessage = "Door failed to open";
+                //                  Globals.doorCloseFlag = 1;
+                //            Console.WriteLine("ERROR o");
+                //                  //serialPort1.Write("n");
+                //            break;
+                //        case 'n': Globals.errorMessage = "Door failed to close";
+                //                  Globals.doorCloseFlag = 0;
+                //                  //serialPort1.Write("o"); //Open door if failed to close?
+                //            break;
+                //        case 'H': Globals.errorMessage = "Failed to get to Home";
+                //            break;
+                //        default: Globals.errorMessage = "Unknown error";
+                //            break;
+                //    }
+
+                //} //else
+                //{
+                Globals.scanReply = Globals.inData;
+                //autoReset.Set(); //Crap Dustin is messing with
+                //Console.WriteLine("Inside \"!\":" + Thread.CurrentThread.ManagedThreadId);
+                //Console.WriteLine("Thread Name: " + Thread.CurrentThread.Name);
+                //BeginInvoke?
+                BeginInvoke(new EventHandler(ResponseData));
+                //}
                 //*************************************
                 //ERROR HANDLING
                 //*************************************
-
+                
             }
             else if (Globals.inData.Contains("*"))
             {
@@ -216,14 +276,17 @@ namespace SDA100
 
         private void ResponseData(object sender, EventArgs e)
         {
-            if (Globals.scanReply == "!m\r")
+            //Console.WriteLine("Inside Response Data: " + Thread.CurrentThread.ManagedThreadId);
+            //Console.WriteLine("Thread Name: " + Thread.CurrentThread.Name);
+            Console.WriteLine("Response Data: " + Globals.scanReply); 
+                        
+            label16.Text = Globals.z_focus;
+
+            if(Globals.errorMessage != null)
             {
-                Console.WriteLine("Response Data: " + Globals.scanReply);                                
-            }
-            else
-            {
-                Console.WriteLine("Response Data: " + Globals.scanReply);
-                //serialPort1.Write("m");
+                string title = "ERROR";
+                MessageBox.Show(Globals.errorMessage, title);
+                Globals.errorMessage = null;
             }
         }
 
@@ -276,8 +339,6 @@ namespace SDA100
                 CheckForComResponse("n");
                 serialPort1.Write("i"); //copy ini(uvw) to XYZ
                 CheckForComResponse("i");
-                serialPort1.Write("I"); //moves XY stage to chuck center and Z to prefocus
-                CheckForComResponse("I");
                 serialPort1.Write("f"); //focus Z
                 CheckForComResponse("f");
                 serialPort1.Write("G"); //Start scan                 
@@ -300,8 +361,16 @@ namespace SDA100
                 CheckForComResponse("o");
                 serialPort1.Write("N");     //Turn chuck vac off
                 CheckForComResponse("N");
-                btnLoad.Text = "Rdy";
+                btnLoad.Text = "READY";
                 btnRun.Enabled = true;
+
+                btnLoad.Enabled = false;
+                btnRun.BackColor = Color.FromArgb(0, 192, 0);
+                btnLoad.BackColor = Color.Gray;
+                //float currentSize = btnLoad.Font.Size;
+                //currentSize -= 2.0F;
+                btnLoad.Font = new Font(FontFamily.GenericSansSerif, btnLoad.Font.Size - 2, FontStyle.Bold);
+                //btnLoad.Font = new Font(FontFamily.GenericSansSerif, currentSize, FontStyle.Bold);
             }
             
         }
@@ -337,18 +406,6 @@ namespace SDA100
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (Globals.doorCloseFlag == 0)
-            {
-                serialPort1.Write("n");
-                Globals.doorCloseFlag = 1;
-            }
-            else
-            {
-                serialPort1.Write("o");
-                Globals.doorCloseFlag = 0;
-            }
-        }
+
     }
 }

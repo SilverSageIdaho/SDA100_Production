@@ -8,7 +8,9 @@ namespace SDA100
 {
     class Globals
     {
-
+        public static int counter;
+        public static string z_focus;
+        public static string errorMessage;
         public static string inData;
         public static string scanTrack;
         public static string statusMessage;

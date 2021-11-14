@@ -70,14 +70,14 @@ namespace SDA100
             {
                 serialPort1.Write("O");
                 btnXYM_VacuumStatus.Text = "Chuck Vac Off";
-                //Globals.vacChuckFlag = 1;
+                Globals.vacChuckFlag = 1;
 
             }
             else
             {
                 serialPort1.Write("N");
                 btnXYM_VacuumStatus.Text = "Chuck Vac On";
-                //Globals.vacChuckFlag = 0;
+                Globals.vacChuckFlag = 0;
 
             }
         }

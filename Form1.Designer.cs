@@ -31,6 +31,9 @@ namespace SDA100
         {
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.lblScanDefectCnt7 = new System.Windows.Forms.Label();
             this.lblScanDefectCnt6 = new System.Windows.Forms.Label();
             this.lblScanDefectCnt5 = new System.Windows.Forms.Label();
@@ -291,7 +294,6 @@ namespace SDA100
             this.txtConsoleOutput = new System.Windows.Forms.TextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabMain.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -336,7 +338,9 @@ namespace SDA100
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.label16);
+            this.tabPage1.Controls.Add(this.label15);
+            this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.lblScanDefectCnt7);
             this.tabPage1.Controls.Add(this.lblScanDefectCnt6);
             this.tabPage1.Controls.Add(this.lblScanDefectCnt5);
@@ -375,6 +379,32 @@ namespace SDA100
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Main";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(119, 704);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(59, 16);
+            this.label16.TabIndex = 109;
+            this.label16.Text = "label16";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(128, 702);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(0, 16);
+            this.label15.TabIndex = 108;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(52, 702);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(60, 16);
+            this.label13.TabIndex = 106;
+            this.label13.Text = "Z-value";
             // 
             // lblScanDefectCnt7
             // 
@@ -1177,7 +1207,7 @@ namespace SDA100
             // 
             // btnLoad
             // 
-            this.btnLoad.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoad.ForeColor = System.Drawing.Color.White;
@@ -1207,7 +1237,7 @@ namespace SDA100
             // 
             // btnRun
             // 
-            this.btnRun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnRun.BackColor = System.Drawing.Color.Gray;
             this.btnRun.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRun.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRun.ForeColor = System.Drawing.Color.White;
@@ -3398,16 +3428,6 @@ namespace SDA100
             this.tabPage7.Text = "Startup";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(54, 690);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(204, 47);
-            this.button2.TabIndex = 106;
-            this.button2.Text = "Door";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3718,7 +3738,9 @@ namespace SDA100
         private System.Windows.Forms.Label lblXYZAbs_Title;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage7;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label16;
     }
 }
 
