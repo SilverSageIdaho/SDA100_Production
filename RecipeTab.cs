@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing; //******new code****//
 using System.Windows.Forms;
 
 namespace SDA100
@@ -10,15 +11,77 @@ namespace SDA100
     public partial class mainForm : Form
     {
         string recSaveData;
+
+
+ // ********* new code ***********//
+        List<Button> buttons = new List<Button>();      
+        List<int> waferSizes = new List<int>();
+        List<int> edgeRejects = new List<int>();
+        List<string> areaScans = new List<string>();
+        List<string> zoneTypes = new List<string>();
+        
         private void lbxLoadBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedRecipe = lbxLoadBox.SelectedItem.ToString();
-            string[] recData = selectedRecipe.Split(',');
+            string selectedRecipe = lbxLoadBox.SelectedItem.ToString(); 
+            string[] recData = selectedRecipe.Split(',');               
+
+            //(DUSTIN: is this new code in the right place?)
+ // ********* new code ***********//
+            //code to create the recipe button list:        
+            CreateRecipeButton();  
+
+            //code to fill the lbxLoadBox with all of the buttons:
+            for(int i = 0; i < buttons.Count; i++)
+            {
+                lbxLoadBox.Items.Add(buttons[i]);
+            }
+            //code to filter the recipe buttons:
+            if(cbxSSWaferSize_Set.Text == intVariable) // <-- need to determine what the values for the comparison variables are!!
+            {
+                for(int i = 0; i < buttons.Count; i++)
+                {
+                    if(waferSizes[i] != intVariable)
+                    {
+                        buttons[i].Visible = false;
+                    }
+                }
+            }
+            if(cbxSSEdgeReject_Set.Text == intVariable)
+            {
+                for(int i = 0; i < buttons.Count; i++)
+                {
+                    if(edgeRejects[i] != intVariable)
+                    {
+                        buttons[i].Visible = false;
+                    }
+                }
+            }
+            if(cbxSSScanOfArea_Set.Text == stringVariable)
+            {
+                for(int i = 0; i < buttons.Count; i++)
+                {
+                    if(areaScans[i] != stringVariable)
+                    {
+                        buttons[i].Visible = false;
+                    }
+                }
+            }
+            if(cbxSSZoneScanType_Set.Text == stringVariable)
+            {
+                for(int i = 0; i < buttons.Count; i++)
+                {
+                    if(zoneTypes[i] != stringVariable)
+                    {
+                        buttons[i].Visible = false;
+                    }
+                }
+            }
+ // ********* end of new code ***********//
 
             txtSSRecipeName_Set.Text = recData[3];
             txtSSUserID_Set.Text = recData[4];
             txtSSScanID_Set.Text = recData[5];
-            cbxSSWaferSize_Set.Text = recData[6];
+            cbxSSWaferSize_Set.Text = recData[6]; //MICHELLE'S COMMENT: dropdown boxes lines 33 to 36
             cbxSSEdgeReject_Set.Text = recData[7];
             cbxSSScanOfArea_Set.Text = recData[8];
             //cbxSSZoneScanType_Set.Text = recDate[9]; //add later...currently disabled
@@ -193,5 +256,34 @@ namespace SDA100
             recSaveData += txtSizeClass_Total_Limit.Text + ",";
             recSaveData += txtRecipeComments.Text + ";";
         }
+ /******NEW CODE********/
+        public void CreateRecipeButton()
+        {
+            string selectedRecipe = lbxLoadBox.SelectedItem.ToString();
+            string[] recData = selectedRecipe.Split(',');
+
+            for (int i = 0; i < recData.Length; i++)
+            {
+                Button button = new Button();
+                button.Name = "btn" + i;
+                button.Font = new Font(FontFamily.GenericSansSerif, 11, FontStyle.Bold);
+                button.Text = recData[3];
+                int waferSize = recData[6]; //MICHELLE'S COMMENT: dropdown box values (I don't know if the types are correct)
+                waferSizes.Add(waferSize);
+                int edgeReject = recData[7];
+                edgeRejects.Add(EdgeReject);
+                string scanOfArea = recData[8];
+                areaScans.Add(scanOfArea);
+                string zoneScanType = recData[9]
+                zoneTypes.Add(zoneScanType);
+                button.TextAlign = ContentAlignment.MiddleCenter;
+                button.Width = 150;  //may need to change these values to fit lbxLoadBox properly
+                button.Height = 40;
+                button.BackColor = Color.RoyalBlue;
+                button.Click += btnRecipeLoad_Click; //I think this needs to change to an event that prompts the user to choose Save, Load, or Edit 
+                buttons.Add(button);                        //(rather than having the 3 buttons always visible underneath the Box)
+            }                                               //perhaps a new popup window containing instructional text and the 3 buttons?
+        }
+ /****** end of NEW CODE********/
     }
 }

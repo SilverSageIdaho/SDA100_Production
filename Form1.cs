@@ -291,7 +291,7 @@ namespace SDA100
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-
+  //***** new code idea:  change to if(btnLoad.Enabled == true) ??   ******
             if (btnLoad.Text == "LOAD")
             {            
                 serialPort1.Write("P");   // Park Stage at preScan position
@@ -300,8 +300,14 @@ namespace SDA100
                 CheckForComResponse("o");
                 serialPort1.Write("N");     //Turn chuck vac off
                 CheckForComResponse("N");
-                btnLoad.Text = "Rdy";
+  //*****   new code  ******//               
+                btnLoad.Text = "READY";
                 btnRun.Enabled = true;
+                btnLoad.Enabled = false;
+                btnRun.BackColor = Color.Green;
+                btnLoad.BackColor = Color.Gray;
+                btnLoad.Font = new Font(FontFamily.GenericSansSerif, btnLoad.Font.Size - 2, FontStyle.Bold);
+  //***** end of new code *****//
             }
             
         }
