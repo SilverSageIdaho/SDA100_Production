@@ -13,6 +13,7 @@ namespace SDA100
         private void lbxLoadBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedRecipe = lbxLoadBox.SelectedItem.ToString();
+            //string selectedRecipe = Globals.recLines[lbxLoadBox.SelectedIndex];
             string[] recData = selectedRecipe.Split(',');
 
             txtSSRecipeName_Set.Text = recData[3];

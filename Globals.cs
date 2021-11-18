@@ -8,6 +8,7 @@ namespace SDA100
 {
     class Globals
     {
+        public static bool errorMessageDisplayed = false;
         public static int counter;
         public static string z_focus;
         public static string errorMessage;

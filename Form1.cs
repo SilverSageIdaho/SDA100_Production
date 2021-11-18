@@ -136,8 +136,8 @@ namespace SDA100
                 serialPort1.Write("." + Globals.preFocusY + "w");
                 Console.WriteLine("." + Globals.preFocusY + "w");
 
+                serialPort1.Write("h");
                 serialPort1.Write("H");
-
                 serialPort1.Write("m");
 
                 btnRun.Enabled = false;
@@ -242,7 +242,7 @@ namespace SDA100
                 serialPort1.Write("P");
                 serialPort1.Write("o");
                 serialPort1.Write("N");
-                
+                                
             }
             else if (Globals.inData.Contains("%"))
             {
@@ -256,11 +256,10 @@ namespace SDA100
 
         private void ProgressBarStatus(object sender, EventArgs e)
         {
-            //Globals.inData = Globals.inData.Remove(Globals.inData.Length - 2, 2);
-            //Console.WriteLine(Globals.inData);
-            //prctComplete = (Convert.ToDouble(Globals.inData)) * 100;
-            //Console.WriteLine(prctComplete);
-            //progressBar.Value = Convert.ToInt32(prctComplete);
+            Globals.inData = Globals.inData.Remove(Globals.inData.Length - 2, 2);
+            prctComplete = (Convert.ToDouble(Globals.inData)) * 100;
+            Console.WriteLine(prctComplete + "%");
+            progressBar.Value = Convert.ToInt32(prctComplete);
         }
         private void DisplayErrorMessage(object sender, EventArgs e)
         {
@@ -293,7 +292,7 @@ namespace SDA100
         private void OpenFile()
         {
             string folderName = @"C:\ScanBeta\";
-            string fileName = "Scan" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".txt";
+            string fileName = Globals.scanID + "_" + Globals.recipeName + "_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".txt";
 
             filePath = System.IO.Path.Combine(folderName, fileName);
             using (System.IO.StreamWriter sw = System.IO.File.CreateText(filePath))
@@ -369,7 +368,7 @@ namespace SDA100
                 btnLoad.BackColor = Color.Gray;
                 //float currentSize = btnLoad.Font.Size;
                 //currentSize -= 2.0F;
-                btnLoad.Font = new Font(FontFamily.GenericSansSerif, btnLoad.Font.Size - 2, FontStyle.Bold);
+                //btnLoad.Font = new Font(FontFamily.GenericSansSerif, btnLoad.Font.Size - 2, FontStyle.Bold);
                 //btnLoad.Font = new Font(FontFamily.GenericSansSerif, currentSize, FontStyle.Bold);
             }
             
