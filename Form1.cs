@@ -148,12 +148,33 @@ namespace SDA100
                 Globals.recLines = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
 
                 //lbxLoadBox.Text = "New Recipe";
-                lbxLoadBox.DataSource = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
+                dataGridView1.ColumnCount = 3;
+                dataGridView1.Columns[0].HeaderText = "Updated Date";
+                dataGridView1.Columns[1].HeaderText = "Recipe name";
+                dataGridView1.Columns[2].HeaderText = "User ID";
+                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView1.MultiSelect = false;
+
+
+                PopulateRecipeList();
+                //lbxLoadBox.DataSource = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
                 lbxScanDataFiles.DataSource = System.IO.Directory.GetFiles(@"C:\ScanBeta\", "Scan*.txt");
                 
 
             }
         }
+
+        private void PopulateRecipeList()
+        {
+            foreach (string line in Globals.recLines)
+            {
+                string[] recipe = line.Split(',');
+                string[] formattedRecipe = { recipe[0], recipe[3], recipe[4] };
+                dataGridView1.Rows.Add(formattedRecipe);
+            }
+        }
+
         public void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
         {
             Globals.inData = serialPort1.ReadLine();
@@ -184,52 +205,6 @@ namespace SDA100
                 {
                     serialPort1.Write("m");
                 }
-                //*************************************
-                //ERROR HANDLING 
-                //*************************************
-
-                //Errors will match this regular expression
-                //Regex regex = new Regex("^![A-Za-z]{1}0{1}\r{1}$");
-
-                //if(regex.IsMatch(Globals.inData))
-                //{
-                //    Console.WriteLine("Indata error: {0}", Globals.inData);
-                //    char letter = Globals.inData[1];
-                //    //int maxFailedAttempts = 3;
-                //    switch (letter)
-                //    {
-                //        case 'O': serialPort1.Write("N");
-                //                  //Globals.vacChuckFlag = 0;
-                //                  Globals.errorMessage = "No wafer detected";
-                //            break;
-                //        case 'o': Globals.errorMessage = "Door failed to open";
-                //                  Globals.doorCloseFlag = 1;
-                //            Console.WriteLine("ERROR o");
-                //                  //serialPort1.Write("n");
-                //            break;
-                //        case 'n': Globals.errorMessage = "Door failed to close";
-                //                  Globals.doorCloseFlag = 0;
-                //                  //serialPort1.Write("o"); //Open door if failed to close?
-                //            break;
-                //        case 'H': Globals.errorMessage = "Failed to get to Home";
-                //            break;
-                //        default: Globals.errorMessage = "Unknown error";
-                //            break;
-                //    }
-
-                //} //else
-                //{
-                Globals.scanReply = Globals.inData;
-                //autoReset.Set(); //Crap Dustin is messing with
-                //Console.WriteLine("Inside \"!\":" + Thread.CurrentThread.ManagedThreadId);
-                //Console.WriteLine("Thread Name: " + Thread.CurrentThread.Name);
-                //BeginInvoke?
-                BeginInvoke(new EventHandler(ResponseData));
-                //}
-                //*************************************
-                //ERROR HANDLING
-                //*************************************
-                
             }
             else if (Globals.inData.Contains("*"))
             {

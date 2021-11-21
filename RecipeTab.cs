@@ -10,12 +10,12 @@ namespace SDA100
     public partial class mainForm : Form
     {
         string recSaveData;
-        private void lbxLoadBox_SelectedIndexChanged(object sender, EventArgs e)
+        public void dataGridViewSelectionChanged(object sender, EventArgs e)
         {
-            string selectedRecipe = lbxLoadBox.SelectedItem.ToString();
+            //string selectedRecipe = lbxLoadBox.SelectedItem.ToString();
             //string selectedRecipe = Globals.recLines[lbxLoadBox.SelectedIndex];
-            string[] recData = selectedRecipe.Split(',');
-
+            //string[] recData = selectedRecipe.Split(',');
+            string[] recData = new string[20];
             txtSSRecipeName_Set.Text = recData[3];
             txtSSUserID_Set.Text = recData[4];
             txtSSScanID_Set.Text = recData[5];
@@ -69,7 +69,7 @@ namespace SDA100
             //}
             //lbxLoadBox.DataSource = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
             
-            lbxLoadBox.DataSource = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
+            //lbxLoadBox.DataSource = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
         }
 
         private void btnRecipeLoad_Click(object sender, EventArgs e)
@@ -153,14 +153,14 @@ namespace SDA100
             recEditData += txtRecipeComments.Text + ";";
 
             //System.IO.File.AppendAllText(@"C:\ScanBeta\SDA100rec.txt", recEditData + Environment.NewLine);
-            Globals.recLines[lbxLoadBox.SelectedIndex] = recEditData;
+            //Globals.recLines[lbxLoadBox.SelectedIndex] = recEditData;
             System.IO.File.Delete(@"C:\ScanBeta\SDA100rec.txt");
-            System.Threading.Thread.Sleep(1000);
-            for (int x = 0; x < lbxLoadBox.Items.Count; x++)
-            {
-                System.IO.File.AppendAllText(@"C:\ScanBeta\SDA100rec.txt", Globals.recLines[x] + Environment.NewLine);
-            }
-            lbxLoadBox.DataSource = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
+            //System.Threading.Thread.Sleep(1000);
+            //for (int x = 0; x < lbxLoadBox.Items.Count; x++)
+            //{
+            //    System.IO.File.AppendAllText(@"C:\ScanBeta\SDA100rec.txt", Globals.recLines[x] + Environment.NewLine);
+            //}
+            //lbxLoadBox.DataSource = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
         }
         public void CreateRecipeString()
         {
