@@ -10,6 +10,7 @@ namespace SDA100
     {
         public static bool errorMessageDisplayed = false;
         public static int counter;
+        public static string filePath = "";
         public static string z_focus;
         public static string errorMessage;
         public static string inData;

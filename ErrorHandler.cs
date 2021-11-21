@@ -46,10 +46,6 @@ namespace SDA100
                 }
 
             }
-            else
-            {
-
-            }
             return returnString;
         }
 

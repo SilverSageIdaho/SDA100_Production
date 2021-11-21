@@ -41,7 +41,36 @@ namespace SDA100
             txtSizeClass_Size7_Limit.Text = recData[18];
             txtSizeClass_Total_Limit.Text = recData[19];
             txtRecipeComments.Text = recData[20];
+        }
 
+        private void PopulateRecipeList()
+        {
+            string[] recipes = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
+            foreach(string recipe in recipes)
+            {
+                Console.WriteLine(recipe);
+                string[] recipeData = recipe.Split(',');
+                string editDate = recipeData[0];
+                string createDate = recipeData[1];
+                string recipeName = recipeData[3];
+                string userID = recipeData[4];
+                string formattedEditDate = FormatDate(editDate);
+
+                //string recipeTitle = recipeName + "   -   " +
+                //                    formattedEditDate + "   -   " +
+                //                    userID; 
+                string[] tableRow = { recipeName, formattedEditDate, userID };
+                dataGridView1.Rows.Add(tableRow);
+                //lbxLoadBox.Items.Add(recipeTitle);
+            }
+        }
+
+        private string FormatDate(string dateString)
+        {
+            string formattedDate = dateString.Substring(0, 4) + "/" +
+                                    dateString.Substring(4, 2) + "/" +
+                                    dateString.Substring(6, 2);
+            return formattedDate;
         }
 
         private void chboxAutoSave_CheckedChanged(object sender, EventArgs e)
@@ -62,14 +91,15 @@ namespace SDA100
             CreateRecipeString();
 
             System.IO.File.AppendAllText(@"C:\ScanBeta\SDA100rec.txt", recSaveData + Environment.NewLine);
-            
-            //using (System.IO.StreamWriter sw = System.IO.File.AppendText(@"C:\ScanBeta\SDA100rec.txt"))
-            //{
-            //    sw.WriteLine(recSaveData);
-            //}
-            //lbxLoadBox.DataSource = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
-            
+
+            using (System.IO.StreamWriter sw = System.IO.File.AppendText(@"C:\ScanBeta\SDA100rec.txt"))
+            {
+                sw.WriteLine(recSaveData);
+            }
             lbxLoadBox.DataSource = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
+
+            //lbxLoadBox.DataSource = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
+            PopulateRecipeList();
         }
 
         private void btnRecipeLoad_Click(object sender, EventArgs e)
@@ -121,8 +151,8 @@ namespace SDA100
         private void btnEdit_Click(object sender, EventArgs e)
         {
             string recEditData;
-            recEditData = DateTime.Now.ToString("yyyyMMddHHmmss") + ",";
-            recEditData += DateTime.Now.ToString("yyyyMMddHHmmss") + ",";
+            recEditData = DateTime.Now.ToString("yyyyMMddHHmmss") + ","; //Updated
+            recEditData += DateTime.Now.ToString("yyyyMMddHHmmss") + ","; //Created
             recEditData += "Active" + ",";
             recEditData += txtSSRecipeName_Set.Text + ",";
             recEditData += txtSSUserID_Set.Text + ",";
@@ -153,6 +183,7 @@ namespace SDA100
             recEditData += txtRecipeComments.Text + ";";
 
             //System.IO.File.AppendAllText(@"C:\ScanBeta\SDA100rec.txt", recEditData + Environment.NewLine);
+            //reclines array gets populated on load
             Globals.recLines[lbxLoadBox.SelectedIndex] = recEditData;
             System.IO.File.Delete(@"C:\ScanBeta\SDA100rec.txt");
             System.Threading.Thread.Sleep(1000);
@@ -161,6 +192,7 @@ namespace SDA100
                 System.IO.File.AppendAllText(@"C:\ScanBeta\SDA100rec.txt", Globals.recLines[x] + Environment.NewLine);
             }
             lbxLoadBox.DataSource = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
+            PopulateRecipeList();
         }
         public void CreateRecipeString()
         {

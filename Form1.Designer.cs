@@ -29,6 +29,7 @@ namespace SDA100
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label16 = new System.Windows.Forms.Label();
@@ -179,6 +180,7 @@ namespace SDA100
             this.label67 = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lbxLoadBox = new System.Windows.Forms.ListBox();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnRecipeLoad = new System.Windows.Forms.Button();
@@ -304,6 +306,7 @@ namespace SDA100
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -379,6 +382,7 @@ namespace SDA100
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Main";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // label16
             // 
@@ -487,11 +491,11 @@ namespace SDA100
             // 
             this.lblMinHeightBar.AutoSize = true;
             this.lblMinHeightBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMinHeightBar.Location = new System.Drawing.Point(460, 660);
+            this.lblMinHeightBar.Location = new System.Drawing.Point(500, 657);
             this.lblMinHeightBar.Name = "lblMinHeightBar";
-            this.lblMinHeightBar.Size = new System.Drawing.Size(68, 16);
+            this.lblMinHeightBar.Size = new System.Drawing.Size(15, 16);
             this.lblMinHeightBar.TabIndex = 98;
-            this.lblMinHeightBar.Text = "MinHeight";
+            this.lblMinHeightBar.Text = "0";
             // 
             // label9
             // 
@@ -567,21 +571,21 @@ namespace SDA100
             // 
             this.lblMidHeightBar.AutoSize = true;
             this.lblMidHeightBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMidHeightBar.Location = new System.Drawing.Point(460, 608);
+            this.lblMidHeightBar.Location = new System.Drawing.Point(493, 606);
             this.lblMidHeightBar.Name = "lblMidHeightBar";
-            this.lblMidHeightBar.Size = new System.Drawing.Size(69, 16);
+            this.lblMidHeightBar.Size = new System.Drawing.Size(22, 16);
             this.lblMidHeightBar.TabIndex = 90;
-            this.lblMidHeightBar.Text = "MidHeight";
+            this.lblMidHeightBar.Text = "50";
             // 
             // lblMaxHeightBar
             // 
             this.lblMaxHeightBar.AutoSize = true;
             this.lblMaxHeightBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaxHeightBar.Location = new System.Drawing.Point(457, 558);
+            this.lblMaxHeightBar.Location = new System.Drawing.Point(486, 557);
             this.lblMaxHeightBar.Name = "lblMaxHeightBar";
-            this.lblMaxHeightBar.Size = new System.Drawing.Size(72, 16);
+            this.lblMaxHeightBar.Size = new System.Drawing.Size(29, 16);
             this.lblMaxHeightBar.TabIndex = 89;
-            this.lblMaxHeightBar.Text = "MaxHeight";
+            this.lblMaxHeightBar.Text = "100";
             // 
             // def7
             // 
@@ -801,9 +805,8 @@ namespace SDA100
             this.lblCCEdgeReject_Current.Location = new System.Drawing.Point(175, 80);
             this.lblCCEdgeReject_Current.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCCEdgeReject_Current.Name = "lblCCEdgeReject_Current";
-            this.lblCCEdgeReject_Current.Size = new System.Drawing.Size(18, 20);
+            this.lblCCEdgeReject_Current.Size = new System.Drawing.Size(0, 20);
             this.lblCCEdgeReject_Current.TabIndex = 2;
-            this.lblCCEdgeReject_Current.Text = "0";
             this.lblCCEdgeReject_Current.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblCCWaferSize_Current
@@ -812,9 +815,8 @@ namespace SDA100
             this.lblCCWaferSize_Current.Location = new System.Drawing.Point(175, 58);
             this.lblCCWaferSize_Current.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCCWaferSize_Current.Name = "lblCCWaferSize_Current";
-            this.lblCCWaferSize_Current.Size = new System.Drawing.Size(18, 20);
+            this.lblCCWaferSize_Current.Size = new System.Drawing.Size(0, 20);
             this.lblCCWaferSize_Current.TabIndex = 2;
-            this.lblCCWaferSize_Current.Text = "0";
             this.lblCCWaferSize_Current.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblCCRecipeName_Text
@@ -1388,11 +1390,11 @@ namespace SDA100
             // 
             this.lbleMinHeightBar.AutoSize = true;
             this.lbleMinHeightBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleMinHeightBar.Location = new System.Drawing.Point(494, 702);
+            this.lbleMinHeightBar.Location = new System.Drawing.Point(535, 699);
             this.lbleMinHeightBar.Name = "lbleMinHeightBar";
-            this.lbleMinHeightBar.Size = new System.Drawing.Size(68, 16);
+            this.lbleMinHeightBar.Size = new System.Drawing.Size(15, 16);
             this.lbleMinHeightBar.TabIndex = 128;
-            this.lbleMinHeightBar.Text = "MinHeight";
+            this.lbleMinHeightBar.Text = "0";
             // 
             // label22
             // 
@@ -1468,21 +1470,21 @@ namespace SDA100
             // 
             this.lbleMidHeightBar.AutoSize = true;
             this.lbleMidHeightBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleMidHeightBar.Location = new System.Drawing.Point(494, 650);
+            this.lbleMidHeightBar.Location = new System.Drawing.Point(528, 648);
             this.lbleMidHeightBar.Name = "lbleMidHeightBar";
-            this.lbleMidHeightBar.Size = new System.Drawing.Size(69, 16);
+            this.lbleMidHeightBar.Size = new System.Drawing.Size(22, 16);
             this.lbleMidHeightBar.TabIndex = 120;
-            this.lbleMidHeightBar.Text = "MidHeight";
+            this.lbleMidHeightBar.Text = "50";
             // 
             // lbleMaxHeightBar
             // 
             this.lbleMaxHeightBar.AutoSize = true;
             this.lbleMaxHeightBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleMaxHeightBar.Location = new System.Drawing.Point(491, 600);
+            this.lbleMaxHeightBar.Location = new System.Drawing.Point(521, 598);
             this.lbleMaxHeightBar.Name = "lbleMaxHeightBar";
-            this.lbleMaxHeightBar.Size = new System.Drawing.Size(72, 16);
+            this.lbleMaxHeightBar.Size = new System.Drawing.Size(29, 16);
             this.lbleMaxHeightBar.TabIndex = 119;
-            this.lbleMaxHeightBar.Text = "MaxHeight";
+            this.lbleMaxHeightBar.Text = "100";
             // 
             // edef7
             // 
@@ -1649,9 +1651,8 @@ namespace SDA100
             this.lbleCCEdgeReject_Value.Location = new System.Drawing.Point(152, 65);
             this.lbleCCEdgeReject_Value.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbleCCEdgeReject_Value.Name = "lbleCCEdgeReject_Value";
-            this.lbleCCEdgeReject_Value.Size = new System.Drawing.Size(18, 20);
+            this.lbleCCEdgeReject_Value.Size = new System.Drawing.Size(0, 20);
             this.lbleCCEdgeReject_Value.TabIndex = 2;
-            this.lbleCCEdgeReject_Value.Text = "0";
             // 
             // lbleCCWaferSize_Value
             // 
@@ -1659,9 +1660,8 @@ namespace SDA100
             this.lbleCCWaferSize_Value.Location = new System.Drawing.Point(152, 45);
             this.lbleCCWaferSize_Value.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbleCCWaferSize_Value.Name = "lbleCCWaferSize_Value";
-            this.lbleCCWaferSize_Value.Size = new System.Drawing.Size(18, 20);
+            this.lbleCCWaferSize_Value.Size = new System.Drawing.Size(0, 20);
             this.lbleCCWaferSize_Value.TabIndex = 2;
-            this.lbleCCWaferSize_Value.Text = "0";
             // 
             // lbleCCRecipeName_Text
             // 
@@ -2045,6 +2045,7 @@ namespace SDA100
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.dataGridView1);
             this.tabPage3.Controls.Add(this.lbxLoadBox);
             this.tabPage3.Controls.Add(this.btnEdit);
             this.tabPage3.Controls.Add(this.btnRecipeLoad);
@@ -2058,20 +2059,31 @@ namespace SDA100
             this.tabPage3.Text = "Recipe";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(536, 379);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(587, 260);
+            this.dataGridView1.TabIndex = 30;
+            // 
             // lbxLoadBox
             // 
             this.lbxLoadBox.FormattingEnabled = true;
             this.lbxLoadBox.ItemHeight = 16;
-            this.lbxLoadBox.Location = new System.Drawing.Point(550, 379);
+            this.lbxLoadBox.Location = new System.Drawing.Point(536, 379);
             this.lbxLoadBox.Name = "lbxLoadBox";
-            this.lbxLoadBox.Size = new System.Drawing.Size(375, 260);
+            this.lbxLoadBox.Size = new System.Drawing.Size(587, 260);
             this.lbxLoadBox.TabIndex = 29;
             this.lbxLoadBox.SelectedIndexChanged += new System.EventHandler(this.lbxLoadBox_SelectedIndexChanged);
             // 
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEdit.Location = new System.Drawing.Point(725, 664);
+            this.btnEdit.Location = new System.Drawing.Point(624, 671);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 30);
             this.btnEdit.TabIndex = 28;
@@ -2082,7 +2094,7 @@ namespace SDA100
             // btnRecipeLoad
             // 
             this.btnRecipeLoad.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnRecipeLoad.Location = new System.Drawing.Point(636, 664);
+            this.btnRecipeLoad.Location = new System.Drawing.Point(531, 671);
             this.btnRecipeLoad.Name = "btnRecipeLoad";
             this.btnRecipeLoad.Size = new System.Drawing.Size(75, 30);
             this.btnRecipeLoad.TabIndex = 27;
@@ -2093,7 +2105,7 @@ namespace SDA100
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnSave.Location = new System.Drawing.Point(550, 664);
+            this.btnSave.Location = new System.Drawing.Point(435, 671);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 30);
             this.btnSave.TabIndex = 26;
@@ -2122,18 +2134,18 @@ namespace SDA100
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Location = new System.Drawing.Point(285, 373);
+            this.groupBox2.Location = new System.Drawing.Point(67, 373);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(260, 283);
+            this.groupBox2.Size = new System.Drawing.Size(454, 266);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             // 
             // txtSizeClass_Total_Limit
             // 
             this.txtSizeClass_Total_Limit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSizeClass_Total_Limit.Location = new System.Drawing.Point(134, 209);
+            this.txtSizeClass_Total_Limit.Location = new System.Drawing.Point(257, 213);
             this.txtSizeClass_Total_Limit.Margin = new System.Windows.Forms.Padding(2);
             this.txtSizeClass_Total_Limit.Name = "txtSizeClass_Total_Limit";
             this.txtSizeClass_Total_Limit.Size = new System.Drawing.Size(64, 26);
@@ -2142,7 +2154,7 @@ namespace SDA100
             // txtSizeClass_Size7_Limit
             // 
             this.txtSizeClass_Size7_Limit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSizeClass_Size7_Limit.Location = new System.Drawing.Point(134, 189);
+            this.txtSizeClass_Size7_Limit.Location = new System.Drawing.Point(257, 193);
             this.txtSizeClass_Size7_Limit.Margin = new System.Windows.Forms.Padding(2);
             this.txtSizeClass_Size7_Limit.Name = "txtSizeClass_Size7_Limit";
             this.txtSizeClass_Size7_Limit.Size = new System.Drawing.Size(64, 26);
@@ -2151,7 +2163,7 @@ namespace SDA100
             // txtSizeClass_Size6_Limit
             // 
             this.txtSizeClass_Size6_Limit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSizeClass_Size6_Limit.Location = new System.Drawing.Point(134, 170);
+            this.txtSizeClass_Size6_Limit.Location = new System.Drawing.Point(257, 174);
             this.txtSizeClass_Size6_Limit.Margin = new System.Windows.Forms.Padding(2);
             this.txtSizeClass_Size6_Limit.Name = "txtSizeClass_Size6_Limit";
             this.txtSizeClass_Size6_Limit.Size = new System.Drawing.Size(64, 26);
@@ -2160,7 +2172,7 @@ namespace SDA100
             // txtSizeClass_Size5_Limit
             // 
             this.txtSizeClass_Size5_Limit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSizeClass_Size5_Limit.Location = new System.Drawing.Point(134, 150);
+            this.txtSizeClass_Size5_Limit.Location = new System.Drawing.Point(257, 154);
             this.txtSizeClass_Size5_Limit.Margin = new System.Windows.Forms.Padding(2);
             this.txtSizeClass_Size5_Limit.Name = "txtSizeClass_Size5_Limit";
             this.txtSizeClass_Size5_Limit.Size = new System.Drawing.Size(64, 26);
@@ -2169,7 +2181,7 @@ namespace SDA100
             // txtSizeClass_Size4_Limit
             // 
             this.txtSizeClass_Size4_Limit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSizeClass_Size4_Limit.Location = new System.Drawing.Point(134, 131);
+            this.txtSizeClass_Size4_Limit.Location = new System.Drawing.Point(257, 135);
             this.txtSizeClass_Size4_Limit.Margin = new System.Windows.Forms.Padding(2);
             this.txtSizeClass_Size4_Limit.Name = "txtSizeClass_Size4_Limit";
             this.txtSizeClass_Size4_Limit.Size = new System.Drawing.Size(64, 26);
@@ -2178,7 +2190,7 @@ namespace SDA100
             // txtSizeClass_Size3_Limit
             // 
             this.txtSizeClass_Size3_Limit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSizeClass_Size3_Limit.Location = new System.Drawing.Point(134, 111);
+            this.txtSizeClass_Size3_Limit.Location = new System.Drawing.Point(257, 115);
             this.txtSizeClass_Size3_Limit.Margin = new System.Windows.Forms.Padding(2);
             this.txtSizeClass_Size3_Limit.Name = "txtSizeClass_Size3_Limit";
             this.txtSizeClass_Size3_Limit.Size = new System.Drawing.Size(64, 26);
@@ -2187,7 +2199,7 @@ namespace SDA100
             // txtSizeClass_Size2_Limit
             // 
             this.txtSizeClass_Size2_Limit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSizeClass_Size2_Limit.Location = new System.Drawing.Point(134, 92);
+            this.txtSizeClass_Size2_Limit.Location = new System.Drawing.Point(257, 96);
             this.txtSizeClass_Size2_Limit.Margin = new System.Windows.Forms.Padding(2);
             this.txtSizeClass_Size2_Limit.Name = "txtSizeClass_Size2_Limit";
             this.txtSizeClass_Size2_Limit.Size = new System.Drawing.Size(64, 26);
@@ -2196,7 +2208,7 @@ namespace SDA100
             // txtSizeClass_Size1_Limit
             // 
             this.txtSizeClass_Size1_Limit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSizeClass_Size1_Limit.Location = new System.Drawing.Point(134, 72);
+            this.txtSizeClass_Size1_Limit.Location = new System.Drawing.Point(257, 76);
             this.txtSizeClass_Size1_Limit.Margin = new System.Windows.Forms.Padding(2);
             this.txtSizeClass_Size1_Limit.Name = "txtSizeClass_Size1_Limit";
             this.txtSizeClass_Size1_Limit.Size = new System.Drawing.Size(64, 26);
@@ -2205,7 +2217,7 @@ namespace SDA100
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 209);
+            this.label1.Location = new System.Drawing.Point(127, 213);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 26);
@@ -2216,7 +2228,7 @@ namespace SDA100
             // lblSizeClass_50um_Text
             // 
             this.lblSizeClass_50um_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSizeClass_50um_Text.Location = new System.Drawing.Point(8, 189);
+            this.lblSizeClass_50um_Text.Location = new System.Drawing.Point(131, 193);
             this.lblSizeClass_50um_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_50um_Text.Name = "lblSizeClass_50um_Text";
             this.lblSizeClass_50um_Text.Size = new System.Drawing.Size(90, 20);
@@ -2227,7 +2239,7 @@ namespace SDA100
             // lblSizeClass_30um_Text
             // 
             this.lblSizeClass_30um_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSizeClass_30um_Text.Location = new System.Drawing.Point(8, 170);
+            this.lblSizeClass_30um_Text.Location = new System.Drawing.Point(131, 174);
             this.lblSizeClass_30um_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_30um_Text.Name = "lblSizeClass_30um_Text";
             this.lblSizeClass_30um_Text.Size = new System.Drawing.Size(90, 19);
@@ -2238,7 +2250,7 @@ namespace SDA100
             // lblSizeClass_10um_Text
             // 
             this.lblSizeClass_10um_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSizeClass_10um_Text.Location = new System.Drawing.Point(8, 150);
+            this.lblSizeClass_10um_Text.Location = new System.Drawing.Point(131, 154);
             this.lblSizeClass_10um_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_10um_Text.Name = "lblSizeClass_10um_Text";
             this.lblSizeClass_10um_Text.Size = new System.Drawing.Size(90, 20);
@@ -2249,7 +2261,7 @@ namespace SDA100
             // lblSizeClass_07um_Text
             // 
             this.lblSizeClass_07um_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSizeClass_07um_Text.Location = new System.Drawing.Point(4, 131);
+            this.lblSizeClass_07um_Text.Location = new System.Drawing.Point(127, 135);
             this.lblSizeClass_07um_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_07um_Text.Name = "lblSizeClass_07um_Text";
             this.lblSizeClass_07um_Text.Size = new System.Drawing.Size(94, 19);
@@ -2260,7 +2272,7 @@ namespace SDA100
             // lblSizeClass_05um_Text
             // 
             this.lblSizeClass_05um_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSizeClass_05um_Text.Location = new System.Drawing.Point(12, 111);
+            this.lblSizeClass_05um_Text.Location = new System.Drawing.Point(135, 115);
             this.lblSizeClass_05um_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_05um_Text.Name = "lblSizeClass_05um_Text";
             this.lblSizeClass_05um_Text.Size = new System.Drawing.Size(86, 20);
@@ -2271,7 +2283,7 @@ namespace SDA100
             // lblSizeClass_03um_Text
             // 
             this.lblSizeClass_03um_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSizeClass_03um_Text.Location = new System.Drawing.Point(16, 92);
+            this.lblSizeClass_03um_Text.Location = new System.Drawing.Point(139, 96);
             this.lblSizeClass_03um_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_03um_Text.Name = "lblSizeClass_03um_Text";
             this.lblSizeClass_03um_Text.Size = new System.Drawing.Size(82, 19);
@@ -2282,7 +2294,7 @@ namespace SDA100
             // lblSizeClass_025um_Text
             // 
             this.lblSizeClass_025um_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSizeClass_025um_Text.Location = new System.Drawing.Point(12, 72);
+            this.lblSizeClass_025um_Text.Location = new System.Drawing.Point(135, 76);
             this.lblSizeClass_025um_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_025um_Text.Name = "lblSizeClass_025um_Text";
             this.lblSizeClass_025um_Text.Size = new System.Drawing.Size(86, 20);
@@ -2294,7 +2306,7 @@ namespace SDA100
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(120, 45);
+            this.label2.Location = new System.Drawing.Point(243, 49);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 20);
@@ -2305,7 +2317,7 @@ namespace SDA100
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(36, 45);
+            this.label10.Location = new System.Drawing.Point(159, 49);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 20);
@@ -2316,7 +2328,7 @@ namespace SDA100
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(53, 13);
+            this.label11.Location = new System.Drawing.Point(176, 17);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(148, 25);
@@ -2344,18 +2356,18 @@ namespace SDA100
             this.groupBox4.Controls.Add(this.lblSSScanOfArea_Text);
             this.groupBox4.Controls.Add(this.lblSSWaferSize_Text);
             this.groupBox4.Controls.Add(this.lblTestScanSettings_Text);
-            this.groupBox4.Location = new System.Drawing.Point(285, 61);
+            this.groupBox4.Location = new System.Drawing.Point(67, 61);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(640, 308);
+            this.groupBox4.Size = new System.Drawing.Size(1056, 308);
             this.groupBox4.TabIndex = 24;
             this.groupBox4.TabStop = false;
             // 
             // txtSSScanID_Set
             // 
             this.txtSSScanID_Set.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSSScanID_Set.Location = new System.Drawing.Point(173, 184);
+            this.txtSSScanID_Set.Location = new System.Drawing.Point(351, 190);
             this.txtSSScanID_Set.Margin = new System.Windows.Forms.Padding(2);
             this.txtSSScanID_Set.Name = "txtSSScanID_Set";
             this.txtSSScanID_Set.Size = new System.Drawing.Size(305, 26);
@@ -2364,7 +2376,7 @@ namespace SDA100
             // lblSSScanID_Text
             // 
             this.lblSSScanID_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSSScanID_Text.Location = new System.Drawing.Point(33, 184);
+            this.lblSSScanID_Text.Location = new System.Drawing.Point(211, 190);
             this.lblSSScanID_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSSScanID_Text.Name = "lblSSScanID_Text";
             this.lblSSScanID_Text.Size = new System.Drawing.Size(113, 26);
@@ -2375,8 +2387,9 @@ namespace SDA100
             // txtSSUserID_Set
             // 
             this.txtSSUserID_Set.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSSUserID_Set.Location = new System.Drawing.Point(173, 154);
+            this.txtSSUserID_Set.Location = new System.Drawing.Point(351, 160);
             this.txtSSUserID_Set.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSSUserID_Set.MaxLength = 20;
             this.txtSSUserID_Set.Name = "txtSSUserID_Set";
             this.txtSSUserID_Set.Size = new System.Drawing.Size(305, 26);
             this.txtSSUserID_Set.TabIndex = 7;
@@ -2384,7 +2397,7 @@ namespace SDA100
             // lblSSUserID_Text
             // 
             this.lblSSUserID_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSSUserID_Text.Location = new System.Drawing.Point(33, 154);
+            this.lblSSUserID_Text.Location = new System.Drawing.Point(211, 160);
             this.lblSSUserID_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSSUserID_Text.Name = "lblSSUserID_Text";
             this.lblSSUserID_Text.Size = new System.Drawing.Size(113, 26);
@@ -2396,7 +2409,7 @@ namespace SDA100
             // 
             this.chboxAutoSave.AutoSize = true;
             this.chboxAutoSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chboxAutoSave.Location = new System.Drawing.Point(484, 228);
+            this.chboxAutoSave.Location = new System.Drawing.Point(673, 237);
             this.chboxAutoSave.Name = "chboxAutoSave";
             this.chboxAutoSave.Size = new System.Drawing.Size(141, 24);
             this.chboxAutoSave.TabIndex = 5;
@@ -2408,7 +2421,7 @@ namespace SDA100
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(228, 97);
+            this.label12.Location = new System.Drawing.Point(406, 103);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(35, 20);
@@ -2418,7 +2431,7 @@ namespace SDA100
             // txtRecipeComments
             // 
             this.txtRecipeComments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRecipeComments.Location = new System.Drawing.Point(173, 216);
+            this.txtRecipeComments.Location = new System.Drawing.Point(351, 222);
             this.txtRecipeComments.Margin = new System.Windows.Forms.Padding(2);
             this.txtRecipeComments.Multiline = true;
             this.txtRecipeComments.Name = "txtRecipeComments";
@@ -2428,7 +2441,7 @@ namespace SDA100
             // txtSSRecipeName_Set
             // 
             this.txtSSRecipeName_Set.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSSRecipeName_Set.Location = new System.Drawing.Point(173, 124);
+            this.txtSSRecipeName_Set.Location = new System.Drawing.Point(351, 130);
             this.txtSSRecipeName_Set.Margin = new System.Windows.Forms.Padding(2);
             this.txtSSRecipeName_Set.Name = "txtSSRecipeName_Set";
             this.txtSSRecipeName_Set.Size = new System.Drawing.Size(389, 26);
@@ -2444,7 +2457,7 @@ namespace SDA100
             "Full",
             "Half",
             "Quarter"});
-            this.cbxSSZoneScanType_Set.Location = new System.Drawing.Point(480, 86);
+            this.cbxSSZoneScanType_Set.Location = new System.Drawing.Point(658, 92);
             this.cbxSSZoneScanType_Set.Margin = new System.Windows.Forms.Padding(2);
             this.cbxSSZoneScanType_Set.Name = "cbxSSZoneScanType_Set";
             this.cbxSSZoneScanType_Set.Size = new System.Drawing.Size(82, 28);
@@ -2462,7 +2475,7 @@ namespace SDA100
             "3",
             "4",
             "5"});
-            this.cbxSSEdgeReject_Set.Location = new System.Drawing.Point(173, 89);
+            this.cbxSSEdgeReject_Set.Location = new System.Drawing.Point(351, 95);
             this.cbxSSEdgeReject_Set.Margin = new System.Windows.Forms.Padding(2);
             this.cbxSSEdgeReject_Set.Name = "cbxSSEdgeReject_Set";
             this.cbxSSEdgeReject_Set.Size = new System.Drawing.Size(54, 28);
@@ -2478,7 +2491,7 @@ namespace SDA100
             "50",
             "75",
             "100"});
-            this.cbxSSScanOfArea_Set.Location = new System.Drawing.Point(480, 53);
+            this.cbxSSScanOfArea_Set.Location = new System.Drawing.Point(658, 59);
             this.cbxSSScanOfArea_Set.Margin = new System.Windows.Forms.Padding(2);
             this.cbxSSScanOfArea_Set.Name = "cbxSSScanOfArea_Set";
             this.cbxSSScanOfArea_Set.Size = new System.Drawing.Size(82, 28);
@@ -2497,7 +2510,7 @@ namespace SDA100
             "125",
             "150",
             "200"});
-            this.cbxSSWaferSize_Set.Location = new System.Drawing.Point(173, 53);
+            this.cbxSSWaferSize_Set.Location = new System.Drawing.Point(351, 59);
             this.cbxSSWaferSize_Set.Margin = new System.Windows.Forms.Padding(2);
             this.cbxSSWaferSize_Set.Name = "cbxSSWaferSize_Set";
             this.cbxSSWaferSize_Set.Size = new System.Drawing.Size(82, 28);
@@ -2506,7 +2519,7 @@ namespace SDA100
             // lblSSTestComments_Text
             // 
             this.lblSSTestComments_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSSTestComments_Text.Location = new System.Drawing.Point(33, 213);
+            this.lblSSTestComments_Text.Location = new System.Drawing.Point(211, 219);
             this.lblSSTestComments_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSSTestComments_Text.Name = "lblSSTestComments_Text";
             this.lblSSTestComments_Text.Size = new System.Drawing.Size(113, 21);
@@ -2517,7 +2530,7 @@ namespace SDA100
             // lblSSRecipeName_Text
             // 
             this.lblSSRecipeName_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSSRecipeName_Text.Location = new System.Drawing.Point(33, 124);
+            this.lblSSRecipeName_Text.Location = new System.Drawing.Point(211, 130);
             this.lblSSRecipeName_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSSRecipeName_Text.Name = "lblSSRecipeName_Text";
             this.lblSSRecipeName_Text.Size = new System.Drawing.Size(113, 26);
@@ -2529,7 +2542,7 @@ namespace SDA100
             // 
             this.lblSSZoneScanType_Text.Enabled = false;
             this.lblSSZoneScanType_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSSZoneScanType_Text.Location = new System.Drawing.Point(311, 86);
+            this.lblSSZoneScanType_Text.Location = new System.Drawing.Point(489, 92);
             this.lblSSZoneScanType_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSSZoneScanType_Text.Name = "lblSSZoneScanType_Text";
             this.lblSSZoneScanType_Text.Size = new System.Drawing.Size(150, 24);
@@ -2540,7 +2553,7 @@ namespace SDA100
             // lblSSEdgeReject_Text
             // 
             this.lblSSEdgeReject_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSSEdgeReject_Text.Location = new System.Drawing.Point(20, 89);
+            this.lblSSEdgeReject_Text.Location = new System.Drawing.Point(198, 95);
             this.lblSSEdgeReject_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSSEdgeReject_Text.Name = "lblSSEdgeReject_Text";
             this.lblSSEdgeReject_Text.Size = new System.Drawing.Size(126, 26);
@@ -2551,7 +2564,7 @@ namespace SDA100
             // lblSSScanOfArea_Text
             // 
             this.lblSSScanOfArea_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSSScanOfArea_Text.Location = new System.Drawing.Point(333, 53);
+            this.lblSSScanOfArea_Text.Location = new System.Drawing.Point(511, 59);
             this.lblSSScanOfArea_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSSScanOfArea_Text.Name = "lblSSScanOfArea_Text";
             this.lblSSScanOfArea_Text.Size = new System.Drawing.Size(127, 26);
@@ -2562,7 +2575,7 @@ namespace SDA100
             // lblSSWaferSize_Text
             // 
             this.lblSSWaferSize_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSSWaferSize_Text.Location = new System.Drawing.Point(33, 53);
+            this.lblSSWaferSize_Text.Location = new System.Drawing.Point(211, 59);
             this.lblSSWaferSize_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSSWaferSize_Text.Name = "lblSSWaferSize_Text";
             this.lblSSWaferSize_Text.Size = new System.Drawing.Size(113, 26);
@@ -2574,7 +2587,7 @@ namespace SDA100
             // 
             this.lblTestScanSettings_Text.AutoSize = true;
             this.lblTestScanSettings_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTestScanSettings_Text.Location = new System.Drawing.Point(210, 14);
+            this.lblTestScanSettings_Text.Location = new System.Drawing.Point(388, 20);
             this.lblTestScanSettings_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTestScanSettings_Text.Name = "lblTestScanSettings_Text";
             this.lblTestScanSettings_Text.Size = new System.Drawing.Size(244, 25);
@@ -3453,6 +3466,7 @@ namespace SDA100
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -3741,6 +3755,7 @@ namespace SDA100
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

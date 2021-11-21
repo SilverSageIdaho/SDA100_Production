@@ -31,7 +31,7 @@ namespace SDA100
         public int scanDefectCnt6;
         public int scanDefectCnt7;
 
-        double prctComplete;
+        //double prctComplete;
 
         Bitmap bmp = new Bitmap(500, 500);
         Bitmap ebmp = new Bitmap(500, 500);
@@ -106,12 +106,10 @@ namespace SDA100
                 
                 serialPort1.Write("." + Globals.waferDiam + "d");
                 Console.WriteLine("." + Globals.waferDiam + "d");
-                lblCCWaferSize_Current.Text = "." + Globals.waferDiam + "d";
-
+                
                 serialPort1.Write("." + Globals.edgeRej + "e");
                 Console.WriteLine("." + Globals.edgeRej + "e");
-                lblCCEdgeReject_Current.Text = "." + Globals.edgeRej + "e";
-
+                
                 serialPort1.Write("." + Globals.sectorSteps + "S");
                 Console.WriteLine("." + Globals.sectorSteps + "S");
 
@@ -149,9 +147,21 @@ namespace SDA100
 
                 //lbxLoadBox.Text = "New Recipe";
                 lbxLoadBox.DataSource = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
+                dataGridView1.Hide();
+                dataGridView1.ColumnCount = 3;
+                dataGridView1.Columns[0].Name = "Recipe Name";
+                dataGridView1.Columns[1].Name = "Edit Date";
+                dataGridView1.Columns[2].Name = "User ID";
+                //dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(2, 255, 0, 0);
+                PopulateRecipeList();
                 lbxScanDataFiles.DataSource = System.IO.Directory.GetFiles(@"C:\ScanBeta\", "Scan*.txt");
-                
 
+                //if (Globals.vacMainFlag == 0)
+                //{
+                //    string message = "No Vacuum present. Must Home X,Y,Z motors before scanning.";
+                //    string title = "IMPORTANT!";
+                //    MessageBox.Show(message, title);
+                //}
             }
         }
         public void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
@@ -166,7 +176,7 @@ namespace SDA100
             {
                 Globals.scanTrack = Globals.inData;
 
-                using (System.IO.StreamWriter sw = System.IO.File.AppendText(filePath))
+                using (System.IO.StreamWriter sw = System.IO.File.AppendText(Globals.filePath))
                 {
                     sw.WriteLine(Globals.scanTrack);                
                 }
@@ -238,7 +248,13 @@ namespace SDA100
             }
             else if (Globals.inData.Contains(">"))
             {
-                Console.WriteLine("Saw the >!");
+                Console.WriteLine("Saw the >!");                
+                string csvData = Globals.editDateTime + "," + Globals.recipeName + "," + Globals.scanID + "," + scanDefectCnt1 + "," + scanDefectCnt2 + "," + scanDefectCnt3 + "," + scanDefectCnt4 + "," + scanDefectCnt5 + "," + scanDefectCnt6 + "," + scanDefectCnt7;
+                using (System.IO.StreamWriter sw = System.IO.File.CreateText(Globals.filePath + ".csv"))
+                {
+                    sw.WriteLine();
+                    sw.WriteLine(csvData);
+                }
                 serialPort1.Write("P");
                 serialPort1.Write("o");
                 serialPort1.Write("N");
@@ -256,8 +272,8 @@ namespace SDA100
 
         private void ProgressBarStatus(object sender, EventArgs e)
         {
-            Globals.inData = Globals.inData.Remove(Globals.inData.Length - 2, 2);
-            prctComplete = (Convert.ToDouble(Globals.inData)) * 100;
+            string prctComplete = Globals.inData.Remove(Globals.inData.Length - 2, 2);
+            //prctComplete = (Convert.ToDouble(Globals.inData)) * 100;
             Console.WriteLine(prctComplete + "%");
             progressBar.Value = Convert.ToInt32(prctComplete);
         }
@@ -292,10 +308,10 @@ namespace SDA100
         private void OpenFile()
         {
             string folderName = @"C:\ScanBeta\";
-            string fileName = Globals.scanID + "_" + Globals.recipeName + "_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".txt";
+            string fileName = Globals.recipeName + "_" + Globals.scanID + "_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".txt";
 
-            filePath = System.IO.Path.Combine(folderName, fileName);
-            using (System.IO.StreamWriter sw = System.IO.File.CreateText(filePath))
+            Globals.filePath = System.IO.Path.Combine(folderName, fileName);
+            using (System.IO.StreamWriter sw = System.IO.File.CreateText(Globals.filePath))
             {
                 sw.WriteLine(recSaveData);
                 //sw.Write("INI Info: ");
@@ -307,8 +323,8 @@ namespace SDA100
         {
             if (lblCCRecipeName_Current.Text == "None")
             {
-                string message = "Clint! Until I'm smarter...you gotta select a recipe first!";
-                string title = "Dustin Says";
+                string message = "No Recipe selected.";
+                string title = "IMPORTANT!";
                 MessageBox.Show(message, title);
             }
             else
@@ -366,12 +382,9 @@ namespace SDA100
                 btnLoad.Enabled = false;
                 btnRun.BackColor = Color.FromArgb(0, 192, 0);
                 btnLoad.BackColor = Color.Gray;
-                //float currentSize = btnLoad.Font.Size;
-                //currentSize -= 2.0F;
-                //btnLoad.Font = new Font(FontFamily.GenericSansSerif, btnLoad.Font.Size - 2, FontStyle.Bold);
-                //btnLoad.Font = new Font(FontFamily.GenericSansSerif, currentSize, FontStyle.Bold);
-            }
-            
+                btnLoad.Font = new Font(FontFamily.GenericSansSerif, btnLoad.Font.Size - 2, FontStyle.Bold);
+                tabMain.SelectedTab = tabPage3;
+            }            
         }
 
         private void CheckForComResponse(string command)
@@ -405,6 +418,19 @@ namespace SDA100
 
         }
 
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        //private void btnSave_Click(object sender, EventArgs e)
+        //{
+
+        //}
     }
 }
