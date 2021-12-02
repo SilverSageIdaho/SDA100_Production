@@ -2,3 +2,6 @@
 .vs/SDA100/v16/.suo
 obj/Debug/SDA100.csproj.AssemblyReference.cache
 *.cache
+.vs/SDA100/v16/.suo
+bin/Debug/SDA100.pdb
+bin/Debug/SDA100.exe

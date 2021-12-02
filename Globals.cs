@@ -45,7 +45,7 @@ namespace SDA100
         public static string dirData;
         public static string dirRecipe;
         public static string dirINI;
-        public static string dirErrorLog;
+        public static string dirSummary;
 
         public static string recipeOID;
         public static string editDateTime;
