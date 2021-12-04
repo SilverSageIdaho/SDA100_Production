@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Drawing;
+using System.Text.RegularExpressions;
 
 namespace SDA100
 {
@@ -13,13 +14,13 @@ namespace SDA100
     {
         string iniSaveData;
         string iniBackupData;
-        //public void UpdateIniTextBox()
-        //{
-        //    DisplayIniText();
-        //}
-
+        string PIN = DateTime.Now.ToString("yyyyMMddHH");
+        Regex regex = new Regex(@" ^\d{10}$");
+        bool isAuth = false;   //user authorization boolean
+        
         public void DisplayIniText()
         {
+            Console.WriteLine(PIN);
             if (Globals.iniOID != null)
             {
                 Console.WriteLine("iniOID not null, values loaded | " + Globals.iniOID);
@@ -59,28 +60,46 @@ namespace SDA100
 
             File.Delete(@"C:\ScanBeta\INI\SDA100ini.bkp.txt");
             //System.Threading.Thread.Sleep(1000);                  //Is this needed?
-            File.AppendAllText(@"C:\ScanBeta\INI\SDA100ini.bkp.txt", 
+            File.AppendAllText(@"C:\ScanBeta\INI\SDA100ini.bkp.txt",
                                 iniBackupData);
             File.Delete(@"C:\ScanBeta\INI\SDA100ini.txt");
-            File.AppendAllText(@"C:\ScanBeta\INI\SDA100ini.txt", 
+            File.AppendAllText(@"C:\ScanBeta\INI\SDA100ini.txt",
                                 iniSaveData);
-            PopulateAndSendIniGlobals();
+            AssignIniGlobals();
             iniSaveData = null;
             iniBackupData = null;
             DisplayIniText();
-            //Globals.mapRes = Convert.ToInt32(TxtIni_MapRes.Text);
-            //Globals.waferDiam = Convert.ToInt32(TxtIni_.Text);
-            //Globals.edgeRej = int.Parse(iniData[3]);
-            //Globals.sectorSteps = iniData[4];
-            //Globals.trackSteps = iniData[5];
-            //Globals.parkY = iniData[6];
-            //Globals.parkX = iniData[7];
-            //Globals.parkZ = iniData[8];
-            //Globals.preFocusX = iniData[9];
-            //Globals.preFocusY = iniData[10];
-            //Globals.preFocusZ = iniData[11];
         }
 
+        //private void EditLockout()
+        //{
+        //    if(TxtIni_PIN == null && )
+        //    { }
+        //}
+
+        private void BtnIni_Edit_Click(object sender, EventArgs e)
+        {
+            TxtIni_PIN.Enabled = true;
+            TxtIni_PIN.Visible = true;
+            BtnIni_SubmitPIN.Visible = true;
+
+        }
+
+        private void BtnIni_SubmitPIN_Click(object sender, EventArgs e)
+        {
+            if (TxtIni_PIN.Text == PIN)
+            {
+                isAuth = true;
+                TxtIni_PIN.Enabled = false;
+                TxtIni_PIN.Visible = false;
+                BtnIni_SubmitPIN.Visible = false;
+                BtnIni_SubmitPIN.Enabled = false;
+                BtnIni_Edit.Enabled = false;
+                BtnIni_Save.Enabled = true;
+                TxtIni_EditMapRes.ReadOnly = false;
+            }
+
+        }
         public void CreateIniString()
         {
             iniSaveData = Globals.iniOID + ",";
@@ -133,6 +152,5 @@ namespace SDA100
             iniBackupData += Globals.dirINI + ",";
             iniBackupData += Globals.dirSummary;
         }
-
     }
 }

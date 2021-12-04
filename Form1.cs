@@ -72,8 +72,47 @@ namespace SDA100
                 serialPort1.ReadBufferSize = 16384;
                 serialPort1.Open();
 
-                PopulateAndSendIniGlobals();
+                //splits ini.txt string to an array, and assigns them to global variables
+                AssignIniGlobals();
+
+                //populates ini values on ini tab
                 DisplayIniText();
+
+                serialPort1.Write("." + Globals.mapRes + "r");
+                Console.WriteLine("." + Globals.mapRes + "r");
+                //autoReset.WaitOne(); //Crap Dustin is messing with
+
+                serialPort1.Write("." + Globals.waferDiam + "d");
+                Console.WriteLine("." + Globals.waferDiam + "d");
+
+                serialPort1.Write("." + Globals.edgeRej + "e");
+                Console.WriteLine("." + Globals.edgeRej + "e");
+
+                serialPort1.Write("." + Globals.sectorSteps + "S");
+                Console.WriteLine("." + Globals.sectorSteps + "S");
+
+                serialPort1.Write("." + Globals.trackSteps + "T");
+                Console.WriteLine("." + Globals.trackSteps + "T");
+
+                serialPort1.Write("." + Globals.parkY + "y");
+                Console.WriteLine("." + Globals.parkY + "y");
+
+                serialPort1.Write("." + Globals.parkX + "x");
+                Console.WriteLine("." + Globals.parkX + "x");
+
+                serialPort1.Write("." + Globals.parkZ + "z");
+                Console.WriteLine("." + Globals.parkZ + "z");
+
+                serialPort1.Write("." + Globals.preFocusZ + "u");
+                Console.WriteLine("." + Globals.preFocusZ + "u");
+
+                serialPort1.Write("." + Globals.preFocusX + "v");
+                Console.WriteLine("." + Globals.preFocusX + "v");
+
+                serialPort1.Write("." + Globals.preFocusY + "w");
+                Console.WriteLine("." + Globals.preFocusY + "w");
+
+                serialPort1.Write("m");
                 serialPort1.Write("h");
                 serialPort1.Write("H");
                 serialPort1.Write("m");
@@ -98,7 +137,7 @@ namespace SDA100
             }
         }
 
-        private void PopulateAndSendIniGlobals()
+        private void AssignIniGlobals()
         {
             string iniString = System.IO.File.ReadAllText(@"C:\ScanBeta\INI\SDA100ini.txt");
             string[] iniData = iniString.Split(',');
@@ -127,42 +166,6 @@ namespace SDA100
             Globals.dirINI = iniData[22];
             Globals.dirSummary = iniData[23];
             Console.WriteLine(Globals.iniOID, Globals.mapRes, Globals.waferDiam);
-
-            serialPort1.Write("." + Globals.mapRes + "r");
-            Console.WriteLine("." + Globals.mapRes + "r");
-            //autoReset.WaitOne(); //Crap Dustin is messing with
-
-            serialPort1.Write("." + Globals.waferDiam + "d");
-            Console.WriteLine("." + Globals.waferDiam + "d");
-
-            serialPort1.Write("." + Globals.edgeRej + "e");
-            Console.WriteLine("." + Globals.edgeRej + "e");
-
-            serialPort1.Write("." + Globals.sectorSteps + "S");
-            Console.WriteLine("." + Globals.sectorSteps + "S");
-
-            serialPort1.Write("." + Globals.trackSteps + "T");
-            Console.WriteLine("." + Globals.trackSteps + "T");
-
-            serialPort1.Write("." + Globals.parkY + "y");
-            Console.WriteLine("." + Globals.parkY + "y");
-
-            serialPort1.Write("." + Globals.parkX + "x");
-            Console.WriteLine("." + Globals.parkX + "x");
-
-            serialPort1.Write("." + Globals.parkZ + "z");
-            Console.WriteLine("." + Globals.parkZ + "z");
-
-            serialPort1.Write("." + Globals.preFocusZ + "u");
-            Console.WriteLine("." + Globals.preFocusZ + "u");
-
-            serialPort1.Write("." + Globals.preFocusX + "v");
-            Console.WriteLine("." + Globals.preFocusX + "v");
-
-            serialPort1.Write("." + Globals.preFocusY + "w");
-            Console.WriteLine("." + Globals.preFocusY + "w");
-                       
-            serialPort1.Write("m");
         }
 
         public void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
@@ -433,12 +436,6 @@ namespace SDA100
         private void tabRecipe_Focus(object sender, EventArgs e)
         {
             OldAssWayOfCleaningUpRecipes();
-            
         }
-
-        //private void btnSave_Click(object sender, EventArgs e)
-        //{
-
-        //}
     }
 }

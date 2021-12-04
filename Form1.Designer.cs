@@ -29,9 +29,10 @@ namespace SDA100
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabGroup = new System.Windows.Forms.TabControl();
             this.tabMain = new System.Windows.Forms.TabPage();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -295,8 +296,11 @@ namespace SDA100
             this.cbxConsoleCommands = new System.Windows.Forms.ComboBox();
             this.txtConsoleOutput = new System.Windows.Forms.TextBox();
             this.tabINI = new System.Windows.Forms.TabPage();
+            this.BtnIni_SubmitPIN = new System.Windows.Forms.Button();
+            this.TxtIni_PIN = new System.Windows.Forms.TextBox();
             this.BtnIni_Save = new System.Windows.Forms.Button();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.groupBoxEdit = new System.Windows.Forms.GroupBox();
+            this.BtnIni_Edit = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
@@ -388,7 +392,7 @@ namespace SDA100
             this.groupBox10.SuspendLayout();
             this.tabConsole.SuspendLayout();
             this.tabINI.SuspendLayout();
-            this.groupBox12.SuspendLayout();
+            this.groupBoxEdit.SuspendLayout();
             this.IniGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -414,6 +418,7 @@ namespace SDA100
             // 
             // tabMain
             // 
+            this.tabMain.Controls.Add(this.listBox1);
             this.tabMain.Controls.Add(this.label16);
             this.tabMain.Controls.Add(this.label15);
             this.tabMain.Controls.Add(this.label13);
@@ -455,6 +460,15 @@ namespace SDA100
             this.tabMain.TabIndex = 0;
             this.tabMain.Text = "Main";
             this.tabMain.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(7, 7);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 84);
+            this.listBox1.TabIndex = 110;
             // 
             // label16
             // 
@@ -2135,11 +2149,11 @@ namespace SDA100
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(624, 441);
+            this.dataGridView1.Location = new System.Drawing.Point(-314, -42);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(587, 260);
             this.dataGridView1.TabIndex = 30;
@@ -2158,32 +2172,32 @@ namespace SDA100
             // 
             // btnEdit
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEdit.Location = new System.Drawing.Point(624, 671);
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnEdit.Location = new System.Drawing.Point(623, 671);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 30);
+            this.btnEdit.Size = new System.Drawing.Size(86, 39);
             this.btnEdit.TabIndex = 28;
-            this.btnEdit.Text = "Edit";
+            this.btnEdit.Text = "Delete";
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnRecipeLoad
             // 
-            this.btnRecipeLoad.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnRecipeLoad.Location = new System.Drawing.Point(531, 671);
+            this.btnRecipeLoad.BackColor = System.Drawing.Color.Yellow;
+            this.btnRecipeLoad.Location = new System.Drawing.Point(529, 671);
             this.btnRecipeLoad.Name = "btnRecipeLoad";
-            this.btnRecipeLoad.Size = new System.Drawing.Size(75, 30);
+            this.btnRecipeLoad.Size = new System.Drawing.Size(86, 39);
             this.btnRecipeLoad.TabIndex = 27;
-            this.btnRecipeLoad.Text = "Load";
+            this.btnRecipeLoad.Text = "Select";
             this.btnRecipeLoad.UseVisualStyleBackColor = false;
             this.btnRecipeLoad.Click += new System.EventHandler(this.btnRecipeLoad_Click);
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnSave.Location = new System.Drawing.Point(435, 671);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 30);
+            this.btnSave.Size = new System.Drawing.Size(86, 39);
             this.btnSave.TabIndex = 26;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -3498,8 +3512,10 @@ namespace SDA100
             // 
             // tabINI
             // 
+            this.tabINI.Controls.Add(this.BtnIni_SubmitPIN);
+            this.tabINI.Controls.Add(this.TxtIni_PIN);
             this.tabINI.Controls.Add(this.BtnIni_Save);
-            this.tabINI.Controls.Add(this.groupBox12);
+            this.tabINI.Controls.Add(this.groupBoxEdit);
             this.tabINI.Controls.Add(this.IniGroupBox);
             this.tabINI.Location = new System.Drawing.Point(4, 4);
             this.tabINI.Margin = new System.Windows.Forms.Padding(2);
@@ -3509,57 +3525,99 @@ namespace SDA100
             this.tabINI.Text = "INI";
             this.tabINI.UseVisualStyleBackColor = true;
             // 
+            // BtnIni_SubmitPIN
+            // 
+            this.BtnIni_SubmitPIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIni_SubmitPIN.Location = new System.Drawing.Point(166, 8);
+            this.BtnIni_SubmitPIN.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnIni_SubmitPIN.Name = "BtnIni_SubmitPIN";
+            this.BtnIni_SubmitPIN.Size = new System.Drawing.Size(128, 50);
+            this.BtnIni_SubmitPIN.TabIndex = 99;
+            this.BtnIni_SubmitPIN.Text = "Submit Pin";
+            this.BtnIni_SubmitPIN.UseVisualStyleBackColor = true;
+            this.BtnIni_SubmitPIN.Visible = false;
+            this.BtnIni_SubmitPIN.Click += new System.EventHandler(this.BtnIni_SubmitPIN_Click);
+            // 
+            // TxtIni_PIN
+            // 
+            this.TxtIni_PIN.Enabled = false;
+            this.TxtIni_PIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_PIN.Location = new System.Drawing.Point(56, 23);
+            this.TxtIni_PIN.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtIni_PIN.Name = "TxtIni_PIN";
+            this.TxtIni_PIN.PasswordChar = '*';
+            this.TxtIni_PIN.Size = new System.Drawing.Size(106, 22);
+            this.TxtIni_PIN.TabIndex = 95;
+            this.TxtIni_PIN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtIni_PIN.UseSystemPasswordChar = true;
+            this.TxtIni_PIN.Visible = false;
+            // 
             // BtnIni_Save
             // 
+            this.BtnIni_Save.Enabled = false;
             this.BtnIni_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnIni_Save.Location = new System.Drawing.Point(547, 454);
+            this.BtnIni_Save.Location = new System.Drawing.Point(545, 371);
             this.BtnIni_Save.Name = "BtnIni_Save";
             this.BtnIni_Save.Size = new System.Drawing.Size(111, 58);
             this.BtnIni_Save.TabIndex = 94;
             this.BtnIni_Save.Text = "Save";
             this.BtnIni_Save.UseVisualStyleBackColor = true;
+            this.BtnIni_Save.Click += new System.EventHandler(this.BtnIni_Save_Click);
             // 
-            // groupBox12
+            // groupBoxEdit
             // 
-            this.groupBox12.Controls.Add(this.label36);
-            this.groupBox12.Controls.Add(this.label37);
-            this.groupBox12.Controls.Add(this.label38);
-            this.groupBox12.Controls.Add(this.label39);
-            this.groupBox12.Controls.Add(this.label41);
-            this.groupBox12.Controls.Add(this.label42);
-            this.groupBox12.Controls.Add(this.label43);
-            this.groupBox12.Controls.Add(this.label44);
-            this.groupBox12.Controls.Add(this.label45);
-            this.groupBox12.Controls.Add(this.label46);
-            this.groupBox12.Controls.Add(this.label47);
-            this.groupBox12.Controls.Add(this.label48);
-            this.groupBox12.Controls.Add(this.TxtIni_EditParkY);
-            this.groupBox12.Controls.Add(this.label72);
-            this.groupBox12.Controls.Add(this.TxtIni_EditPrefocusZ);
-            this.groupBox12.Controls.Add(this.TxtIni_EditTrackSteps);
-            this.groupBox12.Controls.Add(this.label73);
-            this.groupBox12.Controls.Add(this.label74);
-            this.groupBox12.Controls.Add(this.TxtIni_EditPrefocusX);
-            this.groupBox12.Controls.Add(this.TxtIni_EditSectorSteps);
-            this.groupBox12.Controls.Add(this.label75);
-            this.groupBox12.Controls.Add(this.label76);
-            this.groupBox12.Controls.Add(this.TxtIni_EditPrefocusY);
-            this.groupBox12.Controls.Add(this.TxtIni_EditEdgeRej);
-            this.groupBox12.Controls.Add(this.label77);
-            this.groupBox12.Controls.Add(this.label78);
-            this.groupBox12.Controls.Add(this.TxtIni_EditParkZ);
-            this.groupBox12.Controls.Add(this.TxtIni_EditWaferDiam);
-            this.groupBox12.Controls.Add(this.label79);
-            this.groupBox12.Controls.Add(this.label80);
-            this.groupBox12.Controls.Add(this.TxtIni_EditParkX);
-            this.groupBox12.Controls.Add(this.label81);
-            this.groupBox12.Controls.Add(this.TxtIni_EditMapRes);
-            this.groupBox12.Controls.Add(this.label82);
-            this.groupBox12.Location = new System.Drawing.Point(56, 50);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(518, 389);
-            this.groupBox12.TabIndex = 93;
-            this.groupBox12.TabStop = false;
+            this.groupBoxEdit.Controls.Add(this.BtnIni_Edit);
+            this.groupBoxEdit.Controls.Add(this.label36);
+            this.groupBoxEdit.Controls.Add(this.label37);
+            this.groupBoxEdit.Controls.Add(this.label38);
+            this.groupBoxEdit.Controls.Add(this.label39);
+            this.groupBoxEdit.Controls.Add(this.label41);
+            this.groupBoxEdit.Controls.Add(this.label42);
+            this.groupBoxEdit.Controls.Add(this.label43);
+            this.groupBoxEdit.Controls.Add(this.label44);
+            this.groupBoxEdit.Controls.Add(this.label45);
+            this.groupBoxEdit.Controls.Add(this.label46);
+            this.groupBoxEdit.Controls.Add(this.label47);
+            this.groupBoxEdit.Controls.Add(this.label48);
+            this.groupBoxEdit.Controls.Add(this.TxtIni_EditParkY);
+            this.groupBoxEdit.Controls.Add(this.label72);
+            this.groupBoxEdit.Controls.Add(this.TxtIni_EditPrefocusZ);
+            this.groupBoxEdit.Controls.Add(this.TxtIni_EditTrackSteps);
+            this.groupBoxEdit.Controls.Add(this.label73);
+            this.groupBoxEdit.Controls.Add(this.label74);
+            this.groupBoxEdit.Controls.Add(this.TxtIni_EditPrefocusX);
+            this.groupBoxEdit.Controls.Add(this.TxtIni_EditSectorSteps);
+            this.groupBoxEdit.Controls.Add(this.label75);
+            this.groupBoxEdit.Controls.Add(this.label76);
+            this.groupBoxEdit.Controls.Add(this.TxtIni_EditPrefocusY);
+            this.groupBoxEdit.Controls.Add(this.TxtIni_EditEdgeRej);
+            this.groupBoxEdit.Controls.Add(this.label77);
+            this.groupBoxEdit.Controls.Add(this.label78);
+            this.groupBoxEdit.Controls.Add(this.TxtIni_EditParkZ);
+            this.groupBoxEdit.Controls.Add(this.TxtIni_EditWaferDiam);
+            this.groupBoxEdit.Controls.Add(this.label79);
+            this.groupBoxEdit.Controls.Add(this.label80);
+            this.groupBoxEdit.Controls.Add(this.TxtIni_EditParkX);
+            this.groupBoxEdit.Controls.Add(this.label81);
+            this.groupBoxEdit.Controls.Add(this.TxtIni_EditMapRes);
+            this.groupBoxEdit.Controls.Add(this.label82);
+            this.groupBoxEdit.Location = new System.Drawing.Point(56, 50);
+            this.groupBoxEdit.Name = "groupBoxEdit";
+            this.groupBoxEdit.Size = new System.Drawing.Size(518, 315);
+            this.groupBoxEdit.TabIndex = 93;
+            this.groupBoxEdit.TabStop = false;
+            // 
+            // BtnIni_Edit
+            // 
+            this.BtnIni_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIni_Edit.Location = new System.Drawing.Point(20, 18);
+            this.BtnIni_Edit.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnIni_Edit.Name = "BtnIni_Edit";
+            this.BtnIni_Edit.Size = new System.Drawing.Size(80, 56);
+            this.BtnIni_Edit.TabIndex = 98;
+            this.BtnIni_Edit.Text = "Edit";
+            this.BtnIni_Edit.UseVisualStyleBackColor = true;
+            this.BtnIni_Edit.Click += new System.EventHandler(this.BtnIni_Edit_Click);
             // 
             // label36
             // 
@@ -3699,6 +3757,7 @@ namespace SDA100
             this.TxtIni_EditParkY.Location = new System.Drawing.Point(367, 68);
             this.TxtIni_EditParkY.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditParkY.Name = "TxtIni_EditParkY";
+            this.TxtIni_EditParkY.ReadOnly = true;
             this.TxtIni_EditParkY.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditParkY.TabIndex = 15;
             this.TxtIni_EditParkY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3720,6 +3779,7 @@ namespace SDA100
             this.TxtIni_EditPrefocusZ.Location = new System.Drawing.Point(367, 282);
             this.TxtIni_EditPrefocusZ.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditPrefocusZ.Name = "TxtIni_EditPrefocusZ";
+            this.TxtIni_EditPrefocusZ.ReadOnly = true;
             this.TxtIni_EditPrefocusZ.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditPrefocusZ.TabIndex = 85;
             this.TxtIni_EditPrefocusZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3730,6 +3790,7 @@ namespace SDA100
             this.TxtIni_EditTrackSteps.Location = new System.Drawing.Point(133, 260);
             this.TxtIni_EditTrackSteps.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditTrackSteps.Name = "TxtIni_EditTrackSteps";
+            this.TxtIni_EditTrackSteps.ReadOnly = true;
             this.TxtIni_EditTrackSteps.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditTrackSteps.TabIndex = 13;
             this.TxtIni_EditTrackSteps.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3762,6 +3823,7 @@ namespace SDA100
             this.TxtIni_EditPrefocusX.Location = new System.Drawing.Point(367, 238);
             this.TxtIni_EditPrefocusX.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditPrefocusX.Name = "TxtIni_EditPrefocusX";
+            this.TxtIni_EditPrefocusX.ReadOnly = true;
             this.TxtIni_EditPrefocusX.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditPrefocusX.TabIndex = 83;
             this.TxtIni_EditPrefocusX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3772,6 +3834,7 @@ namespace SDA100
             this.TxtIni_EditSectorSteps.Location = new System.Drawing.Point(133, 216);
             this.TxtIni_EditSectorSteps.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditSectorSteps.Name = "TxtIni_EditSectorSteps";
+            this.TxtIni_EditSectorSteps.ReadOnly = true;
             this.TxtIni_EditSectorSteps.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditSectorSteps.TabIndex = 11;
             this.TxtIni_EditSectorSteps.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3804,6 +3867,7 @@ namespace SDA100
             this.TxtIni_EditPrefocusY.Location = new System.Drawing.Point(367, 197);
             this.TxtIni_EditPrefocusY.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditPrefocusY.Name = "TxtIni_EditPrefocusY";
+            this.TxtIni_EditPrefocusY.ReadOnly = true;
             this.TxtIni_EditPrefocusY.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditPrefocusY.TabIndex = 81;
             this.TxtIni_EditPrefocusY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3814,6 +3878,7 @@ namespace SDA100
             this.TxtIni_EditEdgeRej.Location = new System.Drawing.Point(133, 175);
             this.TxtIni_EditEdgeRej.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditEdgeRej.Name = "TxtIni_EditEdgeRej";
+            this.TxtIni_EditEdgeRej.ReadOnly = true;
             this.TxtIni_EditEdgeRej.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditEdgeRej.TabIndex = 9;
             this.TxtIni_EditEdgeRej.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3846,6 +3911,7 @@ namespace SDA100
             this.TxtIni_EditParkZ.Location = new System.Drawing.Point(367, 155);
             this.TxtIni_EditParkZ.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditParkZ.Name = "TxtIni_EditParkZ";
+            this.TxtIni_EditParkZ.ReadOnly = true;
             this.TxtIni_EditParkZ.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditParkZ.TabIndex = 79;
             this.TxtIni_EditParkZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3856,6 +3922,7 @@ namespace SDA100
             this.TxtIni_EditWaferDiam.Location = new System.Drawing.Point(133, 133);
             this.TxtIni_EditWaferDiam.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditWaferDiam.Name = "TxtIni_EditWaferDiam";
+            this.TxtIni_EditWaferDiam.ReadOnly = true;
             this.TxtIni_EditWaferDiam.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditWaferDiam.TabIndex = 7;
             this.TxtIni_EditWaferDiam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3888,6 +3955,7 @@ namespace SDA100
             this.TxtIni_EditParkX.Location = new System.Drawing.Point(367, 111);
             this.TxtIni_EditParkX.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditParkX.Name = "TxtIni_EditParkX";
+            this.TxtIni_EditParkX.ReadOnly = true;
             this.TxtIni_EditParkX.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditParkX.TabIndex = 77;
             this.TxtIni_EditParkX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3909,6 +3977,7 @@ namespace SDA100
             this.TxtIni_EditMapRes.Location = new System.Drawing.Point(133, 89);
             this.TxtIni_EditMapRes.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditMapRes.Name = "TxtIni_EditMapRes";
+            this.TxtIni_EditMapRes.ReadOnly = true;
             this.TxtIni_EditMapRes.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditMapRes.TabIndex = 5;
             this.TxtIni_EditMapRes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3963,7 +4032,7 @@ namespace SDA100
             this.IniGroupBox.Controls.Add(this.label14);
             this.IniGroupBox.Location = new System.Drawing.Point(631, 50);
             this.IniGroupBox.Name = "IniGroupBox";
-            this.IniGroupBox.Size = new System.Drawing.Size(530, 389);
+            this.IniGroupBox.Size = new System.Drawing.Size(530, 315);
             this.IniGroupBox.TabIndex = 92;
             this.IniGroupBox.TabStop = false;
             // 
@@ -4047,7 +4116,7 @@ namespace SDA100
             // label52
             // 
             this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(230, 210);
+            this.label52.Location = new System.Drawing.Point(230, 212);
             this.label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(48, 28);
@@ -4058,7 +4127,7 @@ namespace SDA100
             // label51
             // 
             this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(230, 169);
+            this.label51.Location = new System.Drawing.Point(230, 170);
             this.label51.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(35, 28);
@@ -4069,7 +4138,7 @@ namespace SDA100
             // label50
             // 
             this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(230, 127);
+            this.label50.Location = new System.Drawing.Point(230, 128);
             this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(35, 28);
@@ -4135,7 +4204,7 @@ namespace SDA100
             // TxtIni_TrackSteps
             // 
             this.TxtIni_TrackSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIni_TrackSteps.Location = new System.Drawing.Point(133, 260);
+            this.TxtIni_TrackSteps.Location = new System.Drawing.Point(133, 257);
             this.TxtIni_TrackSteps.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_TrackSteps.Name = "TxtIni_TrackSteps";
             this.TxtIni_TrackSteps.ReadOnly = true;
@@ -4157,7 +4226,7 @@ namespace SDA100
             // label20
             // 
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(17, 263);
+            this.label20.Location = new System.Drawing.Point(17, 260);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(112, 19);
@@ -4179,7 +4248,7 @@ namespace SDA100
             // TxtIni_SectorSteps
             // 
             this.TxtIni_SectorSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIni_SectorSteps.Location = new System.Drawing.Point(133, 216);
+            this.TxtIni_SectorSteps.Location = new System.Drawing.Point(133, 215);
             this.TxtIni_SectorSteps.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_SectorSteps.Name = "TxtIni_SectorSteps";
             this.TxtIni_SectorSteps.ReadOnly = true;
@@ -4201,7 +4270,7 @@ namespace SDA100
             // label21
             // 
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(17, 219);
+            this.label21.Location = new System.Drawing.Point(17, 218);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(112, 19);
@@ -4223,7 +4292,7 @@ namespace SDA100
             // TxtIni_EdgeRej
             // 
             this.TxtIni_EdgeRej.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIni_EdgeRej.Location = new System.Drawing.Point(133, 175);
+            this.TxtIni_EdgeRej.Location = new System.Drawing.Point(133, 173);
             this.TxtIni_EdgeRej.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EdgeRej.Name = "TxtIni_EdgeRej";
             this.TxtIni_EdgeRej.ReadOnly = true;
@@ -4245,7 +4314,7 @@ namespace SDA100
             // label19
             // 
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(17, 178);
+            this.label19.Location = new System.Drawing.Point(17, 176);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(112, 19);
@@ -4267,7 +4336,7 @@ namespace SDA100
             // TxtIni_WaferDiam
             // 
             this.TxtIni_WaferDiam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIni_WaferDiam.Location = new System.Drawing.Point(133, 133);
+            this.TxtIni_WaferDiam.Location = new System.Drawing.Point(133, 131);
             this.TxtIni_WaferDiam.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_WaferDiam.Name = "TxtIni_WaferDiam";
             this.TxtIni_WaferDiam.ReadOnly = true;
@@ -4289,7 +4358,7 @@ namespace SDA100
             // label17
             // 
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(17, 136);
+            this.label17.Location = new System.Drawing.Point(17, 134);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(112, 19);
@@ -4395,8 +4464,9 @@ namespace SDA100
             this.tabConsole.ResumeLayout(false);
             this.tabConsole.PerformLayout();
             this.tabINI.ResumeLayout(false);
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
+            this.tabINI.PerformLayout();
+            this.groupBoxEdit.ResumeLayout(false);
+            this.groupBoxEdit.PerformLayout();
             this.IniGroupBox.ResumeLayout(false);
             this.IniGroupBox.PerformLayout();
             this.ResumeLayout(false);
@@ -4672,7 +4742,7 @@ namespace SDA100
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button BtnIni_Save;
-        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.GroupBox groupBoxEdit;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
@@ -4742,6 +4812,10 @@ namespace SDA100
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.TextBox TxtIni_MapRes;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button BtnIni_Edit;
+        private System.Windows.Forms.TextBox TxtIni_PIN;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button BtnIni_SubmitPIN;
     }
 }
 
