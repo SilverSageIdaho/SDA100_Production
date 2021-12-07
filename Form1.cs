@@ -123,7 +123,7 @@ namespace SDA100
                 //string recString = System.IO.File.ReadAllText(@"C:\ScanBeta\SDA100rec.txt");
                 //string[] recData = iniString.Split(',');
                 Globals.recLines = System.IO.File.ReadAllLines(Globals.dirRecipe + "\\SDA100rec.txt");
-
+                Globals.dataFileList = System.IO.Directory.GetFiles(Globals.dirData, "*.txt");
                 //lbxLoadBox.Text = "New Recipe";
                 //lbxLoadBox.DataSource = System.IO.File.ReadAllLines(Globals.dirRecipe + "\\SDA100rec.txt");
                 dataGridView1.Hide();
@@ -430,7 +430,12 @@ namespace SDA100
 
         private void tabData_Focus(object sender, EventArgs e)
         {
-            lbxScanDataFiles.DataSource = System.IO.Directory.GetFiles(Globals.dirData, "*.txt");
+            
+            foreach (string dataLine in Globals.dataFileList)
+            {
+                string dataLineParsed = dataLine.Remove(0, 18);
+                lbxScanDataFiles.Items.Add(dataLineParsed);
+            }
         }
 
         private void tabRecipe_Focus(object sender, EventArgs e)

@@ -29,7 +29,7 @@ namespace SDA100
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabGroup = new System.Windows.Forms.TabControl();
             this.tabMain = new System.Windows.Forms.TabPage();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -312,7 +312,6 @@ namespace SDA100
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
             this.TxtIni_EditParkY = new System.Windows.Forms.TextBox();
             this.label72 = new System.Windows.Forms.Label();
             this.TxtIni_EditPrefocusZ = new System.Windows.Forms.TextBox();
@@ -371,6 +370,34 @@ namespace SDA100
             this.TxtIni_MapRes = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabStartup = new System.Windows.Forms.TabPage();
+            this.tabClunk = new System.Windows.Forms.TabPage();
+            this.button24 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.label83 = new System.Windows.Forms.Label();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
+            this.IniEditPanel = new System.Windows.Forms.Panel();
+            this.label84 = new System.Windows.Forms.Label();
             this.tabGroup.SuspendLayout();
             this.tabMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -394,6 +421,8 @@ namespace SDA100
             this.tabINI.SuspendLayout();
             this.groupBoxEdit.SuspendLayout();
             this.IniGroupBox.SuspendLayout();
+            this.tabClunk.SuspendLayout();
+            this.IniEditPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabGroup
@@ -406,8 +435,9 @@ namespace SDA100
             this.tabGroup.Controls.Add(this.tabConsole);
             this.tabGroup.Controls.Add(this.tabINI);
             this.tabGroup.Controls.Add(this.tabStartup);
+            this.tabGroup.Controls.Add(this.tabClunk);
             this.tabGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabGroup.ItemSize = new System.Drawing.Size(100, 75);
+            this.tabGroup.ItemSize = new System.Drawing.Size(94, 75);
             this.tabGroup.Location = new System.Drawing.Point(-1, -1);
             this.tabGroup.Multiline = true;
             this.tabGroup.Name = "tabGroup";
@@ -465,7 +495,7 @@ namespace SDA100
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(7, 7);
+            this.listBox1.Location = new System.Drawing.Point(-69, -51);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 84);
             this.listBox1.TabIndex = 110;
@@ -2149,8 +2179,8 @@ namespace SDA100
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(-314, -42);
@@ -3495,6 +3525,64 @@ namespace SDA100
             // cbxConsoleCommands
             // 
             this.cbxConsoleCommands.FormattingEnabled = true;
+            this.cbxConsoleCommands.Items.AddRange(new object[] {
+            ".",
+            "?",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            ".1M",
+            ".2M",
+            ".3M",
+            ".4M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z",
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h",
+            "i",
+            "j",
+            "k",
+            "l",
+            "m",
+            "n",
+            "o",
+            "p",
+            "q",
+            "r",
+            "s",
+            "t",
+            "u",
+            "v",
+            "w",
+            "x",
+            "y",
+            "z"});
             this.cbxConsoleCommands.Location = new System.Drawing.Point(27, 21);
             this.cbxConsoleCommands.Margin = new System.Windows.Forms.Padding(2);
             this.cbxConsoleCommands.Name = "cbxConsoleCommands";
@@ -3566,7 +3654,7 @@ namespace SDA100
             // 
             // groupBoxEdit
             // 
-            this.groupBoxEdit.Controls.Add(this.BtnIni_Edit);
+            this.groupBoxEdit.Controls.Add(this.IniEditPanel);
             this.groupBoxEdit.Controls.Add(this.label36);
             this.groupBoxEdit.Controls.Add(this.label37);
             this.groupBoxEdit.Controls.Add(this.label38);
@@ -3578,7 +3666,6 @@ namespace SDA100
             this.groupBoxEdit.Controls.Add(this.label45);
             this.groupBoxEdit.Controls.Add(this.label46);
             this.groupBoxEdit.Controls.Add(this.label47);
-            this.groupBoxEdit.Controls.Add(this.label48);
             this.groupBoxEdit.Controls.Add(this.TxtIni_EditParkY);
             this.groupBoxEdit.Controls.Add(this.label72);
             this.groupBoxEdit.Controls.Add(this.TxtIni_EditPrefocusZ);
@@ -3610,7 +3697,7 @@ namespace SDA100
             // BtnIni_Edit
             // 
             this.BtnIni_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnIni_Edit.Location = new System.Drawing.Point(20, 18);
+            this.BtnIni_Edit.Location = new System.Drawing.Point(5, 12);
             this.BtnIni_Edit.Margin = new System.Windows.Forms.Padding(2);
             this.BtnIni_Edit.Name = "BtnIni_Edit";
             this.BtnIni_Edit.Size = new System.Drawing.Size(80, 56);
@@ -3740,24 +3827,12 @@ namespace SDA100
             this.label47.Text = "Px";
             this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(149, 18);
-            this.label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(187, 25);
-            this.label48.TabIndex = 86;
-            this.label48.Text = "Edit Ini File Data";
-            // 
             // TxtIni_EditParkY
             // 
             this.TxtIni_EditParkY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_EditParkY.Location = new System.Drawing.Point(367, 68);
             this.TxtIni_EditParkY.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditParkY.Name = "TxtIni_EditParkY";
-            this.TxtIni_EditParkY.ReadOnly = true;
             this.TxtIni_EditParkY.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditParkY.TabIndex = 15;
             this.TxtIni_EditParkY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3779,7 +3854,6 @@ namespace SDA100
             this.TxtIni_EditPrefocusZ.Location = new System.Drawing.Point(367, 282);
             this.TxtIni_EditPrefocusZ.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditPrefocusZ.Name = "TxtIni_EditPrefocusZ";
-            this.TxtIni_EditPrefocusZ.ReadOnly = true;
             this.TxtIni_EditPrefocusZ.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditPrefocusZ.TabIndex = 85;
             this.TxtIni_EditPrefocusZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3790,7 +3864,6 @@ namespace SDA100
             this.TxtIni_EditTrackSteps.Location = new System.Drawing.Point(133, 260);
             this.TxtIni_EditTrackSteps.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditTrackSteps.Name = "TxtIni_EditTrackSteps";
-            this.TxtIni_EditTrackSteps.ReadOnly = true;
             this.TxtIni_EditTrackSteps.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditTrackSteps.TabIndex = 13;
             this.TxtIni_EditTrackSteps.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3823,7 +3896,6 @@ namespace SDA100
             this.TxtIni_EditPrefocusX.Location = new System.Drawing.Point(367, 238);
             this.TxtIni_EditPrefocusX.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditPrefocusX.Name = "TxtIni_EditPrefocusX";
-            this.TxtIni_EditPrefocusX.ReadOnly = true;
             this.TxtIni_EditPrefocusX.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditPrefocusX.TabIndex = 83;
             this.TxtIni_EditPrefocusX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3834,7 +3906,6 @@ namespace SDA100
             this.TxtIni_EditSectorSteps.Location = new System.Drawing.Point(133, 216);
             this.TxtIni_EditSectorSteps.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditSectorSteps.Name = "TxtIni_EditSectorSteps";
-            this.TxtIni_EditSectorSteps.ReadOnly = true;
             this.TxtIni_EditSectorSteps.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditSectorSteps.TabIndex = 11;
             this.TxtIni_EditSectorSteps.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3867,7 +3938,6 @@ namespace SDA100
             this.TxtIni_EditPrefocusY.Location = new System.Drawing.Point(367, 197);
             this.TxtIni_EditPrefocusY.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditPrefocusY.Name = "TxtIni_EditPrefocusY";
-            this.TxtIni_EditPrefocusY.ReadOnly = true;
             this.TxtIni_EditPrefocusY.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditPrefocusY.TabIndex = 81;
             this.TxtIni_EditPrefocusY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3878,7 +3948,6 @@ namespace SDA100
             this.TxtIni_EditEdgeRej.Location = new System.Drawing.Point(133, 175);
             this.TxtIni_EditEdgeRej.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditEdgeRej.Name = "TxtIni_EditEdgeRej";
-            this.TxtIni_EditEdgeRej.ReadOnly = true;
             this.TxtIni_EditEdgeRej.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditEdgeRej.TabIndex = 9;
             this.TxtIni_EditEdgeRej.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3911,7 +3980,6 @@ namespace SDA100
             this.TxtIni_EditParkZ.Location = new System.Drawing.Point(367, 155);
             this.TxtIni_EditParkZ.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditParkZ.Name = "TxtIni_EditParkZ";
-            this.TxtIni_EditParkZ.ReadOnly = true;
             this.TxtIni_EditParkZ.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditParkZ.TabIndex = 79;
             this.TxtIni_EditParkZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3922,7 +3990,6 @@ namespace SDA100
             this.TxtIni_EditWaferDiam.Location = new System.Drawing.Point(133, 133);
             this.TxtIni_EditWaferDiam.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditWaferDiam.Name = "TxtIni_EditWaferDiam";
-            this.TxtIni_EditWaferDiam.ReadOnly = true;
             this.TxtIni_EditWaferDiam.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditWaferDiam.TabIndex = 7;
             this.TxtIni_EditWaferDiam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3955,7 +4022,6 @@ namespace SDA100
             this.TxtIni_EditParkX.Location = new System.Drawing.Point(367, 111);
             this.TxtIni_EditParkX.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditParkX.Name = "TxtIni_EditParkX";
-            this.TxtIni_EditParkX.ReadOnly = true;
             this.TxtIni_EditParkX.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditParkX.TabIndex = 77;
             this.TxtIni_EditParkX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3977,7 +4043,6 @@ namespace SDA100
             this.TxtIni_EditMapRes.Location = new System.Drawing.Point(133, 89);
             this.TxtIni_EditMapRes.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditMapRes.Name = "TxtIni_EditMapRes";
-            this.TxtIni_EditMapRes.ReadOnly = true;
             this.TxtIni_EditMapRes.Size = new System.Drawing.Size(93, 22);
             this.TxtIni_EditMapRes.TabIndex = 5;
             this.TxtIni_EditMapRes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4420,6 +4485,336 @@ namespace SDA100
             this.tabStartup.Text = "Startup";
             this.tabStartup.UseVisualStyleBackColor = true;
             // 
+            // tabClunk
+            // 
+            this.tabClunk.Controls.Add(this.button24);
+            this.tabClunk.Controls.Add(this.textBox3);
+            this.tabClunk.Controls.Add(this.button23);
+            this.tabClunk.Controls.Add(this.button21);
+            this.tabClunk.Controls.Add(this.button22);
+            this.tabClunk.Controls.Add(this.button19);
+            this.tabClunk.Controls.Add(this.button20);
+            this.tabClunk.Controls.Add(this.label83);
+            this.tabClunk.Controls.Add(this.button16);
+            this.tabClunk.Controls.Add(this.button15);
+            this.tabClunk.Controls.Add(this.button14);
+            this.tabClunk.Controls.Add(this.button13);
+            this.tabClunk.Controls.Add(this.textBox1);
+            this.tabClunk.Controls.Add(this.button12);
+            this.tabClunk.Controls.Add(this.button11);
+            this.tabClunk.Controls.Add(this.button10);
+            this.tabClunk.Controls.Add(this.button9);
+            this.tabClunk.Controls.Add(this.button8);
+            this.tabClunk.Controls.Add(this.button7);
+            this.tabClunk.Controls.Add(this.button6);
+            this.tabClunk.Controls.Add(this.button5);
+            this.tabClunk.Controls.Add(this.button4);
+            this.tabClunk.Controls.Add(this.button3);
+            this.tabClunk.Controls.Add(this.button2);
+            this.tabClunk.Controls.Add(this.button25);
+            this.tabClunk.Location = new System.Drawing.Point(4, 4);
+            this.tabClunk.Name = "tabClunk";
+            this.tabClunk.Padding = new System.Windows.Forms.Padding(3);
+            this.tabClunk.Size = new System.Drawing.Size(1186, 754);
+            this.tabClunk.TabIndex = 7;
+            this.tabClunk.Text = "Clunk";
+            this.tabClunk.UseVisualStyleBackColor = true;
+            // 
+            // button24
+            // 
+            this.button24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button24.Location = new System.Drawing.Point(462, 495);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(117, 94);
+            this.button24.TabIndex = 55;
+            this.button24.Text = "Focus Z Axis";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(216, 705);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(834, 35);
+            this.textBox3.TabIndex = 54;
+            // 
+            // button23
+            // 
+            this.button23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button23.Location = new System.Drawing.Point(93, 705);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(117, 36);
+            this.button23.TabIndex = 53;
+            this.button23.Text = "Send String";
+            this.button23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
+            // 
+            // button21
+            // 
+            this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button21.Location = new System.Drawing.Point(585, 547);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(117, 94);
+            this.button21.TabIndex = 52;
+            this.button21.Text = "Stop Scan";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // button22
+            // 
+            this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button22.Location = new System.Drawing.Point(585, 431);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(117, 94);
+            this.button22.TabIndex = 51;
+            this.button22.Text = "Start Scan";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
+            // button19
+            // 
+            this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button19.Location = new System.Drawing.Point(339, 547);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(117, 94);
+            this.button19.TabIndex = 50;
+            this.button19.Text = "Move to PreFocus";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // button20
+            // 
+            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20.Location = new System.Drawing.Point(339, 431);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(117, 94);
+            this.button20.TabIndex = 49;
+            this.button20.Text = "Send Val PreFocus";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label83.Location = new System.Drawing.Point(865, 276);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(107, 16);
+            this.label83.TabIndex = 48;
+            this.label83.Text = "Stepper Steps";
+            // 
+            // button16
+            // 
+            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.Location = new System.Drawing.Point(216, 547);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(117, 94);
+            this.button16.TabIndex = 44;
+            this.button16.Text = "Park Z";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // button15
+            // 
+            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.Location = new System.Drawing.Point(216, 431);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(117, 94);
+            this.button15.TabIndex = 43;
+            this.button15.Text = "Park XY";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // button14
+            // 
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.Location = new System.Drawing.Point(93, 547);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(117, 94);
+            this.button14.TabIndex = 42;
+            this.button14.Text = "Home Z";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // button13
+            // 
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Location = new System.Drawing.Point(93, 431);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(117, 94);
+            this.button13.TabIndex = 41;
+            this.button13.Text = "Home XY";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(868, 300);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(104, 40);
+            this.textBox1.TabIndex = 40;
+            this.textBox1.Text = "0";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.Location = new System.Drawing.Point(708, 276);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(117, 94);
+            this.button12.TabIndex = 39;
+            this.button12.Text = "0 Steps";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button11
+            // 
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Location = new System.Drawing.Point(585, 276);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(117, 94);
+            this.button11.TabIndex = 38;
+            this.button11.Text = "1000 Steps";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Location = new System.Drawing.Point(462, 276);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(117, 94);
+            this.button10.TabIndex = 37;
+            this.button10.Text = "500 Steps";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(339, 276);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(117, 94);
+            this.button9.TabIndex = 36;
+            this.button9.Text = "100 Steps";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(216, 276);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(117, 94);
+            this.button8.TabIndex = 35;
+            this.button8.Text = "10 Steps";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(93, 276);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(117, 94);
+            this.button7.TabIndex = 34;
+            this.button7.Text = "1 Step";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(556, 175);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(117, 75);
+            this.button6.TabIndex = 33;
+            this.button6.Text = "Z Down";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(556, 13);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(117, 75);
+            this.button5.TabIndex = 32;
+            this.button5.Text = "Z Up";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(254, 175);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(117, 75);
+            this.button4.TabIndex = 31;
+            this.button4.Text = "X Front";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(254, 13);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(117, 75);
+            this.button3.TabIndex = 30;
+            this.button3.Text = "X Back";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(368, 94);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(117, 75);
+            this.button2.TabIndex = 29;
+            this.button2.Text = "Y Right";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button25
+            // 
+            this.button25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button25.Location = new System.Drawing.Point(138, 94);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(117, 75);
+            this.button25.TabIndex = 28;
+            this.button25.Text = "Y Left";
+            this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
+            // 
+            // IniEditPanel
+            // 
+            this.IniEditPanel.Controls.Add(this.BtnIni_Edit);
+            this.IniEditPanel.Controls.Add(this.label84);
+            this.IniEditPanel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.IniEditPanel.Location = new System.Drawing.Point(0, 6);
+            this.IniEditPanel.Name = "IniEditPanel";
+            this.IniEditPanel.Size = new System.Drawing.Size(518, 309);
+            this.IniEditPanel.TabIndex = 101;
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label84.Location = new System.Drawing.Point(176, 18);
+            this.label84.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(187, 25);
+            this.label84.TabIndex = 86;
+            this.label84.Text = "Edit Ini File Data";
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4469,6 +4864,10 @@ namespace SDA100
             this.groupBoxEdit.PerformLayout();
             this.IniGroupBox.ResumeLayout(false);
             this.IniGroupBox.PerformLayout();
+            this.tabClunk.ResumeLayout(false);
+            this.tabClunk.PerformLayout();
+            this.IniEditPanel.ResumeLayout(false);
+            this.IniEditPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4754,7 +5153,6 @@ namespace SDA100
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label48;
         private System.Windows.Forms.TextBox TxtIni_EditParkY;
         private System.Windows.Forms.Label label72;
         private System.Windows.Forms.TextBox TxtIni_EditPrefocusZ;
@@ -4816,6 +5214,34 @@ namespace SDA100
         private System.Windows.Forms.TextBox TxtIni_PIN;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button BtnIni_SubmitPIN;
+        private System.Windows.Forms.TabPage tabClunk;
+        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.Panel IniEditPanel;
+        private System.Windows.Forms.Label label84;
     }
 }
 

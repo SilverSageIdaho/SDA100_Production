@@ -98,5 +98,6 @@ namespace SDA100
         public static int sysError;
 
         public static string[] recLines;
+        public static string[] dataFileList;
     }
 }

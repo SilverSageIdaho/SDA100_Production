@@ -1,4 +1,6 @@
-﻿using System;
+﻿/*Comment*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -96,7 +98,8 @@ namespace SDA100
                 BtnIni_SubmitPIN.Enabled = false;
                 BtnIni_Edit.Enabled = false;
                 BtnIni_Save.Enabled = true;
-                TxtIni_EditMapRes.ReadOnly = false;
+                //TxtIni_EditMapRes.ReadOnly = false;
+                IniEditPanel.SendToBack();
             }
 
         }
