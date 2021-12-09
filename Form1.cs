@@ -73,7 +73,7 @@ namespace SDA100
                 serialPort1.ReadBufferSize = 16384;
                 serialPort1.Open();
 
-                string iniString = System.IO.File.ReadAllText(@"C:\ScanBeta\SDA100ini.txt");
+                string iniString = System.IO.File.ReadAllText(@"C:\ScanBeta\INI\SDA100ini.txt");
                 string[] iniData = iniString.Split(',');
                 Globals.iniOID = iniData[0];
                 Globals.mapRes = int.Parse(iniData[1]);
@@ -145,7 +145,7 @@ namespace SDA100
 
                 //string recString = System.IO.File.ReadAllText(@"C:\ScanBeta\SDA100rec.txt");
                 //string[] recData = iniString.Split(',');
-                Globals.recLines = System.IO.File.ReadAllLines(@"C:\ScanBeta\SDA100rec.txt");
+                Globals.recLines = System.IO.File.ReadAllLines(@"C:\ScanBeta\Recipe\SDA100rec.txt");
 
                 //lbxLoadBox.Text = "New Recipe";
                 dataGridView1.ColumnCount = 3;

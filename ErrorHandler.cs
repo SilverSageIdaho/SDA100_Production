@@ -11,12 +11,13 @@ namespace SDA100
 {
     class ErrorHandler
     {
+        private static string errorMessage { get; set; }
+        private static string errorResponse { get; set; }
 
-        public static string CheckForErrors()
-        {
+        public static void CheckForErrors()
+        { 
             //Errors will match this regular expression
             Regex regex = new Regex("^![A-Za-z]{1}0{1}\r{1}$");
-            string returnString = "";
             if (regex.IsMatch(Globals.inData) && !Globals.errorMessageDisplayed)
             {
                 char letter = Globals.inData[1];
@@ -24,34 +25,34 @@ namespace SDA100
                 switch (letter)
                 {
                     case 'O':
-                        returnString = "N";
+                        errorResponse = "N";
                         //Globals.vacChuckFlag = 0;
-                        Globals.errorMessage = "No wafer detected";
+                        errorMessage = "No wafer detected";
                         break;
                     case 'o':
-                        Globals.errorMessage = "Door failed to open";
-                        Globals.doorCloseFlag = 1;
+                        errorMessage = "Door failed to open";
+                        //doorCloseFlag = 1;
                         Console.WriteLine("ERROR o");
                         break;
                     case 'n':
-                        Globals.errorMessage = "Door failed to close";
+                        errorMessage = "Door failed to close";
                         Globals.doorCloseFlag = 0;
                         break;
                     case 'H':
-                        Globals.errorMessage = "Failed to get to Home";
+                        errorMessage = "Failed to get to Home";
                         break;
                     default:
-                        Globals.errorMessage = "Unknown error";
+                        errorMessage = "Unknown error";
                         break;
                 }
 
             }
-            else
-            {
-
-            }
-            return returnString;
+            DisplayErrors();
         }
 
+        private static void DisplayErrors()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
