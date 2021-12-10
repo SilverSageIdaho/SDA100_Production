@@ -32,7 +32,6 @@ namespace SDA100
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabGroup = new System.Windows.Forms.TabControl();
             this.tabMain = new System.Windows.Forms.TabPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -182,7 +181,6 @@ namespace SDA100
             this.label68 = new System.Windows.Forms.Label();
             this.tabRecipe = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lbxLoadBox = new System.Windows.Forms.ListBox();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnRecipeLoad = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -443,12 +441,10 @@ namespace SDA100
             this.tabGroup.Name = "tabGroup";
             this.tabGroup.SelectedIndex = 0;
             this.tabGroup.Size = new System.Drawing.Size(1269, 762);
-            this.tabGroup.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabGroup.TabIndex = 75;
             // 
             // tabMain
             // 
-            this.tabMain.Controls.Add(this.listBox1);
             this.tabMain.Controls.Add(this.label16);
             this.tabMain.Controls.Add(this.label15);
             this.tabMain.Controls.Add(this.label13);
@@ -491,15 +487,18 @@ namespace SDA100
             this.tabMain.Text = "Main";
             this.tabMain.UseVisualStyleBackColor = true;
             // 
+<<<<<<< Updated upstream
             // listBox1
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(-69, -51);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 84);
-            this.listBox1.TabIndex = 110;
+            //this.listBox1.FormattingEnabled = true;
+            //this.listBox1.ItemHeight = 16;
+            //this.listBox1.Location = new System.Drawing.Point(-69, -51);
+            //this.listBox1.Name = "listBox1";
+            //this.listBox1.Size = new System.Drawing.Size(120, 84);
+            //this.listBox1.TabIndex = 110;
             // 
+=======
+>>>>>>> Stashed changes
             // label16
             // 
             this.label16.AutoSize = true;
@@ -2163,7 +2162,6 @@ namespace SDA100
             // tabRecipe
             // 
             this.tabRecipe.Controls.Add(this.dataGridView1);
-            this.tabRecipe.Controls.Add(this.lbxLoadBox);
             this.tabRecipe.Controls.Add(this.btnEdit);
             this.tabRecipe.Controls.Add(this.btnRecipeLoad);
             this.tabRecipe.Controls.Add(this.btnSave);
@@ -2183,22 +2181,10 @@ namespace SDA100
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-314, -42);
+            this.dataGridView1.Location = new System.Drawing.Point(536, 379);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(587, 260);
             this.dataGridView1.TabIndex = 30;
-            // 
-            // lbxLoadBox
-            // 
-            this.lbxLoadBox.FormattingEnabled = true;
-            this.lbxLoadBox.HorizontalScrollbar = true;
-            this.lbxLoadBox.ItemHeight = 16;
-            this.lbxLoadBox.Location = new System.Drawing.Point(536, 379);
-            this.lbxLoadBox.Name = "lbxLoadBox";
-            this.lbxLoadBox.ScrollAlwaysVisible = true;
-            this.lbxLoadBox.Size = new System.Drawing.Size(587, 260);
-            this.lbxLoadBox.TabIndex = 29;
-            this.lbxLoadBox.SelectedIndexChanged += new System.EventHandler(this.lbxLoadBox_SelectedIndexChanged);
             // 
             // btnEdit
             // 
@@ -5008,7 +4994,6 @@ namespace SDA100
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.ListBox lbxLoadBox;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnRecipeLoad;
         private System.Windows.Forms.Button btnSave;
@@ -5212,7 +5197,6 @@ namespace SDA100
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button BtnIni_Edit;
         private System.Windows.Forms.TextBox TxtIni_PIN;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button BtnIni_SubmitPIN;
         private System.Windows.Forms.TabPage tabClunk;
         private System.Windows.Forms.Button button24;

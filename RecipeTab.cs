@@ -10,10 +10,10 @@ namespace SDA100
     public partial class mainForm : Form
     {
         string recSaveData;
-        private void lbxLoadBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void dataGridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedRecipe = Globals.recLines[lbxLoadBox.SelectedIndex];
-            //string selectedRecipe = Globals.recLines[lbxLoadBox.SelectedIndex];
+            string selectedRecipe = Globals.recLines[dataGridView1.SelectedRows[0].Index];
+            //string selectedRecipe = Globals.recLines[dataGridView1.];
             string[] recData = selectedRecipe.Split(',');
 
             txtSSRecipeName_Set.Text = recData[3];
@@ -46,6 +46,7 @@ namespace SDA100
         private void PopulateRecipeList()
         {
             string[] recipes = System.IO.File.ReadAllLines(Globals.dirRecipe + "\\SDA100rec.txt");
+            Console.WriteLine("Populating recipe list, recipes length: " + recipes.Count());
             foreach(string recipe in recipes)
             {
                 Console.WriteLine(recipe);
@@ -63,6 +64,9 @@ namespace SDA100
                 dataGridView1.Rows.Add(tableRow);
                 //lbxLoadBox.Items.Add(recipeTitle);
             }
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoResizeRows();
+            
         }
 
         private string FormatDate(string dateString)
@@ -184,14 +188,14 @@ namespace SDA100
 
             //System.IO.File.AppendAllText(@"C:\ScanBeta\SDA100rec.txt", recEditData + Environment.NewLine);
             //reclines array gets populated on load
-            Globals.recLines[lbxLoadBox.SelectedIndex] = recEditData;
+            //Globals.recLines[lbxLoadBox.SelectedIndex] = recEditData;
             System.IO.File.Delete(Globals.dirRecipe + "\\SDA100rec.txt");
             System.Threading.Thread.Sleep(1000);
-            for (int x = 0; x < lbxLoadBox.Items.Count; x++)
-            {
-                System.IO.File.AppendAllText(Globals.dirRecipe + "\\SDA100rec.txt", Globals.recLines[x] + Environment.NewLine);
-            }
-            lbxLoadBox.DataSource = System.IO.File.ReadAllLines(Globals.dirRecipe + "\\SDA100rec.txt");
+            //for (int x = 0; x < lbxLoadBox.Items.Count; x++)
+            //{
+            //    System.IO.File.AppendAllText(Globals.dirRecipe + "\\SDA100rec.txt", Globals.recLines[x] + Environment.NewLine);
+            //}
+            //lbxLoadBox.DataSource = System.IO.File.ReadAllLines(Globals.dirRecipe + "\\SDA100rec.txt");
             PopulateRecipeList();
         }
         public void CreateRecipeString()
@@ -229,11 +233,11 @@ namespace SDA100
         }
         private void OldAssWayOfCleaningUpRecipes()
         {
-            lbxLoadBox.Items.Clear();
+            //lbxLoadBox.Items.Clear();
             foreach (string recipe in Globals.recLines)
             {
                 string[] reclinesParsed = recipe.Split(',');
-                lbxLoadBox.Items.Add(reclinesParsed[5] + "\t - \t" + reclinesParsed[0]);
+                //lbxLoadBox.Items.Add(reclinesParsed[5] + "\t - \t" + reclinesParsed[0]);
             }
         }
     }

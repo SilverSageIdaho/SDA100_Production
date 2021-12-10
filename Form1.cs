@@ -198,51 +198,11 @@ namespace SDA100
                 {
                     serialPort1.Write("m");
                 }
-                //*************************************
-                //ERROR HANDLING 
-                //*************************************
 
-                //Errors will match this regular expression
-                //Regex regex = new Regex("^![A-Za-z]{1}0{1}\r{1}$");
-
-                //if(regex.IsMatch(Globals.inData))
-                //{
-                //    Console.WriteLine("Indata error: {0}", Globals.inData);
-                //    char letter = Globals.inData[1];
-                //    //int maxFailedAttempts = 3;
-                //    switch (letter)
-                //    {
-                //        case 'O': serialPort1.Write("N");
-                //                  //Globals.vacChuckFlag = 0;
-                //                  Globals.errorMessage = "No wafer detected";
-                //            break;
-                //        case 'o': Globals.errorMessage = "Door failed to open";
-                //                  Globals.doorCloseFlag = 1;
-                //            Console.WriteLine("ERROR o");
-                //                  //serialPort1.Write("n");
-                //            break;
-                //        case 'n': Globals.errorMessage = "Door failed to close";
-                //                  Globals.doorCloseFlag = 0;
-                //                  //serialPort1.Write("o"); //Open door if failed to close?
-                //            break;
-                //        case 'H': Globals.errorMessage = "Failed to get to Home";
-                //            break;
-                //        default: Globals.errorMessage = "Unknown error";
-                //            break;
-                //    }
-
-                //} //else
-                //{
                 Globals.scanReply = Globals.inData;
-                //autoReset.Set(); //Crap Dustin is messing with
-                //Console.WriteLine("Inside \"!\":" + Thread.CurrentThread.ManagedThreadId);
-                //Console.WriteLine("Thread Name: " + Thread.CurrentThread.Name);
-                //BeginInvoke?
+
                 BeginInvoke(new EventHandler(ResponseData));
-                //}
-                //*************************************
-                //ERROR HANDLING
-                //*************************************
+
                 
             }
             else if (Globals.inData.Contains("*"))
