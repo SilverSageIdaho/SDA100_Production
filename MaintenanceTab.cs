@@ -144,17 +144,18 @@ namespace SDA100
         {
             MaintenanceSendCommands("c");
         }
+        
         private void btn_FocusLaser_Click(object sender, EventArgs e)
         {
-            if (Globals.doorOpenFlag == 1)
+            if (btn_FocusLaser.Text == "Focus Laser On")
             {
                 MaintenanceSendCommands("j");
-                btnXYM_DoorStatus.Text = "Focus Laser Off";                
+                btn_FocusLaser.Text = "Focus Laser Off";
             }
             else
             {
                 MaintenanceSendCommands("k");
-                btnXYM_DoorStatus.Text = "Focus Laser On";                
+                btn_FocusLaser.Text = "Focus Laser On";
             }
         }
 
