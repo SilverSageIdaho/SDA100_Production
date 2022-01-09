@@ -18,6 +18,7 @@ namespace SDA100
         public static string statusMessage;
         public static string scanReply;
         public static string scanUnknownMessage;
+        public static string pha;
 
         public static string teensyComPort;
         public static bool teensyComPortOK = true;
@@ -98,5 +99,6 @@ namespace SDA100
         public static int sysError;
 
         public static string[] recLines;
+        public static string[] dataFileList;
     }
 }

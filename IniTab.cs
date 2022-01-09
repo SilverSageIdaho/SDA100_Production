@@ -1,4 +1,6 @@
-﻿using System;
+﻿/*Comment*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -57,18 +59,28 @@ namespace SDA100
         private void BtnIni_Save_Click(object sender, EventArgs e)
         {
             CreateIniString();
+            UpdateIniGlobals(); 
+            SendIniValues();
+            
 
-            File.Delete(@"C:\ScanBeta\INI\SDA100ini.bkp.txt");
-            //System.Threading.Thread.Sleep(1000);                  //Is this needed?
-            File.AppendAllText(@"C:\ScanBeta\INI\SDA100ini.bkp.txt",
-                                iniBackupData);
-            File.Delete(@"C:\ScanBeta\INI\SDA100ini.txt");
-            File.AppendAllText(@"C:\ScanBeta\INI\SDA100ini.txt",
-                                iniSaveData);
-            AssignIniGlobals();
-            iniSaveData = null;
-            iniBackupData = null;
-            DisplayIniText();
+            if (chbox_SetStartupDefaults.Checked == true)
+            {
+                
+                Console.WriteLine(iniSaveData);
+
+                File.Delete(@"C:\ScanBeta\INI\SDA100ini.bkp.txt");
+                //System.Threading.Thread.Sleep(1000);                  //Is this needed?
+                File.AppendAllText(@"C:\ScanBeta\INI\SDA100ini.bkp.txt",
+                                    iniBackupData);
+                File.Delete(@"C:\ScanBeta\INI\SDA100ini.txt");
+                File.AppendAllText(@"C:\ScanBeta\INI\SDA100ini.txt",
+                                    iniSaveData);
+                
+                iniSaveData = null;
+                iniBackupData = null;
+                DisplayIniText();
+            }
+            
         }
 
         //private void EditLockout()
@@ -79,9 +91,27 @@ namespace SDA100
 
         private void BtnIni_Edit_Click(object sender, EventArgs e)
         {
-            TxtIni_PIN.Enabled = true;
-            TxtIni_PIN.Visible = true;
-            BtnIni_SubmitPIN.Visible = true;
+            //TxtIni_PIN.Enabled = true;
+            //TxtIni_PIN.Visible = true;
+            //BtnIni_SubmitPIN.Visible = true;
+            isAuth = true;
+            TxtIni_PIN.Enabled = false;
+            TxtIni_PIN.Visible = false;
+            BtnIni_SubmitPIN.Visible = false;
+            BtnIni_SubmitPIN.Enabled = false;
+            BtnIni_Edit.Enabled = false;
+            BtnIni_Save.Enabled = true;
+            TxtIni_EditMapRes.ReadOnly = false;
+            TxtIni_EditWaferDiam.ReadOnly = false;
+            TxtIni_EditEdgeRej.ReadOnly = false;
+            TxtIni_EditSectorSteps.ReadOnly = false;
+            TxtIni_EditTrackSteps.ReadOnly = false;
+            TxtIni_EditParkY.ReadOnly = false;
+            TxtIni_EditParkX.ReadOnly = false;
+            TxtIni_EditParkZ.ReadOnly = false;
+            TxtIni_EditPrefocusY.ReadOnly = false;
+            TxtIni_EditPrefocusX.ReadOnly = false;
+            TxtIni_EditPrefocusZ.ReadOnly = false;
 
         }
 
@@ -133,8 +163,8 @@ namespace SDA100
             iniBackupData += TxtIni_EdgeRej.Text + ",";
             iniBackupData += TxtIni_SectorSteps.Text + ",";
             iniBackupData += TxtIni_TrackSteps.Text + ",";
-            iniBackupData += TxtIni_ParkY.Text + ",";
             iniBackupData += TxtIni_ParkX.Text + ",";
+            iniBackupData += TxtIni_ParkY.Text + ",";            
             iniBackupData += TxtIni_ParkZ.Text + ",";
             iniBackupData += TxtIni_PrefocusX.Text + ",";
             iniBackupData += TxtIni_PrefocusY.Text + ",";
@@ -151,6 +181,22 @@ namespace SDA100
             iniBackupData += Globals.dirRecipe + ",";
             iniBackupData += Globals.dirINI + ",";
             iniBackupData += Globals.dirSummary;
+        }
+
+        public void UpdateIniGlobals()
+        {
+            //Globals.iniOID = iniData[0];
+            Globals.mapRes = int.Parse(TxtIni_EditMapRes.Text);
+            Globals.waferDiam = int.Parse(TxtIni_EditWaferDiam.Text);
+            Globals.edgeRej = int.Parse(TxtIni_EditEdgeRej.Text);
+            Globals.sectorSteps = TxtIni_EditSectorSteps.Text;
+            Globals.trackSteps = TxtIni_EditTrackSteps.Text;
+            Globals.parkX = TxtIni_EditParkX.Text;
+            Globals.parkY = TxtIni_EditParkY.Text;            
+            Globals.parkZ = TxtIni_EditParkZ.Text;
+            Globals.preFocusX = TxtIni_EditPrefocusX.Text;
+            Globals.preFocusY = TxtIni_EditPrefocusX.Text;
+            Globals.preFocusZ = TxtIni_EditPrefocusX.Text;            
         }
     }
 }

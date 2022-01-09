@@ -78,39 +78,8 @@ namespace SDA100
                 //populates ini values on ini tab
                 DisplayIniText();
 
-                serialPort1.Write("." + Globals.mapRes + "r");
-                Console.WriteLine("." + Globals.mapRes + "r");
-                //autoReset.WaitOne(); //Crap Dustin is messing with
-
-                serialPort1.Write("." + Globals.waferDiam + "d");
-                Console.WriteLine("." + Globals.waferDiam + "d");
-
-                serialPort1.Write("." + Globals.edgeRej + "e");
-                Console.WriteLine("." + Globals.edgeRej + "e");
-
-                serialPort1.Write("." + Globals.sectorSteps + "S");
-                Console.WriteLine("." + Globals.sectorSteps + "S");
-
-                serialPort1.Write("." + Globals.trackSteps + "T");
-                Console.WriteLine("." + Globals.trackSteps + "T");
-
-                serialPort1.Write("." + Globals.parkY + "y");
-                Console.WriteLine("." + Globals.parkY + "y");
-
-                serialPort1.Write("." + Globals.parkX + "x");
-                Console.WriteLine("." + Globals.parkX + "x");
-
-                serialPort1.Write("." + Globals.parkZ + "z");
-                Console.WriteLine("." + Globals.parkZ + "z");
-
-                serialPort1.Write("." + Globals.preFocusZ + "u");
-                Console.WriteLine("." + Globals.preFocusZ + "u");
-
-                serialPort1.Write("." + Globals.preFocusX + "v");
-                Console.WriteLine("." + Globals.preFocusX + "v");
-
-                serialPort1.Write("." + Globals.preFocusY + "w");
-                Console.WriteLine("." + Globals.preFocusY + "w");
+                //sends global INI variable values to teensy
+                SendIniValues();
 
                 serialPort1.Write("m");
                 serialPort1.Write("h");
@@ -123,7 +92,7 @@ namespace SDA100
                 //string recString = System.IO.File.ReadAllText(@"C:\ScanBeta\SDA100rec.txt");
                 //string[] recData = iniString.Split(',');
                 Globals.recLines = System.IO.File.ReadAllLines(Globals.dirRecipe + "\\SDA100rec.txt");
-
+                Globals.dataFileList = System.IO.Directory.GetFiles(Globals.dirData, "*.txt");
                 //lbxLoadBox.Text = "New Recipe";
                 //lbxLoadBox.DataSource = System.IO.File.ReadAllLines(Globals.dirRecipe + "\\SDA100rec.txt");
                 dataGridView1.Hide();
@@ -132,8 +101,7 @@ namespace SDA100
                 dataGridView1.Columns[1].Name = "Edit Date";
                 dataGridView1.Columns[2].Name = "User ID";
                 //dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(2, 255, 0, 0);
-                PopulateRecipeList();
-                
+                PopulateRecipeList();                
             }
         }
 
@@ -146,9 +114,9 @@ namespace SDA100
             Globals.waferDiam = int.Parse(iniData[2]);
             Globals.edgeRej = int.Parse(iniData[3]);
             Globals.sectorSteps = iniData[4];
-            Globals.trackSteps = iniData[5];
-            Globals.parkY = iniData[6];
-            Globals.parkX = iniData[7];
+            Globals.trackSteps = iniData[5];            
+            Globals.parkX = iniData[6];
+            Globals.parkY = iniData[7];
             Globals.parkZ = iniData[8];
             Globals.preFocusX = iniData[9];
             Globals.preFocusY = iniData[10];
@@ -168,6 +136,43 @@ namespace SDA100
             Console.WriteLine(Globals.iniOID, Globals.mapRes, Globals.waferDiam);
         }
 
+        public void SendIniValues()
+        {
+            serialPort1.Write("." + Globals.mapRes + "r");
+            Console.WriteLine("." + Globals.mapRes + "r");
+            //autoReset.WaitOne(); //Crap Dustin is messing with
+
+            serialPort1.Write("." + Globals.waferDiam + "d");
+            Console.WriteLine("." + Globals.waferDiam + "d");
+
+            serialPort1.Write("." + Globals.edgeRej + "e");
+            Console.WriteLine("." + Globals.edgeRej + "e");
+
+            serialPort1.Write("." + Globals.sectorSteps + "S");
+            Console.WriteLine("." + Globals.sectorSteps + "S");
+
+            serialPort1.Write("." + Globals.trackSteps + "T");
+            Console.WriteLine("." + Globals.trackSteps + "T");
+
+            serialPort1.Write("." + Globals.parkY + "y");
+            Console.WriteLine("." + Globals.parkY + "y");
+
+            serialPort1.Write("." + Globals.parkX + "x");
+            Console.WriteLine("." + Globals.parkX + "x");
+
+            serialPort1.Write("." + Globals.parkZ + "z");
+            Console.WriteLine("." + Globals.parkZ + "z");
+
+            serialPort1.Write("." + Globals.preFocusZ + "u");
+            Console.WriteLine("." + Globals.preFocusZ + "u");
+
+            serialPort1.Write("." + Globals.preFocusX + "v");
+            Console.WriteLine("." + Globals.preFocusX + "v");
+
+            serialPort1.Write("." + Globals.preFocusY + "w");
+            Console.WriteLine("." + Globals.preFocusY + "w");
+        }
+
         public void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
         {
             Globals.inData = serialPort1.ReadLine();
@@ -175,7 +180,6 @@ namespace SDA100
             {
                 OpenFile();
             }
-
             else if (Globals.inData.Contains("$"))
             {
                 Globals.scanTrack = Globals.inData;
@@ -193,6 +197,11 @@ namespace SDA100
                 {
                     Console.WriteLine("inData FOCUS: {0}", Globals.inData);
                     Globals.z_focus = Globals.inData.Substring(2, Globals.inData.Length - 2);
+                }
+                if (Globals.inData.Substring(0, 2) == "!Q")
+                {
+                    Console.WriteLine("inData PHA: {0}", Globals.inData);
+                    Globals.pha = Globals.inData.Substring(2, Globals.inData.Length - 2);
                 }
                 else if(Globals.inData.Contains("!H"))
                 {
@@ -237,7 +246,6 @@ namespace SDA100
                 //autoReset.Set(); //Crap Dustin is messing with
                 //Console.WriteLine("Inside \"!\":" + Thread.CurrentThread.ManagedThreadId);
                 //Console.WriteLine("Thread Name: " + Thread.CurrentThread.Name);
-                //BeginInvoke?
                 BeginInvoke(new EventHandler(ResponseData));
                 //}
                 //*************************************
@@ -256,10 +264,7 @@ namespace SDA100
                 BeginInvoke(new EventHandler(ProgressBarStatus));
                 string csvData = Globals.editDateTime + "," + Globals.recipeName + "," + Globals.scanID + "," + scanDefectCnt1 + "," + scanDefectCnt2 + "," + scanDefectCnt3 + "," + scanDefectCnt4 + "," + scanDefectCnt5 + "," + scanDefectCnt6 + "," + scanDefectCnt7;
                 System.IO.File.AppendAllText(Globals.dirSummary + "\\ScanSummary.csv", csvData + Environment.NewLine);
-                //using (System.IO.StreamWriter sw = System.IO.File.CreateText(Globals.filePath + ".csv"))
-                //{
-                //    sw.WriteLine(csvData);
-                //}
+                
                 serialPort1.Write("P");
                 serialPort1.Write("o");
                 serialPort1.Write("N");
@@ -310,8 +315,8 @@ namespace SDA100
             Console.WriteLine("Response Data: " + Globals.scanReply); 
                         
             label16.Text = Globals.z_focus;
-
-            if(Globals.errorMessage != null)
+            
+            if (Globals.errorMessage != null)
             {
                 string title = "ERROR";
                 MessageBox.Show(Globals.errorMessage, title);
@@ -328,7 +333,6 @@ namespace SDA100
             using (System.IO.StreamWriter sw = System.IO.File.CreateText(Globals.filePath))
             {
                 sw.WriteLine(recSaveData);
-                //sw.Write("INI Info: ");
                 sw.WriteLine(System.IO.File.ReadAllText(Globals.dirINI + "\\SDA100ini.txt"));
             }
         }        
@@ -343,6 +347,14 @@ namespace SDA100
             }
             else
             {
+                lblSizeClass_PSize1_Limit.ForeColor = Color.Green;
+                lblSizeClass_PSize2_Limit.ForeColor = Color.Green;
+                lblSizeClass_PSize3_Limit.ForeColor = Color.Green;
+                lblSizeClass_PSize4_Limit.ForeColor = Color.Green;
+                lblSizeClass_PSize5_Limit.ForeColor = Color.Green;
+                lblSizeClass_PSize6_Limit.ForeColor = Color.Green;
+                lblSizeClass_PSize7_Limit.ForeColor = Color.Green;
+                
                 EdgeReject();
 
                 trackDefectCnt1 = 0;
@@ -366,10 +378,14 @@ namespace SDA100
                 CheckForComResponse("O");
                 serialPort1.Write("n"); //Close door
                 CheckForComResponse("n");
-                serialPort1.Write("i"); //copy ini(uvw) to XYZ
-                CheckForComResponse("i");
+                serialPort1.Write("j"); //turn on focus laser
+                CheckForComResponse("j");
+                serialPort1.Write("i"); //copy ini(uvw) to XYZ and move to that position
+                CheckForComResponse("i");                
                 serialPort1.Write("f"); //focus Z
                 CheckForComResponse("f");
+                serialPort1.Write("k"); //turn off focus laser
+                CheckForComResponse("k");
                 serialPort1.Write("G"); //Start scan                 
             }
         }
@@ -420,7 +436,6 @@ namespace SDA100
                     break;
                 }
             } while (!gotResponse);
-
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -430,12 +445,19 @@ namespace SDA100
 
         private void tabData_Focus(object sender, EventArgs e)
         {
-            lbxScanDataFiles.DataSource = System.IO.Directory.GetFiles(Globals.dirData, "*.txt");
+            foreach (string dataLine in Globals.dataFileList)
+            {
+                string dataLineParsed = dataLine.Remove(0, 18);
+                lbxScanDataFiles.Items.Add(dataLineParsed);
+            }
+            serialPort1.Write("m");
         }
 
         private void tabRecipe_Focus(object sender, EventArgs e)
         {
             OldAssWayOfCleaningUpRecipes();
         }
+
+        
     }
 }
