@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SDA100
@@ -48,7 +48,7 @@ namespace SDA100
             string[] recipes = System.IO.File.ReadAllLines(Globals.dirRecipe + "\\SDA100rec.txt");
             foreach(string recipe in recipes)
             {
-                Console.WriteLine(recipe);
+                //Console.WriteLine(recipe);
                 string[] recipeData = recipe.Split(',');
                 string editDate = recipeData[0];
                 string createDate = recipeData[1];
@@ -127,8 +127,8 @@ namespace SDA100
             Globals.rejectLimitTotal = txtSizeClass_Total_Limit.Text;
             Globals.recipeComments = txtRecipeComments.Text;
 
-            serialPort1.Write("." + Globals.waferDiam + "d");
-            serialPort1.Write("." + Globals.edgeRej + "e");
+            ScanPort._serialPort.Write("." + Globals.waferDiam + "d");
+            ScanPort._serialPort.Write("." + Globals.edgeRej + "e");
 
             //Update the labels related to recipe on the Main screen
             lblCCRecipeName_Current.Text = Globals.recipeName;

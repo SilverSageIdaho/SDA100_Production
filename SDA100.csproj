@@ -46,7 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleTab.cs" />
+    <Compile Include="ClunkTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsoleTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DataTab.cs">
       <SubType>Form</SubType>
     </Compile>

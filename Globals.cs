@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 
 namespace SDA100
 {
@@ -18,6 +18,7 @@ namespace SDA100
         public static string statusMessage;
         public static string scanReply;
         public static string scanUnknownMessage;
+        public static string pha;
 
         public static string teensyComPort;
         public static bool teensyComPortOK = true;
@@ -98,5 +99,6 @@ namespace SDA100
         public static int sysError;
 
         public static string[] recLines;
+        public static string[] dataFileList;
     }
 }

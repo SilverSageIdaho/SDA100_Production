@@ -1,4 +1,6 @@
-﻿using System;
+﻿/*Comment*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -65,7 +67,7 @@ namespace SDA100
             File.Delete(@"C:\ScanBeta\INI\SDA100ini.txt");
             File.AppendAllText(@"C:\ScanBeta\INI\SDA100ini.txt",
                                 iniSaveData);
-            AssignIniGlobals();
+            ScanPort.AssignIniGlobals();
             iniSaveData = null;
             iniBackupData = null;
             DisplayIniText();

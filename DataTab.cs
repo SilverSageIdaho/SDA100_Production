@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SDA100
@@ -11,7 +11,7 @@ namespace SDA100
     {
         public void lbxScanDataFiles_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string[] eScanData = System.IO.File.ReadAllLines(lbxScanDataFiles.SelectedItem.ToString());
+            string[] eScanData = System.IO.File.ReadAllLines(Globals.dataFileList[lbxScanDataFiles.SelectedIndex].ToString());
             string[] erecData = eScanData[0].Split(',');
 
             Emulator.erecipeOID = erecData[0];

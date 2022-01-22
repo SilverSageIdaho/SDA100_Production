@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.IO.Ports;
 
 
@@ -10,7 +10,7 @@ namespace SDA100
 {
     class ScanPort
     {
-        static SerialPort _serialPort;
+        public static SerialPort _serialPort;
 
         public static void ScanComPorts()
         {
@@ -33,12 +33,13 @@ namespace SDA100
                 _serialPort.StopBits = StopBits.One;
                 _serialPort.Parity = Parity.None;
                 _serialPort.Open();
-
+                _serialPort.NewLine = Environment.NewLine;
+                
                 _serialPort.Write("?");
                 int portTestCount = 0;
                 string portTest = "";
 
-                while ((portTest == "") && (portTestCount < 100))
+                while ((portTest == "") && (portTestCount < 1000))
                 {
                     portTest = _serialPort.ReadExisting();
                     portTestCount++;
@@ -49,7 +50,7 @@ namespace SDA100
                     Console.WriteLine("Found the ! Flag on ComPort: " + ports[x].ToString());
                     Globals.teensyComPort = Convert.ToString(ports[x]);
                     x = portFoundCount;
-                    _serialPort.Close();
+                    //_serialPort.Close();
                 }
                 else
                 {
@@ -59,6 +60,7 @@ namespace SDA100
                 {
                     Globals.teensyComPortOK = false;
                 }
+                
                 //}
 
                 //catch
@@ -67,6 +69,55 @@ namespace SDA100
                 //}                
             }
         }
+        public static void AssignIniGlobals()
+        {
+            string iniString = System.IO.File.ReadAllText(@"C:\ScanBeta\INI\SDA100ini.txt");
+            string[] iniData = iniString.Split(',');
+            Globals.iniOID = iniData[0];
+            Globals.mapRes = int.Parse(iniData[1]);
+            Globals.waferDiam = int.Parse(iniData[2]);
+            Globals.edgeRej = int.Parse(iniData[3]);
+            Globals.sectorSteps = iniData[4];
+            Globals.trackSteps = iniData[5];
+            Globals.parkY = iniData[6];
+            Globals.parkX = iniData[7];
+            Globals.parkZ = iniData[8];
+            Globals.preFocusX = iniData[9];
+            Globals.preFocusY = iniData[10];
+            Globals.preFocusZ = iniData[11];
+            Globals.pSize1Label = iniData[12];
+            Globals.pSize2Label = iniData[13];
+            Globals.pSize3Label = iniData[14];
+            Globals.pSize4Label = iniData[15];
+            Globals.pSize5Label = iniData[16];
+            Globals.pSize6Label = iniData[17];
+            Globals.pSize7Label = iniData[18];
+            Globals.afTimeOut = iniData[19];
+            Globals.dirData = iniData[20];
+            Globals.dirRecipe = iniData[21];
+            Globals.dirINI = iniData[22];
+            Globals.dirSummary = iniData[23];
+            Console.WriteLine(Globals.iniOID, Globals.mapRes, Globals.waferDiam);
+        }
+
+        public static void SendIniValues()
+        {
+            
+        }
+
+        public static string SendReceiveCommands(string command)
+        {
+            string response = "";
+            int responseTimer = 0;
+            while ((response == "") && (responseTimer < 1000))
+            {
+                response = _serialPort.ReadLine();
+                responseTimer++;
+            }
+            Console.WriteLine(response);
+            return response;
+        }
+
         public static void UpdateStatus()
         {
             const char DELIM = ',';
