@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-//using System.Threading.Tasks;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 
@@ -13,32 +13,32 @@ namespace SDA100
      
         public void btnXYM_Front_Click(object sender, EventArgs e)
         {
-            ScanPort._serialPort.Write("." + txt_moveData.Text + "F");
+            MaintenanceSendCommands("." + txt_moveData.Text + "F");
         }
 
         private void btnXYM_Left_Click(object sender, EventArgs e)
         {
-            ScanPort._serialPort.Write("." + txt_moveData.Text + "L");
+            MaintenanceSendCommands("." + txt_moveData.Text + "L");
         }
 
         private void btnXYM_Right_Click(object sender, EventArgs e)
         {
-            ScanPort._serialPort.Write("." + txt_moveData.Text + "R");
+            MaintenanceSendCommands("." + txt_moveData.Text + "R");
         }
 
         private void btnXYM_Back_Click(object sender, EventArgs e)
         {
-            ScanPort._serialPort.Write("." + txt_moveData.Text + "B");
+            MaintenanceSendCommands("." + txt_moveData.Text + "B");
         }
 
         private void btnZM_Up_Click(object sender, EventArgs e)
         {
-            ScanPort._serialPort.Write("." + txt_moveData.Text + "U");
+            MaintenanceSendCommands("." + txt_moveData.Text + "U");
         }
 
         private void btnZM_Down_Click(object sender, EventArgs e)
         {
-            ScanPort._serialPort.Write("." + txt_moveData.Text + "D");
+            MaintenanceSendCommands("." + txt_moveData.Text + "D");
         }
         
         
@@ -73,50 +73,50 @@ namespace SDA100
 
         private void btnMaint_SendString_Click(object sender, EventArgs e)
         {
-            ScanPort._serialPort.Write(txtMaint_SendString.Text);
+            MaintenanceSendCommands(txtMaint_SendString.Text);
             txtMaint_SendString.Text = "";
         }
         private void btnXYM_Home_Click(object sender, EventArgs e)
         {
-            ScanPort._serialPort.Write("H");
+            MaintenanceSendCommands("H");
         }
 
         private void btnMaint_HomeZ_Click(object sender, EventArgs e)
         {
-            ScanPort._serialPort.Write("h");
+            MaintenanceSendCommands("h");
         }
         private void btnMaint_ParkXY_Click(object sender, EventArgs e)
         {
-            ScanPort._serialPort.Write("P");
+            MaintenanceSendCommands("P");
         }
 
         private void btnMaint_ParkZ_Click(object sender, EventArgs e)
         {
-            ScanPort._serialPort.Write("p");
+            MaintenanceSendCommands("p");
         }
         
         private void btn_Prefocus_Click(object sender, EventArgs e)
         {
-            ScanPort._serialPort.Write("i");
+            MaintenanceSendCommands("i");
         }
 
         private void btnMaint_Focus_Click(object sender, EventArgs e)
         {
-            ScanPort._serialPort.Write("f");
+            MaintenanceSendCommands("f");
         }
 
         private void btnXYM_DoorStatus_Click(object sender, EventArgs e)
         {
             if (Globals.doorOpenFlag == 1)
             {
-                ScanPort._serialPort.Write("o");
+                MaintenanceSendCommands("o");
                 btnXYM_DoorStatus.Text = "Close Door";
                 Globals.doorOpenFlag = 0;
                 Globals.doorCloseFlag = 1;
             }
             else
             {
-                ScanPort._serialPort.Write("n");
+                MaintenanceSendCommands("n");
                 btnXYM_DoorStatus.Text = "Open Door";
                 Globals.doorOpenFlag = 1;
                 Globals.doorCloseFlag = 0;
@@ -127,23 +127,44 @@ namespace SDA100
         {
             if (Globals.vacChuckFlag == 0)
             {
-                ScanPort._serialPort.Write("O");
+                MaintenanceSendCommands("O");
                 btnXYM_VacuumStatus.Text = "Chuck Vac Off";
                 Globals.vacChuckFlag = 1;
 
             }
             else
             {
-                ScanPort._serialPort.Write("N");
+                MaintenanceSendCommands("N");
                 btnXYM_VacuumStatus.Text = "Chuck Vac On";
                 Globals.vacChuckFlag = 0;
 
             }
         }
-        private void btnSyS_ReadPHA_Click(object sender, EventArgs e)
+        private void btn_ClearErrors_Click(object sender, EventArgs e)
         {
-            ScanPort._serialPort.Write("Q");
+            MaintenanceSendCommands("c");
         }
+        
+        private void btn_FocusLaser_Click(object sender, EventArgs e)
+        {
+            if (btn_FocusLaser.Text == "Focus Laser On")
+            {
+                MaintenanceSendCommands("j");
+                btn_FocusLaser.Text = "Focus Laser Off";
+            }
+            else
+            {
+                MaintenanceSendCommands("k");
+                btn_FocusLaser.Text = "Focus Laser On";
+            }
+        }
+
+        public void MaintenanceSendCommands(string command)
+        {
+            serialPort1.Write(command);
+            serialPort1.Write("m");
+        }
+
         public void UpdateSystemStatusLabels()
         {
             if (Globals.mxFrontLimitFlag == 0)
@@ -243,7 +264,7 @@ namespace SDA100
 
         private void btnSyS_RefreshStatus_Click(object sender, EventArgs e)
         {
-            ScanPort._serialPort.Write("m");
+            serialPort1.Write("m");
         }
     }
 }

@@ -31,11 +31,11 @@ namespace SDA100
                 TxtIni_EdgeRej.Text = Convert.ToString(Globals.edgeRej);
                 TxtIni_SectorSteps.Text = Convert.ToString(Globals.sectorSteps);
                 TxtIni_TrackSteps.Text = Convert.ToString(Globals.trackSteps);
-                TxtIni_ParkY.Text = Convert.ToString(Globals.parkY);
                 TxtIni_ParkX.Text = Convert.ToString(Globals.parkX);
+                TxtIni_ParkY.Text = Convert.ToString(Globals.parkY);                
                 TxtIni_ParkZ.Text = Convert.ToString(Globals.parkZ);
-                TxtIni_PrefocusY.Text = Convert.ToString(Globals.preFocusY);
                 TxtIni_PrefocusX.Text = Convert.ToString(Globals.preFocusX);
+                TxtIni_PrefocusY.Text = Convert.ToString(Globals.preFocusY);                
                 TxtIni_PrefocusZ.Text = Convert.ToString(Globals.preFocusZ);
 
                 TxtIni_EditMapRes.Text = Convert.ToString(Globals.mapRes);
@@ -43,8 +43,8 @@ namespace SDA100
                 TxtIni_EditEdgeRej.Text = Convert.ToString(Globals.edgeRej);
                 TxtIni_EditSectorSteps.Text = Convert.ToString(Globals.sectorSteps);
                 TxtIni_EditTrackSteps.Text = Convert.ToString(Globals.trackSteps);
-                TxtIni_EditParkY.Text = Convert.ToString(Globals.parkY);
                 TxtIni_EditParkX.Text = Convert.ToString(Globals.parkX);
+                TxtIni_EditParkY.Text = Convert.ToString(Globals.parkY);
                 TxtIni_EditParkZ.Text = Convert.ToString(Globals.parkZ);
                 TxtIni_EditPrefocusY.Text = Convert.ToString(Globals.preFocusY);
                 TxtIni_EditPrefocusX.Text = Convert.ToString(Globals.preFocusX);
@@ -59,18 +59,28 @@ namespace SDA100
         private void BtnIni_Save_Click(object sender, EventArgs e)
         {
             CreateIniString();
+            UpdateIniGlobals(); 
+            SendIniValues();
+            
 
-            File.Delete(@"C:\ScanBeta\INI\SDA100ini.bkp.txt");
-            //System.Threading.Thread.Sleep(1000);                  //Is this needed?
-            File.AppendAllText(@"C:\ScanBeta\INI\SDA100ini.bkp.txt",
-                                iniBackupData);
-            File.Delete(@"C:\ScanBeta\INI\SDA100ini.txt");
-            File.AppendAllText(@"C:\ScanBeta\INI\SDA100ini.txt",
-                                iniSaveData);
-            ScanPort.AssignIniGlobals();
-            iniSaveData = null;
-            iniBackupData = null;
-            DisplayIniText();
+            if (chbox_SetStartupDefaults.Checked == true)
+            {
+                
+                Console.WriteLine(iniSaveData);
+
+                File.Delete(@"C:\ScanBeta\INI\SDA100ini.bkp.txt");
+                //System.Threading.Thread.Sleep(1000);                  //Is this needed?
+                File.AppendAllText(@"C:\ScanBeta\INI\SDA100ini.bkp.txt",
+                                    iniBackupData);
+                File.Delete(@"C:\ScanBeta\INI\SDA100ini.txt");
+                File.AppendAllText(@"C:\ScanBeta\INI\SDA100ini.txt",
+                                    iniSaveData);
+                
+                iniSaveData = null;
+                iniBackupData = null;
+                DisplayIniText();
+            }
+            
         }
 
         //private void EditLockout()
@@ -81,10 +91,27 @@ namespace SDA100
 
         private void BtnIni_Edit_Click(object sender, EventArgs e)
         {
-            TxtIni_PIN.Enabled = true;
-            TxtIni_PIN.Visible = true;
-            BtnIni_SubmitPIN.Visible = true;
-
+            //TxtIni_PIN.Enabled = true;
+            //TxtIni_PIN.Visible = true;
+            //BtnIni_SubmitPIN.Visible = true;
+            isAuth = true;
+            TxtIni_PIN.Enabled = false;
+            TxtIni_PIN.Visible = false;
+            BtnIni_SubmitPIN.Visible = false;
+            BtnIni_SubmitPIN.Enabled = false;
+            BtnIni_Edit.Enabled = false;
+            BtnIni_Save.Enabled = true;
+            TxtIni_EditMapRes.ReadOnly = false;
+            TxtIni_EditWaferDiam.ReadOnly = false;
+            TxtIni_EditEdgeRej.ReadOnly = false;
+            TxtIni_EditSectorSteps.ReadOnly = false;
+            TxtIni_EditTrackSteps.ReadOnly = false;
+            TxtIni_EditParkY.ReadOnly = false;
+            TxtIni_EditParkX.ReadOnly = false;
+            TxtIni_EditParkZ.ReadOnly = false;
+            TxtIni_EditPrefocusX.ReadOnly = false;
+            TxtIni_EditPrefocusY.ReadOnly = false;            
+            TxtIni_EditPrefocusZ.ReadOnly = false;
         }
 
         private void BtnIni_SubmitPIN_Click(object sender, EventArgs e)
@@ -100,8 +127,8 @@ namespace SDA100
                 BtnIni_Save.Enabled = true;
                 TxtIni_EditMapRes.ReadOnly = false;
             }
-
         }
+
         public void CreateIniString()
         {
             iniSaveData = Globals.iniOID + ",";
@@ -109,9 +136,9 @@ namespace SDA100
             iniSaveData += TxtIni_EditWaferDiam.Text + ",";
             iniSaveData += TxtIni_EditEdgeRej.Text + ",";
             iniSaveData += TxtIni_EditSectorSteps.Text + ",";
-            iniSaveData += TxtIni_EditTrackSteps.Text + ",";
-            iniSaveData += TxtIni_EditParkY.Text + ",";
+            iniSaveData += TxtIni_EditTrackSteps.Text + ",";            
             iniSaveData += TxtIni_EditParkX.Text + ",";
+            iniSaveData += TxtIni_EditParkY.Text + ",";
             iniSaveData += TxtIni_EditParkZ.Text + ",";
             iniSaveData += TxtIni_EditPrefocusX.Text + ",";
             iniSaveData += TxtIni_EditPrefocusY.Text + ",";
@@ -135,8 +162,8 @@ namespace SDA100
             iniBackupData += TxtIni_EdgeRej.Text + ",";
             iniBackupData += TxtIni_SectorSteps.Text + ",";
             iniBackupData += TxtIni_TrackSteps.Text + ",";
-            iniBackupData += TxtIni_ParkY.Text + ",";
             iniBackupData += TxtIni_ParkX.Text + ",";
+            iniBackupData += TxtIni_ParkY.Text + ",";            
             iniBackupData += TxtIni_ParkZ.Text + ",";
             iniBackupData += TxtIni_PrefocusX.Text + ",";
             iniBackupData += TxtIni_PrefocusY.Text + ",";
@@ -153,6 +180,22 @@ namespace SDA100
             iniBackupData += Globals.dirRecipe + ",";
             iniBackupData += Globals.dirINI + ",";
             iniBackupData += Globals.dirSummary;
+        }
+
+        public void UpdateIniGlobals()
+        {
+            //Globals.iniOID = iniData[0];
+            Globals.mapRes = int.Parse(TxtIni_EditMapRes.Text);
+            Globals.waferDiam = int.Parse(TxtIni_EditWaferDiam.Text);
+            Globals.edgeRej = int.Parse(TxtIni_EditEdgeRej.Text);
+            Globals.sectorSteps = TxtIni_EditSectorSteps.Text;
+            Globals.trackSteps = TxtIni_EditTrackSteps.Text;
+            Globals.parkX = TxtIni_EditParkX.Text;
+            Globals.parkY = TxtIni_EditParkY.Text;            
+            Globals.parkZ = TxtIni_EditParkZ.Text;
+            Globals.preFocusX = TxtIni_EditPrefocusX.Text;
+            Globals.preFocusY = TxtIni_EditPrefocusY.Text;
+            Globals.preFocusZ = TxtIni_EditPrefocusZ.Text;            
         }
     }
 }

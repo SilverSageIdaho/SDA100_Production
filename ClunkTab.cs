@@ -7,26 +7,7 @@ using System.Windows.Forms;
 
 namespace SDA100
 {
-    public partial class mainForm : Form
-    {
-        
-       
-
-
-
-       
-
-        
-
-       
-
-       
-
-       
-
-       
-        
-    }
+    
 }
 
 
