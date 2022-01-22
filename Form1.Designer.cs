@@ -3383,11 +3383,11 @@ namespace SDA100
             // lblZM_Title
             // 
             this.lblZM_Title.AutoSize = true;
-            this.lblZM_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZM_Title.Location = new System.Drawing.Point(382, 21);
+            this.lblZM_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblZM_Title.Location = new System.Drawing.Point(378, 16);
             this.lblZM_Title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblZM_Title.Name = "lblZM_Title";
-            this.lblZM_Title.Size = new System.Drawing.Size(116, 25);
+            this.lblZM_Title.Size = new System.Drawing.Size(127, 29);
             this.lblZM_Title.TabIndex = 0;
             this.lblZM_Title.Text = "Z Motions";
             // 
@@ -3419,11 +3419,11 @@ namespace SDA100
             // lblXYM_Title
             // 
             this.lblXYM_Title.AutoSize = true;
-            this.lblXYM_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblXYM_Title.Location = new System.Drawing.Point(127, 21);
+            this.lblXYM_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblXYM_Title.Location = new System.Drawing.Point(123, 16);
             this.lblXYM_Title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblXYM_Title.Name = "lblXYM_Title";
-            this.lblXYM_Title.Size = new System.Drawing.Size(133, 25);
+            this.lblXYM_Title.Size = new System.Drawing.Size(147, 29);
             this.lblXYM_Title.TabIndex = 0;
             this.lblXYM_Title.Text = "XY Motions";
             // 
@@ -3555,9 +3555,12 @@ namespace SDA100
             // chbox_SetStartupDefaults
             // 
             this.chbox_SetStartupDefaults.AutoSize = true;
-            this.chbox_SetStartupDefaults.Location = new System.Drawing.Point(283, 404);
+            this.chbox_SetStartupDefaults.Checked = true;
+            this.chbox_SetStartupDefaults.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chbox_SetStartupDefaults.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chbox_SetStartupDefaults.Location = new System.Drawing.Point(319, 417);
             this.chbox_SetStartupDefaults.Name = "chbox_SetStartupDefaults";
-            this.chbox_SetStartupDefaults.Size = new System.Drawing.Size(194, 20);
+            this.chbox_SetStartupDefaults.Size = new System.Drawing.Size(230, 24);
             this.chbox_SetStartupDefaults.TabIndex = 100;
             this.chbox_SetStartupDefaults.Text = "Set As Startup Defaults?";
             this.chbox_SetStartupDefaults.UseVisualStyleBackColor = true;
@@ -3593,7 +3596,7 @@ namespace SDA100
             // 
             this.BtnIni_Save.Enabled = false;
             this.BtnIni_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnIni_Save.Location = new System.Drawing.Point(130, 371);
+            this.BtnIni_Save.Location = new System.Drawing.Point(167, 393);
             this.BtnIni_Save.Name = "BtnIni_Save";
             this.BtnIni_Save.Size = new System.Drawing.Size(115, 75);
             this.BtnIni_Save.TabIndex = 94;
@@ -3640,7 +3643,7 @@ namespace SDA100
             this.groupBoxEdit.Controls.Add(this.label82);
             this.groupBoxEdit.Location = new System.Drawing.Point(56, 50);
             this.groupBoxEdit.Name = "groupBoxEdit";
-            this.groupBoxEdit.Size = new System.Drawing.Size(518, 315);
+            this.groupBoxEdit.Size = new System.Drawing.Size(545, 325);
             this.groupBoxEdit.TabIndex = 93;
             this.groupBoxEdit.TabStop = false;
             // 
@@ -3658,95 +3661,95 @@ namespace SDA100
             // 
             // label36
             // 
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.Location = new System.Drawing.Point(461, 279);
             this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(48, 28);
+            this.label36.Size = new System.Drawing.Size(53, 28);
             this.label36.TabIndex = 97;
             this.label36.Text = "Steps";
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label37
             // 
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.Location = new System.Drawing.Point(461, 235);
             this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(48, 28);
+            this.label37.Size = new System.Drawing.Size(53, 28);
             this.label37.TabIndex = 96;
             this.label37.Text = "Steps";
             this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label38
             // 
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.Location = new System.Drawing.Point(461, 194);
             this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(48, 28);
+            this.label38.Size = new System.Drawing.Size(53, 28);
             this.label38.TabIndex = 95;
             this.label38.Text = "Steps";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label39
             // 
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.Location = new System.Drawing.Point(461, 152);
             this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(48, 28);
+            this.label39.Size = new System.Drawing.Size(53, 28);
             this.label39.TabIndex = 94;
             this.label39.Text = "Steps";
             this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label41
             // 
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.Location = new System.Drawing.Point(461, 108);
             this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(48, 28);
+            this.label41.Size = new System.Drawing.Size(53, 28);
             this.label41.TabIndex = 93;
             this.label41.Text = "Steps";
             this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label42
             // 
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.Location = new System.Drawing.Point(461, 65);
             this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(48, 28);
+            this.label42.Size = new System.Drawing.Size(53, 28);
             this.label42.TabIndex = 92;
             this.label42.Text = "Steps";
             this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label43
             // 
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.Location = new System.Drawing.Point(230, 254);
             this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(48, 28);
+            this.label43.Size = new System.Drawing.Size(51, 28);
             this.label43.TabIndex = 91;
             this.label43.Text = "Steps";
             this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label44
             // 
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.Location = new System.Drawing.Point(230, 210);
             this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(48, 28);
+            this.label44.Size = new System.Drawing.Size(51, 28);
             this.label44.TabIndex = 90;
             this.label44.Text = "Steps";
             this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label45
             // 
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.Location = new System.Drawing.Point(230, 169);
             this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label45.Name = "label45";
@@ -3757,7 +3760,7 @@ namespace SDA100
             // 
             // label46
             // 
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.Location = new System.Drawing.Point(230, 127);
             this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label46.Name = "label46";
@@ -3768,7 +3771,7 @@ namespace SDA100
             // 
             // label47
             // 
-            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.Location = new System.Drawing.Point(230, 86);
             this.label47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label47.Name = "label47";
@@ -3780,28 +3783,28 @@ namespace SDA100
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(149, 18);
+            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Location = new System.Drawing.Point(187, 18);
             this.label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(167, 25);
+            this.label48.Size = new System.Drawing.Size(185, 29);
             this.label48.TabIndex = 86;
             this.label48.Text = "Edit INI Values";
             // 
             // TxtIni_EditParkY
             // 
-            this.TxtIni_EditParkY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_EditParkY.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_EditParkY.Location = new System.Drawing.Point(367, 68);
             this.TxtIni_EditParkY.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditParkY.Name = "TxtIni_EditParkY";
             this.TxtIni_EditParkY.ReadOnly = true;
-            this.TxtIni_EditParkY.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_EditParkY.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditParkY.TabIndex = 15;
             this.TxtIni_EditParkY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label72
             // 
-            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label72.Location = new System.Drawing.Point(285, 71);
             this.label72.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label72.Name = "label72";
@@ -3812,29 +3815,29 @@ namespace SDA100
             // 
             // TxtIni_EditPrefocusZ
             // 
-            this.TxtIni_EditPrefocusZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_EditPrefocusZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_EditPrefocusZ.Location = new System.Drawing.Point(367, 282);
             this.TxtIni_EditPrefocusZ.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditPrefocusZ.Name = "TxtIni_EditPrefocusZ";
             this.TxtIni_EditPrefocusZ.ReadOnly = true;
-            this.TxtIni_EditPrefocusZ.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_EditPrefocusZ.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditPrefocusZ.TabIndex = 85;
             this.TxtIni_EditPrefocusZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtIni_EditTrackSteps
             // 
-            this.TxtIni_EditTrackSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_EditTrackSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_EditTrackSteps.Location = new System.Drawing.Point(133, 260);
             this.TxtIni_EditTrackSteps.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditTrackSteps.Name = "TxtIni_EditTrackSteps";
             this.TxtIni_EditTrackSteps.ReadOnly = true;
-            this.TxtIni_EditTrackSteps.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_EditTrackSteps.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditTrackSteps.TabIndex = 13;
             this.TxtIni_EditTrackSteps.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label73
             // 
-            this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label73.Location = new System.Drawing.Point(285, 285);
             this.label73.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label73.Name = "label73";
@@ -3845,7 +3848,7 @@ namespace SDA100
             // 
             // label74
             // 
-            this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label74.Location = new System.Drawing.Point(17, 263);
             this.label74.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label74.Name = "label74";
@@ -3856,29 +3859,29 @@ namespace SDA100
             // 
             // TxtIni_EditPrefocusX
             // 
-            this.TxtIni_EditPrefocusX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_EditPrefocusX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_EditPrefocusX.Location = new System.Drawing.Point(367, 238);
             this.TxtIni_EditPrefocusX.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditPrefocusX.Name = "TxtIni_EditPrefocusX";
             this.TxtIni_EditPrefocusX.ReadOnly = true;
-            this.TxtIni_EditPrefocusX.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_EditPrefocusX.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditPrefocusX.TabIndex = 83;
             this.TxtIni_EditPrefocusX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtIni_EditSectorSteps
             // 
-            this.TxtIni_EditSectorSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_EditSectorSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_EditSectorSteps.Location = new System.Drawing.Point(133, 216);
             this.TxtIni_EditSectorSteps.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditSectorSteps.Name = "TxtIni_EditSectorSteps";
             this.TxtIni_EditSectorSteps.ReadOnly = true;
-            this.TxtIni_EditSectorSteps.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_EditSectorSteps.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditSectorSteps.TabIndex = 11;
             this.TxtIni_EditSectorSteps.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label75
             // 
-            this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label75.Location = new System.Drawing.Point(285, 241);
             this.label75.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label75.Name = "label75";
@@ -3889,7 +3892,7 @@ namespace SDA100
             // 
             // label76
             // 
-            this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label76.Location = new System.Drawing.Point(17, 219);
             this.label76.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label76.Name = "label76";
@@ -3900,29 +3903,29 @@ namespace SDA100
             // 
             // TxtIni_EditPrefocusY
             // 
-            this.TxtIni_EditPrefocusY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_EditPrefocusY.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_EditPrefocusY.Location = new System.Drawing.Point(367, 197);
             this.TxtIni_EditPrefocusY.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditPrefocusY.Name = "TxtIni_EditPrefocusY";
             this.TxtIni_EditPrefocusY.ReadOnly = true;
-            this.TxtIni_EditPrefocusY.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_EditPrefocusY.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditPrefocusY.TabIndex = 81;
             this.TxtIni_EditPrefocusY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtIni_EditEdgeRej
             // 
-            this.TxtIni_EditEdgeRej.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_EditEdgeRej.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_EditEdgeRej.Location = new System.Drawing.Point(133, 175);
             this.TxtIni_EditEdgeRej.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditEdgeRej.Name = "TxtIni_EditEdgeRej";
             this.TxtIni_EditEdgeRej.ReadOnly = true;
-            this.TxtIni_EditEdgeRej.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_EditEdgeRej.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditEdgeRej.TabIndex = 9;
             this.TxtIni_EditEdgeRej.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label77
             // 
-            this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label77.Location = new System.Drawing.Point(285, 200);
             this.label77.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label77.Name = "label77";
@@ -3933,7 +3936,7 @@ namespace SDA100
             // 
             // label78
             // 
-            this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label78.Location = new System.Drawing.Point(17, 178);
             this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label78.Name = "label78";
@@ -3944,29 +3947,29 @@ namespace SDA100
             // 
             // TxtIni_EditParkZ
             // 
-            this.TxtIni_EditParkZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_EditParkZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_EditParkZ.Location = new System.Drawing.Point(367, 155);
             this.TxtIni_EditParkZ.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditParkZ.Name = "TxtIni_EditParkZ";
             this.TxtIni_EditParkZ.ReadOnly = true;
-            this.TxtIni_EditParkZ.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_EditParkZ.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditParkZ.TabIndex = 79;
             this.TxtIni_EditParkZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtIni_EditWaferDiam
             // 
-            this.TxtIni_EditWaferDiam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_EditWaferDiam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_EditWaferDiam.Location = new System.Drawing.Point(133, 133);
             this.TxtIni_EditWaferDiam.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditWaferDiam.Name = "TxtIni_EditWaferDiam";
             this.TxtIni_EditWaferDiam.ReadOnly = true;
-            this.TxtIni_EditWaferDiam.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_EditWaferDiam.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditWaferDiam.TabIndex = 7;
             this.TxtIni_EditWaferDiam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label79
             // 
-            this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label79.Location = new System.Drawing.Point(285, 158);
             this.label79.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label79.Name = "label79";
@@ -3977,7 +3980,7 @@ namespace SDA100
             // 
             // label80
             // 
-            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label80.Location = new System.Drawing.Point(17, 136);
             this.label80.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label80.Name = "label80";
@@ -3988,18 +3991,18 @@ namespace SDA100
             // 
             // TxtIni_EditParkX
             // 
-            this.TxtIni_EditParkX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_EditParkX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_EditParkX.Location = new System.Drawing.Point(367, 111);
             this.TxtIni_EditParkX.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditParkX.Name = "TxtIni_EditParkX";
             this.TxtIni_EditParkX.ReadOnly = true;
-            this.TxtIni_EditParkX.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_EditParkX.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditParkX.TabIndex = 77;
             this.TxtIni_EditParkX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label81
             // 
-            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label81.Location = new System.Drawing.Point(285, 114);
             this.label81.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label81.Name = "label81";
@@ -4010,18 +4013,18 @@ namespace SDA100
             // 
             // TxtIni_EditMapRes
             // 
-            this.TxtIni_EditMapRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_EditMapRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_EditMapRes.Location = new System.Drawing.Point(133, 89);
             this.TxtIni_EditMapRes.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditMapRes.Name = "TxtIni_EditMapRes";
             this.TxtIni_EditMapRes.ReadOnly = true;
-            this.TxtIni_EditMapRes.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_EditMapRes.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditMapRes.TabIndex = 5;
             this.TxtIni_EditMapRes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label82
             // 
-            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label82.Location = new System.Drawing.Point(17, 92);
             this.label82.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label82.Name = "label82";
@@ -4069,13 +4072,13 @@ namespace SDA100
             this.IniGroupBox.Controls.Add(this.label14);
             this.IniGroupBox.Location = new System.Drawing.Point(631, 50);
             this.IniGroupBox.Name = "IniGroupBox";
-            this.IniGroupBox.Size = new System.Drawing.Size(530, 315);
+            this.IniGroupBox.Size = new System.Drawing.Size(530, 325);
             this.IniGroupBox.TabIndex = 92;
             this.IniGroupBox.TabStop = false;
             // 
             // label71
             // 
-            this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label71.Location = new System.Drawing.Point(464, 264);
             this.label71.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label71.Name = "label71";
@@ -4086,7 +4089,7 @@ namespace SDA100
             // 
             // label70
             // 
-            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label70.Location = new System.Drawing.Point(464, 220);
             this.label70.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label70.Name = "label70";
@@ -4097,7 +4100,7 @@ namespace SDA100
             // 
             // label69
             // 
-            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label69.Location = new System.Drawing.Point(464, 179);
             this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label69.Name = "label69";
@@ -4108,7 +4111,7 @@ namespace SDA100
             // 
             // label56
             // 
-            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.Location = new System.Drawing.Point(464, 137);
             this.label56.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label56.Name = "label56";
@@ -4119,7 +4122,7 @@ namespace SDA100
             // 
             // label55
             // 
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.Location = new System.Drawing.Point(464, 93);
             this.label55.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label55.Name = "label55";
@@ -4130,7 +4133,7 @@ namespace SDA100
             // 
             // label54
             // 
-            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.Location = new System.Drawing.Point(464, 50);
             this.label54.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label54.Name = "label54";
@@ -4141,7 +4144,7 @@ namespace SDA100
             // 
             // label53
             // 
-            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.Location = new System.Drawing.Point(230, 242);
             this.label53.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label53.Name = "label53";
@@ -4152,7 +4155,7 @@ namespace SDA100
             // 
             // label52
             // 
-            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label52.Location = new System.Drawing.Point(230, 200);
             this.label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label52.Name = "label52";
@@ -4163,7 +4166,7 @@ namespace SDA100
             // 
             // label51
             // 
-            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.Location = new System.Drawing.Point(230, 158);
             this.label51.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label51.Name = "label51";
@@ -4174,7 +4177,7 @@ namespace SDA100
             // 
             // label50
             // 
-            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label50.Location = new System.Drawing.Point(230, 116);
             this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label50.Name = "label50";
@@ -4185,7 +4188,7 @@ namespace SDA100
             // 
             // label49
             // 
-            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label49.Location = new System.Drawing.Point(230, 74);
             this.label49.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label49.Name = "label49";
@@ -4197,28 +4200,28 @@ namespace SDA100
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(149, 18);
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(136, 18);
             this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(250, 25);
+            this.label30.Size = new System.Drawing.Size(277, 29);
             this.label30.TabIndex = 86;
             this.label30.Text = "Current INI File Values";
             // 
             // TxtIni_ParkY
             // 
-            this.TxtIni_ParkY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_ParkY.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_ParkY.Location = new System.Drawing.Point(367, 56);
             this.TxtIni_ParkY.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_ParkY.Name = "TxtIni_ParkY";
             this.TxtIni_ParkY.ReadOnly = true;
-            this.TxtIni_ParkY.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_ParkY.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_ParkY.TabIndex = 15;
             this.TxtIni_ParkY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label18
             // 
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(285, 59);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
@@ -4229,29 +4232,29 @@ namespace SDA100
             // 
             // TxtIni_PrefocusZ
             // 
-            this.TxtIni_PrefocusZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_PrefocusZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_PrefocusZ.Location = new System.Drawing.Point(367, 270);
             this.TxtIni_PrefocusZ.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_PrefocusZ.Name = "TxtIni_PrefocusZ";
             this.TxtIni_PrefocusZ.ReadOnly = true;
-            this.TxtIni_PrefocusZ.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_PrefocusZ.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_PrefocusZ.TabIndex = 85;
             this.TxtIni_PrefocusZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtIni_TrackSteps
             // 
-            this.TxtIni_TrackSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_TrackSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_TrackSteps.Location = new System.Drawing.Point(133, 245);
             this.TxtIni_TrackSteps.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_TrackSteps.Name = "TxtIni_TrackSteps";
             this.TxtIni_TrackSteps.ReadOnly = true;
-            this.TxtIni_TrackSteps.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_TrackSteps.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_TrackSteps.TabIndex = 13;
             this.TxtIni_TrackSteps.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label31
             // 
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.Location = new System.Drawing.Point(285, 273);
             this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
@@ -4262,7 +4265,7 @@ namespace SDA100
             // 
             // label20
             // 
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(17, 248);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
@@ -4273,29 +4276,29 @@ namespace SDA100
             // 
             // TxtIni_PrefocusX
             // 
-            this.TxtIni_PrefocusX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_PrefocusX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_PrefocusX.Location = new System.Drawing.Point(367, 226);
             this.TxtIni_PrefocusX.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_PrefocusX.Name = "TxtIni_PrefocusX";
             this.TxtIni_PrefocusX.ReadOnly = true;
-            this.TxtIni_PrefocusX.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_PrefocusX.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_PrefocusX.TabIndex = 83;
             this.TxtIni_PrefocusX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtIni_SectorSteps
             // 
-            this.TxtIni_SectorSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_SectorSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_SectorSteps.Location = new System.Drawing.Point(133, 203);
             this.TxtIni_SectorSteps.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_SectorSteps.Name = "TxtIni_SectorSteps";
             this.TxtIni_SectorSteps.ReadOnly = true;
-            this.TxtIni_SectorSteps.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_SectorSteps.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_SectorSteps.TabIndex = 11;
             this.TxtIni_SectorSteps.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label32
             // 
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.Location = new System.Drawing.Point(285, 229);
             this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label32.Name = "label32";
@@ -4306,7 +4309,7 @@ namespace SDA100
             // 
             // label21
             // 
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(17, 206);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
@@ -4317,29 +4320,29 @@ namespace SDA100
             // 
             // TxtIni_PrefocusY
             // 
-            this.TxtIni_PrefocusY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_PrefocusY.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_PrefocusY.Location = new System.Drawing.Point(367, 185);
             this.TxtIni_PrefocusY.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_PrefocusY.Name = "TxtIni_PrefocusY";
             this.TxtIni_PrefocusY.ReadOnly = true;
-            this.TxtIni_PrefocusY.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_PrefocusY.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_PrefocusY.TabIndex = 81;
             this.TxtIni_PrefocusY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtIni_EdgeRej
             // 
-            this.TxtIni_EdgeRej.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_EdgeRej.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_EdgeRej.Location = new System.Drawing.Point(133, 161);
             this.TxtIni_EdgeRej.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EdgeRej.Name = "TxtIni_EdgeRej";
             this.TxtIni_EdgeRej.ReadOnly = true;
-            this.TxtIni_EdgeRej.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_EdgeRej.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EdgeRej.TabIndex = 9;
             this.TxtIni_EdgeRej.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label33
             // 
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.Location = new System.Drawing.Point(285, 188);
             this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label33.Name = "label33";
@@ -4350,7 +4353,7 @@ namespace SDA100
             // 
             // label19
             // 
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(17, 164);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
@@ -4361,29 +4364,29 @@ namespace SDA100
             // 
             // TxtIni_ParkZ
             // 
-            this.TxtIni_ParkZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_ParkZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_ParkZ.Location = new System.Drawing.Point(367, 143);
             this.TxtIni_ParkZ.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_ParkZ.Name = "TxtIni_ParkZ";
             this.TxtIni_ParkZ.ReadOnly = true;
-            this.TxtIni_ParkZ.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_ParkZ.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_ParkZ.TabIndex = 79;
             this.TxtIni_ParkZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtIni_WaferDiam
             // 
-            this.TxtIni_WaferDiam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_WaferDiam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_WaferDiam.Location = new System.Drawing.Point(133, 119);
             this.TxtIni_WaferDiam.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_WaferDiam.Name = "TxtIni_WaferDiam";
             this.TxtIni_WaferDiam.ReadOnly = true;
-            this.TxtIni_WaferDiam.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_WaferDiam.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_WaferDiam.TabIndex = 7;
             this.TxtIni_WaferDiam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label34
             // 
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.Location = new System.Drawing.Point(285, 146);
             this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label34.Name = "label34";
@@ -4394,7 +4397,7 @@ namespace SDA100
             // 
             // label17
             // 
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(17, 122);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
@@ -4405,18 +4408,18 @@ namespace SDA100
             // 
             // TxtIni_ParkX
             // 
-            this.TxtIni_ParkX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_ParkX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_ParkX.Location = new System.Drawing.Point(367, 99);
             this.TxtIni_ParkX.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_ParkX.Name = "TxtIni_ParkX";
             this.TxtIni_ParkX.ReadOnly = true;
-            this.TxtIni_ParkX.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_ParkX.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_ParkX.TabIndex = 77;
             this.TxtIni_ParkX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label35
             // 
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.Location = new System.Drawing.Point(285, 102);
             this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label35.Name = "label35";
@@ -4427,18 +4430,18 @@ namespace SDA100
             // 
             // TxtIni_MapRes
             // 
-            this.TxtIni_MapRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIni_MapRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIni_MapRes.Location = new System.Drawing.Point(133, 77);
             this.TxtIni_MapRes.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_MapRes.Name = "TxtIni_MapRes";
             this.TxtIni_MapRes.ReadOnly = true;
-            this.TxtIni_MapRes.Size = new System.Drawing.Size(93, 22);
+            this.TxtIni_MapRes.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_MapRes.TabIndex = 5;
             this.TxtIni_MapRes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label14
             // 
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(17, 80);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";

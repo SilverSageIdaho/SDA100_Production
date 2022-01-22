@@ -98,7 +98,10 @@ namespace SDA100
         public static int countAbort;
         public static int sysError;
 
-        public static string[] recLines;
-        public static string[] dataFileList;
+        public static List<string> recipeList = new List<string>();
+        //public static string[] recLines;
+        public static List<string> dataList = new List<string>();
+        //public static string[] dataFileList;
+        
     }
 }

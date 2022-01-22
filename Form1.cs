@@ -41,8 +41,8 @@ namespace SDA100
 
         //static AutoResetEvent autoReset = new AutoResetEvent(false);
         //static ManualResetEvent manReset = new ManualResetEvent(false);
-                
 
+        
         public string filePath;
         public mainForm()
         {
@@ -91,8 +91,10 @@ namespace SDA100
 
                 //string recString = System.IO.File.ReadAllText(@"C:\ScanBeta\SDA100rec.txt");
                 //string[] recData = iniString.Split(',');
-                Globals.recLines = System.IO.File.ReadAllLines(Globals.dirRecipe + "\\SDA100rec.txt");
-                Globals.dataFileList = System.IO.Directory.GetFiles(Globals.dirData, "*.txt");
+                Globals.recipeList = System.IO.File.ReadAllLines(Globals.dirRecipe + "\\SDA100rec.txt").ToList();
+
+                //Globals.recLines = System.IO.File.ReadAllLines(Globals.dirRecipe + "\\SDA100rec.txt");
+                Globals.dataList = System.IO.Directory.GetFiles(Globals.dirData, "*.txt").ToList();
                 //lbxLoadBox.Text = "New Recipe";
                 //lbxLoadBox.DataSource = System.IO.File.ReadAllLines(Globals.dirRecipe + "\\SDA100rec.txt");
                 dataGridView1.Hide();
@@ -101,7 +103,7 @@ namespace SDA100
                 dataGridView1.Columns[1].Name = "Edit Date";
                 dataGridView1.Columns[2].Name = "User ID";
                 //dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(2, 255, 0, 0);
-                PopulateRecipeList();                
+                //PopulateRecipeList();                
             }
         }
 
@@ -138,6 +140,15 @@ namespace SDA100
 
         public void SendIniValues()
         {
+            //string[] iniCommands = { "r", "d", "e", "S", "T", "y", "x", "z", "u", "v", "w" };
+            //string[] iniGlobals = { Globals.mapRes, Globals.waferDiam, Globals.edgeRej, Globals.sectorSteps, Globals.trackSteps,
+            //                        Globals.parkY, Globals.parkX, Globals.parkZ, Globals.preFocusZ, Globals.preFocusX, Globals.preFocusY};
+
+
+            //for (int x = 0; x < iniCommands.Length; x++) {
+            //    serialPort1.Write("." + iniGlobals[x] + iniCommands[x]);
+            //    Console.WriteLine("." + iniGlobals[x] + iniCommands[x]);
+            //}
             serialPort1.Write("." + Globals.mapRes + "r");
             Console.WriteLine("." + Globals.mapRes + "r");
             //autoReset.WaitOne(); //Crap Dustin is messing with
@@ -262,7 +273,7 @@ namespace SDA100
             {
                 Console.WriteLine("Saw the >!");
                 BeginInvoke(new EventHandler(ProgressBarStatus));
-                string csvData = Globals.editDateTime + "," + Globals.recipeName + "," + Globals.scanID + "," + scanDefectCnt1 + "," + scanDefectCnt2 + "," + scanDefectCnt3 + "," + scanDefectCnt4 + "," + scanDefectCnt5 + "," + scanDefectCnt6 + "," + scanDefectCnt7;
+                string csvData = Globals.recipeOID + "," + Globals.recipeName + "," + Globals.scanID + "," + scanDefectCnt1 + "," + scanDefectCnt2 + "," + scanDefectCnt3 + "," + scanDefectCnt4 + "," + scanDefectCnt5 + "," + scanDefectCnt6 + "," + scanDefectCnt7;
                 System.IO.File.AppendAllText(Globals.dirSummary + "\\ScanSummary.csv", csvData + Environment.NewLine);
                 
                 serialPort1.Write("P");
@@ -270,10 +281,10 @@ namespace SDA100
                 serialPort1.Write("N");
                                 
             }
-            else if (Globals.inData.Contains("%"))
-            {
-                BeginInvoke(new EventHandler(ProgressBarStatus));
-            }
+            //else if (Globals.inData.Contains("%"))
+            //{
+            //    BeginInvoke(new EventHandler(ProgressBarStatus));
+            //}
             else
             {
                 BeginInvoke(new EventHandler(DisplayErrorMessage));
@@ -295,6 +306,7 @@ namespace SDA100
             Console.WriteLine(prctComplete + "%");
             progressBar.Value = Convert.ToInt32(prctComplete);
         }
+
         private void DisplayErrorMessage(object sender, EventArgs e)
         {
             Console.WriteLine("Unknown Response: " + Globals.scanUnknownMessage);
@@ -445,7 +457,7 @@ namespace SDA100
 
         private void tabData_Focus(object sender, EventArgs e)
         {
-            foreach (string dataLine in Globals.dataFileList)
+            foreach (string dataLine in Globals.dataList)
             {
                 string dataLineParsed = dataLine.Remove(0, 18);
                 lbxScanDataFiles.Items.Add(dataLineParsed);

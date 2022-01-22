@@ -31,11 +31,11 @@ namespace SDA100
                 TxtIni_EdgeRej.Text = Convert.ToString(Globals.edgeRej);
                 TxtIni_SectorSteps.Text = Convert.ToString(Globals.sectorSteps);
                 TxtIni_TrackSteps.Text = Convert.ToString(Globals.trackSteps);
-                TxtIni_ParkY.Text = Convert.ToString(Globals.parkY);
                 TxtIni_ParkX.Text = Convert.ToString(Globals.parkX);
+                TxtIni_ParkY.Text = Convert.ToString(Globals.parkY);                
                 TxtIni_ParkZ.Text = Convert.ToString(Globals.parkZ);
-                TxtIni_PrefocusY.Text = Convert.ToString(Globals.preFocusY);
                 TxtIni_PrefocusX.Text = Convert.ToString(Globals.preFocusX);
+                TxtIni_PrefocusY.Text = Convert.ToString(Globals.preFocusY);                
                 TxtIni_PrefocusZ.Text = Convert.ToString(Globals.preFocusZ);
 
                 TxtIni_EditMapRes.Text = Convert.ToString(Globals.mapRes);
@@ -43,8 +43,8 @@ namespace SDA100
                 TxtIni_EditEdgeRej.Text = Convert.ToString(Globals.edgeRej);
                 TxtIni_EditSectorSteps.Text = Convert.ToString(Globals.sectorSteps);
                 TxtIni_EditTrackSteps.Text = Convert.ToString(Globals.trackSteps);
-                TxtIni_EditParkY.Text = Convert.ToString(Globals.parkY);
                 TxtIni_EditParkX.Text = Convert.ToString(Globals.parkX);
+                TxtIni_EditParkY.Text = Convert.ToString(Globals.parkY);
                 TxtIni_EditParkZ.Text = Convert.ToString(Globals.parkZ);
                 TxtIni_EditPrefocusY.Text = Convert.ToString(Globals.preFocusY);
                 TxtIni_EditPrefocusX.Text = Convert.ToString(Globals.preFocusX);
@@ -109,10 +109,9 @@ namespace SDA100
             TxtIni_EditParkY.ReadOnly = false;
             TxtIni_EditParkX.ReadOnly = false;
             TxtIni_EditParkZ.ReadOnly = false;
-            TxtIni_EditPrefocusY.ReadOnly = false;
             TxtIni_EditPrefocusX.ReadOnly = false;
+            TxtIni_EditPrefocusY.ReadOnly = false;            
             TxtIni_EditPrefocusZ.ReadOnly = false;
-
         }
 
         private void BtnIni_SubmitPIN_Click(object sender, EventArgs e)
@@ -128,8 +127,8 @@ namespace SDA100
                 BtnIni_Save.Enabled = true;
                 TxtIni_EditMapRes.ReadOnly = false;
             }
-
         }
+
         public void CreateIniString()
         {
             iniSaveData = Globals.iniOID + ",";
@@ -137,9 +136,9 @@ namespace SDA100
             iniSaveData += TxtIni_EditWaferDiam.Text + ",";
             iniSaveData += TxtIni_EditEdgeRej.Text + ",";
             iniSaveData += TxtIni_EditSectorSteps.Text + ",";
-            iniSaveData += TxtIni_EditTrackSteps.Text + ",";
-            iniSaveData += TxtIni_EditParkY.Text + ",";
+            iniSaveData += TxtIni_EditTrackSteps.Text + ",";            
             iniSaveData += TxtIni_EditParkX.Text + ",";
+            iniSaveData += TxtIni_EditParkY.Text + ",";
             iniSaveData += TxtIni_EditParkZ.Text + ",";
             iniSaveData += TxtIni_EditPrefocusX.Text + ",";
             iniSaveData += TxtIni_EditPrefocusY.Text + ",";
@@ -195,8 +194,8 @@ namespace SDA100
             Globals.parkY = TxtIni_EditParkY.Text;            
             Globals.parkZ = TxtIni_EditParkZ.Text;
             Globals.preFocusX = TxtIni_EditPrefocusX.Text;
-            Globals.preFocusY = TxtIni_EditPrefocusX.Text;
-            Globals.preFocusZ = TxtIni_EditPrefocusX.Text;            
+            Globals.preFocusY = TxtIni_EditPrefocusY.Text;
+            Globals.preFocusZ = TxtIni_EditPrefocusZ.Text;            
         }
     }
 }

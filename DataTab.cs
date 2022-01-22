@@ -11,30 +11,30 @@ namespace SDA100
     {
         public void lbxScanDataFiles_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string[] eScanData = System.IO.File.ReadAllLines(Globals.dataFileList[lbxScanDataFiles.SelectedIndex].ToString());
+            string[] eScanData = System.IO.File.ReadAllLines(Globals.dataList[lbxScanDataFiles.SelectedIndex].ToString());
             string[] erecData = eScanData[0].Split(',');
 
             Emulator.erecipeOID = erecData[0];
-            Emulator.eeditDateTime = erecData[1];
-            Emulator.erecipeStatus = erecData[2];
-            Emulator.erecipeName = erecData[3];
-            Emulator.euserName = erecData[4];
-            Emulator.escanID = erecData[5];
-            Emulator.ewaferDiam = int.Parse(erecData[6]);
-            Emulator.eedgeRej = int.Parse(erecData[7]);
-            Emulator.escanArea = erecData[8];
-            Emulator.ezoneType = erecData[9];
-            Emulator.eautoSave = erecData[10];
-            Emulator.erecipeNameDefault = erecData[11]; //is this still necessary?
-            Emulator.erejectLimitS1 = erecData[12];
-            Emulator.erejectLimitS2 = erecData[13];
-            Emulator.erejectLimitS3 = erecData[14];
-            Emulator.erejectLimitS4 = erecData[15];
-            Emulator.erejectLimitS5 = erecData[16];
-            Emulator.erejectLimitS6 = erecData[17];
-            Emulator.erejectLimitS7 = erecData[18];
-            Emulator.erejectLimitTotal = erecData[19];
-            Emulator.erecipeComments = erecData[20];
+            //Emulator.eeditDateTime = erecData[1];
+            //Emulator.erecipeStatus = erecData[2];
+            Emulator.erecipeName = erecData[1];
+            Emulator.euserName = erecData[2];
+            Emulator.escanID = erecData[3];
+            Emulator.ewaferDiam = int.Parse(erecData[4]);
+            Emulator.eedgeRej = int.Parse(erecData[5]);
+            Emulator.escanArea = erecData[6];
+            Emulator.ezoneType = erecData[7];
+            Emulator.eautoSave = erecData[8];
+            Emulator.erecipeNameDefault = erecData[9]; //is this still necessary?
+            Emulator.erejectLimitS1 = erecData[10];
+            Emulator.erejectLimitS2 = erecData[11];
+            Emulator.erejectLimitS3 = erecData[12];
+            Emulator.erejectLimitS4 = erecData[13];
+            Emulator.erejectLimitS5 = erecData[14];
+            Emulator.erejectLimitS6 = erecData[15];
+            Emulator.erejectLimitS7 = erecData[16];
+            Emulator.erejectLimitTotal = erecData[17];
+            Emulator.erecipeComments = erecData[18];
 
             lbleSizeClass_PSize1_Limit.Text = Emulator.erejectLimitS1;
             lbleSizeClass_PSize2_Limit.Text = Emulator.erejectLimitS2;
