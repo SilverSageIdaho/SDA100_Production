@@ -105,10 +105,16 @@ namespace SDA100
             
         }
 
-        public static string SendReceiveCommands(string command)
+        public static string WaitForSerialCommandResponse(string command)
         {
             string response = "";
             int responseTimer = 0;
+            //if (command.Contains("M1") || command.Contains("M2"))
+            //{
+            //   response = _serialPort.ReadTo("M");
+            //   responseTimer++;
+               
+            //}
             while ((response == "") && (responseTimer < 1000))
             {
                 response = _serialPort.ReadLine();

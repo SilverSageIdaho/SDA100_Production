@@ -60,7 +60,7 @@ namespace SDA100
         {
             CreateIniString();
             UpdateIniGlobals(); 
-            SendIniValues();
+            //SendIniValues();
             
 
             if (chbox_SetStartupDefaults.Checked == true)

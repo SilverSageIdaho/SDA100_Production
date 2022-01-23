@@ -368,6 +368,7 @@ namespace SDA100
             this.TxtIni_MapRes = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabStartup = new System.Windows.Forms.TabPage();
+            this.txtr_Startup = new System.Windows.Forms.RichTextBox();
             this.tabGroup.SuspendLayout();
             this.tabMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -389,6 +390,7 @@ namespace SDA100
             this.tabINI.SuspendLayout();
             this.groupBoxEdit.SuspendLayout();
             this.IniGroupBox.SuspendLayout();
+            this.tabStartup.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabGroup
@@ -4452,6 +4454,7 @@ namespace SDA100
             // 
             // tabStartup
             // 
+            this.tabStartup.Controls.Add(this.txtr_Startup);
             this.tabStartup.Location = new System.Drawing.Point(4, 4);
             this.tabStartup.Margin = new System.Windows.Forms.Padding(2);
             this.tabStartup.Name = "tabStartup";
@@ -4459,6 +4462,15 @@ namespace SDA100
             this.tabStartup.TabIndex = 6;
             this.tabStartup.Text = "Startup";
             this.tabStartup.UseVisualStyleBackColor = true;
+            // 
+            // txtr_Startup
+            // 
+            this.txtr_Startup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtr_Startup.Location = new System.Drawing.Point(87, 43);
+            this.txtr_Startup.Name = "txtr_Startup";
+            this.txtr_Startup.Size = new System.Drawing.Size(1011, 625);
+            this.txtr_Startup.TabIndex = 0;
+            this.txtr_Startup.Text = "";
             // 
             // mainForm
             // 
@@ -4506,6 +4518,7 @@ namespace SDA100
             this.groupBoxEdit.PerformLayout();
             this.IniGroupBox.ResumeLayout(false);
             this.IniGroupBox.PerformLayout();
+            this.tabStartup.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -4850,6 +4863,7 @@ namespace SDA100
         private System.Windows.Forms.Button btn_ClearErrors;
         private System.Windows.Forms.CheckBox chbox_SetStartupDefaults;
         private System.Windows.Forms.Button btn_FocusLaser;
+        private System.Windows.Forms.RichTextBox txtr_Startup;
     }
 }
 

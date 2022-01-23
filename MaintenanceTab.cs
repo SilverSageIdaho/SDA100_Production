@@ -161,8 +161,8 @@ namespace SDA100
 
         public void MaintenanceSendCommands(string command)
         {
-            serialPort1.Write(command);
-            serialPort1.Write("m");
+            ScanPort._serialPort.Write(command);
+            ScanPort._serialPort.Write("m");
         }
 
         public void UpdateSystemStatusLabels()
@@ -264,7 +264,7 @@ namespace SDA100
 
         private void btnSyS_RefreshStatus_Click(object sender, EventArgs e)
         {
-            serialPort1.Write("m");
+            ScanPort._serialPort.Write("m");
         }
     }
 }

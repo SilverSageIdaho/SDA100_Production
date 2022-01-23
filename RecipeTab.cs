@@ -131,19 +131,19 @@ namespace SDA100
             Globals.rejectLimitTotal = txtSizeClass_Total_Limit.Text;
             Globals.recipeComments = txtRecipeComments.Text;
 
-            serialPort1.Write("." + Globals.waferDiam + "d");
-            serialPort1.Write("." + Globals.edgeRej + "e");
+            ScanPort._serialPort.Write("." + Globals.waferDiam + "d");
+            ScanPort._serialPort.Write("." + Globals.edgeRej + "e");
             if (Globals.scanArea == "100")
             {
-                serialPort1.Write(".10T");
+                ScanPort._serialPort.Write(".10T");
             }
             else if (Globals.scanArea == "50")
             {
-                serialPort1.Write(".20T");
+                ScanPort._serialPort.Write(".20T");
             }
             else
             {
-                serialPort1.Write(".40T");
+                ScanPort._serialPort.Write(".40T");
             }
             
 

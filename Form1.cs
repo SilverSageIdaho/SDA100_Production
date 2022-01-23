@@ -51,7 +51,8 @@ namespace SDA100
 
         private void mainForm_Load(object sender, EventArgs e)
         {
-            Thread.CurrentThread.Name = "Form Load";
+            tabGroup.SelectedTab = tabStartup;
+            //Thread.CurrentThread.Name = "Form Load";
             // *** Find the Scanner Com Port by testing for "?" => "!" ****
             ScanPort.ScanComPorts();
             
@@ -84,7 +85,7 @@ namespace SDA100
                 //Console.WriteLine("Thread Name: " + Thread.CurrentThread.Name);
                 ScanPort._serialPort.Write("." + Globals.mapRes + "r");
                 Console.WriteLine("." + Globals.mapRes + "r");
-                Globals.inData = ScanPort.SendReceiveCommands("r");
+                Globals.inData = ScanPort.WaitForSerialCommandResponse("r");
                 txtr_Startup.Text += "." + Globals.mapRes + "r" + ":\t";
                 if (Globals.inData.StartsWith("!r"))
                 {
@@ -97,7 +98,7 @@ namespace SDA100
 
                 ScanPort._serialPort.Write("." + Globals.waferDiam + "d");
                 Console.WriteLine("." + Globals.waferDiam + "d");
-                Globals.inData = ScanPort.SendReceiveCommands("d");
+                Globals.inData = ScanPort.WaitForSerialCommandResponse("d");
                 txtr_Startup.Text += "." + Globals.waferDiam + "d" + ":\t";
                 if (Globals.inData.StartsWith("!d"))
                 {
@@ -110,7 +111,7 @@ namespace SDA100
 
                 ScanPort._serialPort.Write("." + Globals.edgeRej + "e");
                 Console.WriteLine("." + Globals.edgeRej + "e");
-                Globals.inData = ScanPort.SendReceiveCommands("e");
+                Globals.inData = ScanPort.WaitForSerialCommandResponse("e");
                 txtr_Startup.Text += "." + Globals.edgeRej + "e" + ":\t";
                 if (Globals.inData.StartsWith("!e"))
                 {
@@ -123,7 +124,7 @@ namespace SDA100
 
                 ScanPort._serialPort.Write("." + Globals.sectorSteps + "S");
                 Console.WriteLine("." + Globals.sectorSteps + "S");
-                Globals.inData = ScanPort.SendReceiveCommands("S");
+                Globals.inData = ScanPort.WaitForSerialCommandResponse("S");
                 txtr_Startup.Text += "." + Globals.sectorSteps + "S" + ":\t";
                 if (Globals.inData.StartsWith("!S"))
                 {
@@ -136,7 +137,7 @@ namespace SDA100
 
                 ScanPort._serialPort.Write("." + Globals.trackSteps + "T");
                 Console.WriteLine("." + Globals.trackSteps + "T");
-                Globals.inData = ScanPort.SendReceiveCommands("T");
+                Globals.inData = ScanPort.WaitForSerialCommandResponse("T");
                 txtr_Startup.Text += "." + Globals.trackSteps + "T" + ":\t";
                 if (Globals.inData.StartsWith("!T"))
                 {
@@ -147,22 +148,9 @@ namespace SDA100
                     txtr_Startup.Text += "No Response" + Environment.NewLine;
                 }
 
-                ScanPort._serialPort.Write("." + Globals.parkY + "y");
-                Console.WriteLine("." + Globals.parkY + "y");
-                Globals.inData = ScanPort.SendReceiveCommands("y");
-                txtr_Startup.Text += "." + Globals.parkY + "y" + ":\t";
-                if (Globals.inData.StartsWith("!y"))
-                {
-                    txtr_Startup.Text += Globals.inData + Environment.NewLine;
-                }
-                else
-                {
-                    txtr_Startup.Text += "No Response" + Environment.NewLine;
-                }
-
                 ScanPort._serialPort.Write("." + Globals.parkX + "x");
                 Console.WriteLine("." + Globals.parkX + "x");
-                Globals.inData = ScanPort.SendReceiveCommands("x");
+                Globals.inData = ScanPort.WaitForSerialCommandResponse("x");
                 txtr_Startup.Text += "." + Globals.parkX + "x" + ":\t";
                 if (Globals.inData.StartsWith("!x"))
                 {
@@ -172,11 +160,24 @@ namespace SDA100
                 {
                     txtr_Startup.Text += "No Response" + Environment.NewLine;
                 }
+                
+                ScanPort._serialPort.Write("." + Globals.parkY + "y");
+                Console.WriteLine("." + Globals.parkY + "y");
+                Globals.inData = ScanPort.WaitForSerialCommandResponse("y");
+                txtr_Startup.Text += "." + Globals.parkY + "y" + ":\t";
+                if (Globals.inData.StartsWith("!y"))
+                {
+                    txtr_Startup.Text += Globals.inData + Environment.NewLine;
+                }
+                else
+                {
+                    txtr_Startup.Text += "No Response" + Environment.NewLine;
+                }                
 
                 ScanPort._serialPort.Write("." + Globals.parkZ + "z");
                 Console.WriteLine("." + Globals.parkZ + "z");
-                Globals.inData = ScanPort.SendReceiveCommands("z");
-                txtr_Startup.Text += "." + Globals.parkZ + "y" + ":\t";
+                Globals.inData = ScanPort.WaitForSerialCommandResponse("z");
+                txtr_Startup.Text += "." + Globals.parkZ + "z" + ":\t";
                 if (Globals.inData.StartsWith("!z"))
                 {
                     txtr_Startup.Text += Globals.inData + Environment.NewLine;
@@ -188,7 +189,7 @@ namespace SDA100
 
                 ScanPort._serialPort.Write("." + Globals.preFocusZ + "u");
                 Console.WriteLine("." + Globals.preFocusZ + "u");
-                Globals.inData = ScanPort.SendReceiveCommands("u");
+                Globals.inData = ScanPort.WaitForSerialCommandResponse("u");
                 txtr_Startup.Text += "." + Globals.preFocusZ + "u" + ":\t";
                 if (Globals.inData.StartsWith("!u"))
                 {
@@ -201,7 +202,7 @@ namespace SDA100
 
                 ScanPort._serialPort.Write("." + Globals.preFocusX + "v");
                 Console.WriteLine("." + Globals.preFocusX + "v");
-                Globals.inData = ScanPort.SendReceiveCommands("v");
+                Globals.inData = ScanPort.WaitForSerialCommandResponse("v");
                 txtr_Startup.Text += "." + Globals.preFocusX + "v" + ":\t";
                 if (Globals.inData.StartsWith("!v"))
                 {
@@ -214,7 +215,7 @@ namespace SDA100
 
                 ScanPort._serialPort.Write("." + Globals.preFocusY + "w");
                 Console.WriteLine("." + Globals.preFocusY + "w");
-                Globals.inData = ScanPort.SendReceiveCommands("w");
+                Globals.inData = ScanPort.WaitForSerialCommandResponse("w");
                 txtr_Startup.Text += "." + Globals.preFocusY + "w" + ":\t";
                 if (Globals.inData.StartsWith("!w"))
                 {
@@ -225,6 +226,92 @@ namespace SDA100
                     txtr_Startup.Text += "No Response" + Environment.NewLine;
                 }
 
+                ScanPort._serialPort.Write("O");
+                Console.WriteLine("O");
+                Globals.inData = ScanPort.WaitForSerialCommandResponse("O");
+                txtr_Startup.Text += "Wafer Present on Chuck:\t";
+                if (Globals.inData.StartsWith("!O1"))
+                {
+                    txtr_Startup.Text += Globals.inData + " - Wafer Present" + Environment.NewLine;
+                }
+                else if (Globals.inData.StartsWith("!O0"))
+                {
+                    txtr_Startup.Text += Globals.inData + " - No Wafer Present" + Environment.NewLine;
+                    ScanPort._serialPort.Write("N");
+                    Globals.inData = ScanPort.WaitForSerialCommandResponse("N");
+                }
+                else
+                {
+                    txtr_Startup.Text += "No Response" + Environment.NewLine;
+                }
+
+                ScanPort._serialPort.Write("o");
+                Console.WriteLine("o");
+                Globals.inData = ScanPort.WaitForSerialCommandResponse("o");
+                txtr_Startup.Text += "Door Functionality:\t";
+                if (Globals.inData.StartsWith("!o1"))
+                {
+                    txtr_Startup.Text += Globals.inData + " - Able to open" + Environment.NewLine;
+                    ScanPort._serialPort.Write("n");
+                    Console.WriteLine("n");
+                    Globals.inData = ScanPort.WaitForSerialCommandResponse("n");
+                    txtr_Startup.Text += "Attempting to Close Door:\t";
+                    if (Globals.inData.StartsWith("!n1"))
+                    {
+                        txtr_Startup.Text += Globals.inData + " - Able to close" + Environment.NewLine;
+                    }
+                    else if (Globals.inData.StartsWith("!n0"))
+                    {
+                        txtr_Startup.Text += Globals.inData + " - Unable to close - Check for obstruction" + Environment.NewLine;
+                    }
+                    else
+                    {
+                        txtr_Startup.Text += "No Response" + Environment.NewLine;
+                    }
+                }
+                else if (Globals.inData.StartsWith("!o0"))
+                {
+                    txtr_Startup.Text += Globals.inData + " - Unable to open" + Environment.NewLine;
+                    ScanPort._serialPort.Write("n");
+                    Console.WriteLine("n");
+                    Globals.inData = ScanPort.WaitForSerialCommandResponse("n");
+                    txtr_Startup.Text += "Attempting to Close Door:\t";
+                    if (Globals.inData.StartsWith("!n1"))
+                    {
+                        txtr_Startup.Text += Globals.inData + " - Able to close" + Environment.NewLine;
+                    }
+                    else if (Globals.inData.StartsWith("!n0"))
+                    {
+                        txtr_Startup.Text += Globals.inData + " - Unable to close - Check for obstruction" + Environment.NewLine;
+                    }
+                    else
+                    {
+                        txtr_Startup.Text += "No Response" + Environment.NewLine;
+                    }
+                }
+                else
+                {
+                    txtr_Startup.Text += "No Response" + Environment.NewLine;
+                }
+
+                //ScanPort._serialPort.Write("m");
+                //Console.WriteLine("m");
+                //Globals.inData = ScanPort.WaitForSerialCommandResponse("m");
+                //txtr_Startup.Text += "Machine Status:\t";
+                //if (Globals.inData.StartsWith("!O1"))
+                //{
+                //    txtr_Startup.Text += Globals.inData + " - Wafer Present" + Environment.NewLine;
+                //}
+                //else if (Globals.inData.StartsWith("!O0"))
+                //{
+                //    txtr_Startup.Text += Globals.inData + " - No Wafer Present" + Environment.NewLine;
+                //    ScanPort._serialPort.Write("N");
+                //    Globals.inData = ScanPort.WaitForSerialCommandResponse("N");
+                //}
+                //else
+                //{
+                //    txtr_Startup.Text += "No Response" + Environment.NewLine;
+                //}
                 //ScanPort._serialPort.Write("." + Globals.preFocusY + "w");
                 //Console.WriteLine("." + Globals.preFocusY + "w");
                 //Globals.inData = ScanPort.SendReceiveCommands("w");
@@ -242,8 +329,10 @@ namespace SDA100
 
                 //string recString = System.IO.File.ReadAllText(@"C:\ScanBeta\SDA100rec.txt");
                 //string[] recData = iniString.Split(',');
-                Globals.recLines = System.IO.File.ReadAllLines(Globals.dirRecipe + "\\SDA100rec.txt");
-                Globals.dataFileList = System.IO.Directory.GetFiles(Globals.dirData, "*.txt");
+                Globals.recipeList = System.IO.File.ReadAllLines(Globals.dirRecipe + "\\SDA100rec.txt").ToList();
+                //Globals.recLines = System.IO.File.ReadAllLines(Globals.dirRecipe + "\\SDA100rec.txt");
+                Globals.dataList = System.IO.Directory.GetFiles(Globals.dirData, "*.txt").ToList();
+                //Globals.dataFileList = System.IO.Directory.GetFiles(Globals.dirData, "*.txt");
                 //lbxLoadBox.Text = "New Recipe";
                 //lbxLoadBox.DataSource = System.IO.File.ReadAllLines(Globals.dirRecipe + "\\SDA100rec.txt");
                 dataGridView1.Hide();
@@ -430,8 +519,7 @@ namespace SDA100
             Console.WriteLine("Response Data: " + Globals.scanReply); 
                         
             label16.Text = Globals.z_focus;
-            txtSyS_ReadPHA.Text = Globals.pha;
-
+            
             if (Globals.errorMessage != null)
             {
                 string title = "ERROR";
@@ -557,7 +645,7 @@ namespace SDA100
 
         private void tabData_Focus(object sender, EventArgs e)
         {
-            foreach (string dataLine in Globals.dataFileList)
+            foreach (string dataLine in Globals.dataList)
             {
                 string dataLineParsed = dataLine.Remove(0, 18);
                 lbxScanDataFiles.Items.Add(dataLineParsed);
