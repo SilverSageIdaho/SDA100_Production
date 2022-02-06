@@ -13,6 +13,7 @@ using System.Threading;
 
 namespace SDA100
 {
+   
     public partial class mainForm : Form
     {
         public int trackDefectCnt1;
@@ -48,7 +49,35 @@ namespace SDA100
         {
             InitializeComponent();
         }
-
+        //private void WriteTextToRichTextBox()
+        //{
+        //    // Clear all text from the RichTextBox;
+        //    richTextBox1.Clear();
+        //    // Set the font for the opening text to a larger Arial font;
+        //    richTextBox1.SelectionFont = new Font("Arial", 16);
+        //    // Assign the introduction text to the RichTextBox control.
+        //    richTextBox1.SelectedText = "The following is a list of bulleted items:" + "\n";
+        //    // Set the Font for the first item to a smaller size Arial font.
+        //    richTextBox1.SelectionFont = new Font("Arial", 12);
+        //    // Specify that the following items are to be added to a bulleted list.
+        //    richTextBox1.SelectionBullet = true;
+        //    // Set the color of the item text.
+        //    richTextBox1.SelectionColor = Color.Red;
+        //    // Assign the text to the bulleted item.
+        //    richTextBox1.SelectedText = "Apples" + "\n";
+        //    // Apply same font since font settings do not carry to next line.
+        //    richTextBox1.SelectionFont = new Font("Arial", 12);
+        //    richTextBox1.SelectionColor = Color.Orange;
+        //    richTextBox1.SelectedText = "Oranges" + "\n";
+        //    richTextBox1.SelectionFont = new Font("Arial", 12);
+        //    richTextBox1.SelectionColor = Color.Purple;
+        //    richTextBox1.SelectedText = "Grapes" + "\n";
+        //    // End the bulleted list.
+        //    richTextBox1.SelectionBullet = false;
+        //    // Specify the font size and string for text displayed below bulleted list.
+        //    richTextBox1.SelectionFont = new Font("Arial", 16);
+        //    richTextBox1.SelectedText = "Bulleted Text Complete!";
+        //}
         private void mainForm_Load(object sender, EventArgs e)
         {
             tabGroup.SelectedTab = tabStartup;
@@ -86,187 +115,248 @@ namespace SDA100
                 ScanPort._serialPort.Write("." + Globals.mapRes + "r");
                 Console.WriteLine("." + Globals.mapRes + "r");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("r");
-                txtr_Startup.Text += "." + Globals.mapRes + "r" + ":\t";
+                txtr_Startup.AppendText("Map Resolution:\t");
                 if (Globals.inData.StartsWith("!r"))
                 {
-                    txtr_Startup.Text += Globals.inData + Environment.NewLine;
+                    
+                    txtr_Startup.SelectionColor = Color.Green;
+                    txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
+                    //this.txtr_Startup.SelectedText = Globals.inData;
+                    //this.txtr_Startup.SelectionStart = txtr_Startup.TextLength - Globals.inData.Length;
+                    //this.txtr_Startup.SelectionLength = Globals.inData.Length;
+                    //this.txtr_Startup.SelectionColor = Color.Red;    
                 }
                 else
                 {
-                    txtr_Startup.Text += "No Response" + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Red;
+                    txtr_Startup.AppendText("No Response" + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
 
                 ScanPort._serialPort.Write("." + Globals.waferDiam + "d");
                 Console.WriteLine("." + Globals.waferDiam + "d");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("d");
-                txtr_Startup.Text += "." + Globals.waferDiam + "d" + ":\t";
+                txtr_Startup.AppendText("Wafer Diameter:\t");
                 if (Globals.inData.StartsWith("!d"))
                 {
-                    txtr_Startup.Text += Globals.inData + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Green;
+                    txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
                 else
                 {
-                    txtr_Startup.Text += "No Response" + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Red;
+                    txtr_Startup.AppendText("No Response" + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
 
                 ScanPort._serialPort.Write("." + Globals.edgeRej + "e");
                 Console.WriteLine("." + Globals.edgeRej + "e");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("e");
-                txtr_Startup.Text += "." + Globals.edgeRej + "e" + ":\t";
+                txtr_Startup.AppendText("Edje Reject:\t");
                 if (Globals.inData.StartsWith("!e"))
                 {
-                    txtr_Startup.Text += Globals.inData + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Green;
+                    txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
                 else
                 {
-                    txtr_Startup.Text += "No Response" + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Red;
+                    txtr_Startup.AppendText("No Response" + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
 
                 ScanPort._serialPort.Write("." + Globals.sectorSteps + "S");
                 Console.WriteLine("." + Globals.sectorSteps + "S");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("S");
-                txtr_Startup.Text += "." + Globals.sectorSteps + "S" + ":\t";
+                txtr_Startup.AppendText("Sector Steps:\t");
                 if (Globals.inData.StartsWith("!S"))
                 {
-                    txtr_Startup.Text += Globals.inData + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Green;
+                    txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
                 else
                 {
-                    txtr_Startup.Text += "No Response" + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Red;
+                    txtr_Startup.AppendText("No Response" + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
 
                 ScanPort._serialPort.Write("." + Globals.trackSteps + "T");
                 Console.WriteLine("." + Globals.trackSteps + "T");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("T");
-                txtr_Startup.Text += "." + Globals.trackSteps + "T" + ":\t";
+                txtr_Startup.AppendText("Track Steps:\t");
                 if (Globals.inData.StartsWith("!T"))
                 {
-                    txtr_Startup.Text += Globals.inData + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Green;
+                    txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
                 else
                 {
-                    txtr_Startup.Text += "No Response" + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Red;
+                    txtr_Startup.AppendText("No Response" + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
 
                 ScanPort._serialPort.Write("." + Globals.parkX + "x");
                 Console.WriteLine("." + Globals.parkX + "x");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("x");
-                txtr_Startup.Text += "." + Globals.parkX + "x" + ":\t";
+                txtr_Startup.AppendText("Park Pos X:\t\t");
                 if (Globals.inData.StartsWith("!x"))
                 {
-                    txtr_Startup.Text += Globals.inData + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Green;
+                    txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
                 else
                 {
-                    txtr_Startup.Text += "No Response" + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Red;
+                    txtr_Startup.AppendText("No Response" + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
-                
+
                 ScanPort._serialPort.Write("." + Globals.parkY + "y");
                 Console.WriteLine("." + Globals.parkY + "y");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("y");
-                txtr_Startup.Text += "." + Globals.parkY + "y" + ":\t";
+                txtr_Startup.AppendText("Park Pos Y:\t\t");
                 if (Globals.inData.StartsWith("!y"))
                 {
-                    txtr_Startup.Text += Globals.inData + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Green;
+                    txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
                 else
                 {
-                    txtr_Startup.Text += "No Response" + Environment.NewLine;
-                }                
+                    txtr_Startup.SelectionColor = Color.Red;
+                    txtr_Startup.AppendText("No Response" + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
+                }
 
                 ScanPort._serialPort.Write("." + Globals.parkZ + "z");
                 Console.WriteLine("." + Globals.parkZ + "z");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("z");
-                txtr_Startup.Text += "." + Globals.parkZ + "z" + ":\t";
+                txtr_Startup.AppendText("Park Pos Z:\t\t");
                 if (Globals.inData.StartsWith("!z"))
                 {
-                    txtr_Startup.Text += Globals.inData + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Green;
+                    txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
                 else
                 {
-                    txtr_Startup.Text += "No Response" + Environment.NewLine;
-                }
-
-                ScanPort._serialPort.Write("." + Globals.preFocusZ + "u");
-                Console.WriteLine("." + Globals.preFocusZ + "u");
-                Globals.inData = ScanPort.WaitForSerialCommandResponse("u");
-                txtr_Startup.Text += "." + Globals.preFocusZ + "u" + ":\t";
-                if (Globals.inData.StartsWith("!u"))
-                {
-                    txtr_Startup.Text += Globals.inData + Environment.NewLine;
-                }
-                else
-                {
-                    txtr_Startup.Text += "No Response" + Environment.NewLine;
-                }
+                    txtr_Startup.SelectionColor = Color.Red;
+                    txtr_Startup.AppendText("No Response" + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
+                }               
 
                 ScanPort._serialPort.Write("." + Globals.preFocusX + "v");
                 Console.WriteLine("." + Globals.preFocusX + "v");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("v");
-                txtr_Startup.Text += "." + Globals.preFocusX + "v" + ":\t";
+                txtr_Startup.AppendText("Prefocus X:\t\t");
                 if (Globals.inData.StartsWith("!v"))
                 {
-                    txtr_Startup.Text += Globals.inData + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Green;
+                    txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
                 else
                 {
-                    txtr_Startup.Text += "No Response" + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Red;
+                    txtr_Startup.AppendText("No Response" + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
 
                 ScanPort._serialPort.Write("." + Globals.preFocusY + "w");
                 Console.WriteLine("." + Globals.preFocusY + "w");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("w");
-                txtr_Startup.Text += "." + Globals.preFocusY + "w" + ":\t";
+                txtr_Startup.AppendText("Prefocus Y:\t\t");
                 if (Globals.inData.StartsWith("!w"))
                 {
-                    txtr_Startup.Text += Globals.inData + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Green;
+                    txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
                 else
                 {
-                    txtr_Startup.Text += "No Response" + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Red;
+                    txtr_Startup.AppendText("No Response" + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
+                }
+
+                ScanPort._serialPort.Write("." + Globals.preFocusZ + "u");
+                Console.WriteLine("." + Globals.preFocusZ + "u");
+                Globals.inData = ScanPort.WaitForSerialCommandResponse("u");
+                txtr_Startup.AppendText("Prefocus Z:\t\t");
+                if (Globals.inData.StartsWith("!u"))
+                {
+                    txtr_Startup.SelectionColor = Color.Green;
+                    txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
+                }
+                else
+                {
+                    txtr_Startup.SelectionColor = Color.Red;
+                    txtr_Startup.AppendText("No Response" + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
 
                 ScanPort._serialPort.Write("O");
                 Console.WriteLine("O");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("O");
-                txtr_Startup.Text += "Wafer Present on Chuck:\t";
+                txtr_Startup.AppendText("Wafer Present on Chuck:\t");
                 if (Globals.inData.StartsWith("!O1"))
                 {
-                    txtr_Startup.Text += Globals.inData + " - Wafer Present" + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Orange;
+                    txtr_Startup.AppendText(Globals.inData + " - Wafer Present" + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
                 else if (Globals.inData.StartsWith("!O0"))
                 {
-                    txtr_Startup.Text += Globals.inData + " - No Wafer Present" + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Green;
+                    txtr_Startup.AppendText(Globals.inData + " - No Wafer Present" + Environment.NewLine);
                     ScanPort._serialPort.Write("N");
                     Globals.inData = ScanPort.WaitForSerialCommandResponse("N");
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
                 else
                 {
-                    txtr_Startup.Text += "No Response" + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Red;
+                    txtr_Startup.AppendText("No Response" + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
 
                 ScanPort._serialPort.Write("o");
                 Console.WriteLine("o");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("o");
-                txtr_Startup.Text += "Door Functionality:\t";
+                txtr_Startup.AppendText("Door Functionality:\t");
                 if (Globals.inData.StartsWith("!o1"))
                 {
-                    txtr_Startup.Text += Globals.inData + " - Able to open" + Environment.NewLine;
+                    txtr_Startup.AppendText(Globals.inData + " - Able to open" + Environment.NewLine);
                     ScanPort._serialPort.Write("n");
                     Console.WriteLine("n");
                     Globals.inData = ScanPort.WaitForSerialCommandResponse("n");
-                    txtr_Startup.Text += "Attempting to Close Door:\t";
+                    txtr_Startup.AppendText("Attempting to Close Door:\t");
                     if (Globals.inData.StartsWith("!n1"))
                     {
-                        txtr_Startup.Text += Globals.inData + " - Able to close" + Environment.NewLine;
+                        txtr_Startup.SelectionColor = Color.Green;
+                        txtr_Startup.AppendText(Globals.inData + " - Able to close" + Environment.NewLine);
+                        txtr_Startup.SelectionColor = Color.Black;
                     }
                     else if (Globals.inData.StartsWith("!n0"))
                     {
-                        txtr_Startup.Text += Globals.inData + " - Unable to close - Check for obstruction" + Environment.NewLine;
+                        txtr_Startup.SelectionColor = Color.Green;
+                        txtr_Startup.AppendText(Globals.inData + " - Unable to close - Check for obstruction" + Environment.NewLine);
+                        txtr_Startup.SelectionColor = Color.Black;
                     }
                     else
                     {
-                        txtr_Startup.Text += "No Response" + Environment.NewLine;
+                        txtr_Startup.SelectionColor = Color.Red;
+                        txtr_Startup.AppendText("No Response" + Environment.NewLine);
+                        txtr_Startup.SelectionColor = Color.Black;
                     }
                 }
                 else if (Globals.inData.StartsWith("!o0"))
@@ -275,23 +365,31 @@ namespace SDA100
                     ScanPort._serialPort.Write("n");
                     Console.WriteLine("n");
                     Globals.inData = ScanPort.WaitForSerialCommandResponse("n");
-                    txtr_Startup.Text += "Attempting to Close Door:\t";
+                    txtr_Startup.AppendText("Attempting to Close Door:\t");
                     if (Globals.inData.StartsWith("!n1"))
                     {
-                        txtr_Startup.Text += Globals.inData + " - Able to close" + Environment.NewLine;
+                        txtr_Startup.SelectionColor = Color.Green;
+                        txtr_Startup.AppendText(Globals.inData + " - Able to close" + Environment.NewLine);
+                        txtr_Startup.SelectionColor = Color.Black;
                     }
                     else if (Globals.inData.StartsWith("!n0"))
                     {
-                        txtr_Startup.Text += Globals.inData + " - Unable to close - Check for obstruction" + Environment.NewLine;
+                        txtr_Startup.SelectionColor = Color.Red;
+                        txtr_Startup.AppendText(Globals.inData + " - Unable to close - Check for obstruction" + Environment.NewLine);
+                        txtr_Startup.SelectionColor = Color.Black;
                     }
                     else
                     {
-                        txtr_Startup.Text += "No Response" + Environment.NewLine;
+                        txtr_Startup.SelectionColor = Color.Red;
+                        txtr_Startup.AppendText("No Response" + Environment.NewLine);
+                        txtr_Startup.SelectionColor = Color.Black;
                     }
                 }
                 else
                 {
-                    txtr_Startup.Text += "No Response" + Environment.NewLine;
+                    txtr_Startup.SelectionColor = Color.Red;
+                    txtr_Startup.AppendText("No Response" + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
                 }
 
                 //ScanPort._serialPort.Write("m");
@@ -316,7 +414,35 @@ namespace SDA100
                 //Console.WriteLine("." + Globals.preFocusY + "w");
                 //Globals.inData = ScanPort.SendReceiveCommands("w");
                 //txtr_Startup.Text += Globals.inData + Environment.NewLine;
+                ScanPort._serialPort.Write(".1M");
+                Console.WriteLine(".1M");
+                Globals.inData = ScanPort.WaitForSerialCommandResponse(".1M");
+                txtr_Startup.AppendText("Machine Status:\t");
+                if (Globals.inData.StartsWith("{"))
+                {
+                    txtr_Startup.SelectionColor = Color.Green;
+                    txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
+                }
+                else
+                {
+                    txtr_Startup.SelectionColor = Color.Red;
+                    txtr_Startup.AppendText("No Response" + Environment.NewLine);
+                    txtr_Startup.SelectionColor = Color.Black;
+                }
 
+                ScanPort._serialPort.Write(".2M");
+                Console.WriteLine(".2M");
+                Globals.inData = ScanPort.WaitForSerialCommandResponse(".2M");
+                txtr_Startup.AppendText("Machine Status:\t");
+                if (Globals.inData.StartsWith("{"))
+                {
+                    txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
+                }
+                else
+                {
+                    txtr_Startup.AppendText("No Response" + Environment.NewLine);
+                }
                 ScanPort._serialPort.Write("m");
                 ScanPort._serialPort.Write("h");
                 ScanPort._serialPort.Write("H");
@@ -379,6 +505,7 @@ namespace SDA100
         public void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
         {
             Globals.inData = ScanPort._serialPort.ReadLine();
+            Console.WriteLine("InData right after event: " + Globals.inData);
             if (Globals.inData.Contains("<"))
             {
                 OpenFile();
@@ -465,7 +592,7 @@ namespace SDA100
             else if (Globals.inData.Contains(">"))
             {
                 Console.WriteLine("Saw the >!");
-                BeginInvoke(new EventHandler(ProgressBarStatus));
+                //BeginInvoke(new EventHandler(ProgressBarStatus));
                 string csvData = Globals.editDateTime + "," + Globals.recipeName + "," + Globals.scanID + "," + scanDefectCnt1 + "," + scanDefectCnt2 + "," + scanDefectCnt3 + "," + scanDefectCnt4 + "," + scanDefectCnt5 + "," + scanDefectCnt6 + "," + scanDefectCnt7;
                 System.IO.File.AppendAllText(Globals.dirSummary + "\\ScanSummary.csv", csvData + Environment.NewLine);
                 
@@ -480,6 +607,7 @@ namespace SDA100
             }
             else
             {
+                Globals.scanUnknownMessage = Globals.inData;
                 BeginInvoke(new EventHandler(DisplayErrorMessage));
             }
         }
@@ -487,20 +615,31 @@ namespace SDA100
         private void ProgressBarStatus(object sender, EventArgs e)
         {
             string prctComplete;
-            if (Globals.inData.Contains(">"))
+            if (!Globals.inData.Contains("!g"))
             {
-                prctComplete = 100.ToString();
+                if (Globals.inData.Contains(">"))
+                {
+                    prctComplete = 100.ToString();
+                }
+                else
+                {
+                    prctComplete = Globals.inData.Remove(Globals.inData.Length - 1, 1);
+                }
+                Console.WriteLine(prctComplete + "%");
+                progressBar.Value = Convert.ToInt32(prctComplete);
+                
             }
             else
             {
-                prctComplete = Globals.inData.Remove(Globals.inData.Length - 2, 2);
-            }
-            //prctComplete = (Convert.ToDouble(Globals.inData)) * 100;
-            Console.WriteLine(prctComplete + "%");
-            progressBar.Value = Convert.ToInt32(prctComplete);
+                Console.WriteLine("Contains !g: " + Globals.inData);
+                prctComplete = "100";
+                Console.WriteLine(prctComplete + "%");
+                progressBar.Value = Convert.ToInt32(prctComplete);
+            }            
         }
         private void DisplayErrorMessage(object sender, EventArgs e)
         {
+            
             Console.WriteLine("Unknown Response: " + Globals.scanUnknownMessage);
         }
 

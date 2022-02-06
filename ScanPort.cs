@@ -109,17 +109,24 @@ namespace SDA100
         {
             string response = "";
             int responseTimer = 0;
-            //if (command.Contains("M1") || command.Contains("M2"))
-            //{
-            //   response = _serialPort.ReadTo("M");
-            //   responseTimer++;
-               
-            //}
-            while ((response == "") && (responseTimer < 1000))
+            if (command.Contains("1M"))
             {
-                response = _serialPort.ReadLine();
+                response = _serialPort.ReadTo("!M1\r\n");
                 responseTimer++;
             }
+            else if (command.Contains("2M"))
+            {
+                response = _serialPort.ReadTo("!M2\r\n");
+                responseTimer++;
+            }
+            else
+            {
+                while ((response == "") && (responseTimer < 1000))
+                {
+                    response = _serialPort.ReadLine();
+                    responseTimer++;
+                }
+            } 
             Console.WriteLine(response);
             return response;
         }

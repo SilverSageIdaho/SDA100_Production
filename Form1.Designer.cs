@@ -368,6 +368,7 @@ namespace SDA100
             this.TxtIni_MapRes = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabStartup = new System.Windows.Forms.TabPage();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.txtr_Startup = new System.Windows.Forms.RichTextBox();
             this.tabGroup.SuspendLayout();
             this.tabMain.SuspendLayout();
@@ -485,90 +486,90 @@ namespace SDA100
             // 
             // lblScanDefectCnt7
             // 
-            this.lblScanDefectCnt7.AutoSize = true;
             this.lblScanDefectCnt7.BackColor = System.Drawing.SystemColors.Control;
             this.lblScanDefectCnt7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScanDefectCnt7.Location = new System.Drawing.Point(982, 557);
+            this.lblScanDefectCnt7.Location = new System.Drawing.Point(965, 557);
             this.lblScanDefectCnt7.Name = "lblScanDefectCnt7";
-            this.lblScanDefectCnt7.Size = new System.Drawing.Size(15, 16);
+            this.lblScanDefectCnt7.Size = new System.Drawing.Size(50, 16);
             this.lblScanDefectCnt7.TabIndex = 105;
             this.lblScanDefectCnt7.Text = "0";
+            this.lblScanDefectCnt7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblScanDefectCnt6
             // 
-            this.lblScanDefectCnt6.AutoSize = true;
             this.lblScanDefectCnt6.BackColor = System.Drawing.SystemColors.Control;
             this.lblScanDefectCnt6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScanDefectCnt6.Location = new System.Drawing.Point(912, 557);
+            this.lblScanDefectCnt6.Location = new System.Drawing.Point(895, 557);
             this.lblScanDefectCnt6.Name = "lblScanDefectCnt6";
-            this.lblScanDefectCnt6.Size = new System.Drawing.Size(15, 16);
+            this.lblScanDefectCnt6.Size = new System.Drawing.Size(50, 16);
             this.lblScanDefectCnt6.TabIndex = 104;
             this.lblScanDefectCnt6.Text = "0";
+            this.lblScanDefectCnt6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblScanDefectCnt5
             // 
-            this.lblScanDefectCnt5.AutoSize = true;
             this.lblScanDefectCnt5.BackColor = System.Drawing.SystemColors.Control;
             this.lblScanDefectCnt5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScanDefectCnt5.Location = new System.Drawing.Point(841, 557);
+            this.lblScanDefectCnt5.Location = new System.Drawing.Point(824, 557);
             this.lblScanDefectCnt5.Name = "lblScanDefectCnt5";
-            this.lblScanDefectCnt5.Size = new System.Drawing.Size(15, 16);
+            this.lblScanDefectCnt5.Size = new System.Drawing.Size(50, 16);
             this.lblScanDefectCnt5.TabIndex = 103;
             this.lblScanDefectCnt5.Text = "0";
+            this.lblScanDefectCnt5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblScanDefectCnt4
             // 
-            this.lblScanDefectCnt4.AutoSize = true;
             this.lblScanDefectCnt4.BackColor = System.Drawing.SystemColors.Control;
             this.lblScanDefectCnt4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScanDefectCnt4.Location = new System.Drawing.Point(771, 557);
+            this.lblScanDefectCnt4.Location = new System.Drawing.Point(754, 557);
             this.lblScanDefectCnt4.Name = "lblScanDefectCnt4";
-            this.lblScanDefectCnt4.Size = new System.Drawing.Size(15, 16);
+            this.lblScanDefectCnt4.Size = new System.Drawing.Size(50, 16);
             this.lblScanDefectCnt4.TabIndex = 102;
             this.lblScanDefectCnt4.Text = "0";
+            this.lblScanDefectCnt4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblScanDefectCnt3
             // 
-            this.lblScanDefectCnt3.AutoSize = true;
             this.lblScanDefectCnt3.BackColor = System.Drawing.SystemColors.Control;
             this.lblScanDefectCnt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScanDefectCnt3.Location = new System.Drawing.Point(701, 557);
+            this.lblScanDefectCnt3.Location = new System.Drawing.Point(684, 557);
             this.lblScanDefectCnt3.Name = "lblScanDefectCnt3";
-            this.lblScanDefectCnt3.Size = new System.Drawing.Size(15, 16);
+            this.lblScanDefectCnt3.Size = new System.Drawing.Size(50, 16);
             this.lblScanDefectCnt3.TabIndex = 101;
             this.lblScanDefectCnt3.Text = "0";
+            this.lblScanDefectCnt3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblScanDefectCnt2
             // 
-            this.lblScanDefectCnt2.AutoSize = true;
             this.lblScanDefectCnt2.BackColor = System.Drawing.SystemColors.Control;
             this.lblScanDefectCnt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScanDefectCnt2.Location = new System.Drawing.Point(631, 557);
+            this.lblScanDefectCnt2.Location = new System.Drawing.Point(614, 557);
             this.lblScanDefectCnt2.Name = "lblScanDefectCnt2";
-            this.lblScanDefectCnt2.Size = new System.Drawing.Size(15, 16);
+            this.lblScanDefectCnt2.Size = new System.Drawing.Size(50, 16);
             this.lblScanDefectCnt2.TabIndex = 100;
             this.lblScanDefectCnt2.Text = "0";
+            this.lblScanDefectCnt2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblScanDefectCnt1
             // 
-            this.lblScanDefectCnt1.AutoSize = true;
             this.lblScanDefectCnt1.BackColor = System.Drawing.SystemColors.Control;
             this.lblScanDefectCnt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScanDefectCnt1.Location = new System.Drawing.Point(561, 556);
+            this.lblScanDefectCnt1.Location = new System.Drawing.Point(544, 556);
             this.lblScanDefectCnt1.Name = "lblScanDefectCnt1";
-            this.lblScanDefectCnt1.Size = new System.Drawing.Size(15, 16);
+            this.lblScanDefectCnt1.Size = new System.Drawing.Size(50, 16);
             this.lblScanDefectCnt1.TabIndex = 99;
             this.lblScanDefectCnt1.Text = "0";
+            this.lblScanDefectCnt1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblMinHeightBar
             // 
-            this.lblMinHeightBar.AutoSize = true;
             this.lblMinHeightBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMinHeightBar.Location = new System.Drawing.Point(500, 657);
+            this.lblMinHeightBar.Location = new System.Drawing.Point(509, 655);
             this.lblMinHeightBar.Name = "lblMinHeightBar";
             this.lblMinHeightBar.Size = new System.Drawing.Size(15, 16);
             this.lblMinHeightBar.TabIndex = 98;
             this.lblMinHeightBar.Text = "0";
+            this.lblMinHeightBar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label9
             // 
@@ -642,23 +643,23 @@ namespace SDA100
             // 
             // lblMidHeightBar
             // 
-            this.lblMidHeightBar.AutoSize = true;
             this.lblMidHeightBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMidHeightBar.Location = new System.Drawing.Point(493, 606);
+            this.lblMidHeightBar.Location = new System.Drawing.Point(472, 606);
             this.lblMidHeightBar.Name = "lblMidHeightBar";
-            this.lblMidHeightBar.Size = new System.Drawing.Size(22, 16);
+            this.lblMidHeightBar.Size = new System.Drawing.Size(52, 16);
             this.lblMidHeightBar.TabIndex = 90;
             this.lblMidHeightBar.Text = "50";
+            this.lblMidHeightBar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblMaxHeightBar
             // 
-            this.lblMaxHeightBar.AutoSize = true;
             this.lblMaxHeightBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaxHeightBar.Location = new System.Drawing.Point(486, 557);
+            this.lblMaxHeightBar.Location = new System.Drawing.Point(472, 556);
             this.lblMaxHeightBar.Name = "lblMaxHeightBar";
-            this.lblMaxHeightBar.Size = new System.Drawing.Size(29, 16);
+            this.lblMaxHeightBar.Size = new System.Drawing.Size(52, 16);
             this.lblMaxHeightBar.TabIndex = 89;
             this.lblMaxHeightBar.Text = "100";
+            this.lblMaxHeightBar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // def7
             // 
@@ -1378,97 +1379,90 @@ namespace SDA100
             // 
             // lbleScanDefectCnt7
             // 
-            this.lbleScanDefectCnt7.AutoSize = true;
             this.lbleScanDefectCnt7.BackColor = System.Drawing.SystemColors.Control;
             this.lbleScanDefectCnt7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleScanDefectCnt7.Location = new System.Drawing.Point(1016, 599);
+            this.lbleScanDefectCnt7.Location = new System.Drawing.Point(998, 599);
             this.lbleScanDefectCnt7.Name = "lbleScanDefectCnt7";
-            this.lbleScanDefectCnt7.Size = new System.Drawing.Size(15, 16);
+            this.lbleScanDefectCnt7.Size = new System.Drawing.Size(50, 16);
             this.lbleScanDefectCnt7.TabIndex = 135;
             this.lbleScanDefectCnt7.Text = "0";
             this.lbleScanDefectCnt7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbleScanDefectCnt6
             // 
-            this.lbleScanDefectCnt6.AutoSize = true;
             this.lbleScanDefectCnt6.BackColor = System.Drawing.SystemColors.Control;
             this.lbleScanDefectCnt6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleScanDefectCnt6.Location = new System.Drawing.Point(946, 599);
+            this.lbleScanDefectCnt6.Location = new System.Drawing.Point(928, 599);
             this.lbleScanDefectCnt6.Name = "lbleScanDefectCnt6";
-            this.lbleScanDefectCnt6.Size = new System.Drawing.Size(15, 16);
+            this.lbleScanDefectCnt6.Size = new System.Drawing.Size(50, 16);
             this.lbleScanDefectCnt6.TabIndex = 134;
             this.lbleScanDefectCnt6.Text = "0";
             this.lbleScanDefectCnt6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbleScanDefectCnt5
             // 
-            this.lbleScanDefectCnt5.AutoSize = true;
             this.lbleScanDefectCnt5.BackColor = System.Drawing.SystemColors.Control;
             this.lbleScanDefectCnt5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleScanDefectCnt5.Location = new System.Drawing.Point(876, 599);
+            this.lbleScanDefectCnt5.Location = new System.Drawing.Point(858, 599);
             this.lbleScanDefectCnt5.Name = "lbleScanDefectCnt5";
-            this.lbleScanDefectCnt5.Size = new System.Drawing.Size(15, 16);
+            this.lbleScanDefectCnt5.Size = new System.Drawing.Size(50, 16);
             this.lbleScanDefectCnt5.TabIndex = 133;
             this.lbleScanDefectCnt5.Text = "0";
             this.lbleScanDefectCnt5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbleScanDefectCnt4
             // 
-            this.lbleScanDefectCnt4.AutoSize = true;
             this.lbleScanDefectCnt4.BackColor = System.Drawing.SystemColors.Control;
             this.lbleScanDefectCnt4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleScanDefectCnt4.Location = new System.Drawing.Point(806, 599);
+            this.lbleScanDefectCnt4.Location = new System.Drawing.Point(788, 599);
             this.lbleScanDefectCnt4.Name = "lbleScanDefectCnt4";
-            this.lbleScanDefectCnt4.Size = new System.Drawing.Size(15, 16);
+            this.lbleScanDefectCnt4.Size = new System.Drawing.Size(50, 16);
             this.lbleScanDefectCnt4.TabIndex = 132;
             this.lbleScanDefectCnt4.Text = "0";
             this.lbleScanDefectCnt4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbleScanDefectCnt3
             // 
-            this.lbleScanDefectCnt3.AutoSize = true;
             this.lbleScanDefectCnt3.BackColor = System.Drawing.SystemColors.Control;
             this.lbleScanDefectCnt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleScanDefectCnt3.Location = new System.Drawing.Point(737, 599);
+            this.lbleScanDefectCnt3.Location = new System.Drawing.Point(718, 599);
             this.lbleScanDefectCnt3.Name = "lbleScanDefectCnt3";
-            this.lbleScanDefectCnt3.Size = new System.Drawing.Size(15, 16);
+            this.lbleScanDefectCnt3.Size = new System.Drawing.Size(50, 16);
             this.lbleScanDefectCnt3.TabIndex = 131;
             this.lbleScanDefectCnt3.Text = "0";
             this.lbleScanDefectCnt3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbleScanDefectCnt2
             // 
-            this.lbleScanDefectCnt2.AutoSize = true;
             this.lbleScanDefectCnt2.BackColor = System.Drawing.SystemColors.Control;
             this.lbleScanDefectCnt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleScanDefectCnt2.Location = new System.Drawing.Point(666, 599);
+            this.lbleScanDefectCnt2.Location = new System.Drawing.Point(649, 599);
             this.lbleScanDefectCnt2.Name = "lbleScanDefectCnt2";
-            this.lbleScanDefectCnt2.Size = new System.Drawing.Size(15, 16);
+            this.lbleScanDefectCnt2.Size = new System.Drawing.Size(50, 16);
             this.lbleScanDefectCnt2.TabIndex = 130;
             this.lbleScanDefectCnt2.Text = "0";
             this.lbleScanDefectCnt2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbleScanDefectCnt1
             // 
-            this.lbleScanDefectCnt1.AutoSize = true;
             this.lbleScanDefectCnt1.BackColor = System.Drawing.SystemColors.Control;
             this.lbleScanDefectCnt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleScanDefectCnt1.Location = new System.Drawing.Point(596, 599);
+            this.lbleScanDefectCnt1.Location = new System.Drawing.Point(578, 599);
             this.lbleScanDefectCnt1.Name = "lbleScanDefectCnt1";
-            this.lbleScanDefectCnt1.Size = new System.Drawing.Size(15, 16);
+            this.lbleScanDefectCnt1.Size = new System.Drawing.Size(50, 16);
             this.lbleScanDefectCnt1.TabIndex = 129;
             this.lbleScanDefectCnt1.Text = "0";
             this.lbleScanDefectCnt1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbleMinHeightBar
             // 
-            this.lbleMinHeightBar.AutoSize = true;
             this.lbleMinHeightBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleMinHeightBar.Location = new System.Drawing.Point(535, 699);
+            this.lbleMinHeightBar.Location = new System.Drawing.Point(530, 698);
             this.lbleMinHeightBar.Name = "lbleMinHeightBar";
-            this.lbleMinHeightBar.Size = new System.Drawing.Size(15, 16);
+            this.lbleMinHeightBar.Size = new System.Drawing.Size(29, 16);
             this.lbleMinHeightBar.TabIndex = 128;
             this.lbleMinHeightBar.Text = "0";
+            this.lbleMinHeightBar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label22
             // 
@@ -1542,23 +1536,23 @@ namespace SDA100
             // 
             // lbleMidHeightBar
             // 
-            this.lbleMidHeightBar.AutoSize = true;
             this.lbleMidHeightBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleMidHeightBar.Location = new System.Drawing.Point(528, 648);
+            this.lbleMidHeightBar.Location = new System.Drawing.Point(508, 643);
             this.lbleMidHeightBar.Name = "lbleMidHeightBar";
-            this.lbleMidHeightBar.Size = new System.Drawing.Size(22, 16);
+            this.lbleMidHeightBar.Size = new System.Drawing.Size(52, 16);
             this.lbleMidHeightBar.TabIndex = 120;
             this.lbleMidHeightBar.Text = "50";
+            this.lbleMidHeightBar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbleMaxHeightBar
             // 
-            this.lbleMaxHeightBar.AutoSize = true;
             this.lbleMaxHeightBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbleMaxHeightBar.Location = new System.Drawing.Point(521, 598);
+            this.lbleMaxHeightBar.Location = new System.Drawing.Point(508, 595);
             this.lbleMaxHeightBar.Name = "lbleMaxHeightBar";
-            this.lbleMaxHeightBar.Size = new System.Drawing.Size(29, 16);
+            this.lbleMaxHeightBar.Size = new System.Drawing.Size(52, 16);
             this.lbleMaxHeightBar.TabIndex = 119;
             this.lbleMaxHeightBar.Text = "100";
+            this.lbleMaxHeightBar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // edef7
             // 
@@ -1631,7 +1625,7 @@ namespace SDA100
             // 
             // eDisHis
             // 
-            this.eDisHis.Location = new System.Drawing.Point(563, 595);
+            this.eDisHis.Location = new System.Drawing.Point(564, 595);
             this.eDisHis.Multiline = true;
             this.eDisHis.Name = "eDisHis";
             this.eDisHis.ReadOnly = true;
@@ -2564,6 +2558,8 @@ namespace SDA100
             this.cbxSSScanOfArea_Set.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxSSScanOfArea_Set.FormattingEnabled = true;
             this.cbxSSScanOfArea_Set.Items.AddRange(new object[] {
+            "2",
+            "10",
             "25",
             "50",
             "75",
@@ -3643,9 +3639,9 @@ namespace SDA100
             this.groupBoxEdit.Controls.Add(this.label81);
             this.groupBoxEdit.Controls.Add(this.TxtIni_EditMapRes);
             this.groupBoxEdit.Controls.Add(this.label82);
-            this.groupBoxEdit.Location = new System.Drawing.Point(56, 50);
+            this.groupBoxEdit.Location = new System.Drawing.Point(32, 50);
             this.groupBoxEdit.Name = "groupBoxEdit";
-            this.groupBoxEdit.Size = new System.Drawing.Size(545, 325);
+            this.groupBoxEdit.Size = new System.Drawing.Size(569, 325);
             this.groupBoxEdit.TabIndex = 93;
             this.groupBoxEdit.TabStop = false;
             // 
@@ -3664,7 +3660,7 @@ namespace SDA100
             // label36
             // 
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(461, 279);
+            this.label36.Location = new System.Drawing.Point(481, 279);
             this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(53, 28);
@@ -3675,7 +3671,7 @@ namespace SDA100
             // label37
             // 
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(461, 235);
+            this.label37.Location = new System.Drawing.Point(481, 235);
             this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(53, 28);
@@ -3686,7 +3682,7 @@ namespace SDA100
             // label38
             // 
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(461, 194);
+            this.label38.Location = new System.Drawing.Point(481, 194);
             this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(53, 28);
@@ -3697,7 +3693,7 @@ namespace SDA100
             // label39
             // 
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(461, 152);
+            this.label39.Location = new System.Drawing.Point(481, 152);
             this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(53, 28);
@@ -3708,7 +3704,7 @@ namespace SDA100
             // label41
             // 
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(461, 108);
+            this.label41.Location = new System.Drawing.Point(481, 108);
             this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(53, 28);
@@ -3719,7 +3715,7 @@ namespace SDA100
             // label42
             // 
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(461, 65);
+            this.label42.Location = new System.Drawing.Point(481, 65);
             this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(53, 28);
@@ -3730,7 +3726,7 @@ namespace SDA100
             // label43
             // 
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(230, 254);
+            this.label43.Location = new System.Drawing.Point(223, 254);
             this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(51, 28);
@@ -3741,7 +3737,7 @@ namespace SDA100
             // label44
             // 
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(230, 210);
+            this.label44.Location = new System.Drawing.Point(223, 210);
             this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(51, 28);
@@ -3752,7 +3748,7 @@ namespace SDA100
             // label45
             // 
             this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(230, 169);
+            this.label45.Location = new System.Drawing.Point(223, 169);
             this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(35, 28);
@@ -3763,7 +3759,7 @@ namespace SDA100
             // label46
             // 
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(230, 127);
+            this.label46.Location = new System.Drawing.Point(223, 127);
             this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(35, 28);
@@ -3774,7 +3770,7 @@ namespace SDA100
             // label47
             // 
             this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(230, 86);
+            this.label47.Location = new System.Drawing.Point(223, 86);
             this.label47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(35, 28);
@@ -3796,7 +3792,7 @@ namespace SDA100
             // TxtIni_EditParkY
             // 
             this.TxtIni_EditParkY.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIni_EditParkY.Location = new System.Drawing.Point(367, 68);
+            this.TxtIni_EditParkY.Location = new System.Drawing.Point(387, 68);
             this.TxtIni_EditParkY.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditParkY.Name = "TxtIni_EditParkY";
             this.TxtIni_EditParkY.ReadOnly = true;
@@ -3807,7 +3803,7 @@ namespace SDA100
             // label72
             // 
             this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label72.Location = new System.Drawing.Point(285, 71);
+            this.label72.Location = new System.Drawing.Point(305, 71);
             this.label72.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(78, 19);
@@ -3818,7 +3814,7 @@ namespace SDA100
             // TxtIni_EditPrefocusZ
             // 
             this.TxtIni_EditPrefocusZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIni_EditPrefocusZ.Location = new System.Drawing.Point(367, 282);
+            this.TxtIni_EditPrefocusZ.Location = new System.Drawing.Point(387, 282);
             this.TxtIni_EditPrefocusZ.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditPrefocusZ.Name = "TxtIni_EditPrefocusZ";
             this.TxtIni_EditPrefocusZ.ReadOnly = true;
@@ -3829,7 +3825,7 @@ namespace SDA100
             // TxtIni_EditTrackSteps
             // 
             this.TxtIni_EditTrackSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIni_EditTrackSteps.Location = new System.Drawing.Point(133, 260);
+            this.TxtIni_EditTrackSteps.Location = new System.Drawing.Point(126, 260);
             this.TxtIni_EditTrackSteps.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditTrackSteps.Name = "TxtIni_EditTrackSteps";
             this.TxtIni_EditTrackSteps.ReadOnly = true;
@@ -3840,10 +3836,10 @@ namespace SDA100
             // label73
             // 
             this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.Location = new System.Drawing.Point(285, 285);
+            this.label73.Location = new System.Drawing.Point(287, 285);
             this.label73.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(78, 19);
+            this.label73.Size = new System.Drawing.Size(96, 19);
             this.label73.TabIndex = 84;
             this.label73.Text = "Prefocus Z:";
             this.label73.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -3851,7 +3847,7 @@ namespace SDA100
             // label74
             // 
             this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label74.Location = new System.Drawing.Point(17, 263);
+            this.label74.Location = new System.Drawing.Point(10, 263);
             this.label74.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(112, 19);
@@ -3862,7 +3858,7 @@ namespace SDA100
             // TxtIni_EditPrefocusX
             // 
             this.TxtIni_EditPrefocusX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIni_EditPrefocusX.Location = new System.Drawing.Point(367, 238);
+            this.TxtIni_EditPrefocusX.Location = new System.Drawing.Point(387, 238);
             this.TxtIni_EditPrefocusX.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditPrefocusX.Name = "TxtIni_EditPrefocusX";
             this.TxtIni_EditPrefocusX.ReadOnly = true;
@@ -3873,7 +3869,7 @@ namespace SDA100
             // TxtIni_EditSectorSteps
             // 
             this.TxtIni_EditSectorSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIni_EditSectorSteps.Location = new System.Drawing.Point(133, 216);
+            this.TxtIni_EditSectorSteps.Location = new System.Drawing.Point(126, 216);
             this.TxtIni_EditSectorSteps.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditSectorSteps.Name = "TxtIni_EditSectorSteps";
             this.TxtIni_EditSectorSteps.ReadOnly = true;
@@ -3884,10 +3880,10 @@ namespace SDA100
             // label75
             // 
             this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.Location = new System.Drawing.Point(285, 241);
+            this.label75.Location = new System.Drawing.Point(287, 241);
             this.label75.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(78, 19);
+            this.label75.Size = new System.Drawing.Size(96, 19);
             this.label75.TabIndex = 82;
             this.label75.Text = "Prefocus X:";
             this.label75.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -3895,7 +3891,7 @@ namespace SDA100
             // label76
             // 
             this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.Location = new System.Drawing.Point(17, 219);
+            this.label76.Location = new System.Drawing.Point(10, 219);
             this.label76.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(112, 19);
@@ -3906,7 +3902,7 @@ namespace SDA100
             // TxtIni_EditPrefocusY
             // 
             this.TxtIni_EditPrefocusY.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIni_EditPrefocusY.Location = new System.Drawing.Point(367, 197);
+            this.TxtIni_EditPrefocusY.Location = new System.Drawing.Point(387, 197);
             this.TxtIni_EditPrefocusY.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditPrefocusY.Name = "TxtIni_EditPrefocusY";
             this.TxtIni_EditPrefocusY.ReadOnly = true;
@@ -3917,7 +3913,7 @@ namespace SDA100
             // TxtIni_EditEdgeRej
             // 
             this.TxtIni_EditEdgeRej.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIni_EditEdgeRej.Location = new System.Drawing.Point(133, 175);
+            this.TxtIni_EditEdgeRej.Location = new System.Drawing.Point(126, 175);
             this.TxtIni_EditEdgeRej.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditEdgeRej.Name = "TxtIni_EditEdgeRej";
             this.TxtIni_EditEdgeRej.ReadOnly = true;
@@ -3928,10 +3924,10 @@ namespace SDA100
             // label77
             // 
             this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.Location = new System.Drawing.Point(285, 200);
+            this.label77.Location = new System.Drawing.Point(287, 200);
             this.label77.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(78, 19);
+            this.label77.Size = new System.Drawing.Size(96, 19);
             this.label77.TabIndex = 80;
             this.label77.Text = "Prefocus Y:";
             this.label77.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -3939,7 +3935,7 @@ namespace SDA100
             // label78
             // 
             this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label78.Location = new System.Drawing.Point(17, 178);
+            this.label78.Location = new System.Drawing.Point(10, 178);
             this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(112, 19);
@@ -3950,7 +3946,7 @@ namespace SDA100
             // TxtIni_EditParkZ
             // 
             this.TxtIni_EditParkZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIni_EditParkZ.Location = new System.Drawing.Point(367, 155);
+            this.TxtIni_EditParkZ.Location = new System.Drawing.Point(387, 155);
             this.TxtIni_EditParkZ.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditParkZ.Name = "TxtIni_EditParkZ";
             this.TxtIni_EditParkZ.ReadOnly = true;
@@ -3961,7 +3957,7 @@ namespace SDA100
             // TxtIni_EditWaferDiam
             // 
             this.TxtIni_EditWaferDiam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIni_EditWaferDiam.Location = new System.Drawing.Point(133, 133);
+            this.TxtIni_EditWaferDiam.Location = new System.Drawing.Point(126, 133);
             this.TxtIni_EditWaferDiam.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditWaferDiam.Name = "TxtIni_EditWaferDiam";
             this.TxtIni_EditWaferDiam.ReadOnly = true;
@@ -3972,7 +3968,7 @@ namespace SDA100
             // label79
             // 
             this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label79.Location = new System.Drawing.Point(285, 158);
+            this.label79.Location = new System.Drawing.Point(305, 158);
             this.label79.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(78, 19);
@@ -3983,7 +3979,7 @@ namespace SDA100
             // label80
             // 
             this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label80.Location = new System.Drawing.Point(17, 136);
+            this.label80.Location = new System.Drawing.Point(10, 136);
             this.label80.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label80.Name = "label80";
             this.label80.Size = new System.Drawing.Size(112, 19);
@@ -3994,7 +3990,7 @@ namespace SDA100
             // TxtIni_EditParkX
             // 
             this.TxtIni_EditParkX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIni_EditParkX.Location = new System.Drawing.Point(367, 111);
+            this.TxtIni_EditParkX.Location = new System.Drawing.Point(387, 111);
             this.TxtIni_EditParkX.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditParkX.Name = "TxtIni_EditParkX";
             this.TxtIni_EditParkX.ReadOnly = true;
@@ -4005,7 +4001,7 @@ namespace SDA100
             // label81
             // 
             this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label81.Location = new System.Drawing.Point(285, 114);
+            this.label81.Location = new System.Drawing.Point(305, 114);
             this.label81.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label81.Name = "label81";
             this.label81.Size = new System.Drawing.Size(78, 19);
@@ -4016,7 +4012,7 @@ namespace SDA100
             // TxtIni_EditMapRes
             // 
             this.TxtIni_EditMapRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIni_EditMapRes.Location = new System.Drawing.Point(133, 89);
+            this.TxtIni_EditMapRes.Location = new System.Drawing.Point(126, 89);
             this.TxtIni_EditMapRes.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIni_EditMapRes.Name = "TxtIni_EditMapRes";
             this.TxtIni_EditMapRes.ReadOnly = true;
@@ -4027,7 +4023,7 @@ namespace SDA100
             // label82
             // 
             this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label82.Location = new System.Drawing.Point(17, 92);
+            this.label82.Location = new System.Drawing.Point(10, 92);
             this.label82.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(112, 19);
@@ -4074,7 +4070,7 @@ namespace SDA100
             this.IniGroupBox.Controls.Add(this.label14);
             this.IniGroupBox.Location = new System.Drawing.Point(631, 50);
             this.IniGroupBox.Name = "IniGroupBox";
-            this.IniGroupBox.Size = new System.Drawing.Size(530, 325);
+            this.IniGroupBox.Size = new System.Drawing.Size(569, 325);
             this.IniGroupBox.TabIndex = 92;
             this.IniGroupBox.TabStop = false;
             // 
@@ -4454,6 +4450,7 @@ namespace SDA100
             // 
             // tabStartup
             // 
+            this.tabStartup.Controls.Add(this.richTextBox1);
             this.tabStartup.Controls.Add(this.txtr_Startup);
             this.tabStartup.Location = new System.Drawing.Point(4, 4);
             this.tabStartup.Margin = new System.Windows.Forms.Padding(2);
@@ -4463,12 +4460,23 @@ namespace SDA100
             this.tabStartup.Text = "Startup";
             this.tabStartup.UseVisualStyleBackColor = true;
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(669, 66);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(323, 455);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = "";
+            // 
             // txtr_Startup
             // 
+            this.txtr_Startup.AutoWordSelection = true;
+            this.txtr_Startup.BackColor = System.Drawing.Color.White;
             this.txtr_Startup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtr_Startup.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtr_Startup.Location = new System.Drawing.Point(87, 43);
             this.txtr_Startup.Name = "txtr_Startup";
-            this.txtr_Startup.Size = new System.Drawing.Size(1011, 625);
+            this.txtr_Startup.Size = new System.Drawing.Size(501, 625);
             this.txtr_Startup.TabIndex = 0;
             this.txtr_Startup.Text = "";
             // 
@@ -4863,6 +4871,7 @@ namespace SDA100
         private System.Windows.Forms.Button btn_ClearErrors;
         private System.Windows.Forms.CheckBox chbox_SetStartupDefaults;
         private System.Windows.Forms.Button btn_FocusLaser;
+        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.RichTextBox txtr_Startup;
     }
 }

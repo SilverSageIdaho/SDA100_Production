@@ -52,9 +52,9 @@ C:\Users\Silve\OneDrive\Documents\GitHub\SDA100_InProgress\bin\Debug\SDA100.exe.
 C:\Users\Silve\OneDrive\Documents\GitHub\SDA100_InProgress\bin\Debug\SDA100.exe
 C:\Users\Silve\OneDrive\Documents\GitHub\SDA100_InProgress\bin\Debug\SDA100.pdb
 C:\Users\Silve\OneDrive\Documents\GitHub\SDA100_InProgress\obj\Debug\SDA100.csproj.AssemblyReference.cache
-C:\Users\Silve\OneDrive\Documents\GitHub\SDA100_InProgress\obj\Debug\SDA100.mainForm.resources
 C:\Users\Silve\OneDrive\Documents\GitHub\SDA100_InProgress\obj\Debug\SDA100.Properties.Resources.resources
 C:\Users\Silve\OneDrive\Documents\GitHub\SDA100_InProgress\obj\Debug\SDA100.csproj.GenerateResource.cache
 C:\Users\Silve\OneDrive\Documents\GitHub\SDA100_InProgress\obj\Debug\SDA100.csproj.CoreCompileInputs.cache
 C:\Users\Silve\OneDrive\Documents\GitHub\SDA100_InProgress\obj\Debug\SDA100.exe
 C:\Users\Silve\OneDrive\Documents\GitHub\SDA100_InProgress\obj\Debug\SDA100.pdb
+C:\Users\Silve\OneDrive\Documents\GitHub\SDA100_InProgress\obj\Debug\SDA100.mainForm.resources

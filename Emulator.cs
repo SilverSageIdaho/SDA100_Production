@@ -146,9 +146,10 @@ namespace SDA100
             Emulator.etrackDefectCnt6 = 0;
             Emulator.etrackDefectCnt7 = 0;
 
+            
+        }
             EPostHistData();
         }
-    }
 
     public void EPostHistData()
     {
