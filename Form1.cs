@@ -12,10 +12,10 @@ using System.Text.RegularExpressions;
 using System.Threading;
 
 namespace SDA100
-{
-   
+{   
     public partial class mainForm : Form
     {
+        Keyboard keyboard;
         public int trackDefectCnt1;
         public int trackDefectCnt2;
         public int trackDefectCnt3;
@@ -447,7 +447,7 @@ namespace SDA100
                 ScanPort._serialPort.Write("h");
                 ScanPort._serialPort.Write("H");
                 ScanPort._serialPort.Write("m");
-
+                tabGroup.SelectedTab = tabStartup;
                 ScanPort._serialPort.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
 
                 btnRun.Enabled = false;
@@ -627,7 +627,7 @@ namespace SDA100
                 }
                 Console.WriteLine(prctComplete + "%");
                 progressBar.Value = Convert.ToInt32(prctComplete);
-                
+
             }
             else
             {
@@ -635,8 +635,9 @@ namespace SDA100
                 prctComplete = "100";
                 Console.WriteLine(prctComplete + "%");
                 progressBar.Value = Convert.ToInt32(prctComplete);
-            }            
+            }
         }
+
         private void DisplayErrorMessage(object sender, EventArgs e)
         {
             
@@ -795,6 +796,35 @@ namespace SDA100
         private void tabRecipe_Focus(object sender, EventArgs e)
         {
             OldAssWayOfCleaningUpRecipes();
-        }        
+        }
+
+        private void btn_StartupDismiss_Click(object sender, EventArgs e)
+        {
+            tabGroup.SelectedTab = tabMain;
+        }
+
+        private void btn_Keyboard_Click(object sender, EventArgs e)
+        {
+            string currentTxtBox = Globals.FocusedTextbox[0].Text;
+            keyboard = new Keyboard(currentTxtBox);
+            DialogResult kr = keyboard.ShowDialog(this);
+            if (kr == DialogResult.Cancel)
+            {
+                keyboard.Dispose();
+            }
+            else if (kr == DialogResult.OK)
+            {
+                Globals.FocusedTextbox[0].Text = keyboard.getText();
+                Globals.FocusedTextbox.Clear();
+                keyboard.Dispose();
+            }
+            
+           
+        }
+
+        private void btn_Keyboard_MouseEnter(object sender, EventArgs e)
+        {
+            Globals.FocusedTextbox.Add(this.ActiveControl);
+        }
     }
 }

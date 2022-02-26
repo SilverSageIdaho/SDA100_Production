@@ -229,6 +229,7 @@ namespace SDA100
             this.txtMaint_SendString = new System.Windows.Forms.TextBox();
             this.btnMaint_SendString = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.lblSyS_LeftLimitY = new System.Windows.Forms.Label();
             this.lblSyS_AutoFocusValue = new System.Windows.Forms.Label();
             this.lblSyS_ZStagePosition = new System.Windows.Forms.Label();
@@ -286,11 +287,6 @@ namespace SDA100
             this.btnXYM_Back = new System.Windows.Forms.Button();
             this.btnXYM_Left = new System.Windows.Forms.Button();
             this.lblXYM_Title = new System.Windows.Forms.Label();
-            this.tabConsole = new System.Windows.Forms.TabPage();
-            this.btnSendConsole = new System.Windows.Forms.Button();
-            this.btnClearConsole = new System.Windows.Forms.Button();
-            this.cbxConsoleCommands = new System.Windows.Forms.ComboBox();
-            this.txtConsoleOutput = new System.Windows.Forms.TextBox();
             this.tabINI = new System.Windows.Forms.TabPage();
             this.chbox_SetStartupDefaults = new System.Windows.Forms.CheckBox();
             this.BtnIni_SubmitPIN = new System.Windows.Forms.Button();
@@ -368,7 +364,9 @@ namespace SDA100
             this.TxtIni_MapRes = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabStartup = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txt_FormTextBox = new System.Windows.Forms.TextBox();
+            this.btn_Keyboard = new System.Windows.Forms.Button();
+            this.btn_StartupDismiss = new System.Windows.Forms.Button();
             this.txtr_Startup = new System.Windows.Forms.RichTextBox();
             this.tabGroup.SuspendLayout();
             this.tabMain.SuspendLayout();
@@ -387,7 +385,6 @@ namespace SDA100
             this.groupBox7.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
-            this.tabConsole.SuspendLayout();
             this.tabINI.SuspendLayout();
             this.groupBoxEdit.SuspendLayout();
             this.IniGroupBox.SuspendLayout();
@@ -401,11 +398,10 @@ namespace SDA100
             this.tabGroup.Controls.Add(this.tabData);
             this.tabGroup.Controls.Add(this.tabRecipe);
             this.tabGroup.Controls.Add(this.tabMaintenance);
-            this.tabGroup.Controls.Add(this.tabConsole);
             this.tabGroup.Controls.Add(this.tabINI);
             this.tabGroup.Controls.Add(this.tabStartup);
             this.tabGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabGroup.ItemSize = new System.Drawing.Size(94, 75);
+            this.tabGroup.ItemSize = new System.Drawing.Size(100, 75);
             this.tabGroup.Location = new System.Drawing.Point(-1, -1);
             this.tabGroup.Multiline = true;
             this.tabGroup.Name = "tabGroup";
@@ -818,7 +814,7 @@ namespace SDA100
             // lblCCScanID_Current
             // 
             this.lblCCScanID_Current.AutoSize = true;
-            this.lblCCScanID_Current.Location = new System.Drawing.Point(164, 172);
+            this.lblCCScanID_Current.Location = new System.Drawing.Point(189, 172);
             this.lblCCScanID_Current.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCCScanID_Current.Name = "lblCCScanID_Current";
             this.lblCCScanID_Current.Size = new System.Drawing.Size(47, 20);
@@ -827,7 +823,7 @@ namespace SDA100
             // 
             // lblCCScanID_Text
             // 
-            this.lblCCScanID_Text.Location = new System.Drawing.Point(21, 172);
+            this.lblCCScanID_Text.Location = new System.Drawing.Point(46, 172);
             this.lblCCScanID_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCCScanID_Text.Name = "lblCCScanID_Text";
             this.lblCCScanID_Text.Size = new System.Drawing.Size(101, 19);
@@ -838,7 +834,7 @@ namespace SDA100
             // lblCCUserID_Current
             // 
             this.lblCCUserID_Current.AutoSize = true;
-            this.lblCCUserID_Current.Location = new System.Drawing.Point(164, 146);
+            this.lblCCUserID_Current.Location = new System.Drawing.Point(189, 146);
             this.lblCCUserID_Current.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCCUserID_Current.Name = "lblCCUserID_Current";
             this.lblCCUserID_Current.Size = new System.Drawing.Size(47, 20);
@@ -847,7 +843,7 @@ namespace SDA100
             // 
             // lblCCUserID_Text
             // 
-            this.lblCCUserID_Text.Location = new System.Drawing.Point(21, 146);
+            this.lblCCUserID_Text.Location = new System.Drawing.Point(46, 146);
             this.lblCCUserID_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCCUserID_Text.Name = "lblCCUserID_Text";
             this.lblCCUserID_Text.Size = new System.Drawing.Size(101, 19);
@@ -858,7 +854,7 @@ namespace SDA100
             // lblCCRecipeName_Current
             // 
             this.lblCCRecipeName_Current.AutoSize = true;
-            this.lblCCRecipeName_Current.Location = new System.Drawing.Point(164, 120);
+            this.lblCCRecipeName_Current.Location = new System.Drawing.Point(189, 120);
             this.lblCCRecipeName_Current.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCCRecipeName_Current.Name = "lblCCRecipeName_Current";
             this.lblCCRecipeName_Current.Size = new System.Drawing.Size(47, 20);
@@ -876,7 +872,7 @@ namespace SDA100
             // lblCCEdgeReject_Current
             // 
             this.lblCCEdgeReject_Current.AutoSize = true;
-            this.lblCCEdgeReject_Current.Location = new System.Drawing.Point(175, 80);
+            this.lblCCEdgeReject_Current.Location = new System.Drawing.Point(200, 80);
             this.lblCCEdgeReject_Current.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCCEdgeReject_Current.Name = "lblCCEdgeReject_Current";
             this.lblCCEdgeReject_Current.Size = new System.Drawing.Size(0, 20);
@@ -886,7 +882,7 @@ namespace SDA100
             // lblCCWaferSize_Current
             // 
             this.lblCCWaferSize_Current.AutoSize = true;
-            this.lblCCWaferSize_Current.Location = new System.Drawing.Point(175, 58);
+            this.lblCCWaferSize_Current.Location = new System.Drawing.Point(200, 58);
             this.lblCCWaferSize_Current.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCCWaferSize_Current.Name = "lblCCWaferSize_Current";
             this.lblCCWaferSize_Current.Size = new System.Drawing.Size(0, 20);
@@ -895,7 +891,7 @@ namespace SDA100
             // 
             // lblCCRecipeName_Text
             // 
-            this.lblCCRecipeName_Text.Location = new System.Drawing.Point(21, 121);
+            this.lblCCRecipeName_Text.Location = new System.Drawing.Point(46, 121);
             this.lblCCRecipeName_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCCRecipeName_Text.Name = "lblCCRecipeName_Text";
             this.lblCCRecipeName_Text.Size = new System.Drawing.Size(101, 19);
@@ -905,7 +901,7 @@ namespace SDA100
             // 
             // lblCCEdgeReject_Text
             // 
-            this.lblCCEdgeReject_Text.Location = new System.Drawing.Point(19, 80);
+            this.lblCCEdgeReject_Text.Location = new System.Drawing.Point(44, 80);
             this.lblCCEdgeReject_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCCEdgeReject_Text.Name = "lblCCEdgeReject_Text";
             this.lblCCEdgeReject_Text.Size = new System.Drawing.Size(105, 20);
@@ -915,7 +911,7 @@ namespace SDA100
             // 
             // lblCCWaferSize_Text
             // 
-            this.lblCCWaferSize_Text.Location = new System.Drawing.Point(25, 58);
+            this.lblCCWaferSize_Text.Location = new System.Drawing.Point(50, 58);
             this.lblCCWaferSize_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCCWaferSize_Text.Name = "lblCCWaferSize_Text";
             this.lblCCWaferSize_Text.Size = new System.Drawing.Size(97, 20);
@@ -927,7 +923,7 @@ namespace SDA100
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(110, 25);
+            this.label29.Location = new System.Drawing.Point(124, 25);
             this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(140, 25);
@@ -977,7 +973,7 @@ namespace SDA100
             // 
             this.lblSizeClass_PSizeTotal_Limit.AutoSize = true;
             this.lblSizeClass_PSizeTotal_Limit.ForeColor = System.Drawing.Color.Green;
-            this.lblSizeClass_PSizeTotal_Limit.Location = new System.Drawing.Point(268, 208);
+            this.lblSizeClass_PSizeTotal_Limit.Location = new System.Drawing.Point(291, 205);
             this.lblSizeClass_PSizeTotal_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSizeTotal_Limit.Name = "lblSizeClass_PSizeTotal_Limit";
             this.lblSizeClass_PSizeTotal_Limit.Size = new System.Drawing.Size(18, 20);
@@ -989,7 +985,7 @@ namespace SDA100
             // 
             this.lblSizeClass_PSize7_Limit.AutoSize = true;
             this.lblSizeClass_PSize7_Limit.ForeColor = System.Drawing.Color.Green;
-            this.lblSizeClass_PSize7_Limit.Location = new System.Drawing.Point(268, 188);
+            this.lblSizeClass_PSize7_Limit.Location = new System.Drawing.Point(291, 185);
             this.lblSizeClass_PSize7_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize7_Limit.Name = "lblSizeClass_PSize7_Limit";
             this.lblSizeClass_PSize7_Limit.Size = new System.Drawing.Size(18, 20);
@@ -1001,7 +997,7 @@ namespace SDA100
             // 
             this.lblSizeClass_PSize6_Limit.AutoSize = true;
             this.lblSizeClass_PSize6_Limit.ForeColor = System.Drawing.Color.Green;
-            this.lblSizeClass_PSize6_Limit.Location = new System.Drawing.Point(268, 169);
+            this.lblSizeClass_PSize6_Limit.Location = new System.Drawing.Point(291, 166);
             this.lblSizeClass_PSize6_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize6_Limit.Name = "lblSizeClass_PSize6_Limit";
             this.lblSizeClass_PSize6_Limit.Size = new System.Drawing.Size(18, 20);
@@ -1013,7 +1009,7 @@ namespace SDA100
             // 
             this.lblSizeClass_PSize5_Limit.AutoSize = true;
             this.lblSizeClass_PSize5_Limit.ForeColor = System.Drawing.Color.Green;
-            this.lblSizeClass_PSize5_Limit.Location = new System.Drawing.Point(268, 149);
+            this.lblSizeClass_PSize5_Limit.Location = new System.Drawing.Point(291, 146);
             this.lblSizeClass_PSize5_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize5_Limit.Name = "lblSizeClass_PSize5_Limit";
             this.lblSizeClass_PSize5_Limit.Size = new System.Drawing.Size(18, 20);
@@ -1025,7 +1021,7 @@ namespace SDA100
             // 
             this.lblSizeClass_PSize4_Limit.AutoSize = true;
             this.lblSizeClass_PSize4_Limit.ForeColor = System.Drawing.Color.Green;
-            this.lblSizeClass_PSize4_Limit.Location = new System.Drawing.Point(268, 130);
+            this.lblSizeClass_PSize4_Limit.Location = new System.Drawing.Point(291, 127);
             this.lblSizeClass_PSize4_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize4_Limit.Name = "lblSizeClass_PSize4_Limit";
             this.lblSizeClass_PSize4_Limit.Size = new System.Drawing.Size(18, 20);
@@ -1037,7 +1033,7 @@ namespace SDA100
             // 
             this.lblSizeClass_PSize3_Limit.AutoSize = true;
             this.lblSizeClass_PSize3_Limit.ForeColor = System.Drawing.Color.Green;
-            this.lblSizeClass_PSize3_Limit.Location = new System.Drawing.Point(268, 110);
+            this.lblSizeClass_PSize3_Limit.Location = new System.Drawing.Point(291, 107);
             this.lblSizeClass_PSize3_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize3_Limit.Name = "lblSizeClass_PSize3_Limit";
             this.lblSizeClass_PSize3_Limit.Size = new System.Drawing.Size(18, 20);
@@ -1049,7 +1045,7 @@ namespace SDA100
             // 
             this.lblSizeClass_PSize2_Limit.AutoSize = true;
             this.lblSizeClass_PSize2_Limit.ForeColor = System.Drawing.Color.Green;
-            this.lblSizeClass_PSize2_Limit.Location = new System.Drawing.Point(268, 91);
+            this.lblSizeClass_PSize2_Limit.Location = new System.Drawing.Point(291, 88);
             this.lblSizeClass_PSize2_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize2_Limit.Name = "lblSizeClass_PSize2_Limit";
             this.lblSizeClass_PSize2_Limit.Size = new System.Drawing.Size(18, 20);
@@ -1061,7 +1057,7 @@ namespace SDA100
             // 
             this.lblSizeClass_PSize1_Limit.AutoSize = true;
             this.lblSizeClass_PSize1_Limit.ForeColor = System.Drawing.Color.Green;
-            this.lblSizeClass_PSize1_Limit.Location = new System.Drawing.Point(268, 71);
+            this.lblSizeClass_PSize1_Limit.Location = new System.Drawing.Point(291, 68);
             this.lblSizeClass_PSize1_Limit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize1_Limit.Name = "lblSizeClass_PSize1_Limit";
             this.lblSizeClass_PSize1_Limit.Size = new System.Drawing.Size(18, 20);
@@ -1072,7 +1068,7 @@ namespace SDA100
             // lblSizeClass_Total_Count
             // 
             this.lblSizeClass_Total_Count.AutoSize = true;
-            this.lblSizeClass_Total_Count.Location = new System.Drawing.Point(154, 208);
+            this.lblSizeClass_Total_Count.Location = new System.Drawing.Point(177, 205);
             this.lblSizeClass_Total_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_Total_Count.Name = "lblSizeClass_Total_Count";
             this.lblSizeClass_Total_Count.Size = new System.Drawing.Size(18, 20);
@@ -1083,7 +1079,7 @@ namespace SDA100
             // lblSizeClass_PSize7_Count
             // 
             this.lblSizeClass_PSize7_Count.AutoSize = true;
-            this.lblSizeClass_PSize7_Count.Location = new System.Drawing.Point(154, 188);
+            this.lblSizeClass_PSize7_Count.Location = new System.Drawing.Point(177, 185);
             this.lblSizeClass_PSize7_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize7_Count.Name = "lblSizeClass_PSize7_Count";
             this.lblSizeClass_PSize7_Count.Size = new System.Drawing.Size(18, 20);
@@ -1094,7 +1090,7 @@ namespace SDA100
             // lblSizeClass_PSize6_Count
             // 
             this.lblSizeClass_PSize6_Count.AutoSize = true;
-            this.lblSizeClass_PSize6_Count.Location = new System.Drawing.Point(154, 169);
+            this.lblSizeClass_PSize6_Count.Location = new System.Drawing.Point(177, 166);
             this.lblSizeClass_PSize6_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize6_Count.Name = "lblSizeClass_PSize6_Count";
             this.lblSizeClass_PSize6_Count.Size = new System.Drawing.Size(18, 20);
@@ -1105,7 +1101,7 @@ namespace SDA100
             // lblSizeClass_PSize5_Count
             // 
             this.lblSizeClass_PSize5_Count.AutoSize = true;
-            this.lblSizeClass_PSize5_Count.Location = new System.Drawing.Point(154, 149);
+            this.lblSizeClass_PSize5_Count.Location = new System.Drawing.Point(177, 146);
             this.lblSizeClass_PSize5_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize5_Count.Name = "lblSizeClass_PSize5_Count";
             this.lblSizeClass_PSize5_Count.Size = new System.Drawing.Size(18, 20);
@@ -1116,7 +1112,7 @@ namespace SDA100
             // lblSizeClass_PSize4_Count
             // 
             this.lblSizeClass_PSize4_Count.AutoSize = true;
-            this.lblSizeClass_PSize4_Count.Location = new System.Drawing.Point(154, 130);
+            this.lblSizeClass_PSize4_Count.Location = new System.Drawing.Point(177, 127);
             this.lblSizeClass_PSize4_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize4_Count.Name = "lblSizeClass_PSize4_Count";
             this.lblSizeClass_PSize4_Count.Size = new System.Drawing.Size(18, 20);
@@ -1127,7 +1123,7 @@ namespace SDA100
             // lblSizeClass_PSize3_Count
             // 
             this.lblSizeClass_PSize3_Count.AutoSize = true;
-            this.lblSizeClass_PSize3_Count.Location = new System.Drawing.Point(154, 110);
+            this.lblSizeClass_PSize3_Count.Location = new System.Drawing.Point(177, 107);
             this.lblSizeClass_PSize3_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize3_Count.Name = "lblSizeClass_PSize3_Count";
             this.lblSizeClass_PSize3_Count.Size = new System.Drawing.Size(18, 20);
@@ -1138,7 +1134,7 @@ namespace SDA100
             // lblSizeClass_PSize2_Count
             // 
             this.lblSizeClass_PSize2_Count.AutoSize = true;
-            this.lblSizeClass_PSize2_Count.Location = new System.Drawing.Point(154, 91);
+            this.lblSizeClass_PSize2_Count.Location = new System.Drawing.Point(177, 88);
             this.lblSizeClass_PSize2_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize2_Count.Name = "lblSizeClass_PSize2_Count";
             this.lblSizeClass_PSize2_Count.Size = new System.Drawing.Size(18, 20);
@@ -1149,7 +1145,7 @@ namespace SDA100
             // lblSizeClass_PSize1_Count
             // 
             this.lblSizeClass_PSize1_Count.AutoSize = true;
-            this.lblSizeClass_PSize1_Count.Location = new System.Drawing.Point(154, 71);
+            this.lblSizeClass_PSize1_Count.Location = new System.Drawing.Point(177, 68);
             this.lblSizeClass_PSize1_Count.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize1_Count.Name = "lblSizeClass_PSize1_Count";
             this.lblSizeClass_PSize1_Count.Size = new System.Drawing.Size(18, 20);
@@ -1160,7 +1156,7 @@ namespace SDA100
             // lblSizeClass_Total_Text
             // 
             this.lblSizeClass_Total_Text.AutoSize = true;
-            this.lblSizeClass_Total_Text.Location = new System.Drawing.Point(43, 208);
+            this.lblSizeClass_Total_Text.Location = new System.Drawing.Point(66, 205);
             this.lblSizeClass_Total_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_Total_Text.Name = "lblSizeClass_Total_Text";
             this.lblSizeClass_Total_Text.Size = new System.Drawing.Size(48, 20);
@@ -1170,7 +1166,7 @@ namespace SDA100
             // lblSizeClass_PSize7_Text
             // 
             this.lblSizeClass_PSize7_Text.AutoSize = true;
-            this.lblSizeClass_PSize7_Text.Location = new System.Drawing.Point(25, 188);
+            this.lblSizeClass_PSize7_Text.Location = new System.Drawing.Point(48, 185);
             this.lblSizeClass_PSize7_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize7_Text.Name = "lblSizeClass_PSize7_Text";
             this.lblSizeClass_PSize7_Text.Size = new System.Drawing.Size(66, 20);
@@ -1180,7 +1176,7 @@ namespace SDA100
             // lblSizeClass_PSize6_Text
             // 
             this.lblSizeClass_PSize6_Text.AutoSize = true;
-            this.lblSizeClass_PSize6_Text.Location = new System.Drawing.Point(34, 169);
+            this.lblSizeClass_PSize6_Text.Location = new System.Drawing.Point(57, 166);
             this.lblSizeClass_PSize6_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize6_Text.Name = "lblSizeClass_PSize6_Text";
             this.lblSizeClass_PSize6_Text.Size = new System.Drawing.Size(57, 20);
@@ -1190,7 +1186,7 @@ namespace SDA100
             // lblSizeClass_PSize5_Text
             // 
             this.lblSizeClass_PSize5_Text.AutoSize = true;
-            this.lblSizeClass_PSize5_Text.Location = new System.Drawing.Point(34, 149);
+            this.lblSizeClass_PSize5_Text.Location = new System.Drawing.Point(57, 146);
             this.lblSizeClass_PSize5_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize5_Text.Name = "lblSizeClass_PSize5_Text";
             this.lblSizeClass_PSize5_Text.Size = new System.Drawing.Size(57, 20);
@@ -1200,7 +1196,7 @@ namespace SDA100
             // lblSizeClass_PSize4_Text
             // 
             this.lblSizeClass_PSize4_Text.AutoSize = true;
-            this.lblSizeClass_PSize4_Text.Location = new System.Drawing.Point(34, 130);
+            this.lblSizeClass_PSize4_Text.Location = new System.Drawing.Point(57, 127);
             this.lblSizeClass_PSize4_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize4_Text.Name = "lblSizeClass_PSize4_Text";
             this.lblSizeClass_PSize4_Text.Size = new System.Drawing.Size(57, 20);
@@ -1210,7 +1206,7 @@ namespace SDA100
             // lblSizeClass_PSize3_Text
             // 
             this.lblSizeClass_PSize3_Text.AutoSize = true;
-            this.lblSizeClass_PSize3_Text.Location = new System.Drawing.Point(34, 110);
+            this.lblSizeClass_PSize3_Text.Location = new System.Drawing.Point(57, 107);
             this.lblSizeClass_PSize3_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize3_Text.Name = "lblSizeClass_PSize3_Text";
             this.lblSizeClass_PSize3_Text.Size = new System.Drawing.Size(57, 20);
@@ -1220,7 +1216,7 @@ namespace SDA100
             // lblSizeClass_PSize2_Text
             // 
             this.lblSizeClass_PSize2_Text.AutoSize = true;
-            this.lblSizeClass_PSize2_Text.Location = new System.Drawing.Point(34, 91);
+            this.lblSizeClass_PSize2_Text.Location = new System.Drawing.Point(57, 88);
             this.lblSizeClass_PSize2_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize2_Text.Name = "lblSizeClass_PSize2_Text";
             this.lblSizeClass_PSize2_Text.Size = new System.Drawing.Size(57, 20);
@@ -1230,7 +1226,7 @@ namespace SDA100
             // lblSizeClass_PSize1_Text
             // 
             this.lblSizeClass_PSize1_Text.AutoSize = true;
-            this.lblSizeClass_PSize1_Text.Location = new System.Drawing.Point(25, 72);
+            this.lblSizeClass_PSize1_Text.Location = new System.Drawing.Point(48, 69);
             this.lblSizeClass_PSize1_Text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClass_PSize1_Text.Name = "lblSizeClass_PSize1_Text";
             this.lblSizeClass_PSize1_Text.Size = new System.Drawing.Size(66, 20);
@@ -1241,7 +1237,7 @@ namespace SDA100
             // 
             this.lblRejectLimitTitle.AutoSize = true;
             this.lblRejectLimitTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRejectLimitTitle.Location = new System.Drawing.Point(228, 52);
+            this.lblRejectLimitTitle.Location = new System.Drawing.Point(251, 49);
             this.lblRejectLimitTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRejectLimitTitle.Name = "lblRejectLimitTitle";
             this.lblRejectLimitTitle.Size = new System.Drawing.Size(92, 20);
@@ -1252,7 +1248,7 @@ namespace SDA100
             // 
             this.lblDefectCountTitle.AutoSize = true;
             this.lblDefectCountTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDefectCountTitle.Location = new System.Drawing.Point(114, 52);
+            this.lblDefectCountTitle.Location = new System.Drawing.Point(137, 49);
             this.lblDefectCountTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDefectCountTitle.Name = "lblDefectCountTitle";
             this.lblDefectCountTitle.Size = new System.Drawing.Size(104, 20);
@@ -1263,7 +1259,7 @@ namespace SDA100
             // 
             this.lblSizeClassTitle.AutoSize = true;
             this.lblSizeClassTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSizeClassTitle.Location = new System.Drawing.Point(21, 52);
+            this.lblSizeClassTitle.Location = new System.Drawing.Point(44, 49);
             this.lblSizeClassTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeClassTitle.Name = "lblSizeClassTitle";
             this.lblSizeClassTitle.Size = new System.Drawing.Size(83, 20);
@@ -1274,7 +1270,7 @@ namespace SDA100
             // 
             this.lblTestInfoTitle.AutoSize = true;
             this.lblTestInfoTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTestInfoTitle.Location = new System.Drawing.Point(94, 22);
+            this.lblTestInfoTitle.Location = new System.Drawing.Point(105, 19);
             this.lblTestInfoTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTestInfoTitle.Name = "lblTestInfoTitle";
             this.lblTestInfoTitle.Size = new System.Drawing.Size(182, 25);
@@ -2704,6 +2700,7 @@ namespace SDA100
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.checkBox1);
             this.groupBox7.Controls.Add(this.lblSyS_LeftLimitY);
             this.groupBox7.Controls.Add(this.lblSyS_AutoFocusValue);
             this.groupBox7.Controls.Add(this.lblSyS_ZStagePosition);
@@ -2740,6 +2737,16 @@ namespace SDA100
             this.groupBox7.Size = new System.Drawing.Size(298, 729);
             this.groupBox7.TabIndex = 18;
             this.groupBox7.TabStop = false;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(145, 673);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(102, 20);
+            this.checkBox1.TabIndex = 4;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // lblSyS_LeftLimitY
             // 
@@ -3424,115 +3431,6 @@ namespace SDA100
             this.lblXYM_Title.Size = new System.Drawing.Size(147, 29);
             this.lblXYM_Title.TabIndex = 0;
             this.lblXYM_Title.Text = "XY Motions";
-            // 
-            // tabConsole
-            // 
-            this.tabConsole.Controls.Add(this.btnSendConsole);
-            this.tabConsole.Controls.Add(this.btnClearConsole);
-            this.tabConsole.Controls.Add(this.cbxConsoleCommands);
-            this.tabConsole.Controls.Add(this.txtConsoleOutput);
-            this.tabConsole.Location = new System.Drawing.Point(4, 4);
-            this.tabConsole.Name = "tabConsole";
-            this.tabConsole.Size = new System.Drawing.Size(1186, 754);
-            this.tabConsole.TabIndex = 4;
-            this.tabConsole.Text = "Console";
-            this.tabConsole.UseVisualStyleBackColor = true;
-            // 
-            // btnSendConsole
-            // 
-            this.btnSendConsole.Location = new System.Drawing.Point(287, 21);
-            this.btnSendConsole.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSendConsole.Name = "btnSendConsole";
-            this.btnSendConsole.Size = new System.Drawing.Size(60, 24);
-            this.btnSendConsole.TabIndex = 5;
-            this.btnSendConsole.Text = "Send";
-            this.btnSendConsole.UseVisualStyleBackColor = true;
-            // 
-            // btnClearConsole
-            // 
-            this.btnClearConsole.Location = new System.Drawing.Point(367, 21);
-            this.btnClearConsole.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClearConsole.Name = "btnClearConsole";
-            this.btnClearConsole.Size = new System.Drawing.Size(60, 24);
-            this.btnClearConsole.TabIndex = 6;
-            this.btnClearConsole.Text = "Clear";
-            this.btnClearConsole.UseVisualStyleBackColor = true;
-            // 
-            // cbxConsoleCommands
-            // 
-            this.cbxConsoleCommands.FormattingEnabled = true;
-            this.cbxConsoleCommands.Items.AddRange(new object[] {
-            ".",
-            "?",
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H",
-            "I",
-            "J",
-            "K",
-            "L",
-            ".1M",
-            ".2M",
-            ".3M",
-            ".4M",
-            "N",
-            "O",
-            "P",
-            "Q",
-            "R",
-            "S",
-            "T",
-            "U",
-            "V",
-            "W",
-            "X",
-            "Y",
-            "Z",
-            "a",
-            "b",
-            "c",
-            "d",
-            "e",
-            "f",
-            "g",
-            "h",
-            "i",
-            "j",
-            "k",
-            "l",
-            "m",
-            "n",
-            "o",
-            "p",
-            "q",
-            "r",
-            "s",
-            "t",
-            "u",
-            "v",
-            "w",
-            "x",
-            "y",
-            "z"});
-            this.cbxConsoleCommands.Location = new System.Drawing.Point(27, 21);
-            this.cbxConsoleCommands.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxConsoleCommands.Name = "cbxConsoleCommands";
-            this.cbxConsoleCommands.Size = new System.Drawing.Size(241, 24);
-            this.cbxConsoleCommands.TabIndex = 4;
-            // 
-            // txtConsoleOutput
-            // 
-            this.txtConsoleOutput.Location = new System.Drawing.Point(27, 72);
-            this.txtConsoleOutput.Margin = new System.Windows.Forms.Padding(2);
-            this.txtConsoleOutput.Multiline = true;
-            this.txtConsoleOutput.Name = "txtConsoleOutput";
-            this.txtConsoleOutput.Size = new System.Drawing.Size(401, 274);
-            this.txtConsoleOutput.TabIndex = 3;
             // 
             // tabINI
             // 
@@ -4450,7 +4348,9 @@ namespace SDA100
             // 
             // tabStartup
             // 
-            this.tabStartup.Controls.Add(this.richTextBox1);
+            this.tabStartup.Controls.Add(this.txt_FormTextBox);
+            this.tabStartup.Controls.Add(this.btn_Keyboard);
+            this.tabStartup.Controls.Add(this.btn_StartupDismiss);
             this.tabStartup.Controls.Add(this.txtr_Startup);
             this.tabStartup.Location = new System.Drawing.Point(4, 4);
             this.tabStartup.Margin = new System.Windows.Forms.Padding(2);
@@ -4460,13 +4360,36 @@ namespace SDA100
             this.tabStartup.Text = "Startup";
             this.tabStartup.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // txt_FormTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(669, 66);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(323, 455);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.txt_FormTextBox.Location = new System.Drawing.Point(865, 516);
+            this.txt_FormTextBox.Multiline = true;
+            this.txt_FormTextBox.Name = "txt_FormTextBox";
+            this.txt_FormTextBox.Size = new System.Drawing.Size(132, 56);
+            this.txt_FormTextBox.TabIndex = 4;
+            // 
+            // btn_Keyboard
+            // 
+            this.btn_Keyboard.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btn_Keyboard.Location = new System.Drawing.Point(865, 648);
+            this.btn_Keyboard.Name = "btn_Keyboard";
+            this.btn_Keyboard.Size = new System.Drawing.Size(115, 75);
+            this.btn_Keyboard.TabIndex = 3;
+            this.btn_Keyboard.Text = "Keyboard";
+            this.btn_Keyboard.UseVisualStyleBackColor = true;
+            this.btn_Keyboard.Click += new System.EventHandler(this.btn_Keyboard_Click);
+            this.btn_Keyboard.MouseEnter += new System.EventHandler(this.btn_Keyboard_MouseEnter);
+            // 
+            // btn_StartupDismiss
+            // 
+            this.btn_StartupDismiss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_StartupDismiss.Location = new System.Drawing.Point(264, 661);
+            this.btn_StartupDismiss.Name = "btn_StartupDismiss";
+            this.btn_StartupDismiss.Size = new System.Drawing.Size(115, 75);
+            this.btn_StartupDismiss.TabIndex = 2;
+            this.btn_StartupDismiss.Text = "Confirm";
+            this.btn_StartupDismiss.UseVisualStyleBackColor = true;
+            this.btn_StartupDismiss.Click += new System.EventHandler(this.btn_StartupDismiss_Click);
             // 
             // txtr_Startup
             // 
@@ -4476,7 +4399,7 @@ namespace SDA100
             this.txtr_Startup.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtr_Startup.Location = new System.Drawing.Point(87, 43);
             this.txtr_Startup.Name = "txtr_Startup";
-            this.txtr_Startup.Size = new System.Drawing.Size(501, 625);
+            this.txtr_Startup.Size = new System.Drawing.Size(501, 602);
             this.txtr_Startup.TabIndex = 0;
             this.txtr_Startup.Text = "";
             // 
@@ -4518,8 +4441,6 @@ namespace SDA100
             this.groupBox9.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
-            this.tabConsole.ResumeLayout(false);
-            this.tabConsole.PerformLayout();
             this.tabINI.ResumeLayout(false);
             this.tabINI.PerformLayout();
             this.groupBoxEdit.ResumeLayout(false);
@@ -4527,6 +4448,7 @@ namespace SDA100
             this.IniGroupBox.ResumeLayout(false);
             this.IniGroupBox.PerformLayout();
             this.tabStartup.ResumeLayout(false);
+            this.tabStartup.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4767,15 +4689,10 @@ namespace SDA100
         private System.Windows.Forms.Button btnXYM_DoorStatus;
         private System.Windows.Forms.Button btnMaint_HomeXY;
         private System.Windows.Forms.Label lblXYM_Title;
-        private System.Windows.Forms.TabPage tabConsole;
         private System.Windows.Forms.Label lbleCCScanID_Value;
         private System.Windows.Forms.Label lbleCCScanID_Text;
         private System.Windows.Forms.Label lbleCCUserID_Value;
         private System.Windows.Forms.Label lbleCCUserID_Text;
-        private System.Windows.Forms.Button btnSendConsole;
-        private System.Windows.Forms.Button btnClearConsole;
-        private System.Windows.Forms.ComboBox cbxConsoleCommands;
-        private System.Windows.Forms.TextBox txtConsoleOutput;
         private System.Windows.Forms.TabPage tabINI;
         private System.Windows.Forms.TabPage tabStartup;
         private System.Windows.Forms.Label label15;
@@ -4871,8 +4788,11 @@ namespace SDA100
         private System.Windows.Forms.Button btn_ClearErrors;
         private System.Windows.Forms.CheckBox chbox_SetStartupDefaults;
         private System.Windows.Forms.Button btn_FocusLaser;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.RichTextBox txtr_Startup;
+        private System.Windows.Forms.Button btn_StartupDismiss;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button btn_Keyboard;
+        private System.Windows.Forms.TextBox txt_FormTextBox;
     }
 }
 

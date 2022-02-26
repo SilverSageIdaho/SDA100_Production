@@ -148,8 +148,8 @@ namespace SDA100
 
             
         }
-            EPostHistData();
-        }
+        EPostHistData();
+    }
 
     public void EPostHistData()
     {
@@ -226,7 +226,6 @@ namespace SDA100
         {
             maxHeightBar = 100000;
         }
-
 
         lbleMaxHeightBar.Text = maxHeightBar.ToString();
         lbleMidHeightBar.Text = (maxHeightBar / 2).ToString();
@@ -310,8 +309,16 @@ namespace SDA100
         edef6.Location = new Point(edef6x, ebSyPoint6);
         edef7.Location = new Point(edef7x, ebSyPoint7);
 
-    }
-        public void EEdgeReject()
+        Emulator.escanDefectCnt1 = 0;        
+        Emulator.escanDefectCnt2 = 0;        
+        Emulator.escanDefectCnt3 = 0;        
+        Emulator.escanDefectCnt4 = 0;
+        Emulator.escanDefectCnt5 = 0;
+        Emulator.escanDefectCnt6 = 0;
+        Emulator.escanDefectCnt7 = 0;
+
+        }
+    public void EEdgeReject()
         {
             //int SizeofWaferMM = 125;
             //int EdgeRejctMM = 5;

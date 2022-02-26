@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SDA100
 {
     class Globals
     {
+        public static List<Control> FocusedTextbox = new List<Control>();
         public static bool errorMessageDisplayed = false;
         public static int counter;
         public static string filePath = "";
