@@ -154,7 +154,7 @@ namespace SDA100
                 ScanPort._serialPort.Write("." + Globals.edgeRej + "e");
                 Console.WriteLine("." + Globals.edgeRej + "e");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("e");
-                txtr_Startup.AppendText("Edje Reject:\t");
+                txtr_Startup.AppendText("Edge Reject:\t");
                 if (Globals.inData.StartsWith("!e"))
                 {
                     txtr_Startup.SelectionColor = Color.Green;
@@ -659,7 +659,9 @@ namespace SDA100
             Console.WriteLine("Response Data: " + Globals.scanReply); 
                         
             label16.Text = Globals.z_focus;
-            
+            rtxt_levelresult.Text += Globals.z_focus + Environment.NewLine;
+
+
             if (Globals.errorMessage != null)
             {
                 string title = "ERROR";
@@ -818,13 +820,15 @@ namespace SDA100
                 Globals.FocusedTextbox.Clear();
                 keyboard.Dispose();
             }
-            
-           
         }
 
         private void btn_Keyboard_MouseEnter(object sender, EventArgs e)
         {
             Globals.FocusedTextbox.Add(this.ActiveControl);
         }
+
+       
+
+       
     }
 }

@@ -266,5 +266,46 @@ namespace SDA100
         {
             ScanPort._serialPort.Write("m");
         }
+
+        private void btn_checklevel_Click(object sender, EventArgs e)
+        {
+            string currentPreFocusX = Globals.preFocusX;
+            string currentPreFocusY = Globals.preFocusY;
+            string coordString = txt_coord.Text;
+            int[] coordValues = coordString.Split(',').Select(Int32.Parse).ToArray();
+            ScanPort._serialPort.Write("." + coordValues[0] + "v");
+            ScanPort._serialPort.Write("." + coordValues[1] + "w");
+            ScanPort._serialPort.Write("i");
+            ScanPort._serialPort.Write("j");
+            ScanPort._serialPort.Write("f");
+            ScanPort._serialPort.Write("k");
+            ScanPort._serialPort.Write("." + coordValues[2] + "v");
+            ScanPort._serialPort.Write("." + coordValues[3] + "w");
+            ScanPort._serialPort.Write("i");
+            ScanPort._serialPort.Write("j");
+            ScanPort._serialPort.Write("f");
+            ScanPort._serialPort.Write("k");
+            ScanPort._serialPort.Write("." + coordValues[4] + "v");
+            ScanPort._serialPort.Write("." + coordValues[5] + "w");
+            ScanPort._serialPort.Write("i");
+            ScanPort._serialPort.Write("j");
+            ScanPort._serialPort.Write("f");
+            ScanPort._serialPort.Write("k");
+            ScanPort._serialPort.Write("." + coordValues[6] + "v");
+            ScanPort._serialPort.Write("." + coordValues[7] + "w");
+            ScanPort._serialPort.Write("i");
+            ScanPort._serialPort.Write("j");
+            ScanPort._serialPort.Write("f");
+            ScanPort._serialPort.Write("k");          
+
+            ScanPort._serialPort.Write("." + Globals.preFocusX + "v");
+            ScanPort._serialPort.Write("." + Globals.preFocusY + "w");
+            ScanPort._serialPort.Write("i");
+        }
+
+        private void btn_clearresults_Click(object sender, EventArgs e)
+        {
+            rtxt_levelresult.Text = "";
+        }
     }
 }

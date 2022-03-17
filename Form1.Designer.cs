@@ -229,7 +229,9 @@ namespace SDA100
             this.txtMaint_SendString = new System.Windows.Forms.TextBox();
             this.btnMaint_SendString = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.rtxt_levelresult = new System.Windows.Forms.RichTextBox();
+            this.txt_coord = new System.Windows.Forms.TextBox();
+            this.btn_checklevel = new System.Windows.Forms.Button();
             this.lblSyS_LeftLimitY = new System.Windows.Forms.Label();
             this.lblSyS_AutoFocusValue = new System.Windows.Forms.Label();
             this.lblSyS_ZStagePosition = new System.Windows.Forms.Label();
@@ -368,6 +370,7 @@ namespace SDA100
             this.btn_Keyboard = new System.Windows.Forms.Button();
             this.btn_StartupDismiss = new System.Windows.Forms.Button();
             this.txtr_Startup = new System.Windows.Forms.RichTextBox();
+            this.btn_clearresults = new System.Windows.Forms.Button();
             this.tabGroup.SuspendLayout();
             this.tabMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -2700,7 +2703,10 @@ namespace SDA100
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.checkBox1);
+            this.groupBox7.Controls.Add(this.btn_clearresults);
+            this.groupBox7.Controls.Add(this.rtxt_levelresult);
+            this.groupBox7.Controls.Add(this.txt_coord);
+            this.groupBox7.Controls.Add(this.btn_checklevel);
             this.groupBox7.Controls.Add(this.lblSyS_LeftLimitY);
             this.groupBox7.Controls.Add(this.lblSyS_AutoFocusValue);
             this.groupBox7.Controls.Add(this.lblSyS_ZStagePosition);
@@ -2738,15 +2744,30 @@ namespace SDA100
             this.groupBox7.TabIndex = 18;
             this.groupBox7.TabStop = false;
             // 
-            // checkBox1
+            // rtxt_levelresult
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(145, 673);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(102, 20);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.rtxt_levelresult.Location = new System.Drawing.Point(101, 586);
+            this.rtxt_levelresult.Name = "rtxt_levelresult";
+            this.rtxt_levelresult.Size = new System.Drawing.Size(171, 120);
+            this.rtxt_levelresult.TabIndex = 6;
+            this.rtxt_levelresult.Text = "";
+            // 
+            // txt_coord
+            // 
+            this.txt_coord.Location = new System.Drawing.Point(101, 558);
+            this.txt_coord.Name = "txt_coord";
+            this.txt_coord.Size = new System.Drawing.Size(171, 22);
+            this.txt_coord.TabIndex = 5;
+            // 
+            // btn_checklevel
+            // 
+            this.btn_checklevel.Location = new System.Drawing.Point(20, 558);
+            this.btn_checklevel.Name = "btn_checklevel";
+            this.btn_checklevel.Size = new System.Drawing.Size(75, 23);
+            this.btn_checklevel.TabIndex = 4;
+            this.btn_checklevel.Text = "Go";
+            this.btn_checklevel.UseVisualStyleBackColor = true;
+            this.btn_checklevel.Click += new System.EventHandler(this.btn_checklevel_Click);
             // 
             // lblSyS_LeftLimitY
             // 
@@ -4403,6 +4424,16 @@ namespace SDA100
             this.txtr_Startup.TabIndex = 0;
             this.txtr_Startup.Text = "";
             // 
+            // btn_clearresults
+            // 
+            this.btn_clearresults.Location = new System.Drawing.Point(20, 587);
+            this.btn_clearresults.Name = "btn_clearresults";
+            this.btn_clearresults.Size = new System.Drawing.Size(75, 23);
+            this.btn_clearresults.TabIndex = 7;
+            this.btn_clearresults.Text = "Clear";
+            this.btn_clearresults.UseVisualStyleBackColor = true;
+            this.btn_clearresults.Click += new System.EventHandler(this.btn_clearresults_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4790,9 +4821,12 @@ namespace SDA100
         private System.Windows.Forms.Button btn_FocusLaser;
         private System.Windows.Forms.RichTextBox txtr_Startup;
         private System.Windows.Forms.Button btn_StartupDismiss;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button btn_Keyboard;
         private System.Windows.Forms.TextBox txt_FormTextBox;
+        private System.Windows.Forms.TextBox txt_coord;
+        private System.Windows.Forms.Button btn_checklevel;
+        private System.Windows.Forms.RichTextBox rtxt_levelresult;
+        private System.Windows.Forms.Button btn_clearresults;
     }
 }
 
