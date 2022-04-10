@@ -820,15 +820,24 @@ namespace SDA100
                 Globals.FocusedTextbox.Clear();
                 keyboard.Dispose();
             }
-        }
+        }       
 
-        private void btn_Keyboard_MouseEnter(object sender, EventArgs e)
+        private void Keyboard_TextBox_Enter(object sender, EventArgs e)
         {
-            Globals.FocusedTextbox.Add(this.ActiveControl);
+            TextBox currentTxtBox = sender as TextBox;
+            keyboard = new Keyboard(currentTxtBox.Text);
+            DialogResult kr = keyboard.ShowDialog(this);
+            if (kr == DialogResult.Cancel)
+            {
+                this.ActiveControl = null;
+                keyboard.Dispose();
+            }
+            else if (kr == DialogResult.OK)
+            {
+                currentTxtBox.Text = keyboard.getText();
+                this.ActiveControl = null;
+                keyboard.Dispose();
+            }
         }
-
-       
-
-       
     }
 }

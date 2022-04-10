@@ -12,18 +12,16 @@ namespace SDA100
 {
     public partial class Keyboard : Form
     {
-        public Keyboard(string currentTxtBox)
+        public Keyboard(string currentTxtBoxText)
         {
             InitializeComponent();
-            txt_key_inputbox.Text = currentTxtBox;
+            txt_key_inputbox.Text = currentTxtBoxText;
         }
         
         public string getText()
         {
             return txt_key_inputbox.Text;
-        }
-
-       
+        }       
 
         private void btn_key_letter_number_Click(object sender, EventArgs e)
         {
@@ -33,16 +31,6 @@ namespace SDA100
         private void btn_key_space_Click(object sender, EventArgs e)
         {
             txt_key_inputbox.Text += ' ';
-        }
-
-        private void btn_key_leftarrow_Click(object sender, EventArgs e)
-        {
-            txt_key_inputbox.SelectionStart = txt_key_inputbox.SelectionStart - 1;
-        }
-
-        private void btn_key_rightarrow_Click(object sender, EventArgs e)
-        {
-            txt_key_inputbox.SelectionStart = txt_key_inputbox.SelectionStart + 1;
         }
 
         private void btn_key_backspace_Click(object sender, EventArgs e)

@@ -229,6 +229,7 @@ namespace SDA100
             this.txtMaint_SendString = new System.Windows.Forms.TextBox();
             this.btnMaint_SendString = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.btn_clearresults = new System.Windows.Forms.Button();
             this.rtxt_levelresult = new System.Windows.Forms.RichTextBox();
             this.txt_coord = new System.Windows.Forms.TextBox();
             this.btn_checklevel = new System.Windows.Forms.Button();
@@ -367,10 +368,8 @@ namespace SDA100
             this.label14 = new System.Windows.Forms.Label();
             this.tabStartup = new System.Windows.Forms.TabPage();
             this.txt_FormTextBox = new System.Windows.Forms.TextBox();
-            this.btn_Keyboard = new System.Windows.Forms.Button();
             this.btn_StartupDismiss = new System.Windows.Forms.Button();
             this.txtr_Startup = new System.Windows.Forms.RichTextBox();
-            this.btn_clearresults = new System.Windows.Forms.Button();
             this.tabGroup.SuspendLayout();
             this.tabMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -2220,6 +2219,7 @@ namespace SDA100
             this.txtSizeClass_Total_Limit.Name = "txtSizeClass_Total_Limit";
             this.txtSizeClass_Total_Limit.Size = new System.Drawing.Size(64, 26);
             this.txtSizeClass_Total_Limit.TabIndex = 3;
+            this.txtSizeClass_Total_Limit.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // txtSizeClass_Size7_Limit
             // 
@@ -2229,6 +2229,7 @@ namespace SDA100
             this.txtSizeClass_Size7_Limit.Name = "txtSizeClass_Size7_Limit";
             this.txtSizeClass_Size7_Limit.Size = new System.Drawing.Size(64, 26);
             this.txtSizeClass_Size7_Limit.TabIndex = 3;
+            this.txtSizeClass_Size7_Limit.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // txtSizeClass_Size6_Limit
             // 
@@ -2238,6 +2239,7 @@ namespace SDA100
             this.txtSizeClass_Size6_Limit.Name = "txtSizeClass_Size6_Limit";
             this.txtSizeClass_Size6_Limit.Size = new System.Drawing.Size(64, 26);
             this.txtSizeClass_Size6_Limit.TabIndex = 3;
+            this.txtSizeClass_Size6_Limit.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // txtSizeClass_Size5_Limit
             // 
@@ -2247,6 +2249,7 @@ namespace SDA100
             this.txtSizeClass_Size5_Limit.Name = "txtSizeClass_Size5_Limit";
             this.txtSizeClass_Size5_Limit.Size = new System.Drawing.Size(64, 26);
             this.txtSizeClass_Size5_Limit.TabIndex = 3;
+            this.txtSizeClass_Size5_Limit.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // txtSizeClass_Size4_Limit
             // 
@@ -2256,6 +2259,7 @@ namespace SDA100
             this.txtSizeClass_Size4_Limit.Name = "txtSizeClass_Size4_Limit";
             this.txtSizeClass_Size4_Limit.Size = new System.Drawing.Size(64, 26);
             this.txtSizeClass_Size4_Limit.TabIndex = 3;
+            this.txtSizeClass_Size4_Limit.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // txtSizeClass_Size3_Limit
             // 
@@ -2265,6 +2269,7 @@ namespace SDA100
             this.txtSizeClass_Size3_Limit.Name = "txtSizeClass_Size3_Limit";
             this.txtSizeClass_Size3_Limit.Size = new System.Drawing.Size(64, 26);
             this.txtSizeClass_Size3_Limit.TabIndex = 3;
+            this.txtSizeClass_Size3_Limit.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // txtSizeClass_Size2_Limit
             // 
@@ -2274,6 +2279,7 @@ namespace SDA100
             this.txtSizeClass_Size2_Limit.Name = "txtSizeClass_Size2_Limit";
             this.txtSizeClass_Size2_Limit.Size = new System.Drawing.Size(64, 26);
             this.txtSizeClass_Size2_Limit.TabIndex = 3;
+            this.txtSizeClass_Size2_Limit.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // txtSizeClass_Size1_Limit
             // 
@@ -2283,6 +2289,7 @@ namespace SDA100
             this.txtSizeClass_Size1_Limit.Name = "txtSizeClass_Size1_Limit";
             this.txtSizeClass_Size1_Limit.Size = new System.Drawing.Size(64, 26);
             this.txtSizeClass_Size1_Limit.TabIndex = 3;
+            this.txtSizeClass_Size1_Limit.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // label1
             // 
@@ -2442,6 +2449,7 @@ namespace SDA100
             this.txtSSScanID_Set.Name = "txtSSScanID_Set";
             this.txtSSScanID_Set.Size = new System.Drawing.Size(305, 26);
             this.txtSSScanID_Set.TabIndex = 9;
+            this.txtSSScanID_Set.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // lblSSScanID_Text
             // 
@@ -2463,6 +2471,7 @@ namespace SDA100
             this.txtSSUserID_Set.Name = "txtSSUserID_Set";
             this.txtSSUserID_Set.Size = new System.Drawing.Size(305, 26);
             this.txtSSUserID_Set.TabIndex = 7;
+            this.txtSSUserID_Set.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // lblSSUserID_Text
             // 
@@ -2507,6 +2516,7 @@ namespace SDA100
             this.txtRecipeComments.Name = "txtRecipeComments";
             this.txtRecipeComments.Size = new System.Drawing.Size(305, 73);
             this.txtRecipeComments.TabIndex = 3;
+            this.txtRecipeComments.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // txtSSRecipeName_Set
             // 
@@ -2516,6 +2526,7 @@ namespace SDA100
             this.txtSSRecipeName_Set.Name = "txtSSRecipeName_Set";
             this.txtSSRecipeName_Set.Size = new System.Drawing.Size(389, 26);
             this.txtSSRecipeName_Set.TabIndex = 3;
+            this.txtSSRecipeName_Set.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // cbxSSZoneScanType_Set
             // 
@@ -2688,6 +2699,7 @@ namespace SDA100
             this.txtMaint_SendString.Name = "txtMaint_SendString";
             this.txtMaint_SendString.Size = new System.Drawing.Size(628, 35);
             this.txtMaint_SendString.TabIndex = 56;
+            this.txtMaint_SendString.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // btnMaint_SendString
             // 
@@ -2743,6 +2755,16 @@ namespace SDA100
             this.groupBox7.Size = new System.Drawing.Size(298, 729);
             this.groupBox7.TabIndex = 18;
             this.groupBox7.TabStop = false;
+            // 
+            // btn_clearresults
+            // 
+            this.btn_clearresults.Location = new System.Drawing.Point(20, 587);
+            this.btn_clearresults.Name = "btn_clearresults";
+            this.btn_clearresults.Size = new System.Drawing.Size(75, 23);
+            this.btn_clearresults.TabIndex = 7;
+            this.btn_clearresults.Text = "Clear";
+            this.btn_clearresults.UseVisualStyleBackColor = true;
+            this.btn_clearresults.Click += new System.EventHandler(this.btn_clearresults_Click);
             // 
             // rtxt_levelresult
             // 
@@ -3718,6 +3740,7 @@ namespace SDA100
             this.TxtIni_EditParkY.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditParkY.TabIndex = 15;
             this.TxtIni_EditParkY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtIni_EditParkY.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // label72
             // 
@@ -3740,6 +3763,7 @@ namespace SDA100
             this.TxtIni_EditPrefocusZ.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditPrefocusZ.TabIndex = 85;
             this.TxtIni_EditPrefocusZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtIni_EditPrefocusZ.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // TxtIni_EditTrackSteps
             // 
@@ -3751,6 +3775,7 @@ namespace SDA100
             this.TxtIni_EditTrackSteps.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditTrackSteps.TabIndex = 13;
             this.TxtIni_EditTrackSteps.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtIni_EditTrackSteps.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // label73
             // 
@@ -3784,6 +3809,7 @@ namespace SDA100
             this.TxtIni_EditPrefocusX.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditPrefocusX.TabIndex = 83;
             this.TxtIni_EditPrefocusX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtIni_EditPrefocusX.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // TxtIni_EditSectorSteps
             // 
@@ -3795,6 +3821,7 @@ namespace SDA100
             this.TxtIni_EditSectorSteps.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditSectorSteps.TabIndex = 11;
             this.TxtIni_EditSectorSteps.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtIni_EditSectorSteps.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // label75
             // 
@@ -3828,6 +3855,7 @@ namespace SDA100
             this.TxtIni_EditPrefocusY.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditPrefocusY.TabIndex = 81;
             this.TxtIni_EditPrefocusY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtIni_EditPrefocusY.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // TxtIni_EditEdgeRej
             // 
@@ -3839,6 +3867,7 @@ namespace SDA100
             this.TxtIni_EditEdgeRej.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditEdgeRej.TabIndex = 9;
             this.TxtIni_EditEdgeRej.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtIni_EditEdgeRej.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // label77
             // 
@@ -3872,6 +3901,7 @@ namespace SDA100
             this.TxtIni_EditParkZ.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditParkZ.TabIndex = 79;
             this.TxtIni_EditParkZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtIni_EditParkZ.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // TxtIni_EditWaferDiam
             // 
@@ -3883,6 +3913,7 @@ namespace SDA100
             this.TxtIni_EditWaferDiam.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditWaferDiam.TabIndex = 7;
             this.TxtIni_EditWaferDiam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtIni_EditWaferDiam.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // label79
             // 
@@ -3916,6 +3947,7 @@ namespace SDA100
             this.TxtIni_EditParkX.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditParkX.TabIndex = 77;
             this.TxtIni_EditParkX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtIni_EditParkX.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // label81
             // 
@@ -3938,6 +3970,7 @@ namespace SDA100
             this.TxtIni_EditMapRes.Size = new System.Drawing.Size(93, 26);
             this.TxtIni_EditMapRes.TabIndex = 5;
             this.TxtIni_EditMapRes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtIni_EditMapRes.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // label82
             // 
@@ -4370,7 +4403,6 @@ namespace SDA100
             // tabStartup
             // 
             this.tabStartup.Controls.Add(this.txt_FormTextBox);
-            this.tabStartup.Controls.Add(this.btn_Keyboard);
             this.tabStartup.Controls.Add(this.btn_StartupDismiss);
             this.tabStartup.Controls.Add(this.txtr_Startup);
             this.tabStartup.Location = new System.Drawing.Point(4, 4);
@@ -4388,18 +4420,7 @@ namespace SDA100
             this.txt_FormTextBox.Name = "txt_FormTextBox";
             this.txt_FormTextBox.Size = new System.Drawing.Size(132, 56);
             this.txt_FormTextBox.TabIndex = 4;
-            // 
-            // btn_Keyboard
-            // 
-            this.btn_Keyboard.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btn_Keyboard.Location = new System.Drawing.Point(865, 648);
-            this.btn_Keyboard.Name = "btn_Keyboard";
-            this.btn_Keyboard.Size = new System.Drawing.Size(115, 75);
-            this.btn_Keyboard.TabIndex = 3;
-            this.btn_Keyboard.Text = "Keyboard";
-            this.btn_Keyboard.UseVisualStyleBackColor = true;
-            this.btn_Keyboard.Click += new System.EventHandler(this.btn_Keyboard_Click);
-            this.btn_Keyboard.MouseEnter += new System.EventHandler(this.btn_Keyboard_MouseEnter);
+            this.txt_FormTextBox.Enter += new System.EventHandler(this.Keyboard_TextBox_Enter);
             // 
             // btn_StartupDismiss
             // 
@@ -4423,16 +4444,6 @@ namespace SDA100
             this.txtr_Startup.Size = new System.Drawing.Size(501, 602);
             this.txtr_Startup.TabIndex = 0;
             this.txtr_Startup.Text = "";
-            // 
-            // btn_clearresults
-            // 
-            this.btn_clearresults.Location = new System.Drawing.Point(20, 587);
-            this.btn_clearresults.Name = "btn_clearresults";
-            this.btn_clearresults.Size = new System.Drawing.Size(75, 23);
-            this.btn_clearresults.TabIndex = 7;
-            this.btn_clearresults.Text = "Clear";
-            this.btn_clearresults.UseVisualStyleBackColor = true;
-            this.btn_clearresults.Click += new System.EventHandler(this.btn_clearresults_Click);
             // 
             // mainForm
             // 
@@ -4821,7 +4832,6 @@ namespace SDA100
         private System.Windows.Forms.Button btn_FocusLaser;
         private System.Windows.Forms.RichTextBox txtr_Startup;
         private System.Windows.Forms.Button btn_StartupDismiss;
-        private System.Windows.Forms.Button btn_Keyboard;
         private System.Windows.Forms.TextBox txt_FormTextBox;
         private System.Windows.Forms.TextBox txt_coord;
         private System.Windows.Forms.Button btn_checklevel;
