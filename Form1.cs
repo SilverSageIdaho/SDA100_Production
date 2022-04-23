@@ -16,6 +16,7 @@ namespace SDA100
     public partial class mainForm : Form
     {
         Keyboard keyboard;
+        Keypad keypad;
         public int trackDefectCnt1;
         public int trackDefectCnt2;
         public int trackDefectCnt3;
@@ -804,24 +805,7 @@ namespace SDA100
         {
             tabGroup.SelectedTab = tabMain;
         }
-
-        private void btn_Keyboard_Click(object sender, EventArgs e)
-        {
-            string currentTxtBox = Globals.FocusedTextbox[0].Text;
-            keyboard = new Keyboard(currentTxtBox);
-            DialogResult kr = keyboard.ShowDialog(this);
-            if (kr == DialogResult.Cancel)
-            {
-                keyboard.Dispose();
-            }
-            else if (kr == DialogResult.OK)
-            {
-                Globals.FocusedTextbox[0].Text = keyboard.getText();
-                Globals.FocusedTextbox.Clear();
-                keyboard.Dispose();
-            }
-        }       
-
+                
         private void Keyboard_TextBox_Enter(object sender, EventArgs e)
         {
             TextBox currentTxtBox = sender as TextBox;
@@ -837,6 +821,24 @@ namespace SDA100
                 currentTxtBox.Text = keyboard.getText();
                 this.ActiveControl = null;
                 keyboard.Dispose();
+            }
+        }
+
+        private void Keypad_TexBox_Enter(object sender, EventArgs e)
+        {
+            TextBox currentTxtBox = sender as TextBox;
+            keypad = new Keypad(currentTxtBox.Text);
+            DialogResult kp = keypad.ShowDialog(this);
+            if (kp == DialogResult.Cancel)
+            {
+                this.ActiveControl = null;
+                keypad.Dispose();
+            }
+            else if (kp == DialogResult.OK)
+            {
+                currentTxtBox.Text = keypad.getText();
+                this.ActiveControl = null;
+                keypad.Dispose();
             }
         }
     }

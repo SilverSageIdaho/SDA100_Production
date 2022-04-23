@@ -59,3 +59,4 @@ C:\Users\Silve\OneDrive\Documents\GitHub\SDA100_InProgress\obj\Debug\SDA100.exe
 C:\Users\Silve\OneDrive\Documents\GitHub\SDA100_InProgress\obj\Debug\SDA100.pdb
 C:\Users\Silve\OneDrive\Documents\GitHub\SDA100_InProgress\obj\Debug\SDA100.mainForm.resources
 C:\Users\Silve\OneDrive\Documents\GitHub\SDA100_InProgress\obj\Debug\SDA100.Keyboard.resources
+C:\Users\Silve\OneDrive\Documents\GitHub\SDA100_InProgress\obj\Debug\SDA100.Keypad.resources

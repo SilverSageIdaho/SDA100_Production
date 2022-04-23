@@ -566,6 +566,7 @@ namespace SDA100
             this.button2.TabIndex = 10;
             this.button2.Text = ".";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Enter += new System.EventHandler(this.btn_key_letter_number_Click);
             // 
             // Keyboard
             // 
