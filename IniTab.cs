@@ -137,11 +137,12 @@ namespace SDA100
             iniSaveData += TxtIni_EditEdgeRej.Text + ",";
             iniSaveData += TxtIni_EditSectorSteps.Text + ",";
             iniSaveData += TxtIni_EditTrackSteps.Text + ",";            
-            iniSaveData += TxtIni_EditParkX.Text + ",";
+            
             iniSaveData += TxtIni_EditParkY.Text + ",";
+            iniSaveData += TxtIni_EditParkX.Text + ",";
             iniSaveData += TxtIni_EditParkZ.Text + ",";
             iniSaveData += TxtIni_EditPrefocusX.Text + ",";
-            iniSaveData += TxtIni_EditPrefocusY.Text + ",";
+            iniSaveData += TxtIni_EditPrefocusY.Text + ",";      
             iniSaveData += TxtIni_EditPrefocusZ.Text + ",";
             iniSaveData += Globals.pSize1Label + ",";
             iniSaveData += Globals.pSize2Label + ",";
@@ -162,8 +163,9 @@ namespace SDA100
             iniBackupData += TxtIni_EdgeRej.Text + ",";
             iniBackupData += TxtIni_SectorSteps.Text + ",";
             iniBackupData += TxtIni_TrackSteps.Text + ",";
+            iniBackupData += TxtIni_ParkY.Text + ",";
             iniBackupData += TxtIni_ParkX.Text + ",";
-            iniBackupData += TxtIni_ParkY.Text + ",";            
+                        
             iniBackupData += TxtIni_ParkZ.Text + ",";
             iniBackupData += TxtIni_PrefocusX.Text + ",";
             iniBackupData += TxtIni_PrefocusY.Text + ",";
@@ -195,7 +197,8 @@ namespace SDA100
             Globals.parkZ = TxtIni_EditParkZ.Text;
             Globals.preFocusX = TxtIni_EditPrefocusX.Text;
             Globals.preFocusY = TxtIni_EditPrefocusY.Text;
-            Globals.preFocusZ = TxtIni_EditPrefocusZ.Text;            
+            Globals.preFocusZ = TxtIni_EditPrefocusZ.Text;
+            ScanPort.SendIniValues();
         }
     }
 }

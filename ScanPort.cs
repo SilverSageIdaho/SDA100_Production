@@ -102,7 +102,17 @@ namespace SDA100
 
         public static void SendIniValues()
         {
-            
+            ScanPort._serialPort.Write("." + Globals.mapRes + "r");
+            ScanPort._serialPort.Write("." + Globals.waferDiam + "d");
+            ScanPort._serialPort.Write("." + Globals.edgeRej + "e");
+            ScanPort._serialPort.Write("." + Globals.sectorSteps + "S");
+            ScanPort._serialPort.Write("." + Globals.trackSteps + "T");
+            ScanPort._serialPort.Write("." + Globals.parkX + "x");
+            ScanPort._serialPort.Write("." + Globals.parkY + "y");
+            ScanPort._serialPort.Write("." + Globals.parkZ + "z");
+            ScanPort._serialPort.Write("." + Globals.preFocusX + "v");
+            ScanPort._serialPort.Write("." + Globals.preFocusY + "w");
+            ScanPort._serialPort.Write("." + Globals.preFocusZ + "u");
         }
 
         public static string WaitForSerialCommandResponse(string command)

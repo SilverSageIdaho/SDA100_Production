@@ -105,7 +105,7 @@ namespace SDA100
                 
                 //splits ini.txt string to an array, and assigns them to global variables
                 ScanPort.AssignIniGlobals();
-                ScanPort.SendIniValues();
+                //ScanPort.SendIniValues();
                 //populates ini values on ini tab
                 DisplayIniText();
 
