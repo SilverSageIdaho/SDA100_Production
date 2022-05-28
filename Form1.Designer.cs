@@ -368,49 +368,40 @@ namespace SDA100
             this.TxtIni_MapRes = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabStartup = new System.Windows.Forms.TabPage();
-            this.btn_StartupDismiss = new System.Windows.Forms.Button();
-            this.txtr_Startup = new System.Windows.Forms.RichTextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.lbl_Stup_MapRes = new System.Windows.Forms.Label();
-            this.lbl_Stup_WaferPres_Status = new System.Windows.Forms.Label();
-            this.lbl_Stup_MachineStatus = new System.Windows.Forms.Label();
-            this.lbl_Stup_DoorFunc = new System.Windows.Forms.Label();
-            this.label87 = new System.Windows.Forms.Label();
-            this.lbl_Stup_WaferPres = new System.Windows.Forms.Label();
-            this.lbl_Stup_PrefocusZ = new System.Windows.Forms.Label();
-            this.lbl_Stup_PrefocusY = new System.Windows.Forms.Label();
-            this.lbl_Stup_PrefocusX = new System.Windows.Forms.Label();
-            this.lbl_Stup_ParkPosZ = new System.Windows.Forms.Label();
-            this.lbl_Stup_ParkPosY = new System.Windows.Forms.Label();
-            this.lbl_Stup_ParkPosX = new System.Windows.Forms.Label();
-            this.lbl_Stup_TrackSteps = new System.Windows.Forms.Label();
-            this.lbl_Stup_SecSteps = new System.Windows.Forms.Label();
-            this.lbl_Stup_EdgeRej = new System.Windows.Forms.Label();
-            this.lbl_Stup_WafDiam = new System.Windows.Forms.Label();
-            this.label84 = new System.Windows.Forms.Label();
-            this.lbl_Stup_DoorFunc_Status = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            this.lbl_Stup_DoorFunc_Status = new System.Windows.Forms.Label();
+            this.lbl_Stup_MachineStatus_Status = new System.Windows.Forms.Label();
+            this.lbl_Stup_WafDiam = new System.Windows.Forms.Label();
+            this.lbl_Stup_EdgeRej = new System.Windows.Forms.Label();
+            this.lbl_Stup_SecSteps = new System.Windows.Forms.Label();
+            this.lbl_Stup_TrackSteps = new System.Windows.Forms.Label();
+            this.lbl_Stup_ParkPosX = new System.Windows.Forms.Label();
+            this.lbl_Stup_ParkPosY = new System.Windows.Forms.Label();
+            this.lbl_Stup_ParkPosZ = new System.Windows.Forms.Label();
+            this.lbl_Stup_PrefocusX = new System.Windows.Forms.Label();
+            this.lbl_Stup_PrefocusY = new System.Windows.Forms.Label();
+            this.lbl_Stup_PrefocusZ = new System.Windows.Forms.Label();
+            this.lbl_Stup_WaferPres = new System.Windows.Forms.Label();
+            this.label87 = new System.Windows.Forms.Label();
+            this.lbl_Stup_DoorFunc = new System.Windows.Forms.Label();
+            this.lbl_Stup_MachineStatus = new System.Windows.Forms.Label();
+            this.lbl_Stup_WaferPres_Status = new System.Windows.Forms.Label();
+            this.lbl_Stup_MapRes = new System.Windows.Forms.Label();
+            this.btn_StartupDismiss = new System.Windows.Forms.Button();
+            this.txtr_Startup = new System.Windows.Forms.RichTextBox();
+            this.lbl_Stup_MapRes_Status = new System.Windows.Forms.Label();
+            this.lbl_Stup_ParkPosZ_Status = new System.Windows.Forms.Label();
+            this.lbl_Stup_ParkPosY_Status = new System.Windows.Forms.Label();
+            this.lbl_Stup_ParkPosX_Status = new System.Windows.Forms.Label();
+            this.lbl_Stup_TrackSteps_Status = new System.Windows.Forms.Label();
+            this.lbl_Stup_SecSteps_Status = new System.Windows.Forms.Label();
+            this.lbl_Stup_EdgeRej_Status = new System.Windows.Forms.Label();
+            this.lbl_Stup_WafDiam_Status = new System.Windows.Forms.Label();
+            this.lbl_Stup_PrefocusZ_Status = new System.Windows.Forms.Label();
+            this.lbl_Stup_PrefocusY_Status = new System.Windows.Forms.Label();
+            this.lbl_Stup_PrefocusX_Status = new System.Windows.Forms.Label();
             this.tabGroup.SuspendLayout();
             this.tabMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -433,26 +424,6 @@ namespace SDA100
             this.IniGroupBox.SuspendLayout();
             this.tabStartup.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             this.SuspendLayout();
@@ -4484,6 +4455,243 @@ namespace SDA100
             this.tabStartup.Text = "Startup";
             this.tabStartup.UseVisualStyleBackColor = true;
             // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.lbl_Stup_PrefocusX_Status);
+            this.groupBox8.Controls.Add(this.lbl_Stup_PrefocusY_Status);
+            this.groupBox8.Controls.Add(this.lbl_Stup_PrefocusZ_Status);
+            this.groupBox8.Controls.Add(this.lbl_Stup_WafDiam_Status);
+            this.groupBox8.Controls.Add(this.lbl_Stup_EdgeRej_Status);
+            this.groupBox8.Controls.Add(this.lbl_Stup_SecSteps_Status);
+            this.groupBox8.Controls.Add(this.lbl_Stup_TrackSteps_Status);
+            this.groupBox8.Controls.Add(this.lbl_Stup_ParkPosX_Status);
+            this.groupBox8.Controls.Add(this.lbl_Stup_ParkPosY_Status);
+            this.groupBox8.Controls.Add(this.lbl_Stup_ParkPosZ_Status);
+            this.groupBox8.Controls.Add(this.lbl_Stup_MapRes_Status);
+            this.groupBox8.Controls.Add(this.pictureBox22);
+            this.groupBox8.Controls.Add(this.pictureBox23);
+            this.groupBox8.Controls.Add(this.lbl_Stup_DoorFunc_Status);
+            this.groupBox8.Controls.Add(this.lbl_Stup_MachineStatus_Status);
+            this.groupBox8.Controls.Add(this.lbl_Stup_WafDiam);
+            this.groupBox8.Controls.Add(this.lbl_Stup_EdgeRej);
+            this.groupBox8.Controls.Add(this.lbl_Stup_SecSteps);
+            this.groupBox8.Controls.Add(this.lbl_Stup_TrackSteps);
+            this.groupBox8.Controls.Add(this.lbl_Stup_ParkPosX);
+            this.groupBox8.Controls.Add(this.lbl_Stup_ParkPosY);
+            this.groupBox8.Controls.Add(this.lbl_Stup_ParkPosZ);
+            this.groupBox8.Controls.Add(this.lbl_Stup_PrefocusX);
+            this.groupBox8.Controls.Add(this.lbl_Stup_PrefocusY);
+            this.groupBox8.Controls.Add(this.lbl_Stup_PrefocusZ);
+            this.groupBox8.Controls.Add(this.lbl_Stup_WaferPres);
+            this.groupBox8.Controls.Add(this.label87);
+            this.groupBox8.Controls.Add(this.lbl_Stup_DoorFunc);
+            this.groupBox8.Controls.Add(this.lbl_Stup_MachineStatus);
+            this.groupBox8.Controls.Add(this.lbl_Stup_WaferPres_Status);
+            this.groupBox8.Controls.Add(this.lbl_Stup_MapRes);
+            this.groupBox8.Location = new System.Drawing.Point(611, 43);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(534, 602);
+            this.groupBox8.TabIndex = 3;
+            this.groupBox8.TabStop = false;
+            // 
+            // pictureBox22
+            // 
+            this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
+            this.pictureBox22.Location = new System.Drawing.Point(494, 559);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(33, 33);
+            this.pictureBox22.TabIndex = 39;
+            this.pictureBox22.TabStop = false;
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox23.Image")));
+            this.pictureBox23.Location = new System.Drawing.Point(470, 543);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(33, 33);
+            this.pictureBox23.TabIndex = 38;
+            this.pictureBox23.TabStop = false;
+            // 
+            // lbl_Stup_DoorFunc_Status
+            // 
+            this.lbl_Stup_DoorFunc_Status.AutoSize = true;
+            this.lbl_Stup_DoorFunc_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_DoorFunc_Status.Location = new System.Drawing.Point(235, 533);
+            this.lbl_Stup_DoorFunc_Status.Name = "lbl_Stup_DoorFunc_Status";
+            this.lbl_Stup_DoorFunc_Status.Size = new System.Drawing.Size(51, 25);
+            this.lbl_Stup_DoorFunc_Status.TabIndex = 17;
+            this.lbl_Stup_DoorFunc_Status.Text = "text";
+            // 
+            // lbl_Stup_MachineStatus_Status
+            // 
+            this.lbl_Stup_MachineStatus_Status.AutoSize = true;
+            this.lbl_Stup_MachineStatus_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_MachineStatus_Status.Location = new System.Drawing.Point(417, 77);
+            this.lbl_Stup_MachineStatus_Status.Name = "lbl_Stup_MachineStatus_Status";
+            this.lbl_Stup_MachineStatus_Status.Size = new System.Drawing.Size(51, 25);
+            this.lbl_Stup_MachineStatus_Status.TabIndex = 16;
+            this.lbl_Stup_MachineStatus_Status.Text = "text";
+            // 
+            // lbl_Stup_WafDiam
+            // 
+            this.lbl_Stup_WafDiam.AutoSize = true;
+            this.lbl_Stup_WafDiam.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_WafDiam.Location = new System.Drawing.Point(7, 63);
+            this.lbl_Stup_WafDiam.Name = "lbl_Stup_WafDiam";
+            this.lbl_Stup_WafDiam.Size = new System.Drawing.Size(182, 25);
+            this.lbl_Stup_WafDiam.TabIndex = 15;
+            this.lbl_Stup_WafDiam.Text = "Wafer Diameter:";
+            // 
+            // lbl_Stup_EdgeRej
+            // 
+            this.lbl_Stup_EdgeRej.AutoSize = true;
+            this.lbl_Stup_EdgeRej.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_EdgeRej.Location = new System.Drawing.Point(7, 102);
+            this.lbl_Stup_EdgeRej.Name = "lbl_Stup_EdgeRej";
+            this.lbl_Stup_EdgeRej.Size = new System.Drawing.Size(147, 25);
+            this.lbl_Stup_EdgeRej.TabIndex = 14;
+            this.lbl_Stup_EdgeRej.Text = "Edge Reject:";
+            // 
+            // lbl_Stup_SecSteps
+            // 
+            this.lbl_Stup_SecSteps.AutoSize = true;
+            this.lbl_Stup_SecSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_SecSteps.Location = new System.Drawing.Point(7, 141);
+            this.lbl_Stup_SecSteps.Name = "lbl_Stup_SecSteps";
+            this.lbl_Stup_SecSteps.Size = new System.Drawing.Size(154, 25);
+            this.lbl_Stup_SecSteps.TabIndex = 13;
+            this.lbl_Stup_SecSteps.Text = "Sector Steps:";
+            // 
+            // lbl_Stup_TrackSteps
+            // 
+            this.lbl_Stup_TrackSteps.AutoSize = true;
+            this.lbl_Stup_TrackSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_TrackSteps.Location = new System.Drawing.Point(7, 179);
+            this.lbl_Stup_TrackSteps.Name = "lbl_Stup_TrackSteps";
+            this.lbl_Stup_TrackSteps.Size = new System.Drawing.Size(145, 25);
+            this.lbl_Stup_TrackSteps.TabIndex = 12;
+            this.lbl_Stup_TrackSteps.Text = "Track Steps:";
+            // 
+            // lbl_Stup_ParkPosX
+            // 
+            this.lbl_Stup_ParkPosX.AutoSize = true;
+            this.lbl_Stup_ParkPosX.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_ParkPosX.Location = new System.Drawing.Point(7, 221);
+            this.lbl_Stup_ParkPosX.Name = "lbl_Stup_ParkPosX";
+            this.lbl_Stup_ParkPosX.Size = new System.Drawing.Size(190, 25);
+            this.lbl_Stup_ParkPosX.TabIndex = 11;
+            this.lbl_Stup_ParkPosX.Text = "Park Position(X):";
+            // 
+            // lbl_Stup_ParkPosY
+            // 
+            this.lbl_Stup_ParkPosY.AutoSize = true;
+            this.lbl_Stup_ParkPosY.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_ParkPosY.Location = new System.Drawing.Point(6, 260);
+            this.lbl_Stup_ParkPosY.Name = "lbl_Stup_ParkPosY";
+            this.lbl_Stup_ParkPosY.Size = new System.Drawing.Size(191, 25);
+            this.lbl_Stup_ParkPosY.TabIndex = 10;
+            this.lbl_Stup_ParkPosY.Text = "Park Position(Y):";
+            // 
+            // lbl_Stup_ParkPosZ
+            // 
+            this.lbl_Stup_ParkPosZ.AutoSize = true;
+            this.lbl_Stup_ParkPosZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_ParkPosZ.Location = new System.Drawing.Point(7, 299);
+            this.lbl_Stup_ParkPosZ.Name = "lbl_Stup_ParkPosZ";
+            this.lbl_Stup_ParkPosZ.Size = new System.Drawing.Size(189, 25);
+            this.lbl_Stup_ParkPosZ.TabIndex = 9;
+            this.lbl_Stup_ParkPosZ.Text = "Park Position(Z):";
+            // 
+            // lbl_Stup_PrefocusX
+            // 
+            this.lbl_Stup_PrefocusX.AutoSize = true;
+            this.lbl_Stup_PrefocusX.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_PrefocusX.Location = new System.Drawing.Point(6, 336);
+            this.lbl_Stup_PrefocusX.Name = "lbl_Stup_PrefocusX";
+            this.lbl_Stup_PrefocusX.Size = new System.Drawing.Size(143, 25);
+            this.lbl_Stup_PrefocusX.TabIndex = 8;
+            this.lbl_Stup_PrefocusX.Text = "Prefocus(X):";
+            // 
+            // lbl_Stup_PrefocusY
+            // 
+            this.lbl_Stup_PrefocusY.AutoSize = true;
+            this.lbl_Stup_PrefocusY.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_PrefocusY.Location = new System.Drawing.Point(7, 377);
+            this.lbl_Stup_PrefocusY.Name = "lbl_Stup_PrefocusY";
+            this.lbl_Stup_PrefocusY.Size = new System.Drawing.Size(144, 25);
+            this.lbl_Stup_PrefocusY.TabIndex = 7;
+            this.lbl_Stup_PrefocusY.Text = "Prefocus(Y):";
+            this.lbl_Stup_PrefocusY.Click += new System.EventHandler(this.label90_Click);
+            // 
+            // lbl_Stup_PrefocusZ
+            // 
+            this.lbl_Stup_PrefocusZ.AutoSize = true;
+            this.lbl_Stup_PrefocusZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_PrefocusZ.Location = new System.Drawing.Point(7, 415);
+            this.lbl_Stup_PrefocusZ.Name = "lbl_Stup_PrefocusZ";
+            this.lbl_Stup_PrefocusZ.Size = new System.Drawing.Size(142, 25);
+            this.lbl_Stup_PrefocusZ.TabIndex = 6;
+            this.lbl_Stup_PrefocusZ.Text = "Prefocus(Z):";
+            // 
+            // lbl_Stup_WaferPres
+            // 
+            this.lbl_Stup_WaferPres.AutoSize = true;
+            this.lbl_Stup_WaferPres.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_WaferPres.Location = new System.Drawing.Point(7, 489);
+            this.lbl_Stup_WaferPres.Name = "lbl_Stup_WaferPres";
+            this.lbl_Stup_WaferPres.Size = new System.Drawing.Size(275, 25);
+            this.lbl_Stup_WaferPres.TabIndex = 5;
+            this.lbl_Stup_WaferPres.Text = "Wafer Present on Chuck:";
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Image = ((System.Drawing.Image)(resources.GetObject("label87.Image")));
+            this.label87.Location = new System.Drawing.Point(206, 489);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(0, 16);
+            this.label87.TabIndex = 4;
+            // 
+            // lbl_Stup_DoorFunc
+            // 
+            this.lbl_Stup_DoorFunc.AutoSize = true;
+            this.lbl_Stup_DoorFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_DoorFunc.Location = new System.Drawing.Point(7, 526);
+            this.lbl_Stup_DoorFunc.Name = "lbl_Stup_DoorFunc";
+            this.lbl_Stup_DoorFunc.Size = new System.Drawing.Size(211, 25);
+            this.lbl_Stup_DoorFunc.TabIndex = 3;
+            this.lbl_Stup_DoorFunc.Text = "Door Functionality:";
+            // 
+            // lbl_Stup_MachineStatus
+            // 
+            this.lbl_Stup_MachineStatus.AutoSize = true;
+            this.lbl_Stup_MachineStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_MachineStatus.Location = new System.Drawing.Point(321, 29);
+            this.lbl_Stup_MachineStatus.Name = "lbl_Stup_MachineStatus";
+            this.lbl_Stup_MachineStatus.Size = new System.Drawing.Size(182, 25);
+            this.lbl_Stup_MachineStatus.TabIndex = 2;
+            this.lbl_Stup_MachineStatus.Text = "Machine Status:";
+            // 
+            // lbl_Stup_WaferPres_Status
+            // 
+            this.lbl_Stup_WaferPres_Status.AutoSize = true;
+            this.lbl_Stup_WaferPres_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_WaferPres_Status.Location = new System.Drawing.Point(288, 489);
+            this.lbl_Stup_WaferPres_Status.Name = "lbl_Stup_WaferPres_Status";
+            this.lbl_Stup_WaferPres_Status.Size = new System.Drawing.Size(51, 25);
+            this.lbl_Stup_WaferPres_Status.TabIndex = 1;
+            this.lbl_Stup_WaferPres_Status.Text = "text";
+            // 
+            // lbl_Stup_MapRes
+            // 
+            this.lbl_Stup_MapRes.AutoSize = true;
+            this.lbl_Stup_MapRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_MapRes.Location = new System.Drawing.Point(7, 22);
+            this.lbl_Stup_MapRes.Name = "lbl_Stup_MapRes";
+            this.lbl_Stup_MapRes.Size = new System.Drawing.Size(183, 25);
+            this.lbl_Stup_MapRes.TabIndex = 0;
+            this.lbl_Stup_MapRes.Text = "Map Resolution:";
+            // 
             // btn_StartupDismiss
             // 
             this.btn_StartupDismiss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4507,428 +4715,115 @@ namespace SDA100
             this.txtr_Startup.TabIndex = 0;
             this.txtr_Startup.Text = "";
             // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.pictureBox22);
-            this.groupBox8.Controls.Add(this.pictureBox23);
-            this.groupBox8.Controls.Add(this.pictureBox20);
-            this.groupBox8.Controls.Add(this.pictureBox21);
-            this.groupBox8.Controls.Add(this.pictureBox18);
-            this.groupBox8.Controls.Add(this.pictureBox19);
-            this.groupBox8.Controls.Add(this.pictureBox16);
-            this.groupBox8.Controls.Add(this.pictureBox17);
-            this.groupBox8.Controls.Add(this.pictureBox14);
-            this.groupBox8.Controls.Add(this.pictureBox15);
-            this.groupBox8.Controls.Add(this.pictureBox12);
-            this.groupBox8.Controls.Add(this.pictureBox13);
-            this.groupBox8.Controls.Add(this.pictureBox10);
-            this.groupBox8.Controls.Add(this.pictureBox11);
-            this.groupBox8.Controls.Add(this.pictureBox8);
-            this.groupBox8.Controls.Add(this.pictureBox9);
-            this.groupBox8.Controls.Add(this.pictureBox6);
-            this.groupBox8.Controls.Add(this.pictureBox7);
-            this.groupBox8.Controls.Add(this.pictureBox4);
-            this.groupBox8.Controls.Add(this.pictureBox5);
-            this.groupBox8.Controls.Add(this.pictureBox3);
-            this.groupBox8.Controls.Add(this.pictureBox2);
-            this.groupBox8.Controls.Add(this.lbl_Stup_DoorFunc_Status);
-            this.groupBox8.Controls.Add(this.label84);
-            this.groupBox8.Controls.Add(this.lbl_Stup_WafDiam);
-            this.groupBox8.Controls.Add(this.lbl_Stup_EdgeRej);
-            this.groupBox8.Controls.Add(this.lbl_Stup_SecSteps);
-            this.groupBox8.Controls.Add(this.lbl_Stup_TrackSteps);
-            this.groupBox8.Controls.Add(this.lbl_Stup_ParkPosX);
-            this.groupBox8.Controls.Add(this.lbl_Stup_ParkPosY);
-            this.groupBox8.Controls.Add(this.lbl_Stup_ParkPosZ);
-            this.groupBox8.Controls.Add(this.lbl_Stup_PrefocusX);
-            this.groupBox8.Controls.Add(this.lbl_Stup_PrefocusY);
-            this.groupBox8.Controls.Add(this.lbl_Stup_PrefocusZ);
-            this.groupBox8.Controls.Add(this.lbl_Stup_WaferPres);
-            this.groupBox8.Controls.Add(this.label87);
-            this.groupBox8.Controls.Add(this.lbl_Stup_DoorFunc);
-            this.groupBox8.Controls.Add(this.lbl_Stup_MachineStatus);
-            this.groupBox8.Controls.Add(this.lbl_Stup_WaferPres_Status);
-            this.groupBox8.Controls.Add(this.lbl_Stup_MapRes);
-            this.groupBox8.Location = new System.Drawing.Point(611, 43);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(534, 602);
-            this.groupBox8.TabIndex = 3;
-            this.groupBox8.TabStop = false;
-            // 
-            // lbl_Stup_MapRes
-            // 
-            this.lbl_Stup_MapRes.AutoSize = true;
-            this.lbl_Stup_MapRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Stup_MapRes.Location = new System.Drawing.Point(7, 22);
-            this.lbl_Stup_MapRes.Name = "lbl_Stup_MapRes";
-            this.lbl_Stup_MapRes.Size = new System.Drawing.Size(183, 25);
-            this.lbl_Stup_MapRes.TabIndex = 0;
-            this.lbl_Stup_MapRes.Text = "Map Resolution:";
-            // 
-            // lbl_Stup_WaferPres_Status
-            // 
-            this.lbl_Stup_WaferPres_Status.AutoSize = true;
-            this.lbl_Stup_WaferPres_Status.Location = new System.Drawing.Point(287, 418);
-            this.lbl_Stup_WaferPres_Status.Name = "lbl_Stup_WaferPres_Status";
-            this.lbl_Stup_WaferPres_Status.Size = new System.Drawing.Size(32, 16);
-            this.lbl_Stup_WaferPres_Status.TabIndex = 1;
-            this.lbl_Stup_WaferPres_Status.Text = "text";
-            // 
-            // lbl_Stup_MachineStatus
-            // 
-            this.lbl_Stup_MachineStatus.AutoSize = true;
-            this.lbl_Stup_MachineStatus.Location = new System.Drawing.Point(248, 22);
-            this.lbl_Stup_MachineStatus.Name = "lbl_Stup_MachineStatus";
-            this.lbl_Stup_MachineStatus.Size = new System.Drawing.Size(117, 16);
-            this.lbl_Stup_MachineStatus.TabIndex = 2;
-            this.lbl_Stup_MachineStatus.Text = "Machine Status:";
-            // 
-            // lbl_Stup_DoorFunc
-            // 
-            this.lbl_Stup_DoorFunc.AutoSize = true;
-            this.lbl_Stup_DoorFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Stup_DoorFunc.Location = new System.Drawing.Point(7, 473);
-            this.lbl_Stup_DoorFunc.Name = "lbl_Stup_DoorFunc";
-            this.lbl_Stup_DoorFunc.Size = new System.Drawing.Size(211, 25);
-            this.lbl_Stup_DoorFunc.TabIndex = 3;
-            this.lbl_Stup_DoorFunc.Text = "Door Functionality:";
-            // 
-            // label87
-            // 
-            this.label87.AutoSize = true;
-            this.label87.Image = ((System.Drawing.Image)(resources.GetObject("label87.Image")));
-            this.label87.Location = new System.Drawing.Point(206, 489);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(0, 16);
-            this.label87.TabIndex = 4;
-            // 
-            // lbl_Stup_WaferPres
-            // 
-            this.lbl_Stup_WaferPres.AutoSize = true;
-            this.lbl_Stup_WaferPres.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Stup_WaferPres.Location = new System.Drawing.Point(7, 436);
-            this.lbl_Stup_WaferPres.Name = "lbl_Stup_WaferPres";
-            this.lbl_Stup_WaferPres.Size = new System.Drawing.Size(275, 25);
-            this.lbl_Stup_WaferPres.TabIndex = 5;
-            this.lbl_Stup_WaferPres.Text = "Wafer Present on Chuck:";
-            // 
-            // lbl_Stup_PrefocusZ
-            // 
-            this.lbl_Stup_PrefocusZ.AutoSize = true;
-            this.lbl_Stup_PrefocusZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Stup_PrefocusZ.Location = new System.Drawing.Point(7, 400);
-            this.lbl_Stup_PrefocusZ.Name = "lbl_Stup_PrefocusZ";
-            this.lbl_Stup_PrefocusZ.Size = new System.Drawing.Size(142, 25);
-            this.lbl_Stup_PrefocusZ.TabIndex = 6;
-            this.lbl_Stup_PrefocusZ.Text = "Prefocus(Z):";
-            // 
-            // lbl_Stup_PrefocusY
-            // 
-            this.lbl_Stup_PrefocusY.AutoSize = true;
-            this.lbl_Stup_PrefocusY.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Stup_PrefocusY.Location = new System.Drawing.Point(7, 366);
-            this.lbl_Stup_PrefocusY.Name = "lbl_Stup_PrefocusY";
-            this.lbl_Stup_PrefocusY.Size = new System.Drawing.Size(144, 25);
-            this.lbl_Stup_PrefocusY.TabIndex = 7;
-            this.lbl_Stup_PrefocusY.Text = "Prefocus(Y):";
-            this.lbl_Stup_PrefocusY.Click += new System.EventHandler(this.label90_Click);
-            // 
-            // lbl_Stup_PrefocusX
-            // 
-            this.lbl_Stup_PrefocusX.AutoSize = true;
-            this.lbl_Stup_PrefocusX.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Stup_PrefocusX.Location = new System.Drawing.Point(6, 331);
-            this.lbl_Stup_PrefocusX.Name = "lbl_Stup_PrefocusX";
-            this.lbl_Stup_PrefocusX.Size = new System.Drawing.Size(143, 25);
-            this.lbl_Stup_PrefocusX.TabIndex = 8;
-            this.lbl_Stup_PrefocusX.Text = "Prefocus(X):";
-            // 
-            // lbl_Stup_ParkPosZ
-            // 
-            this.lbl_Stup_ParkPosZ.AutoSize = true;
-            this.lbl_Stup_ParkPosZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Stup_ParkPosZ.Location = new System.Drawing.Point(7, 297);
-            this.lbl_Stup_ParkPosZ.Name = "lbl_Stup_ParkPosZ";
-            this.lbl_Stup_ParkPosZ.Size = new System.Drawing.Size(189, 25);
-            this.lbl_Stup_ParkPosZ.TabIndex = 9;
-            this.lbl_Stup_ParkPosZ.Text = "Park Position(Z):";
-            // 
-            // lbl_Stup_ParkPosY
-            // 
-            this.lbl_Stup_ParkPosY.AutoSize = true;
-            this.lbl_Stup_ParkPosY.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Stup_ParkPosY.Location = new System.Drawing.Point(6, 260);
-            this.lbl_Stup_ParkPosY.Name = "lbl_Stup_ParkPosY";
-            this.lbl_Stup_ParkPosY.Size = new System.Drawing.Size(191, 25);
-            this.lbl_Stup_ParkPosY.TabIndex = 10;
-            this.lbl_Stup_ParkPosY.Text = "Park Position(Y):";
-            // 
-            // lbl_Stup_ParkPosX
-            // 
-            this.lbl_Stup_ParkPosX.AutoSize = true;
-            this.lbl_Stup_ParkPosX.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Stup_ParkPosX.Location = new System.Drawing.Point(7, 225);
-            this.lbl_Stup_ParkPosX.Name = "lbl_Stup_ParkPosX";
-            this.lbl_Stup_ParkPosX.Size = new System.Drawing.Size(190, 25);
-            this.lbl_Stup_ParkPosX.TabIndex = 11;
-            this.lbl_Stup_ParkPosX.Text = "Park Position(X):";
-            // 
-            // lbl_Stup_TrackSteps
-            // 
-            this.lbl_Stup_TrackSteps.AutoSize = true;
-            this.lbl_Stup_TrackSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Stup_TrackSteps.Location = new System.Drawing.Point(7, 184);
-            this.lbl_Stup_TrackSteps.Name = "lbl_Stup_TrackSteps";
-            this.lbl_Stup_TrackSteps.Size = new System.Drawing.Size(145, 25);
-            this.lbl_Stup_TrackSteps.TabIndex = 12;
-            this.lbl_Stup_TrackSteps.Text = "Track Steps:";
-            // 
-            // lbl_Stup_SecSteps
-            // 
-            this.lbl_Stup_SecSteps.AutoSize = true;
-            this.lbl_Stup_SecSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Stup_SecSteps.Location = new System.Drawing.Point(7, 145);
-            this.lbl_Stup_SecSteps.Name = "lbl_Stup_SecSteps";
-            this.lbl_Stup_SecSteps.Size = new System.Drawing.Size(154, 25);
-            this.lbl_Stup_SecSteps.TabIndex = 13;
-            this.lbl_Stup_SecSteps.Text = "Sector Steps:";
-            // 
-            // lbl_Stup_EdgeRej
-            // 
-            this.lbl_Stup_EdgeRej.AutoSize = true;
-            this.lbl_Stup_EdgeRej.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Stup_EdgeRej.Location = new System.Drawing.Point(7, 105);
-            this.lbl_Stup_EdgeRej.Name = "lbl_Stup_EdgeRej";
-            this.lbl_Stup_EdgeRej.Size = new System.Drawing.Size(147, 25);
-            this.lbl_Stup_EdgeRej.TabIndex = 14;
-            this.lbl_Stup_EdgeRej.Text = "Edge Reject:";
-            // 
-            // lbl_Stup_WafDiam
-            // 
-            this.lbl_Stup_WafDiam.AutoSize = true;
-            this.lbl_Stup_WafDiam.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Stup_WafDiam.Location = new System.Drawing.Point(7, 63);
-            this.lbl_Stup_WafDiam.Name = "lbl_Stup_WafDiam";
-            this.lbl_Stup_WafDiam.Size = new System.Drawing.Size(182, 25);
-            this.lbl_Stup_WafDiam.TabIndex = 15;
-            this.lbl_Stup_WafDiam.Text = "Wafer Diameter:";
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label84.Location = new System.Drawing.Point(297, 52);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(65, 16);
-            this.label84.TabIndex = 16;
-            this.label84.Text = "\"\\u2713\"";
-            // 
-            // lbl_Stup_DoorFunc_Status
-            // 
-            this.lbl_Stup_DoorFunc_Status.AutoSize = true;
-            this.lbl_Stup_DoorFunc_Status.Location = new System.Drawing.Point(288, 462);
-            this.lbl_Stup_DoorFunc_Status.Name = "lbl_Stup_DoorFunc_Status";
-            this.lbl_Stup_DoorFunc_Status.Size = new System.Drawing.Size(32, 16);
-            this.lbl_Stup_DoorFunc_Status.TabIndex = 17;
-            this.lbl_Stup_DoorFunc_Status.Text = "text";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(195, 21);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox2.TabIndex = 18;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(219, 37);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox3.TabIndex = 19;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(209, 115);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox4.TabIndex = 21;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(195, 97);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox5.TabIndex = 20;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(209, 76);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox6.TabIndex = 23;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(195, 60);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox7.TabIndex = 22;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(219, 153);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox8.TabIndex = 25;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(195, 137);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox9.TabIndex = 24;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(219, 192);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox10.TabIndex = 27;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(195, 176);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox11.TabIndex = 26;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(219, 233);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox12.TabIndex = 29;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(195, 217);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox13.TabIndex = 28;
-            this.pictureBox13.TabStop = false;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(219, 272);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox14.TabIndex = 31;
-            this.pictureBox14.TabStop = false;
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(195, 256);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox15.TabIndex = 30;
-            this.pictureBox15.TabStop = false;
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(219, 311);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox16.TabIndex = 33;
-            this.pictureBox16.TabStop = false;
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(195, 295);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox17.TabIndex = 32;
-            this.pictureBox17.TabStop = false;
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
-            this.pictureBox18.Location = new System.Drawing.Point(219, 350);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox18.TabIndex = 35;
-            this.pictureBox18.TabStop = false;
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
-            this.pictureBox19.Location = new System.Drawing.Point(195, 334);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox19.TabIndex = 34;
-            this.pictureBox19.TabStop = false;
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox20.Image")));
-            this.pictureBox20.Location = new System.Drawing.Point(219, 389);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox20.TabIndex = 37;
-            this.pictureBox20.TabStop = false;
-            // 
-            // pictureBox21
-            // 
-            this.pictureBox21.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox21.Image")));
-            this.pictureBox21.Location = new System.Drawing.Point(195, 373);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox21.TabIndex = 36;
-            this.pictureBox21.TabStop = false;
-            // 
-            // pictureBox22
-            // 
-            this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
-            this.pictureBox22.Location = new System.Drawing.Point(219, 417);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox22.TabIndex = 39;
-            this.pictureBox22.TabStop = false;
-            // 
-            // pictureBox23
-            // 
-            this.pictureBox23.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox23.Image")));
-            this.pictureBox23.Location = new System.Drawing.Point(195, 401);
-            this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox23.TabIndex = 38;
-            this.pictureBox23.TabStop = false;
+            // lbl_Stup_MapRes_Status
+            // 
+            this.lbl_Stup_MapRes_Status.AutoSize = true;
+            this.lbl_Stup_MapRes_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_MapRes_Status.Location = new System.Drawing.Point(196, 22);
+            this.lbl_Stup_MapRes_Status.Name = "lbl_Stup_MapRes_Status";
+            this.lbl_Stup_MapRes_Status.Size = new System.Drawing.Size(51, 25);
+            this.lbl_Stup_MapRes_Status.TabIndex = 40;
+            this.lbl_Stup_MapRes_Status.Text = "text";
+            // 
+            // lbl_Stup_ParkPosZ_Status
+            // 
+            this.lbl_Stup_ParkPosZ_Status.AutoSize = true;
+            this.lbl_Stup_ParkPosZ_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_ParkPosZ_Status.Location = new System.Drawing.Point(196, 299);
+            this.lbl_Stup_ParkPosZ_Status.Name = "lbl_Stup_ParkPosZ_Status";
+            this.lbl_Stup_ParkPosZ_Status.Size = new System.Drawing.Size(51, 25);
+            this.lbl_Stup_ParkPosZ_Status.TabIndex = 41;
+            this.lbl_Stup_ParkPosZ_Status.Text = "text";
+            // 
+            // lbl_Stup_ParkPosY_Status
+            // 
+            this.lbl_Stup_ParkPosY_Status.AutoSize = true;
+            this.lbl_Stup_ParkPosY_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_ParkPosY_Status.Location = new System.Drawing.Point(196, 260);
+            this.lbl_Stup_ParkPosY_Status.Name = "lbl_Stup_ParkPosY_Status";
+            this.lbl_Stup_ParkPosY_Status.Size = new System.Drawing.Size(51, 25);
+            this.lbl_Stup_ParkPosY_Status.TabIndex = 42;
+            this.lbl_Stup_ParkPosY_Status.Text = "text";
+            // 
+            // lbl_Stup_ParkPosX_Status
+            // 
+            this.lbl_Stup_ParkPosX_Status.AutoSize = true;
+            this.lbl_Stup_ParkPosX_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_ParkPosX_Status.Location = new System.Drawing.Point(196, 221);
+            this.lbl_Stup_ParkPosX_Status.Name = "lbl_Stup_ParkPosX_Status";
+            this.lbl_Stup_ParkPosX_Status.Size = new System.Drawing.Size(51, 25);
+            this.lbl_Stup_ParkPosX_Status.TabIndex = 43;
+            this.lbl_Stup_ParkPosX_Status.Text = "text";
+            // 
+            // lbl_Stup_TrackSteps_Status
+            // 
+            this.lbl_Stup_TrackSteps_Status.AutoSize = true;
+            this.lbl_Stup_TrackSteps_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_TrackSteps_Status.Location = new System.Drawing.Point(196, 179);
+            this.lbl_Stup_TrackSteps_Status.Name = "lbl_Stup_TrackSteps_Status";
+            this.lbl_Stup_TrackSteps_Status.Size = new System.Drawing.Size(51, 25);
+            this.lbl_Stup_TrackSteps_Status.TabIndex = 44;
+            this.lbl_Stup_TrackSteps_Status.Text = "text";
+            // 
+            // lbl_Stup_SecSteps_Status
+            // 
+            this.lbl_Stup_SecSteps_Status.AutoSize = true;
+            this.lbl_Stup_SecSteps_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_SecSteps_Status.Location = new System.Drawing.Point(196, 141);
+            this.lbl_Stup_SecSteps_Status.Name = "lbl_Stup_SecSteps_Status";
+            this.lbl_Stup_SecSteps_Status.Size = new System.Drawing.Size(51, 25);
+            this.lbl_Stup_SecSteps_Status.TabIndex = 45;
+            this.lbl_Stup_SecSteps_Status.Text = "text";
+            // 
+            // lbl_Stup_EdgeRej_Status
+            // 
+            this.lbl_Stup_EdgeRej_Status.AutoSize = true;
+            this.lbl_Stup_EdgeRej_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_EdgeRej_Status.Location = new System.Drawing.Point(196, 102);
+            this.lbl_Stup_EdgeRej_Status.Name = "lbl_Stup_EdgeRej_Status";
+            this.lbl_Stup_EdgeRej_Status.Size = new System.Drawing.Size(51, 25);
+            this.lbl_Stup_EdgeRej_Status.TabIndex = 46;
+            this.lbl_Stup_EdgeRej_Status.Text = "text";
+            // 
+            // lbl_Stup_WafDiam_Status
+            // 
+            this.lbl_Stup_WafDiam_Status.AutoSize = true;
+            this.lbl_Stup_WafDiam_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_WafDiam_Status.Location = new System.Drawing.Point(196, 63);
+            this.lbl_Stup_WafDiam_Status.Name = "lbl_Stup_WafDiam_Status";
+            this.lbl_Stup_WafDiam_Status.Size = new System.Drawing.Size(51, 25);
+            this.lbl_Stup_WafDiam_Status.TabIndex = 47;
+            this.lbl_Stup_WafDiam_Status.Text = "text";
+            // 
+            // lbl_Stup_PrefocusZ_Status
+            // 
+            this.lbl_Stup_PrefocusZ_Status.AutoSize = true;
+            this.lbl_Stup_PrefocusZ_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_PrefocusZ_Status.Location = new System.Drawing.Point(196, 415);
+            this.lbl_Stup_PrefocusZ_Status.Name = "lbl_Stup_PrefocusZ_Status";
+            this.lbl_Stup_PrefocusZ_Status.Size = new System.Drawing.Size(51, 25);
+            this.lbl_Stup_PrefocusZ_Status.TabIndex = 48;
+            this.lbl_Stup_PrefocusZ_Status.Text = "text";
+            // 
+            // lbl_Stup_PrefocusY_Status
+            // 
+            this.lbl_Stup_PrefocusY_Status.AutoSize = true;
+            this.lbl_Stup_PrefocusY_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_PrefocusY_Status.Location = new System.Drawing.Point(196, 377);
+            this.lbl_Stup_PrefocusY_Status.Name = "lbl_Stup_PrefocusY_Status";
+            this.lbl_Stup_PrefocusY_Status.Size = new System.Drawing.Size(51, 25);
+            this.lbl_Stup_PrefocusY_Status.TabIndex = 49;
+            this.lbl_Stup_PrefocusY_Status.Text = "text";
+            // 
+            // lbl_Stup_PrefocusX_Status
+            // 
+            this.lbl_Stup_PrefocusX_Status.AutoSize = true;
+            this.lbl_Stup_PrefocusX_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Stup_PrefocusX_Status.Location = new System.Drawing.Point(196, 336);
+            this.lbl_Stup_PrefocusX_Status.Name = "lbl_Stup_PrefocusX_Status";
+            this.lbl_Stup_PrefocusX_Status.Size = new System.Drawing.Size(51, 25);
+            this.lbl_Stup_PrefocusX_Status.TabIndex = 50;
+            this.lbl_Stup_PrefocusX_Status.Text = "text";
             // 
             // mainForm
             // 
@@ -4977,26 +4872,6 @@ namespace SDA100
             this.tabStartup.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             this.ResumeLayout(false);
@@ -5362,29 +5237,20 @@ namespace SDA100
         private System.Windows.Forms.Label lbl_Stup_WaferPres_Status;
         private System.Windows.Forms.Label lbl_Stup_MapRes;
         private System.Windows.Forms.Label lbl_Stup_DoorFunc_Status;
-        private System.Windows.Forms.Label label84;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lbl_Stup_MachineStatus_Status;
         private System.Windows.Forms.PictureBox pictureBox22;
         private System.Windows.Forms.PictureBox pictureBox23;
-        private System.Windows.Forms.PictureBox pictureBox20;
-        private System.Windows.Forms.PictureBox pictureBox21;
-        private System.Windows.Forms.PictureBox pictureBox18;
-        private System.Windows.Forms.PictureBox pictureBox19;
-        private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.PictureBox pictureBox17;
-        private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label lbl_Stup_PrefocusX_Status;
+        private System.Windows.Forms.Label lbl_Stup_PrefocusY_Status;
+        private System.Windows.Forms.Label lbl_Stup_PrefocusZ_Status;
+        private System.Windows.Forms.Label lbl_Stup_WafDiam_Status;
+        private System.Windows.Forms.Label lbl_Stup_EdgeRej_Status;
+        private System.Windows.Forms.Label lbl_Stup_SecSteps_Status;
+        private System.Windows.Forms.Label lbl_Stup_TrackSteps_Status;
+        private System.Windows.Forms.Label lbl_Stup_ParkPosX_Status;
+        private System.Windows.Forms.Label lbl_Stup_ParkPosY_Status;
+        private System.Windows.Forms.Label lbl_Stup_ParkPosZ_Status;
+        private System.Windows.Forms.Label lbl_Stup_MapRes_Status;
     }
 }
 

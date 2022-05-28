@@ -126,13 +126,17 @@ namespace SDA100
                     //this.txtr_Startup.SelectedText = Globals.inData;
                     //this.txtr_Startup.SelectionStart = txtr_Startup.TextLength - Globals.inData.Length;
                     //this.txtr_Startup.SelectionLength = Globals.inData.Length;
-                    //this.txtr_Startup.SelectionColor = Color.Red;    
+                    //this.txtr_Startup.SelectionColor = Color.Red;
+                    lbl_Stup_MapRes_Status.ForeColor = Color.Green;
+                    lbl_Stup_MapRes_Status.Text = Globals.inData;
                 }
                 else
                 {
                     txtr_Startup.SelectionColor = Color.Red;
                     txtr_Startup.AppendText("No Response" + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+                    lbl_Stup_MapRes_Status.ForeColor = Color.Red;
+                    lbl_Stup_MapRes_Status.Text = "No Response";
                 }
 
                 ScanPort._serialPort.Write("." + Globals.waferDiam + "d");
@@ -144,12 +148,18 @@ namespace SDA100
                     txtr_Startup.SelectionColor = Color.Green;
                     txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_WafDiam_Status.ForeColor = Color.Green;
+                    lbl_Stup_WafDiam_Status.Text = Globals.inData;
                 }
                 else
                 {
                     txtr_Startup.SelectionColor = Color.Red;
                     txtr_Startup.AppendText("No Response" + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_WafDiam_Status.ForeColor = Color.Red;
+                    lbl_Stup_WafDiam_Status.Text = "No Response";
                 }
 
                 ScanPort._serialPort.Write("." + Globals.edgeRej + "e");
@@ -161,12 +171,18 @@ namespace SDA100
                     txtr_Startup.SelectionColor = Color.Green;
                     txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_EdgeRej_Status.ForeColor = Color.Green;
+                    lbl_Stup_EdgeRej_Status.Text = Globals.inData;
                 }
                 else
                 {
                     txtr_Startup.SelectionColor = Color.Red;
                     txtr_Startup.AppendText("No Response" + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_EdgeRej_Status.ForeColor = Color.Red;
+                    lbl_Stup_EdgeRej_Status.Text = "No Response";
                 }
 
                 ScanPort._serialPort.Write("." + Globals.sectorSteps + "S");
@@ -178,12 +194,18 @@ namespace SDA100
                     txtr_Startup.SelectionColor = Color.Green;
                     txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_SecSteps_Status.ForeColor = Color.Green;
+                    lbl_Stup_SecSteps_Status.Text = Globals.inData;
                 }
                 else
                 {
                     txtr_Startup.SelectionColor = Color.Red;
                     txtr_Startup.AppendText("No Response" + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_SecSteps_Status.ForeColor = Color.Red;
+                    lbl_Stup_SecSteps_Status.Text = "No Response";
                 }
 
                 ScanPort._serialPort.Write("." + Globals.trackSteps + "T");
@@ -195,12 +217,18 @@ namespace SDA100
                     txtr_Startup.SelectionColor = Color.Green;
                     txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_TrackSteps_Status.ForeColor = Color.Green;
+                    lbl_Stup_TrackSteps_Status.Text = Globals.inData;
                 }
                 else
                 {
                     txtr_Startup.SelectionColor = Color.Red;
                     txtr_Startup.AppendText("No Response" + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_TrackSteps_Status.ForeColor = Color.Red;
+                    lbl_Stup_TrackSteps_Status.Text = "No Response";
                 }
 
                 ScanPort._serialPort.Write("." + Globals.parkX + "x");
@@ -212,12 +240,18 @@ namespace SDA100
                     txtr_Startup.SelectionColor = Color.Green;
                     txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_ParkPosX_Status.ForeColor = Color.Green;
+                    lbl_Stup_ParkPosX_Status.Text = Globals.inData;
                 }
                 else
                 {
                     txtr_Startup.SelectionColor = Color.Red;
                     txtr_Startup.AppendText("No Response" + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_ParkPosX_Status.ForeColor = Color.Red;
+                    lbl_Stup_ParkPosX_Status.Text = "No Response";
                 }
 
                 ScanPort._serialPort.Write("." + Globals.parkY + "y");
@@ -229,12 +263,18 @@ namespace SDA100
                     txtr_Startup.SelectionColor = Color.Green;
                     txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_ParkPosY_Status.ForeColor = Color.Green;
+                    lbl_Stup_ParkPosY_Status.Text = Globals.inData;
                 }
                 else
                 {
                     txtr_Startup.SelectionColor = Color.Red;
                     txtr_Startup.AppendText("No Response" + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_ParkPosY_Status.ForeColor = Color.Red;
+                    lbl_Stup_ParkPosY_Status.Text = "No Response";
                 }
 
                 ScanPort._serialPort.Write("." + Globals.parkZ + "z");
@@ -246,12 +286,18 @@ namespace SDA100
                     txtr_Startup.SelectionColor = Color.Green;
                     txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_ParkPosZ_Status.ForeColor = Color.Green;
+                    lbl_Stup_ParkPosZ_Status.Text = Globals.inData;
                 }
                 else
                 {
                     txtr_Startup.SelectionColor = Color.Red;
                     txtr_Startup.AppendText("No Response" + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_ParkPosZ_Status.ForeColor = Color.Red;
+                    lbl_Stup_ParkPosZ_Status.Text = "No Response";
                 }               
 
                 ScanPort._serialPort.Write("." + Globals.preFocusX + "v");
@@ -263,12 +309,17 @@ namespace SDA100
                     txtr_Startup.SelectionColor = Color.Green;
                     txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_PrefocusX_Status.ForeColor = Color.Green;
+                    lbl_Stup_PrefocusX_Status.Text = Globals.inData;
                 }
                 else
-                {
-                    txtr_Startup.SelectionColor = Color.Red;
+                {txtr_Startup.SelectionColor = Color.Red;
                     txtr_Startup.AppendText("No Response" + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_ParkPosX_Status.ForeColor = Color.Red;
+                    lbl_Stup_ParkPosX_Status.Text = "No Response";
                 }
 
                 ScanPort._serialPort.Write("." + Globals.preFocusY + "w");
