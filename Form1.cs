@@ -841,5 +841,10 @@ namespace SDA100
                 keypad.Dispose();
             }
         }
+
+        private void label90_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
