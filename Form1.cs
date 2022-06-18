@@ -113,6 +113,8 @@ namespace SDA100
                 //autoReset.WaitOne(); //Crap Dustin is messing with
                 //Console.WriteLine("Right after send:" + Thread.CurrentThread.ManagedThreadId);
                 //Console.WriteLine("Thread Name: " + Thread.CurrentThread.Name);
+
+                // Map Resolution Startup -------------------------------------------------------------------
                 ScanPort._serialPort.Write("." + Globals.mapRes + "r");
                 Console.WriteLine("." + Globals.mapRes + "r");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("r");
@@ -135,10 +137,12 @@ namespace SDA100
                     txtr_Startup.SelectionColor = Color.Red;
                     txtr_Startup.AppendText("No Response" + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+                    
                     lbl_Stup_MapRes_Status.ForeColor = Color.Red;
                     lbl_Stup_MapRes_Status.Text = "No Response";
                 }
 
+                // Wafer Diameter Startup -------------------------------------------------------------------
                 ScanPort._serialPort.Write("." + Globals.waferDiam + "d");
                 Console.WriteLine("." + Globals.waferDiam + "d");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("d");
@@ -162,6 +166,7 @@ namespace SDA100
                     lbl_Stup_WafDiam_Status.Text = "No Response";
                 }
 
+                // Edge Reject Startup -------------------------------------------------------------------
                 ScanPort._serialPort.Write("." + Globals.edgeRej + "e");
                 Console.WriteLine("." + Globals.edgeRej + "e");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("e");
@@ -185,6 +190,7 @@ namespace SDA100
                     lbl_Stup_EdgeRej_Status.Text = "No Response";
                 }
 
+                // Sector Steps Startup -------------------------------------------------------------------
                 ScanPort._serialPort.Write("." + Globals.sectorSteps + "S");
                 Console.WriteLine("." + Globals.sectorSteps + "S");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("S");
@@ -208,6 +214,7 @@ namespace SDA100
                     lbl_Stup_SecSteps_Status.Text = "No Response";
                 }
 
+                // Track Steps Startup -------------------------------------------------------------------
                 ScanPort._serialPort.Write("." + Globals.trackSteps + "T");
                 Console.WriteLine("." + Globals.trackSteps + "T");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("T");
@@ -231,6 +238,7 @@ namespace SDA100
                     lbl_Stup_TrackSteps_Status.Text = "No Response";
                 }
 
+                // Park Pos X Startup -------------------------------------------------------------------
                 ScanPort._serialPort.Write("." + Globals.parkX + "x");
                 Console.WriteLine("." + Globals.parkX + "x");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("x");
@@ -254,6 +262,7 @@ namespace SDA100
                     lbl_Stup_ParkPosX_Status.Text = "No Response";
                 }
 
+                // Park Pos Y Startup -------------------------------------------------------------------
                 ScanPort._serialPort.Write("." + Globals.parkY + "y");
                 Console.WriteLine("." + Globals.parkY + "y");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("y");
@@ -277,6 +286,7 @@ namespace SDA100
                     lbl_Stup_ParkPosY_Status.Text = "No Response";
                 }
 
+                // Park Pos Z Startup -------------------------------------------------------------------
                 ScanPort._serialPort.Write("." + Globals.parkZ + "z");
                 Console.WriteLine("." + Globals.parkZ + "z");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("z");
@@ -298,8 +308,9 @@ namespace SDA100
 
                     lbl_Stup_ParkPosZ_Status.ForeColor = Color.Red;
                     lbl_Stup_ParkPosZ_Status.Text = "No Response";
-                }               
+                }
 
+                // Prefocus X Startup -------------------------------------------------------------------
                 ScanPort._serialPort.Write("." + Globals.preFocusX + "v");
                 Console.WriteLine("." + Globals.preFocusX + "v");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("v");
@@ -318,10 +329,11 @@ namespace SDA100
                     txtr_Startup.AppendText("No Response" + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
 
-                    lbl_Stup_ParkPosX_Status.ForeColor = Color.Red;
-                    lbl_Stup_ParkPosX_Status.Text = "No Response";
+                    lbl_Stup_PrefocusX_Status.ForeColor = Color.Red;
+                    lbl_Stup_PrefocusX_Status.Text = "No Response";
                 }
 
+                // Prefocus Y Startup -------------------------------------------------------------------
                 ScanPort._serialPort.Write("." + Globals.preFocusY + "w");
                 Console.WriteLine("." + Globals.preFocusY + "w");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("w");
@@ -331,14 +343,21 @@ namespace SDA100
                     txtr_Startup.SelectionColor = Color.Green;
                     txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_PrefocusY_Status.ForeColor = Color.Green;
+                    lbl_Stup_PrefocusY_Status.Text = Globals.inData;
                 }
                 else
                 {
                     txtr_Startup.SelectionColor = Color.Red;
                     txtr_Startup.AppendText("No Response" + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_PrefocusY_Status.ForeColor = Color.Red;
+                    lbl_Stup_PrefocusY_Status.Text = "No Response";
                 }
 
+                // Prefocus Z Startup -------------------------------------------------------------------
                 ScanPort._serialPort.Write("." + Globals.preFocusZ + "u");
                 Console.WriteLine("." + Globals.preFocusZ + "u");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("u");
@@ -348,14 +367,21 @@ namespace SDA100
                     txtr_Startup.SelectionColor = Color.Green;
                     txtr_Startup.AppendText(Globals.inData + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_PrefocusZ_Status.ForeColor = Color.Green;
+                    lbl_Stup_PrefocusZ_Status.Text = Globals.inData;
                 }
                 else
                 {
                     txtr_Startup.SelectionColor = Color.Red;
                     txtr_Startup.AppendText("No Response" + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_PrefocusZ_Status.ForeColor = Color.Red;
+                    lbl_Stup_PrefocusZ_Status.Text = "No Response";
                 }
 
+                // Wafer Present on Chuck Startup -------------------------------------------------------------------
                 ScanPort._serialPort.Write("O");
                 Console.WriteLine("O");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("O");
@@ -365,11 +391,19 @@ namespace SDA100
                     txtr_Startup.SelectionColor = Color.Orange;
                     txtr_Startup.AppendText(Globals.inData + " - Wafer Present" + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_WaferPres_Status.ForeColor = Color.Orange;
+                    lbl_Stup_WaferPres_Status.Text = Globals.inData + " - Wafer Present" + Environment.NewLine;
+
                 }
                 else if (Globals.inData.StartsWith("!O0"))
                 {
                     txtr_Startup.SelectionColor = Color.Green;
                     txtr_Startup.AppendText(Globals.inData + " - No Wafer Present" + Environment.NewLine);
+
+                    lbl_Stup_WaferPres_Status.ForeColor = Color.Green;
+                    lbl_Stup_WaferPres_Status.Text = Globals.inData + " - No Wafer Present" + Environment.NewLine;
+
                     ScanPort._serialPort.Write("N");
                     Globals.inData = ScanPort.WaitForSerialCommandResponse("N");
                     txtr_Startup.SelectionColor = Color.Black;
@@ -379,8 +413,40 @@ namespace SDA100
                     txtr_Startup.SelectionColor = Color.Red;
                     txtr_Startup.AppendText("No Response" + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_WaferPres_Status.ForeColor = Color.Red;
+                    lbl_Stup_WaferPres_Status.Text = Globals.inData + " - No Response" + Environment.NewLine;
                 }
 
+                // Home XY Startup -------------------------------------------------------------------
+                ScanPort._serialPort.Write("H");
+                Globals.inData = ScanPort.WaitForSerialCommandResponse("H");
+                if (Globals.inData.StartsWith("!H"))
+                {
+                    Stup_Home_XY_Status.ForeColor = Color.Green;
+                    Stup_Home_XY_Status.Text = "Yes";
+                }
+                else
+                {
+                    Stup_Home_XY_Status.ForeColor = Color.Red;
+                    Stup_Home_XY_Status.Text = "No";
+                }
+
+                // Home Z Startup -------------------------------------------------------------------
+                ScanPort._serialPort.Write("h");
+                Globals.inData = ScanPort.WaitForSerialCommandResponse("h");
+                if (Globals.inData.StartsWith("!h"))
+                {
+                    Stup_Home_Z_Status.ForeColor = Color.Green;
+                    Stup_Home_Z_Status.Text = "Yes";
+                }
+                else
+                {
+                    Stup_Home_Z_Status.ForeColor = Color.Red;
+                    Stup_Home_Z_Status.Text = "No";
+                }
+
+                // Door Functionality Startup -------------------------------------------------------------------
                 ScanPort._serialPort.Write("o");
                 Console.WriteLine("o");
                 Globals.inData = ScanPort.WaitForSerialCommandResponse("o");
@@ -397,18 +463,29 @@ namespace SDA100
                         txtr_Startup.SelectionColor = Color.Green;
                         txtr_Startup.AppendText(Globals.inData + " - Able to close" + Environment.NewLine);
                         txtr_Startup.SelectionColor = Color.Black;
+
+                        lbl_Stup_DoorFunc_Status.ForeColor = Color.Green;
+                        lbl_Stup_DoorFunc_Status.Text = Globals.inData + " - Able to close" + Environment.NewLine;
+
                     }
                     else if (Globals.inData.StartsWith("!n0"))
                     {
-                        txtr_Startup.SelectionColor = Color.Green;
+                        txtr_Startup.SelectionColor = Color.Red;
                         txtr_Startup.AppendText(Globals.inData + " - Unable to close - Check for obstruction" + Environment.NewLine);
                         txtr_Startup.SelectionColor = Color.Black;
+
+                        lbl_Stup_DoorFunc_Status.ForeColor = Color.Red;
+                        lbl_Stup_DoorFunc_Status.Text = Globals.inData + " - Unable to close - Check for obstruction" + Environment.NewLine;
                     }
                     else
                     {
                         txtr_Startup.SelectionColor = Color.Red;
                         txtr_Startup.AppendText("No Response" + Environment.NewLine);
                         txtr_Startup.SelectionColor = Color.Black;
+
+                        lbl_Stup_DoorFunc_Status.ForeColor = Color.Red;
+                        lbl_Stup_DoorFunc_Status.Text = Globals.inData + " - No Response" + Environment.NewLine;
+
                     }
                 }
                 else if (Globals.inData.StartsWith("!o0"))
@@ -423,18 +500,29 @@ namespace SDA100
                         txtr_Startup.SelectionColor = Color.Green;
                         txtr_Startup.AppendText(Globals.inData + " - Able to close" + Environment.NewLine);
                         txtr_Startup.SelectionColor = Color.Black;
+
+                        lbl_Stup_DoorFunc_Status.ForeColor = Color.Green;
+                        lbl_Stup_DoorFunc_Status.Text = Globals.inData + " - Able to close" + Environment.NewLine;
+
                     }
                     else if (Globals.inData.StartsWith("!n0"))
                     {
                         txtr_Startup.SelectionColor = Color.Red;
                         txtr_Startup.AppendText(Globals.inData + " - Unable to close - Check for obstruction" + Environment.NewLine);
                         txtr_Startup.SelectionColor = Color.Black;
+
+                        lbl_Stup_DoorFunc_Status.ForeColor = Color.Red;
+                        lbl_Stup_DoorFunc_Status.Text = Globals.inData + " - Unable to close - Check for obstruction" + Environment.NewLine;
+
                     }
                     else
                     {
                         txtr_Startup.SelectionColor = Color.Red;
                         txtr_Startup.AppendText("No Response" + Environment.NewLine);
                         txtr_Startup.SelectionColor = Color.Black;
+
+                        lbl_Stup_DoorFunc_Status.ForeColor = Color.Red;
+                        lbl_Stup_DoorFunc_Status.Text = Globals.inData + " - No Response" + Environment.NewLine;
                     }
                 }
                 else
@@ -442,6 +530,9 @@ namespace SDA100
                     txtr_Startup.SelectionColor = Color.Red;
                     txtr_Startup.AppendText("No Response" + Environment.NewLine);
                     txtr_Startup.SelectionColor = Color.Black;
+
+                    lbl_Stup_DoorFunc_Status.ForeColor = Color.Red;
+                    lbl_Stup_DoorFunc_Status.Text = Globals.inData + " - No Response" + Environment.NewLine;
                 }
 
                 //ScanPort._serialPort.Write("m");
@@ -496,9 +587,9 @@ namespace SDA100
                     txtr_Startup.AppendText("No Response" + Environment.NewLine);
                 }
                 ScanPort._serialPort.Write("m");
-                ScanPort._serialPort.Write("h");
-                ScanPort._serialPort.Write("H");
-                ScanPort._serialPort.Write("m");
+                //ScanPort._serialPort.Write("h");
+                //ScanPort._serialPort.Write("H");
+                //ScanPort._serialPort.Write("m");
                 tabGroup.SelectedTab = tabStartup;
                 ScanPort._serialPort.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
 

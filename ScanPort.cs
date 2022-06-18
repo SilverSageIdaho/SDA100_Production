@@ -129,9 +129,17 @@ namespace SDA100
                 response = _serialPort.ReadTo("!M2\r\n");
                 responseTimer++;
             }
+            else if (command.Contains("h") || command.Contains("H"))
+            {
+                while (response != "!" + command)
+                {
+                    response = _serialPort.ReadLine();
+                    responseTimer++;
+                }
+            }
             else
             {
-                while ((response == "") && (responseTimer < 1000))
+                while (!response.StartsWith("!" + command))
                 {
                     response = _serialPort.ReadLine();
                     responseTimer++;
